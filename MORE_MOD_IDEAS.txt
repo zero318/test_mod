@@ -1,0 +1,5 @@
+-Large mineral deposits that require machines to extract (encourages exploration and resource automation with trains and such)
+-Minerals are processed into multiple types of ore (more types avaiable with increasing tiers)
+-Most metal combinations will create alloys in the smeltery, but the majority of those are waste
+-Higher tiers of machines require different processes instead of just swapping out blocks (like increased steel production would require adding an oxygen input)
+-Resource costs increase non-linearly via intermediate products

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_torch_wall",
+  "textures": {
+    "torch": "test_mod:block/soul_redstone_torch"
+  }
+}

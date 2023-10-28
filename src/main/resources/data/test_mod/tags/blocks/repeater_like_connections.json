@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"#test_mod:repeaters",
+		"#test_mod:resistors"
+	]
+}

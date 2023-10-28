@@ -1,0 +1,66 @@
+
+package yeet;
+
+#include "util.h"
+#include "block/custom_state_util.h"
+
+public class HashTest {
+	public static int[] VALUES = { VALID_SOUL_DUST_STATES };
+	
+	//private static void test_hash_based_table(int[])
+	class IDK_thing {
+		public int index;
+		private static int master_index = 0;
+		
+		public static void reset_indices() {
+			master_index = 0;
+		}
+		
+		public IDK_thing() {
+			this.index = master_index++;
+		}
+	}
+	
+	private static void test_linked_hash_map(int[] values) {
+		System.out.printf("Linked Hash Map Test:\n");
+		
+		LinkedHashMap<Integer, IDK_thing> linked_map = new LinkedHashMap<>();
+		IDK_thing.reset_indices();
+		int length = values.length;
+		for (int i = 0; i < length; ++i) {
+			linked_map.put(values[i], new IDK_thing());
+		}
+		int failed_values = 0;
+		for (int i = 0; i < length; ++i) {
+			int value = values[i];
+			if (!linked_map.containsKey(value)) {
+				System.out.printf("Value missing:\t%d\n", value);
+                ++failed_values;
+			}
+		}
+		System.out.printf(failed_values == 0 ? "SUCCESS\n\n" : "FAILED (%d values)\n\n", failed_values);
+	}
+	
+	private static void test_hash_set(int[] values) {
+		System.out.printf("Hash Set Test:\n");
+        HashSet<Integer> hash_set = new HashSet<>();
+		int length = values.length;
+		for (int i = 0; i < length; ++i) {
+			hash_set.add(values[i]);
+		}
+        int failed_values = 0;
+        for (int i = 0; i < length; ++i) {
+            int value = values[i];
+            if (!hash_set.contains(value)) {
+                System.out.printf("Value missing:\t%d\n", value);
+                ++failed_values;
+            }
+        }
+        System.out.printf(failed_values == 0 ? "SUCCESS\n\n" : "FAILED (%d values)\n\n", failed_values);
+    }
+	
+	public static void test_hashes() {
+		test_hash_set();
+		test_linked_hash_map();
+	}
+}

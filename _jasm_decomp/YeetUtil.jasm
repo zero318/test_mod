@@ -1,0 +1,2679 @@
+/*
+ * Disassembled from YeetUtil.class (originally YeetUtil.java) by JASM
+ *
+ * Original class version: 61
+ * Signature: <no signature>
+ */
+public class yeet/YeetUtil {
+    // <no signature>
+    public static final DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final UP_OFFSET_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final SOUTH_OFFSET_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final WEST_OFFSET_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final EAST_OFFSET_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final NORTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final NORTH_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final NORTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final NORTH_EAST_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final SOUTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final SOUTH_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final SOUTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final SOUTH_EAST_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final WEST_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final WEST_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final EAST_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final EAST_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final DOWN_TO_UP_DELTA_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final UP_TO_DOWN_DELTA_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final NORTH_TO_SOUTH_DELTA_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final SOUTH_TO_NORTH_DELTA_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final WEST_TO_EAST_DELTA_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final EAST_TO_WEST_DELTA_VEC net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final ALL_DIRECTIONS [net/minecraft/core/Direction
+
+    // <no signature>
+    public static final horizontal_direction_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final vertical_direction_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final all_direction_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final shape_update_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final update_neighbors_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final all_direction_iter_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final horizontal_direction_iter_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final vertical_direction_iter_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final shape_update_iter_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    public static final update_neighbors_iter_offsets [net/minecraft/core/Vec3i
+
+    // <no signature>
+    // <no exceptions>
+    public <init>()V {
+        
+        label0:
+        aload 0
+        invokespecial java/lang/Object.<init>()V
+        return
+        
+        label1:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final bool_to_byte(Z)B {
+        
+        label0:
+        iload 0
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final byte_to_bool(B)Z {
+        
+        label0:
+        iload 0
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final bool_to_short(Z)V {
+        
+        label0:
+        iload 0
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final short_to_bool()Z {
+        
+        label0:
+        iload 0
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final bool_to_int(Z)I {
+        
+        label0:
+        iload 0
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final int_to_bool(I)Z {
+        
+        label0:
+        iload 0
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final bool_to_long(Z)J {
+        
+        label0:
+        iload 0
+        ifeq label1
+        lconst 0
+        goto label2
+        
+        label1:
+        lconst 0
+        
+        label2:
+        lreturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final long_to_bool(J)Z {
+        
+        label0:
+        lload 0
+        lconst 0
+        lcmp
+        ifeq label1
+        iconst 1
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final is_valid_hex(C)Z {
+        
+        label0:
+        iload 0
+        bipush 48
+        isub
+        bipush 10
+        invokestatic java/lang/Integer.compareUnsigned(I, I)I
+        iflt label1
+        iload 0
+        bipush 32
+        ior
+        bipush 97
+        isub
+        bipush 6
+        invokestatic java/lang/Integer.compareUnsigned(I, I)I
+        ifge label2
+        
+        label1:
+        iconst 1
+        goto label3
+        
+        label2:
+        iconst 0
+        
+        label3:
+        ireturn
+        
+        label4:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final rotate_left_byte(B, I)B {
+        
+        label0:
+        iload 1
+        bipush 7
+        iand
+        istore 1
+        
+        label1:
+        iload 0
+        iload 1
+        ishl
+        iload 0
+        bipush 8
+        iload 1
+        isub
+        iushr
+        ior
+        i2b
+        ireturn
+        
+        label2:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final rotate_left_short(I)V {
+        
+        label0:
+        iload 1
+        bipush 15
+        iand
+        istore 1
+        
+        label1:
+        iload 0
+        iload 1
+        ishl
+        iload 0
+        bipush 16
+        iload 1
+        isub
+        iushr
+        ior
+        i2s
+        ireturn
+        
+        label2:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final rotate_left_int(I, I)I {
+        
+        label0:
+        iload 0
+        iload 1
+        ishl
+        iload 0
+        bipush 32
+        iload 1
+        isub
+        iushr
+        ior
+        ireturn
+        
+        label1:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final rotate_left_long(J, I)J {
+        
+        label0:
+        lload 0
+        iload 2
+        lshl
+        lload 0
+        bipush 64
+        iload 2
+        isub
+        lushr
+        lor
+        lreturn
+        
+        label1:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final upow64(J, J)J {
+        
+        label0:
+        lload 2
+        lconst 0
+        lcmp
+        ifne label1
+        lconst 0
+        lreturn
+        
+        label1:
+        lconst 0
+        lstore 4
+        
+        label2:
+        bipush 63
+        lload 0
+        invokestatic java/lang/Long.numberOfLeadingZeros(J)I
+        isub
+        tableswitch label3 {
+            0: label4,
+            1: label5,
+            2: label6,
+            3: label7,
+            4: label8,
+            5: label9
+        }
+        
+        label3:
+        ldc 9223372036854775807L
+        lreturn
+        
+        label9:
+        lload 2
+        lconst 0
+        land
+        lconst 0
+        lcmp
+        ifeq label10
+        lload 0
+        goto label11
+        
+        label10:
+        lconst 0
+        
+        label11:
+        lstore 4
+        
+        label12:
+        lload 2
+        iconst 1
+        lushr
+        lstore 2
+        
+        label13:
+        lload 0
+        lload 0
+        lmul
+        lstore 0
+        
+        label8:
+        lload 4
+        lload 2
+        lconst 0
+        land
+        lconst 0
+        lcmp
+        ifeq label14
+        lload 0
+        goto label15
+        
+        label14:
+        lconst 0
+        
+        label15:
+        lmul
+        lstore 4
+        
+        label16:
+        lload 2
+        iconst 1
+        lushr
+        lstore 2
+        
+        label17:
+        lload 0
+        lload 0
+        lmul
+        lstore 0
+        
+        label7:
+        lload 4
+        lload 2
+        lconst 0
+        land
+        lconst 0
+        lcmp
+        ifeq label18
+        lload 0
+        goto label19
+        
+        label18:
+        lconst 0
+        
+        label19:
+        lmul
+        lstore 4
+        
+        label20:
+        lload 2
+        iconst 1
+        lushr
+        lstore 2
+        
+        label21:
+        lload 0
+        lload 0
+        lmul
+        lstore 0
+        
+        label6:
+        lload 4
+        lload 2
+        lconst 0
+        land
+        lconst 0
+        lcmp
+        ifeq label22
+        lload 0
+        goto label23
+        
+        label22:
+        lconst 0
+        
+        label23:
+        lmul
+        lstore 4
+        
+        label24:
+        lload 2
+        iconst 1
+        lushr
+        lstore 2
+        
+        label25:
+        lload 0
+        lload 0
+        lmul
+        lstore 0
+        
+        label5:
+        lload 4
+        lload 2
+        lconst 0
+        land
+        lconst 0
+        lcmp
+        ifeq label26
+        lload 0
+        goto label27
+        
+        label26:
+        lconst 0
+        
+        label27:
+        lmul
+        lstore 4
+        
+        label28:
+        lload 2
+        iconst 1
+        lushr
+        lstore 2
+        
+        label29:
+        lload 0
+        lload 0
+        lmul
+        lstore 0
+        
+        label4:
+        lload 4
+        lload 2
+        lconst 0
+        land
+        lconst 0
+        lcmp
+        ifeq label30
+        lload 0
+        goto label31
+        
+        label30:
+        lconst 0
+        
+        label31:
+        lmul
+        lreturn
+        
+        label32:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final upow32(I, I)I {
+        
+        label0:
+        iload 1
+        ifne label1
+        iconst 1
+        ireturn
+        
+        label1:
+        iconst 1
+        istore 2
+        
+        label2:
+        bipush 31
+        iload 0
+        invokestatic java/lang/Integer.numberOfLeadingZeros(I)I
+        isub
+        tableswitch label3 {
+            0: label4,
+            1: label5,
+            2: label6,
+            3: label7,
+            4: label8
+        }
+        
+        label3:
+        ldc 2147483647
+        ireturn
+        
+        label8:
+        iload 1
+        iconst 1
+        iand
+        ifeq label9
+        iload 0
+        goto label10
+        
+        label9:
+        iconst 1
+        
+        label10:
+        istore 2
+        
+        label11:
+        iload 1
+        iconst 1
+        iushr
+        istore 1
+        
+        label12:
+        iload 0
+        iload 0
+        imul
+        istore 0
+        
+        label7:
+        iload 2
+        iload 1
+        iconst 1
+        iand
+        ifeq label13
+        iload 0
+        goto label14
+        
+        label13:
+        iconst 1
+        
+        label14:
+        imul
+        istore 2
+        
+        label15:
+        iload 1
+        iconst 1
+        iushr
+        istore 1
+        
+        label16:
+        iload 0
+        iload 0
+        imul
+        istore 0
+        
+        label6:
+        iload 2
+        iload 1
+        iconst 1
+        iand
+        ifeq label17
+        iload 0
+        goto label18
+        
+        label17:
+        iconst 1
+        
+        label18:
+        imul
+        istore 2
+        
+        label19:
+        iload 1
+        iconst 1
+        iushr
+        istore 1
+        
+        label20:
+        iload 0
+        iload 0
+        imul
+        istore 0
+        
+        label5:
+        iload 2
+        iload 1
+        iconst 1
+        iand
+        ifeq label21
+        iload 0
+        goto label22
+        
+        label21:
+        iconst 1
+        
+        label22:
+        imul
+        istore 2
+        
+        label23:
+        iload 1
+        iconst 1
+        iushr
+        istore 1
+        
+        label24:
+        iload 0
+        iload 0
+        imul
+        istore 0
+        
+        label4:
+        iload 2
+        iload 1
+        iconst 1
+        iand
+        ifeq label25
+        iload 0
+        goto label26
+        
+        label25:
+        iconst 1
+        
+        label26:
+        imul
+        ireturn
+        
+        label27:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final to_lower(B)B {
+        
+        label0:
+        iload 0
+        iload 0
+        bipush 65
+        isub
+        sipush 255
+        iand
+        bipush 26
+        if_icmpge label1
+        bipush 32
+        goto label2
+        
+        label1:
+        iconst 0
+        
+        label2:
+        ior
+        i2b
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final to_upper(B)B {
+        
+        label0:
+        iload 0
+        bipush 97
+        isub
+        sipush 255
+        iand
+        bipush 26
+        if_icmpge label1
+        iload 0
+        sipush 223
+        iand
+        goto label2
+        
+        label1:
+        iload 0
+        
+        label2:
+        i2b
+        ireturn
+        
+        label3:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final strnicmp(I, [B, [B, I)Z {
+        
+        label0:
+        iconst 0
+        istore 4
+        
+        label1:
+        iload 4
+        iload 3
+        if_icmpge label2
+        
+        label3:
+        aload 1
+        iload 0
+        iload 4
+        iadd
+        baload
+        istore 5
+        
+        label4:
+        iload 5
+        bipush 65
+        isub
+        sipush 255
+        iand
+        bipush 26
+        if_icmpge label5
+        iload 5
+        bipush 32
+        ior
+        i2b
+        istore 5
+        
+        label5:
+        aload 2
+        iload 4
+        baload
+        istore 6
+        
+        label6:
+        iload 6
+        bipush 65
+        isub
+        sipush 255
+        iand
+        bipush 26
+        if_icmpge label7
+        iload 6
+        bipush 32
+        ior
+        i2b
+        istore 6
+        
+        label7:
+        iload 5
+        iload 6
+        if_icmpeq label8
+        iconst 0
+        ireturn
+        
+        label8:
+        iinc 4, [1]
+        goto label1
+        
+        label2:
+        iconst 1
+        ireturn
+        
+        label9:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final calculate_neighbor_direction(net/minecraft/core/BlockPos, net/minecraft/core/BlockPos)I {
+        
+        label0:
+        aload 0
+        invokevirtual net/minecraft/core/BlockPos.getX()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getX()I
+        isub
+        dup
+        istore 2
+        
+        label1:
+        ifeq label2
+        iconst 4
+        iload 2
+        bipush 31
+        iushr
+        iadd
+        ireturn
+        
+        label2:
+        aload 0
+        invokevirtual net/minecraft/core/BlockPos.getZ()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getZ()I
+        isub
+        dup
+        istore 2
+        ifeq label3
+        iconst 2
+        iload 2
+        bipush 31
+        iushr
+        iadd
+        ireturn
+        
+        label3:
+        aload 0
+        invokevirtual net/minecraft/core/BlockPos.getY()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getY()I
+        isub
+        bipush 31
+        iushr
+        ireturn
+        
+        label4:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final calculate_neighbor_multi_direction(net/minecraft/core/BlockPos, net/minecraft/core/BlockPos)I {
+        
+        label0:
+        aload 0
+        invokevirtual net/minecraft/core/BlockPos.getX()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getX()I
+        isub
+        bipush 7
+        iand
+        aload 0
+        
+        label1:
+        invokevirtual net/minecraft/core/BlockPos.getY()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getY()I
+        isub
+        bipush 7
+        iand
+        iconst 3
+        ishl
+        iadd
+        aload 0
+        
+        label2:
+        invokevirtual net/minecraft/core/BlockPos.getZ()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getZ()I
+        isub
+        bipush 7
+        iand
+        bipush 6
+        ishl
+        iadd
+        
+        label3:
+        ireturn
+        
+        label4:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final update_neighbors(net/minecraft/world/level/Level, net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos$MutableBlockPos)V {
+        
+        label0:
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 2
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.neighborChanged(net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos)V
+        
+        label1:
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 2
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.neighborChanged(net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos)V
+        
+        label2:
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 2
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.neighborChanged(net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos)V
+        
+        label3:
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 2
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.neighborChanged(net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos)V
+        
+        label4:
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 2
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.neighborChanged(net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos)V
+        
+        label5:
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 2
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.neighborChanged(net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos)V
+        
+        label6:
+        return
+        
+        label7:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final update_neighbors(net/minecraft/world/level/Level, net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block)V {
+        
+        label0:
+        aload 0
+        aload 1
+        aload 2
+        new net/minecraft/core/BlockPos$MutableBlockPos
+        dup
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getX()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getY()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getZ()I
+        invokespecial net/minecraft/core/BlockPos$MutableBlockPos.<init>(I, I, I)V
+        invokestatic yeet/YeetUtil.update_neighbors(net/minecraft/world/level/Level, net/minecraft/core/BlockPos, net/minecraft/world/level/block/Block, net/minecraft/core/BlockPos$MutableBlockPos)V
+        
+        label1:
+        return
+        
+        label2:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final get_signal(net/minecraft/world/level/Level, net/minecraft/core/BlockPos, net/minecraft/core/Direction, net/minecraft/core/BlockPos$MutableBlockPos)I {
+        
+        label0:
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label1:
+        aload 4
+        aload 0
+        aload 1
+        aload 2
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        istore 5
+        
+        label2:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label3
+        iload 5
+        aload 0
+        aload 3
+        aload 3
+        
+        label4:
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 5
+        bipush 15
+        if_icmpge label3
+        iload 5
+        aload 0
+        aload 3
+        aload 3
+        
+        label5:
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 5
+        bipush 15
+        if_icmpge label3
+        iload 5
+        aload 0
+        aload 3
+        aload 3
+        
+        label6:
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 5
+        bipush 15
+        if_icmpge label3
+        iload 5
+        aload 0
+        aload 3
+        aload 3
+        
+        label7:
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 5
+        bipush 15
+        if_icmpge label3
+        iload 5
+        aload 0
+        aload 3
+        aload 3
+        
+        label8:
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 5
+        bipush 15
+        if_icmpge label3
+        
+        label9:
+        iload 5
+        aload 0
+        aload 3
+        aload 3
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        istore 5
+        
+        label3:
+        iload 5
+        ireturn
+        
+        label10:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final get_signal(net/minecraft/world/level/Level, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I {
+        
+        label0:
+        aload 0
+        aload 1
+        aload 2
+        new net/minecraft/core/BlockPos$MutableBlockPos
+        dup
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getX()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getY()I
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos.getZ()I
+        invokespecial net/minecraft/core/BlockPos$MutableBlockPos.<init>(I, I, I)V
+        invokestatic yeet/YeetUtil.get_signal(net/minecraft/world/level/Level, net/minecraft/core/BlockPos, net/minecraft/core/Direction, net/minecraft/core/BlockPos$MutableBlockPos)I
+        ireturn
+        
+        label1:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public static final get_best_neighbor_signal_unrolled(net/minecraft/world/level/Level, net/minecraft/core/BlockPos$MutableBlockPos, I)I {
+        
+        label0:
+        iconst 0
+        istore 3
+        
+        label1:
+        iload 2
+        ifeq label2
+        
+        label3:
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label4:
+        aload 4
+        aload 0
+        aload 1
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label5
+        goto label6
+        
+        label5:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label7
+        
+        label8:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label9
+        goto label6
+        
+        label9:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label10
+        goto label6
+        
+        label10:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label11
+        goto label6
+        
+        label11:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label12
+        goto label6
+        
+        label12:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label13
+        goto label6
+        
+        label13:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label7:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label2:
+        iload 2
+        iconst 1
+        if_icmpeq label14
+        
+        label15:
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label16:
+        iload 3
+        aload 4
+        aload 0
+        aload 1
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label17
+        goto label6
+        
+        label17:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label18
+        
+        label19:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label20
+        goto label6
+        
+        label20:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label21
+        goto label6
+        
+        label21:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label22
+        goto label6
+        
+        label22:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label23
+        goto label6
+        
+        label23:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label24
+        goto label6
+        
+        label24:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label18:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label14:
+        iload 2
+        iconst 2
+        if_icmpeq label25
+        
+        label26:
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label27:
+        iload 3
+        aload 4
+        aload 0
+        aload 1
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label28
+        goto label6
+        
+        label28:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label29
+        
+        label30:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label31
+        goto label6
+        
+        label31:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label32
+        goto label6
+        
+        label32:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label33
+        goto label6
+        
+        label33:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label34
+        goto label6
+        
+        label34:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label35
+        goto label6
+        
+        label35:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label29:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label25:
+        iload 2
+        iconst 3
+        if_icmpeq label36
+        
+        label37:
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label38:
+        iload 3
+        aload 4
+        aload 0
+        aload 1
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label39
+        goto label6
+        
+        label39:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label40
+        
+        label41:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label42
+        goto label6
+        
+        label42:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label43
+        goto label6
+        
+        label43:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label44
+        goto label6
+        
+        label44:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label45
+        goto label6
+        
+        label45:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label46
+        goto label6
+        
+        label46:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label40:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label36:
+        iload 2
+        iconst 4
+        if_icmpeq label47
+        
+        label48:
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label49:
+        iload 3
+        aload 4
+        aload 0
+        aload 1
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label50
+        goto label6
+        
+        label50:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label51
+        
+        label52:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label53
+        goto label6
+        
+        label53:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label54
+        goto label6
+        
+        label54:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label55
+        goto label6
+        
+        label55:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label56
+        goto label6
+        
+        label56:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label57
+        goto label6
+        
+        label57:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label51:
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        pop
+        
+        label47:
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst 1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        invokevirtual net/minecraft/world/level/Level.getBlockState(net/minecraft/core/BlockPos)net/minecraft/world/level/block/state/BlockState
+        astore 4
+        
+        label58:
+        iload 3
+        aload 4
+        aload 0
+        aload 1
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/block/state/BlockState.getSignal(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label59
+        goto label6
+        
+        label59:
+        aload 4
+        aload 0
+        aload 1
+        invokevirtual net/minecraft/world/level/block/state/BlockState.isRedstoneConductor(net/minecraft/world/level/BlockGetter, net/minecraft/core/BlockPos)Z
+        ifeq label6
+        
+        label60:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label61
+        goto label6
+        
+        label61:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label62
+        goto label6
+        
+        label62:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getY()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setY(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label63
+        goto label6
+        
+        label63:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst 2
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        dup
+        istore 3
+        bipush 15
+        if_icmplt label64
+        goto label6
+        
+        label64:
+        iload 3
+        aload 0
+        aload 1
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getX()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setX(I)net/minecraft/core/BlockPos$MutableBlockPos
+        aload 1
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.getZ()I
+        iconst -1
+        iadd
+        invokevirtual net/minecraft/core/BlockPos$MutableBlockPos.setZ(I)net/minecraft/core/BlockPos$MutableBlockPos
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/world/level/Level.getDirectSignal(net/minecraft/core/BlockPos, net/minecraft/core/Direction)I
+        invokestatic java/lang/Math.max(I, I)I
+        istore 3
+        
+        label6:
+        iload 3
+        bipush 15
+        iand
+        ireturn
+        
+        label65:
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    static <clinit>()V {
+        
+        label0:
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        invokevirtual net/minecraft/core/Direction.getNormal()net/minecraft/core/Vec3i
+        putstatic yeet/YeetUtil.DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+        
+        label1:
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        invokevirtual net/minecraft/core/Direction.getNormal()net/minecraft/core/Vec3i
+        putstatic yeet/YeetUtil.UP_OFFSET_VEC net/minecraft/core/Vec3i
+        
+        label2:
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/core/Direction.getNormal()net/minecraft/core/Vec3i
+        putstatic yeet/YeetUtil.NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+        
+        label3:
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        invokevirtual net/minecraft/core/Direction.getNormal()net/minecraft/core/Vec3i
+        putstatic yeet/YeetUtil.SOUTH_OFFSET_VEC net/minecraft/core/Vec3i
+        
+        label4:
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        invokevirtual net/minecraft/core/Direction.getNormal()net/minecraft/core/Vec3i
+        putstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        
+        label5:
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        invokevirtual net/minecraft/core/Direction.getNormal()net/minecraft/core/Vec3i
+        putstatic yeet/YeetUtil.EAST_OFFSET_VEC net/minecraft/core/Vec3i
+        
+        label6:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst -1
+        iconst -1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.NORTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label7:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst 1
+        iconst -1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.NORTH_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label8:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst -1
+        iconst 0
+        iconst -1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.NORTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label9:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 1
+        iconst 0
+        iconst -1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.NORTH_EAST_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label10:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst -1
+        iconst 1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.SOUTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label11:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst 1
+        iconst 1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.SOUTH_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label12:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst -1
+        iconst 0
+        iconst 1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.SOUTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label13:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 1
+        iconst 0
+        iconst 1
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.SOUTH_EAST_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label14:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst -1
+        iconst -1
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.WEST_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label15:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst -1
+        iconst 1
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.WEST_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label16:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 1
+        iconst -1
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.EAST_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label17:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 1
+        iconst 1
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.EAST_UP_OFFSETS_VEC net/minecraft/core/Vec3i
+        
+        label18:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst 2
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.DOWN_TO_UP_DELTA_VEC net/minecraft/core/Vec3i
+        
+        label19:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        bipush -2
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.UP_TO_DOWN_DELTA_VEC net/minecraft/core/Vec3i
+        
+        label20:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst 0
+        iconst 2
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.NORTH_TO_SOUTH_DELTA_VEC net/minecraft/core/Vec3i
+        
+        label21:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        iconst 0
+        bipush -2
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.SOUTH_TO_NORTH_DELTA_VEC net/minecraft/core/Vec3i
+        
+        label22:
+        new net/minecraft/core/Vec3i
+        dup
+        iconst 2
+        iconst 0
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.WEST_TO_EAST_DELTA_VEC net/minecraft/core/Vec3i
+        
+        label23:
+        new net/minecraft/core/Vec3i
+        dup
+        bipush -2
+        iconst 0
+        iconst 0
+        invokespecial net/minecraft/core/Vec3i.<init>(I, I, I)V
+        putstatic yeet/YeetUtil.EAST_TO_WEST_DELTA_VEC net/minecraft/core/Vec3i
+        
+        label24:
+        bipush 6
+        anewarray net/minecraft/core/Direction
+        dup
+        iconst 0
+        getstatic net/minecraft/core/Direction.DOWN net/minecraft/core/Direction
+        aastore
+        dup
+        iconst 1
+        getstatic net/minecraft/core/Direction.UP net/minecraft/core/Direction
+        aastore
+        dup
+        iconst 2
+        getstatic net/minecraft/core/Direction.NORTH net/minecraft/core/Direction
+        aastore
+        dup
+        iconst 3
+        getstatic net/minecraft/core/Direction.SOUTH net/minecraft/core/Direction
+        aastore
+        dup
+        iconst 4
+        getstatic net/minecraft/core/Direction.WEST net/minecraft/core/Direction
+        aastore
+        dup
+        iconst 5
+        getstatic net/minecraft/core/Direction.EAST net/minecraft/core/Direction
+        aastore
+        putstatic yeet/YeetUtil.ALL_DIRECTIONS [net/minecraft/core/Direction
+        
+        label25:
+        iconst 4
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.EAST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.SOUTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.horizontal_direction_offsets [net/minecraft/core/Vec3i
+        
+        label26:
+        iconst 2
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.UP_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.vertical_direction_offsets [net/minecraft/core/Vec3i
+        
+        label27:
+        bipush 6
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.UP_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.SOUTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 4
+        getstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 5
+        getstatic yeet/YeetUtil.EAST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.all_direction_offsets [net/minecraft/core/Vec3i
+        
+        label28:
+        bipush 6
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.EAST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.SOUTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 4
+        getstatic yeet/YeetUtil.DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 5
+        getstatic yeet/YeetUtil.UP_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.shape_update_offsets [net/minecraft/core/Vec3i
+        
+        label29:
+        bipush 6
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.EAST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.UP_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 4
+        getstatic yeet/YeetUtil.NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 5
+        getstatic yeet/YeetUtil.SOUTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.update_neighbors_offsets [net/minecraft/core/Vec3i
+        
+        label30:
+        bipush 6
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.DOWN_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.DOWN_TO_UP_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.NORTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.NORTH_TO_SOUTH_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 4
+        getstatic yeet/YeetUtil.NORTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 5
+        getstatic yeet/YeetUtil.WEST_TO_EAST_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.all_direction_iter_offsets [net/minecraft/core/Vec3i
+        
+        label31:
+        iconst 4
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.NORTH_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.SOUTH_EAST_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.SOUTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.NORTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.horizontal_direction_iter_offsets [net/minecraft/core/Vec3i
+        
+        label32:
+        iconst 2
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.UP_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.UP_TO_DOWN_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.vertical_direction_iter_offsets [net/minecraft/core/Vec3i
+        
+        label33:
+        bipush 6
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.WEST_TO_EAST_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.NORTH_WEST_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.NORTH_TO_SOUTH_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 4
+        getstatic yeet/YeetUtil.NORTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 5
+        getstatic yeet/YeetUtil.DOWN_TO_UP_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.shape_update_iter_offsets [net/minecraft/core/Vec3i
+        
+        label34:
+        bipush 6
+        anewarray net/minecraft/core/Vec3i
+        dup
+        iconst 0
+        getstatic yeet/YeetUtil.WEST_OFFSET_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 1
+        getstatic yeet/YeetUtil.WEST_TO_EAST_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 2
+        getstatic yeet/YeetUtil.WEST_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 3
+        getstatic yeet/YeetUtil.DOWN_TO_UP_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 4
+        getstatic yeet/YeetUtil.NORTH_DOWN_OFFSETS_VEC net/minecraft/core/Vec3i
+        aastore
+        dup
+        iconst 5
+        getstatic yeet/YeetUtil.NORTH_TO_SOUTH_DELTA_VEC net/minecraft/core/Vec3i
+        aastore
+        putstatic yeet/YeetUtil.update_neighbors_iter_offsets [net/minecraft/core/Vec3i
+        return
+    }
+
+}

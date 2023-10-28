@@ -1,0 +1,883 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/Linker.class
+  Last modified Oct 22, 2022; size 6599 bytes
+  SHA-256 checksum 92d44af1ba293978e6438e5ac5272fa12272c670edcca51df189148984ffa70e
+  Compiled from "Linker.java"
+public class one.nalim.Linker
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #8                          // one/nalim/Linker
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 3, methods: 11, attributes: 3
+Constant pool:
+    #1 = Methodref          #2.#3         // java/lang/Object."<init>":()V
+    #2 = Class              #4            // java/lang/Object
+    #3 = NameAndType        #5:#6         // "<init>":()V
+    #4 = Utf8               java/lang/Object
+    #5 = Utf8               <init>
+    #6 = Utf8               ()V
+    #7 = Fieldref           #8.#9         // one/nalim/Linker.nativeLibraries:Ljava/util/concurrent/ConcurrentHashMap;
+    #8 = Class              #10           // one/nalim/Linker
+    #9 = NameAndType        #11:#12       // nativeLibraries:Ljava/util/concurrent/ConcurrentHashMap;
+   #10 = Utf8               one/nalim/Linker
+   #11 = Utf8               nativeLibraries
+   #12 = Utf8               Ljava/util/concurrent/ConcurrentHashMap;
+   #13 = Fieldref           #14.#15       // java/lang/Boolean.TRUE:Ljava/lang/Boolean;
+   #14 = Class              #16           // java/lang/Boolean
+   #15 = NameAndType        #17:#18       // TRUE:Ljava/lang/Boolean;
+   #16 = Utf8               java/lang/Boolean
+   #17 = Utf8               TRUE
+   #18 = Utf8               Ljava/lang/Boolean;
+   #19 = Methodref          #20.#21       // java/util/concurrent/ConcurrentHashMap.putIfAbsent:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   #20 = Class              #22           // java/util/concurrent/ConcurrentHashMap
+   #21 = NameAndType        #23:#24       // putIfAbsent:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   #22 = Utf8               java/util/concurrent/ConcurrentHashMap
+   #23 = Utf8               putIfAbsent
+   #24 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   #25 = Methodref          #26.#27       // java/lang/String.indexOf:(I)I
+   #26 = Class              #28           // java/lang/String
+   #27 = NameAndType        #29:#30       // indexOf:(I)I
+   #28 = Utf8               java/lang/String
+   #29 = Utf8               indexOf
+   #30 = Utf8               (I)I
+   #31 = Methodref          #32.#33       // java/lang/System.load:(Ljava/lang/String;)V
+   #32 = Class              #34           // java/lang/System
+   #33 = NameAndType        #35:#36       // load:(Ljava/lang/String;)V
+   #34 = Utf8               java/lang/System
+   #35 = Utf8               load
+   #36 = Utf8               (Ljava/lang/String;)V
+   #37 = Methodref          #32.#38       // java/lang/System.loadLibrary:(Ljava/lang/String;)V
+   #38 = NameAndType        #39:#36       // loadLibrary:(Ljava/lang/String;)V
+   #39 = Utf8               loadLibrary
+   #40 = Class              #41           // java/lang/ClassLoader
+   #41 = Utf8               java/lang/ClassLoader
+   #42 = String             #43           // findNative
+   #43 = Utf8               findNative
+   #44 = Class              #45           // java/lang/Class
+   #45 = Utf8               java/lang/Class
+   #46 = Methodref          #47.#48       // one/nalim/JavaInternals.getPrivateMethod:(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+   #47 = Class              #49           // one/nalim/JavaInternals
+   #48 = NameAndType        #50:#51       // getPrivateMethod:(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+   #49 = Utf8               one/nalim/JavaInternals
+   #50 = Utf8               getPrivateMethod
+   #51 = Utf8               (Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+   #52 = Methodref          #44.#53       // java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+   #53 = NameAndType        #54:#55       // getClassLoader:()Ljava/lang/ClassLoader;
+   #54 = Utf8               getClassLoader
+   #55 = Utf8               ()Ljava/lang/ClassLoader;
+   #56 = Methodref          #57.#58       // java/lang/reflect/Method.invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+   #57 = Class              #59           // java/lang/reflect/Method
+   #58 = NameAndType        #60:#61       // invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+   #59 = Utf8               java/lang/reflect/Method
+   #60 = Utf8               invoke
+   #61 = Utf8               (Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+   #62 = Class              #63           // java/lang/Long
+   #63 = Utf8               java/lang/Long
+   #64 = Methodref          #62.#65       // java/lang/Long.longValue:()J
+   #65 = NameAndType        #66:#67       // longValue:()J
+   #66 = Utf8               longValue
+   #67 = Utf8               ()J
+   #68 = Class              #69           // java/lang/ReflectiveOperationException
+   #69 = Utf8               java/lang/ReflectiveOperationException
+   #70 = Class              #71           // java/lang/IllegalStateException
+   #71 = Utf8               java/lang/IllegalStateException
+   #72 = Methodref          #70.#73       // java/lang/IllegalStateException."<init>":(Ljava/lang/Throwable;)V
+   #73 = NameAndType        #5:#74        // "<init>":(Ljava/lang/Throwable;)V
+   #74 = Utf8               (Ljava/lang/Throwable;)V
+   #75 = Class              #76           // one/nalim/Library
+   #76 = Utf8               one/nalim/Library
+   #77 = Methodref          #44.#78       // java/lang/Class.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+   #78 = NameAndType        #79:#80       // getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+   #79 = Utf8               getAnnotation
+   #80 = Utf8               (Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+   #81 = InterfaceMethodref #75.#82       // one/nalim/Library.value:()Ljava/lang/String;
+   #82 = NameAndType        #83:#84       // value:()Ljava/lang/String;
+   #83 = Utf8               value
+   #84 = Utf8               ()Ljava/lang/String;
+   #85 = Methodref          #8.#38        // one/nalim/Linker.loadLibrary:(Ljava/lang/String;)V
+   #86 = Methodref          #44.#87       // java/lang/Class.getDeclaredMethods:()[Ljava/lang/reflect/Method;
+   #87 = NameAndType        #88:#89       // getDeclaredMethods:()[Ljava/lang/reflect/Method;
+   #88 = Utf8               getDeclaredMethods
+   #89 = Utf8               ()[Ljava/lang/reflect/Method;
+   #90 = Class              #91           // one/nalim/Link
+   #91 = Utf8               one/nalim/Link
+   #92 = Methodref          #57.#78       // java/lang/reflect/Method.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+   #93 = Class              #94           // one/nalim/Code
+   #94 = Utf8               one/nalim/Code
+   #95 = Methodref          #8.#96        // one/nalim/Linker.linkMethod:(Ljava/lang/reflect/Method;)V
+   #96 = NameAndType        #97:#98       // linkMethod:(Ljava/lang/reflect/Method;)V
+   #97 = Utf8               linkMethod
+   #98 = Utf8               (Ljava/lang/reflect/Method;)V
+   #99 = Methodref          #8.#100       // one/nalim/Linker.checkMethodType:(Ljava/lang/reflect/Method;)V
+  #100 = NameAndType        #101:#98      // checkMethodType:(Ljava/lang/reflect/Method;)V
+  #101 = Utf8               checkMethodType
+  #102 = InterfaceMethodref #93.#82       // one/nalim/Code.value:()Ljava/lang/String;
+  #103 = Methodref          #8.#104       // one/nalim/Linker.parseHex:(Ljava/lang/String;)[B
+  #104 = NameAndType        #105:#106     // parseHex:(Ljava/lang/String;)[B
+  #105 = Utf8               parseHex
+  #106 = Utf8               (Ljava/lang/String;)[B
+  #107 = Methodref          #8.#108       // one/nalim/Linker.installCode:(Ljava/lang/reflect/Method;[B)V
+  #108 = NameAndType        #109:#110     // installCode:(Ljava/lang/reflect/Method;[B)V
+  #109 = Utf8               installCode
+  #110 = Utf8               (Ljava/lang/reflect/Method;[B)V
+  #111 = InterfaceMethodref #90.#112      // one/nalim/Link.name:()Ljava/lang/String;
+  #112 = NameAndType        #113:#84      // name:()Ljava/lang/String;
+  #113 = Utf8               name
+  #114 = InterfaceMethodref #90.#115      // one/nalim/Link.naked:()Z
+  #115 = NameAndType        #116:#117     // naked:()Z
+  #116 = Utf8               naked
+  #117 = Utf8               ()Z
+  #118 = Methodref          #8.#119       // one/nalim/Linker.linkMethod:(Ljava/lang/reflect/Method;Ljava/lang/String;Z)V
+  #119 = NameAndType        #97:#120      // linkMethod:(Ljava/lang/reflect/Method;Ljava/lang/String;Z)V
+  #120 = Utf8               (Ljava/lang/reflect/Method;Ljava/lang/String;Z)V
+  #121 = Methodref          #57.#122      // java/lang/reflect/Method.getName:()Ljava/lang/String;
+  #122 = NameAndType        #123:#84      // getName:()Ljava/lang/String;
+  #123 = Utf8               getName
+  #124 = Methodref          #26.#125      // java/lang/String.isEmpty:()Z
+  #125 = NameAndType        #126:#117     // isEmpty:()Z
+  #126 = Utf8               isEmpty
+  #127 = Methodref          #8.#128       // one/nalim/Linker.findAddress:(Ljava/lang/String;)J
+  #128 = NameAndType        #129:#130     // findAddress:(Ljava/lang/String;)J
+  #129 = Utf8               findAddress
+  #130 = Utf8               (Ljava/lang/String;)J
+  #131 = Class              #132          // java/lang/IllegalArgumentException
+  #132 = Utf8               java/lang/IllegalArgumentException
+  #133 = InvokeDynamic      #0:#134       // #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #134 = NameAndType        #135:#136     // makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #135 = Utf8               makeConcatWithConstants
+  #136 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #137 = Methodref          #131.#138     // java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+  #138 = NameAndType        #5:#36        // "<init>":(Ljava/lang/String;)V
+  #139 = Methodref          #140.#141     // java/nio/ByteBuffer.allocate:(I)Ljava/nio/ByteBuffer;
+  #140 = Class              #142          // java/nio/ByteBuffer
+  #141 = NameAndType        #143:#144     // allocate:(I)Ljava/nio/ByteBuffer;
+  #142 = Utf8               java/nio/ByteBuffer
+  #143 = Utf8               allocate
+  #144 = Utf8               (I)Ljava/nio/ByteBuffer;
+  #145 = Methodref          #146.#147     // java/nio/ByteOrder.nativeOrder:()Ljava/nio/ByteOrder;
+  #146 = Class              #148          // java/nio/ByteOrder
+  #147 = NameAndType        #149:#150     // nativeOrder:()Ljava/nio/ByteOrder;
+  #148 = Utf8               java/nio/ByteOrder
+  #149 = Utf8               nativeOrder
+  #150 = Utf8               ()Ljava/nio/ByteOrder;
+  #151 = Methodref          #140.#152     // java/nio/ByteBuffer.order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+  #152 = NameAndType        #153:#154     // order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+  #153 = Utf8               order
+  #154 = Utf8               (Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+  #155 = Fieldref           #8.#156       // one/nalim/Linker.callingConvention:Lone/nalim/CallingConvention;
+  #156 = NameAndType        #157:#158     // callingConvention:Lone/nalim/CallingConvention;
+  #157 = Utf8               callingConvention
+  #158 = Utf8               Lone/nalim/CallingConvention;
+  #159 = Methodref          #57.#160      // java/lang/reflect/Method.getParameterTypes:()[Ljava/lang/Class;
+  #160 = NameAndType        #161:#162     // getParameterTypes:()[Ljava/lang/Class;
+  #161 = Utf8               getParameterTypes
+  #162 = Utf8               ()[Ljava/lang/Class;
+  #163 = Methodref          #57.#164      // java/lang/reflect/Method.getParameterAnnotations:()[[Ljava/lang/annotation/Annotation;
+  #164 = NameAndType        #165:#166     // getParameterAnnotations:()[[Ljava/lang/annotation/Annotation;
+  #165 = Utf8               getParameterAnnotations
+  #166 = Utf8               ()[[Ljava/lang/annotation/Annotation;
+  #167 = Methodref          #168.#169     // one/nalim/CallingConvention.javaToNative:(Ljava/nio/ByteBuffer;[Ljava/lang/Class;[[Ljava/lang/annotation/Annotation;)V
+  #168 = Class              #170          // one/nalim/CallingConvention
+  #169 = NameAndType        #171:#172     // javaToNative:(Ljava/nio/ByteBuffer;[Ljava/lang/Class;[[Ljava/lang/annotation/Annotation;)V
+  #170 = Utf8               one/nalim/CallingConvention
+  #171 = Utf8               javaToNative
+  #172 = Utf8               (Ljava/nio/ByteBuffer;[Ljava/lang/Class;[[Ljava/lang/annotation/Annotation;)V
+  #173 = Methodref          #168.#174     // one/nalim/CallingConvention.emitCall:(Ljava/nio/ByteBuffer;J)V
+  #174 = NameAndType        #175:#176     // emitCall:(Ljava/nio/ByteBuffer;J)V
+  #175 = Utf8               emitCall
+  #176 = Utf8               (Ljava/nio/ByteBuffer;J)V
+  #177 = Methodref          #140.#178     // java/nio/ByteBuffer.array:()[B
+  #178 = NameAndType        #179:#180     // array:()[B
+  #179 = Utf8               array
+  #180 = Utf8               ()[B
+  #181 = Methodref          #140.#182     // java/nio/ByteBuffer.position:()I
+  #182 = NameAndType        #183:#184     // position:()I
+  #183 = Utf8               position
+  #184 = Utf8               ()I
+  #185 = Methodref          #8.#186       // one/nalim/Linker.installCode:(Ljava/lang/reflect/Method;[BI)V
+  #186 = NameAndType        #109:#187     // installCode:(Ljava/lang/reflect/Method;[BI)V
+  #187 = Utf8               (Ljava/lang/reflect/Method;[BI)V
+  #188 = Methodref          #57.#189      // java/lang/reflect/Method.getModifiers:()I
+  #189 = NameAndType        #190:#184     // getModifiers:()I
+  #190 = Utf8               getModifiers
+  #191 = Methodref          #192.#193     // java/lang/reflect/Modifier.isStatic:(I)Z
+  #192 = Class              #194          // java/lang/reflect/Modifier
+  #193 = NameAndType        #195:#196     // isStatic:(I)Z
+  #194 = Utf8               java/lang/reflect/Modifier
+  #195 = Utf8               isStatic
+  #196 = Utf8               (I)Z
+  #197 = Methodref          #192.#198     // java/lang/reflect/Modifier.isNative:(I)Z
+  #198 = NameAndType        #199:#196     // isNative:(I)Z
+  #199 = Utf8               isNative
+  #200 = Methodref          #26.#201      // java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #201 = NameAndType        #202:#203     // valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+  #202 = Utf8               valueOf
+  #203 = Utf8               (Ljava/lang/Object;)Ljava/lang/String;
+  #204 = InvokeDynamic      #1:#134       // #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+  #205 = String             #206          // \\s+
+  #206 = Utf8               \\s+
+  #207 = String             #208          //
+  #208 = Utf8
+  #209 = Methodref          #26.#210      // java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #210 = NameAndType        #211:#212     // replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #211 = Utf8               replaceAll
+  #212 = Utf8               (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+  #213 = Methodref          #26.#214      // java/lang/String.length:()I
+  #214 = NameAndType        #215:#184     // length:()I
+  #215 = Utf8               length
+  #216 = String             #217          // Invalid hex string
+  #217 = Utf8               Invalid hex string
+  #218 = Methodref          #26.#219      // java/lang/String.substring:(II)Ljava/lang/String;
+  #219 = NameAndType        #220:#221     // substring:(II)Ljava/lang/String;
+  #220 = Utf8               substring
+  #221 = Utf8               (II)Ljava/lang/String;
+  #222 = Methodref          #223.#224     // java/lang/Integer.parseInt:(Ljava/lang/String;I)I
+  #223 = Class              #225          // java/lang/Integer
+  #224 = NameAndType        #226:#227     // parseInt:(Ljava/lang/String;I)I
+  #225 = Utf8               java/lang/Integer
+  #226 = Utf8               parseInt
+  #227 = Utf8               (Ljava/lang/String;I)I
+  #228 = Fieldref           #8.#229       // one/nalim/Linker.jvmci:Ljdk/vm/ci/runtime/JVMCIBackend;
+  #229 = NameAndType        #230:#231     // jvmci:Ljdk/vm/ci/runtime/JVMCIBackend;
+  #230 = Utf8               jvmci
+  #231 = Utf8               Ljdk/vm/ci/runtime/JVMCIBackend;
+  #232 = Methodref          #233.#234     // jdk/vm/ci/runtime/JVMCIBackend.getMetaAccess:()Ljdk/vm/ci/meta/MetaAccessProvider;
+  #233 = Class              #235          // jdk/vm/ci/runtime/JVMCIBackend
+  #234 = NameAndType        #236:#237     // getMetaAccess:()Ljdk/vm/ci/meta/MetaAccessProvider;
+  #235 = Utf8               jdk/vm/ci/runtime/JVMCIBackend
+  #236 = Utf8               getMetaAccess
+  #237 = Utf8               ()Ljdk/vm/ci/meta/MetaAccessProvider;
+  #238 = InterfaceMethodref #239.#240     // jdk/vm/ci/meta/MetaAccessProvider.lookupJavaMethod:(Ljava/lang/reflect/Executable;)Ljdk/vm/ci/meta/ResolvedJavaMethod;
+  #239 = Class              #241          // jdk/vm/ci/meta/MetaAccessProvider
+  #240 = NameAndType        #242:#243     // lookupJavaMethod:(Ljava/lang/reflect/Executable;)Ljdk/vm/ci/meta/ResolvedJavaMethod;
+  #241 = Utf8               jdk/vm/ci/meta/MetaAccessProvider
+  #242 = Utf8               lookupJavaMethod
+  #243 = Utf8               (Ljava/lang/reflect/Executable;)Ljdk/vm/ci/meta/ResolvedJavaMethod;
+  #244 = Class              #245          // jdk/vm/ci/hotspot/HotSpotCompiledNmethod
+  #245 = Utf8               jdk/vm/ci/hotspot/HotSpotCompiledNmethod
+  #246 = Class              #247          // jdk/vm/ci/code/site/Site
+  #247 = Utf8               jdk/vm/ci/code/site/Site
+  #248 = Class              #249          // jdk/vm/ci/meta/Assumptions$Assumption
+  #249 = Utf8               jdk/vm/ci/meta/Assumptions$Assumption
+  #250 = Class              #251          // jdk/vm/ci/meta/ResolvedJavaMethod
+  #251 = Utf8               jdk/vm/ci/meta/ResolvedJavaMethod
+  #252 = Class              #253          // jdk/vm/ci/hotspot/HotSpotCompiledCode$Comment
+  #253 = Utf8               jdk/vm/ci/hotspot/HotSpotCompiledCode$Comment
+  #254 = Class              #255          // jdk/vm/ci/code/site/DataPatch
+  #255 = Utf8               jdk/vm/ci/code/site/DataPatch
+  #256 = Class              #257          // jdk/vm/ci/hotspot/HotSpotResolvedJavaMethod
+  #257 = Utf8               jdk/vm/ci/hotspot/HotSpotResolvedJavaMethod
+  #258 = Class              #259          // jdk/vm/ci/runtime/JVMCICompiler
+  #259 = Utf8               jdk/vm/ci/runtime/JVMCICompiler
+  #260 = Methodref          #244.#261     // jdk/vm/ci/hotspot/HotSpotCompiledNmethod."<init>":(Ljava/lang/String;[BI[Ljdk/vm/ci/code/site/Site;[Ljdk/vm/ci/meta/Assumptions$Assumption;[Ljdk/vm/ci/meta/ResolvedJavaMethod;[Ljdk/vm/ci/hotspot/HotSpotCompiledCode$Comment;[BI[Ljdk/vm/ci/code/site/DataPatch;ZILjdk/vm/ci/code/StackSlot;Ljdk/vm/ci/hotspot/HotSpotResolvedJavaMethod;IIJZ)V
+  #261 = NameAndType        #5:#262       // "<init>":(Ljava/lang/String;[BI[Ljdk/vm/ci/code/site/Site;[Ljdk/vm/ci/meta/Assumptions$Assumption;[Ljdk/vm/ci/meta/ResolvedJavaMethod;[Ljdk/vm/ci/hotspot/HotSpotCompiledCode$Comment;[BI[Ljdk/vm/ci/code/site/DataPatch;ZILjdk/vm/ci/code/StackSlot;Ljdk/vm/ci/hotspot/HotSpotResolvedJavaMethod;IIJZ)V
+  #262 = Utf8               (Ljava/lang/String;[BI[Ljdk/vm/ci/code/site/Site;[Ljdk/vm/ci/meta/Assumptions$Assumption;[Ljdk/vm/ci/meta/ResolvedJavaMethod;[Ljdk/vm/ci/hotspot/HotSpotCompiledCode$Comment;[BI[Ljdk/vm/ci/code/site/DataPatch;ZILjdk/vm/ci/code/StackSlot;Ljdk/vm/ci/hotspot/HotSpotResolvedJavaMethod;IIJZ)V
+  #263 = Methodref          #233.#264     // jdk/vm/ci/runtime/JVMCIBackend.getCodeCache:()Ljdk/vm/ci/code/CodeCacheProvider;
+  #264 = NameAndType        #265:#266     // getCodeCache:()Ljdk/vm/ci/code/CodeCacheProvider;
+  #265 = Utf8               getCodeCache
+  #266 = Utf8               ()Ljdk/vm/ci/code/CodeCacheProvider;
+  #267 = InterfaceMethodref #268.#269     // jdk/vm/ci/code/CodeCacheProvider.setDefaultCode:(Ljdk/vm/ci/meta/ResolvedJavaMethod;Ljdk/vm/ci/code/CompiledCode;)Ljdk/vm/ci/code/InstalledCode;
+  #268 = Class              #270          // jdk/vm/ci/code/CodeCacheProvider
+  #269 = NameAndType        #271:#272     // setDefaultCode:(Ljdk/vm/ci/meta/ResolvedJavaMethod;Ljdk/vm/ci/code/CompiledCode;)Ljdk/vm/ci/code/InstalledCode;
+  #270 = Utf8               jdk/vm/ci/code/CodeCacheProvider
+  #271 = Utf8               setDefaultCode
+  #272 = Utf8               (Ljdk/vm/ci/meta/ResolvedJavaMethod;Ljdk/vm/ci/code/CompiledCode;)Ljdk/vm/ci/code/InstalledCode;
+  #273 = Methodref          #274.#275     // jdk/vm/ci/runtime/JVMCI.getRuntime:()Ljdk/vm/ci/runtime/JVMCIRuntime;
+  #274 = Class              #276          // jdk/vm/ci/runtime/JVMCI
+  #275 = NameAndType        #277:#278     // getRuntime:()Ljdk/vm/ci/runtime/JVMCIRuntime;
+  #276 = Utf8               jdk/vm/ci/runtime/JVMCI
+  #277 = Utf8               getRuntime
+  #278 = Utf8               ()Ljdk/vm/ci/runtime/JVMCIRuntime;
+  #279 = InterfaceMethodref #280.#281     // jdk/vm/ci/runtime/JVMCIRuntime.getHostJVMCIBackend:()Ljdk/vm/ci/runtime/JVMCIBackend;
+  #280 = Class              #282          // jdk/vm/ci/runtime/JVMCIRuntime
+  #281 = NameAndType        #283:#284     // getHostJVMCIBackend:()Ljdk/vm/ci/runtime/JVMCIBackend;
+  #282 = Utf8               jdk/vm/ci/runtime/JVMCIRuntime
+  #283 = Utf8               getHostJVMCIBackend
+  #284 = Utf8               ()Ljdk/vm/ci/runtime/JVMCIBackend;
+  #285 = Methodref          #20.#3        // java/util/concurrent/ConcurrentHashMap."<init>":()V
+  #286 = Methodref          #168.#287     // one/nalim/CallingConvention.getInstance:()Lone/nalim/CallingConvention;
+  #287 = NameAndType        #288:#289     // getInstance:()Lone/nalim/CallingConvention;
+  #288 = Utf8               getInstance
+  #289 = Utf8               ()Lone/nalim/CallingConvention;
+  #290 = String             #291          // java
+  #291 = Utf8               java
+  #292 = Utf8               Signature
+  #293 = Utf8               Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Boolean;>;
+  #294 = Utf8               Code
+  #295 = Utf8               LineNumberTable
+  #296 = Utf8               StackMapTable
+  #297 = Utf8               linkClass
+  #298 = Utf8               (Ljava/lang/Class;)V
+  #299 = Class              #300          // "[Ljava/lang/reflect/Method;"
+  #300 = Utf8               [Ljava/lang/reflect/Method;
+  #301 = Utf8               (Ljava/lang/Class<*>;)V
+  #302 = Class              #303          // "[B"
+  #303 = Utf8               [B
+  #304 = Utf8               <clinit>
+  #305 = Utf8               SourceFile
+  #306 = Utf8               Linker.java
+  #307 = Utf8               BootstrapMethods
+  #308 = MethodHandle       6:#309        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #309 = Methodref          #310.#311     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #310 = Class              #312          // java/lang/invoke/StringConcatFactory
+  #311 = NameAndType        #135:#313     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #312 = Utf8               java/lang/invoke/StringConcatFactory
+  #313 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #314 = String             #315          // Symbol not found: \u0001
+  #315 = Utf8               Symbol not found: \u0001
+  #316 = String             #317          // Method must be static native: \u0001
+  #317 = Utf8               Method must be static native: \u0001
+  #318 = Utf8               InnerClasses
+  #319 = Class              #320          // jdk/vm/ci/meta/Assumptions
+  #320 = Utf8               jdk/vm/ci/meta/Assumptions
+  #321 = Utf8               Assumption
+  #322 = Class              #323          // jdk/vm/ci/hotspot/HotSpotCompiledCode
+  #323 = Utf8               jdk/vm/ci/hotspot/HotSpotCompiledCode
+  #324 = Utf8               Comment
+  #325 = Class              #326          // java/lang/invoke/MethodHandles$Lookup
+  #326 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #327 = Class              #328          // java/lang/invoke/MethodHandles
+  #328 = Utf8               java/lang/invoke/MethodHandles
+  #329 = Utf8               Lookup
+{
+  private static final jdk.vm.ci.runtime.JVMCIBackend jvmci;
+    descriptor: Ljdk/vm/ci/runtime/JVMCIBackend;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final java.util.concurrent.ConcurrentHashMap<java.lang.String, java.lang.Boolean> nativeLibraries;
+    descriptor: Ljava/util/concurrent/ConcurrentHashMap;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    Signature: #293                         // Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Boolean;>;
+
+  private static final one.nalim.CallingConvention callingConvention;
+    descriptor: Lone/nalim/CallingConvention;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  public one.nalim.Linker();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 41: 0
+
+  public static void loadLibrary(java.lang.String);
+    descriptor: (Ljava/lang/String;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: getstatic     #7                  // Field nativeLibraries:Ljava/util/concurrent/ConcurrentHashMap;
+         3: aload_0
+         4: getstatic     #13                 // Field java/lang/Boolean.TRUE:Ljava/lang/Boolean;
+         7: invokevirtual #19                 // Method java/util/concurrent/ConcurrentHashMap.putIfAbsent:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        10: ifnonnull     42
+        13: aload_0
+        14: bipush        47
+        16: invokevirtual #25                 // Method java/lang/String.indexOf:(I)I
+        19: ifge          31
+        22: aload_0
+        23: bipush        92
+        25: invokevirtual #25                 // Method java/lang/String.indexOf:(I)I
+        28: ifle          38
+        31: aload_0
+        32: invokestatic  #31                 // Method java/lang/System.load:(Ljava/lang/String;)V
+        35: goto          42
+        38: aload_0
+        39: invokestatic  #37                 // Method java/lang/System.loadLibrary:(Ljava/lang/String;)V
+        42: return
+      LineNumberTable:
+        line 51: 0
+        line 52: 13
+        line 53: 31
+        line 55: 38
+        line 58: 42
+      StackMapTable: number_of_entries = 3
+        frame_type = 31 /* same */
+        frame_type = 6 /* same */
+        frame_type = 3 /* same */
+
+  public static long findAddress(java.lang.String);
+    descriptor: (Ljava/lang/String;)J
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=6, locals=2, args_size=1
+         0: ldc           #40                 // class java/lang/ClassLoader
+         2: ldc           #42                 // String findNative
+         4: iconst_2
+         5: anewarray     #44                 // class java/lang/Class
+         8: dup
+         9: iconst_0
+        10: ldc           #40                 // class java/lang/ClassLoader
+        12: aastore
+        13: dup
+        14: iconst_1
+        15: ldc           #26                 // class java/lang/String
+        17: aastore
+        18: invokestatic  #46                 // Method one/nalim/JavaInternals.getPrivateMethod:(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+        21: astore_1
+        22: aload_1
+        23: aconst_null
+        24: iconst_2
+        25: anewarray     #2                  // class java/lang/Object
+        28: dup
+        29: iconst_0
+        30: ldc           #8                  // class one/nalim/Linker
+        32: invokevirtual #52                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+        35: aastore
+        36: dup
+        37: iconst_1
+        38: aload_0
+        39: aastore
+        40: invokevirtual #56                 // Method java/lang/reflect/Method.invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+        43: checkcast     #62                 // class java/lang/Long
+        46: invokevirtual #64                 // Method java/lang/Long.longValue:()J
+        49: lreturn
+        50: astore_1
+        51: new           #70                 // class java/lang/IllegalStateException
+        54: dup
+        55: aload_1
+        56: invokespecial #72                 // Method java/lang/IllegalStateException."<init>":(Ljava/lang/Throwable;)V
+        59: athrow
+      Exception table:
+         from    to  target type
+             0    49    50   Class java/lang/ReflectiveOperationException
+      LineNumberTable:
+        line 62: 0
+        line 63: 22
+        line 64: 50
+        line 65: 51
+      StackMapTable: number_of_entries = 1
+        frame_type = 114 /* same_locals_1_stack_item */
+          stack = [ class java/lang/ReflectiveOperationException ]
+
+  public static void linkClass(java.lang.Class<?>);
+    descriptor: (Ljava/lang/Class;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=6, args_size=1
+         0: aload_0
+         1: ldc           #75                 // class one/nalim/Library
+         3: invokevirtual #77                 // Method java/lang/Class.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+         6: checkcast     #75                 // class one/nalim/Library
+         9: astore_1
+        10: aload_1
+        11: ifnull        23
+        14: aload_1
+        15: invokeinterface #81,  1           // InterfaceMethod one/nalim/Library.value:()Ljava/lang/String;
+        20: invokestatic  #85                 // Method loadLibrary:(Ljava/lang/String;)V
+        23: aload_0
+        24: invokevirtual #86                 // Method java/lang/Class.getDeclaredMethods:()[Ljava/lang/reflect/Method;
+        27: astore_2
+        28: aload_2
+        29: arraylength
+        30: istore_3
+        31: iconst_0
+        32: istore        4
+        34: iload         4
+        36: iload_3
+        37: if_icmpge     77
+        40: aload_2
+        41: iload         4
+        43: aaload
+        44: astore        5
+        46: aload         5
+        48: ldc           #90                 // class one/nalim/Link
+        50: invokevirtual #92                 // Method java/lang/reflect/Method.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+        53: ifnonnull     66
+        56: aload         5
+        58: ldc           #93                 // class one/nalim/Code
+        60: invokevirtual #92                 // Method java/lang/reflect/Method.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+        63: ifnull        71
+        66: aload         5
+        68: invokestatic  #95                 // Method linkMethod:(Ljava/lang/reflect/Method;)V
+        71: iinc          4, 1
+        74: goto          34
+        77: return
+      LineNumberTable:
+        line 70: 0
+        line 71: 10
+        line 72: 14
+        line 75: 23
+        line 76: 46
+        line 77: 66
+        line 75: 71
+        line 80: 77
+      StackMapTable: number_of_entries = 5
+        frame_type = 252 /* append */
+          offset_delta = 23
+          locals = [ class one/nalim/Library ]
+        frame_type = 254 /* append */
+          offset_delta = 10
+          locals = [ class "[Ljava/lang/reflect/Method;", int, int ]
+        frame_type = 252 /* append */
+          offset_delta = 31
+          locals = [ class java/lang/reflect/Method ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+        frame_type = 248 /* chop */
+          offset_delta = 5
+    Signature: #301                         // (Ljava/lang/Class<*>;)V
+
+  public static void linkMethod(java.lang.reflect.Method);
+    descriptor: (Ljava/lang/reflect/Method;)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: aload_0
+         1: invokestatic  #99                 // Method checkMethodType:(Ljava/lang/reflect/Method;)V
+         4: aload_0
+         5: ldc           #93                 // class one/nalim/Code
+         7: invokevirtual #92                 // Method java/lang/reflect/Method.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+        10: checkcast     #93                 // class one/nalim/Code
+        13: astore_1
+        14: aload_1
+        15: ifnull        32
+        18: aload_0
+        19: aload_1
+        20: invokeinterface #102,  1          // InterfaceMethod one/nalim/Code.value:()Ljava/lang/String;
+        25: invokestatic  #103                // Method parseHex:(Ljava/lang/String;)[B
+        28: invokestatic  #107                // Method installCode:(Ljava/lang/reflect/Method;[B)V
+        31: return
+        32: aload_0
+        33: ldc           #90                 // class one/nalim/Link
+        35: invokevirtual #92                 // Method java/lang/reflect/Method.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+        38: checkcast     #90                 // class one/nalim/Link
+        41: astore_2
+        42: aload_2
+        43: ifnull        65
+        46: aload_0
+        47: aload_2
+        48: invokeinterface #111,  1          // InterfaceMethod one/nalim/Link.name:()Ljava/lang/String;
+        53: aload_2
+        54: invokeinterface #114,  1          // InterfaceMethod one/nalim/Link.naked:()Z
+        59: invokestatic  #118                // Method linkMethod:(Ljava/lang/reflect/Method;Ljava/lang/String;Z)V
+        62: goto          74
+        65: aload_0
+        66: aload_0
+        67: invokevirtual #121                // Method java/lang/reflect/Method.getName:()Ljava/lang/String;
+        70: iconst_0
+        71: invokestatic  #118                // Method linkMethod:(Ljava/lang/reflect/Method;Ljava/lang/String;Z)V
+        74: return
+      LineNumberTable:
+        line 83: 0
+        line 85: 4
+        line 86: 14
+        line 87: 18
+        line 88: 31
+        line 91: 32
+        line 92: 42
+        line 93: 46
+        line 95: 65
+        line 97: 74
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 32
+          locals = [ class one/nalim/Code ]
+        frame_type = 252 /* append */
+          offset_delta = 32
+          locals = [ class one/nalim/Link ]
+        frame_type = 8 /* same */
+
+  public static void linkMethod(java.lang.reflect.Method, java.lang.String, boolean);
+    descriptor: (Ljava/lang/reflect/Method;Ljava/lang/String;Z)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=4, locals=7, args_size=3
+         0: aload_0
+         1: invokestatic  #99                 // Method checkMethodType:(Ljava/lang/reflect/Method;)V
+         4: aload_0
+         5: ldc           #75                 // class one/nalim/Library
+         7: invokevirtual #92                 // Method java/lang/reflect/Method.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
+        10: checkcast     #75                 // class one/nalim/Library
+        13: astore_3
+        14: aload_3
+        15: ifnull        27
+        18: aload_3
+        19: invokeinterface #81,  1           // InterfaceMethod one/nalim/Library.value:()Ljava/lang/String;
+        24: invokestatic  #85                 // Method loadLibrary:(Ljava/lang/String;)V
+        27: aload_1
+        28: invokevirtual #124                // Method java/lang/String.isEmpty:()Z
+        31: ifeq          39
+        34: aload_0
+        35: invokevirtual #121                // Method java/lang/reflect/Method.getName:()Ljava/lang/String;
+        38: astore_1
+        39: aload_1
+        40: invokestatic  #127                // Method findAddress:(Ljava/lang/String;)J
+        43: lstore        4
+        45: lload         4
+        47: lconst_0
+        48: lcmp
+        49: ifne          66
+        52: new           #131                // class java/lang/IllegalArgumentException
+        55: dup
+        56: aload_1
+        57: invokedynamic #133,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        62: invokespecial #137                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        65: athrow
+        66: bipush        100
+        68: invokestatic  #139                // Method java/nio/ByteBuffer.allocate:(I)Ljava/nio/ByteBuffer;
+        71: invokestatic  #145                // Method java/nio/ByteOrder.nativeOrder:()Ljava/nio/ByteOrder;
+        74: invokevirtual #151                // Method java/nio/ByteBuffer.order:(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+        77: astore        6
+        79: iload_2
+        80: ifne          99
+        83: getstatic     #155                // Field callingConvention:Lone/nalim/CallingConvention;
+        86: aload         6
+        88: aload_0
+        89: invokevirtual #159                // Method java/lang/reflect/Method.getParameterTypes:()[Ljava/lang/Class;
+        92: aload_0
+        93: invokevirtual #163                // Method java/lang/reflect/Method.getParameterAnnotations:()[[Ljava/lang/annotation/Annotation;
+        96: invokevirtual #167                // Method one/nalim/CallingConvention.javaToNative:(Ljava/nio/ByteBuffer;[Ljava/lang/Class;[[Ljava/lang/annotation/Annotation;)V
+        99: getstatic     #155                // Field callingConvention:Lone/nalim/CallingConvention;
+       102: aload         6
+       104: lload         4
+       106: invokevirtual #173                // Method one/nalim/CallingConvention.emitCall:(Ljava/nio/ByteBuffer;J)V
+       109: aload_0
+       110: aload         6
+       112: invokevirtual #177                // Method java/nio/ByteBuffer.array:()[B
+       115: aload         6
+       117: invokevirtual #181                // Method java/nio/ByteBuffer.position:()I
+       120: invokestatic  #185                // Method installCode:(Ljava/lang/reflect/Method;[BI)V
+       123: return
+      LineNumberTable:
+        line 100: 0
+        line 102: 4
+        line 103: 14
+        line 104: 18
+        line 107: 27
+        line 108: 34
+        line 110: 39
+        line 111: 45
+        line 112: 52
+        line 115: 66
+        line 116: 79
+        line 117: 83
+        line 119: 99
+        line 121: 109
+        line 122: 123
+      StackMapTable: number_of_entries = 4
+        frame_type = 252 /* append */
+          offset_delta = 27
+          locals = [ class one/nalim/Library ]
+        frame_type = 11 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 26
+          locals = [ long ]
+        frame_type = 252 /* append */
+          offset_delta = 32
+          locals = [ class java/nio/ByteBuffer ]
+
+  private static void checkMethodType(java.lang.reflect.Method);
+    descriptor: (Ljava/lang/reflect/Method;)V
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: aload_0
+         1: invokevirtual #188                // Method java/lang/reflect/Method.getModifiers:()I
+         4: istore_1
+         5: iload_1
+         6: invokestatic  #191                // Method java/lang/reflect/Modifier.isStatic:(I)Z
+         9: ifeq          19
+        12: iload_1
+        13: invokestatic  #197                // Method java/lang/reflect/Modifier.isNative:(I)Z
+        16: ifne          36
+        19: new           #131                // class java/lang/IllegalArgumentException
+        22: dup
+        23: aload_0
+        24: invokestatic  #200                // Method java/lang/String.valueOf:(Ljava/lang/Object;)Ljava/lang/String;
+        27: invokedynamic #204,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+        32: invokespecial #137                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        35: athrow
+        36: return
+      LineNumberTable:
+        line 125: 0
+        line 126: 5
+        line 127: 19
+        line 129: 36
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 19
+          locals = [ int ]
+        frame_type = 16 /* same */
+
+  private static byte[] parseHex(java.lang.String);
+    descriptor: (Ljava/lang/String;)[B
+    flags: (0x000a) ACC_PRIVATE, ACC_STATIC
+    Code:
+      stack=6, locals=4, args_size=1
+         0: aload_0
+         1: ldc           #205                // String \\s+
+         3: ldc           #207                // String
+         5: invokevirtual #209                // Method java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+         8: astore_0
+         9: aload_0
+        10: invokevirtual #213                // Method java/lang/String.length:()I
+        13: istore_1
+        14: iload_1
+        15: iconst_1
+        16: iand
+        17: ifeq          30
+        20: new           #131                // class java/lang/IllegalArgumentException
+        23: dup
+        24: ldc           #216                // String Invalid hex string
+        26: invokespecial #137                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        29: athrow
+        30: iload_1
+        31: iconst_2
+        32: idiv
+        33: newarray       byte
+        35: astore_2
+        36: iconst_0
+        37: istore_3
+        38: iload_3
+        39: aload_2
+        40: arraylength
+        41: if_icmpge     71
+        44: aload_2
+        45: iload_3
+        46: aload_0
+        47: iload_3
+        48: iconst_2
+        49: imul
+        50: iload_3
+        51: iconst_2
+        52: imul
+        53: iconst_2
+        54: iadd
+        55: invokevirtual #218                // Method java/lang/String.substring:(II)Ljava/lang/String;
+        58: bipush        16
+        60: invokestatic  #222                // Method java/lang/Integer.parseInt:(Ljava/lang/String;I)I
+        63: i2b
+        64: bastore
+        65: iinc          3, 1
+        68: goto          38
+        71: aload_2
+        72: areturn
+      LineNumberTable:
+        line 132: 0
+        line 134: 9
+        line 135: 14
+        line 136: 20
+        line 139: 30
+        line 140: 36
+        line 141: 44
+        line 140: 65
+        line 143: 71
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 30
+          locals = [ int ]
+        frame_type = 253 /* append */
+          offset_delta = 7
+          locals = [ class "[B", int ]
+        frame_type = 250 /* chop */
+          offset_delta = 32
+
+  public static void installCode(java.lang.reflect.Method, byte[]);
+    descriptor: (Ljava/lang/reflect/Method;[B)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: aload_1
+         3: arraylength
+         4: invokestatic  #185                // Method installCode:(Ljava/lang/reflect/Method;[BI)V
+         7: return
+      LineNumberTable:
+        line 147: 0
+        line 148: 7
+
+  public static void installCode(java.lang.reflect.Method, byte[], int);
+    descriptor: (Ljava/lang/reflect/Method;[BI)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=21, locals=5, args_size=3
+         0: getstatic     #228                // Field jvmci:Ljdk/vm/ci/runtime/JVMCIBackend;
+         3: invokevirtual #232                // Method jdk/vm/ci/runtime/JVMCIBackend.getMetaAccess:()Ljdk/vm/ci/meta/MetaAccessProvider;
+         6: aload_0
+         7: invokeinterface #238,  2          // InterfaceMethod jdk/vm/ci/meta/MetaAccessProvider.lookupJavaMethod:(Ljava/lang/reflect/Executable;)Ljdk/vm/ci/meta/ResolvedJavaMethod;
+        12: astore_3
+        13: new           #244                // class jdk/vm/ci/hotspot/HotSpotCompiledNmethod
+        16: dup
+        17: aload_0
+        18: invokevirtual #121                // Method java/lang/reflect/Method.getName:()Ljava/lang/String;
+        21: aload_1
+        22: iload_2
+        23: iconst_0
+        24: anewarray     #246                // class jdk/vm/ci/code/site/Site
+        27: iconst_0
+        28: anewarray     #248                // class jdk/vm/ci/meta/Assumptions$Assumption
+        31: iconst_0
+        32: anewarray     #250                // class jdk/vm/ci/meta/ResolvedJavaMethod
+        35: iconst_0
+        36: anewarray     #252                // class jdk/vm/ci/hotspot/HotSpotCompiledCode$Comment
+        39: iconst_0
+        40: newarray       byte
+        42: iconst_1
+        43: iconst_0
+        44: anewarray     #254                // class jdk/vm/ci/code/site/DataPatch
+        47: iconst_1
+        48: iconst_0
+        49: aconst_null
+        50: aload_3
+        51: checkcast     #256                // class jdk/vm/ci/hotspot/HotSpotResolvedJavaMethod
+        54: iconst_m1
+        55: iconst_1
+        56: lconst_0
+        57: iconst_0
+        58: invokespecial #260                // Method jdk/vm/ci/hotspot/HotSpotCompiledNmethod."<init>":(Ljava/lang/String;[BI[Ljdk/vm/ci/code/site/Site;[Ljdk/vm/ci/meta/Assumptions$Assumption;[Ljdk/vm/ci/meta/ResolvedJavaMethod;[Ljdk/vm/ci/hotspot/HotSpotCompiledCode$Comment;[BI[Ljdk/vm/ci/code/site/DataPatch;ZILjdk/vm/ci/code/StackSlot;Ljdk/vm/ci/hotspot/HotSpotResolvedJavaMethod;IIJZ)V
+        61: astore        4
+        63: getstatic     #228                // Field jvmci:Ljdk/vm/ci/runtime/JVMCIBackend;
+        66: invokevirtual #263                // Method jdk/vm/ci/runtime/JVMCIBackend.getCodeCache:()Ljdk/vm/ci/code/CodeCacheProvider;
+        69: aload_3
+        70: aload         4
+        72: invokeinterface #267,  3          // InterfaceMethod jdk/vm/ci/code/CodeCacheProvider.setDefaultCode:(Ljdk/vm/ci/meta/ResolvedJavaMethod;Ljdk/vm/ci/code/CompiledCode;)Ljdk/vm/ci/code/InstalledCode;
+        77: pop
+        78: return
+      LineNumberTable:
+        line 151: 0
+        line 153: 13
+        line 154: 18
+        line 174: 63
+        line 175: 78
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: invokestatic  #273                // Method jdk/vm/ci/runtime/JVMCI.getRuntime:()Ljdk/vm/ci/runtime/JVMCIRuntime;
+         3: invokeinterface #279,  1          // InterfaceMethod jdk/vm/ci/runtime/JVMCIRuntime.getHostJVMCIBackend:()Ljdk/vm/ci/runtime/JVMCIBackend;
+         8: putstatic     #228                // Field jvmci:Ljdk/vm/ci/runtime/JVMCIBackend;
+        11: new           #20                 // class java/util/concurrent/ConcurrentHashMap
+        14: dup
+        15: invokespecial #285                // Method java/util/concurrent/ConcurrentHashMap."<init>":()V
+        18: putstatic     #7                  // Field nativeLibraries:Ljava/util/concurrent/ConcurrentHashMap;
+        21: invokestatic  #286                // Method one/nalim/CallingConvention.getInstance:()Lone/nalim/CallingConvention;
+        24: putstatic     #155                // Field callingConvention:Lone/nalim/CallingConvention;
+        27: ldc_w         #290                // String java
+        30: invokestatic  #85                 // Method loadLibrary:(Ljava/lang/String;)V
+        33: return
+      LineNumberTable:
+        line 42: 0
+        line 43: 11
+        line 44: 21
+        line 47: 27
+        line 48: 33
+}
+SourceFile: "Linker.java"
+BootstrapMethods:
+  0: #308 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #314 Symbol not found: \u0001
+  1: #308 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #316 Method must be static native: \u0001
+InnerClasses:
+  public static abstract #321= #248 of #319; // Assumption=class jdk/vm/ci/meta/Assumptions$Assumption of class jdk/vm/ci/meta/Assumptions
+  public static #324= #252 of #322;       // Comment=class jdk/vm/ci/hotspot/HotSpotCompiledCode$Comment of class jdk/vm/ci/hotspot/HotSpotCompiledCode
+  public static final #329= #325 of #327; // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

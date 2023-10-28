@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:comparator",
+		"test_mod:soul_comparator"
+	]
+}

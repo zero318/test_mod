@@ -1,0 +1,9 @@
+{
+    "parent": "minecraft:block/repeater_4tick_on_locked",
+    "textures": {
+        "particle": "test_mod:block/soul_repeater_on",
+        "slab": "test_mod:block/smooth_polished_blackstone",
+        "top": "test_mod:block/soul_repeater_on",
+        "lit": "test_mod:block/soul_redstone_torch"
+    }
+}

@@ -1,0 +1,2907 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/Unsafe.class
+  Last modified Nov 29, 2022; size 17040 bytes
+  SHA-256 checksum 40c069937f2a318254e9b2f71471ed92f4a2b8e5a03d9adc7faa23f9fe4c5e48
+  Compiled from "Unsafe.java"
+public final class sun.misc.Unsafe
+  minor version: 0
+  major version: 61
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #35                         // sun/misc/Unsafe
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 22, methods: 91, attributes: 3
+Constant pool:
+    #1 = Class              #2            // jdk/internal/misc/Unsafe
+    #2 = Utf8               jdk/internal/misc/Unsafe
+    #3 = Methodref          #4.#5         // java/lang/Object."<init>":()V
+    #4 = Class              #6            // java/lang/Object
+    #5 = NameAndType        #7:#8         // "<init>":()V
+    #6 = Utf8               java/lang/Object
+    #7 = Utf8               <init>
+    #8 = Utf8               ()V
+    #9 = Methodref          #10.#11       // jdk/internal/reflect/Reflection.getCallerClass:()Ljava/lang/Class;
+   #10 = Class              #12           // jdk/internal/reflect/Reflection
+   #11 = NameAndType        #13:#14       // getCallerClass:()Ljava/lang/Class;
+   #12 = Utf8               jdk/internal/reflect/Reflection
+   #13 = Utf8               getCallerClass
+   #14 = Utf8               ()Ljava/lang/Class;
+   #15 = Methodref          #16.#17       // java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+   #16 = Class              #18           // java/lang/Class
+   #17 = NameAndType        #19:#20       // getClassLoader:()Ljava/lang/ClassLoader;
+   #18 = Utf8               java/lang/Class
+   #19 = Utf8               getClassLoader
+   #20 = Utf8               ()Ljava/lang/ClassLoader;
+   #21 = Methodref          #22.#23       // jdk/internal/misc/VM.isSystemDomainLoader:(Ljava/lang/ClassLoader;)Z
+   #22 = Class              #24           // jdk/internal/misc/VM
+   #23 = NameAndType        #25:#26       // isSystemDomainLoader:(Ljava/lang/ClassLoader;)Z
+   #24 = Utf8               jdk/internal/misc/VM
+   #25 = Utf8               isSystemDomainLoader
+   #26 = Utf8               (Ljava/lang/ClassLoader;)Z
+   #27 = Class              #28           // java/lang/SecurityException
+   #28 = Utf8               java/lang/SecurityException
+   #29 = String             #30           // Unsafe
+   #30 = Utf8               Unsafe
+   #31 = Methodref          #27.#32       // java/lang/SecurityException."<init>":(Ljava/lang/String;)V
+   #32 = NameAndType        #7:#33        // "<init>":(Ljava/lang/String;)V
+   #33 = Utf8               (Ljava/lang/String;)V
+   #34 = Fieldref           #35.#36       // sun/misc/Unsafe.theUnsafe:Lsun/misc/Unsafe;
+   #35 = Class              #37           // sun/misc/Unsafe
+   #36 = NameAndType        #38:#39       // theUnsafe:Lsun/misc/Unsafe;
+   #37 = Utf8               sun/misc/Unsafe
+   #38 = Utf8               theUnsafe
+   #39 = Utf8               Lsun/misc/Unsafe;
+   #40 = Fieldref           #35.#41       // sun/misc/Unsafe.theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+   #41 = NameAndType        #42:#43       // theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+   #42 = Utf8               theInternalUnsafe
+   #43 = Utf8               Ljdk/internal/misc/Unsafe;
+   #44 = Methodref          #1.#45        // jdk/internal/misc/Unsafe.getInt:(Ljava/lang/Object;J)I
+   #45 = NameAndType        #46:#47       // getInt:(Ljava/lang/Object;J)I
+   #46 = Utf8               getInt
+   #47 = Utf8               (Ljava/lang/Object;J)I
+   #48 = Methodref          #1.#49        // jdk/internal/misc/Unsafe.putInt:(Ljava/lang/Object;JI)V
+   #49 = NameAndType        #50:#51       // putInt:(Ljava/lang/Object;JI)V
+   #50 = Utf8               putInt
+   #51 = Utf8               (Ljava/lang/Object;JI)V
+   #52 = Methodref          #1.#53        // jdk/internal/misc/Unsafe.getReference:(Ljava/lang/Object;J)Ljava/lang/Object;
+   #53 = NameAndType        #54:#55       // getReference:(Ljava/lang/Object;J)Ljava/lang/Object;
+   #54 = Utf8               getReference
+   #55 = Utf8               (Ljava/lang/Object;J)Ljava/lang/Object;
+   #56 = Methodref          #1.#57        // jdk/internal/misc/Unsafe.putReference:(Ljava/lang/Object;JLjava/lang/Object;)V
+   #57 = NameAndType        #58:#59       // putReference:(Ljava/lang/Object;JLjava/lang/Object;)V
+   #58 = Utf8               putReference
+   #59 = Utf8               (Ljava/lang/Object;JLjava/lang/Object;)V
+   #60 = Methodref          #1.#61        // jdk/internal/misc/Unsafe.getBoolean:(Ljava/lang/Object;J)Z
+   #61 = NameAndType        #62:#63       // getBoolean:(Ljava/lang/Object;J)Z
+   #62 = Utf8               getBoolean
+   #63 = Utf8               (Ljava/lang/Object;J)Z
+   #64 = Methodref          #1.#65        // jdk/internal/misc/Unsafe.putBoolean:(Ljava/lang/Object;JZ)V
+   #65 = NameAndType        #66:#67       // putBoolean:(Ljava/lang/Object;JZ)V
+   #66 = Utf8               putBoolean
+   #67 = Utf8               (Ljava/lang/Object;JZ)V
+   #68 = Methodref          #1.#69        // jdk/internal/misc/Unsafe.getByte:(Ljava/lang/Object;J)B
+   #69 = NameAndType        #70:#71       // getByte:(Ljava/lang/Object;J)B
+   #70 = Utf8               getByte
+   #71 = Utf8               (Ljava/lang/Object;J)B
+   #72 = Methodref          #1.#73        // jdk/internal/misc/Unsafe.putByte:(Ljava/lang/Object;JB)V
+   #73 = NameAndType        #74:#75       // putByte:(Ljava/lang/Object;JB)V
+   #74 = Utf8               putByte
+   #75 = Utf8               (Ljava/lang/Object;JB)V
+   #76 = Methodref          #1.#77        // jdk/internal/misc/Unsafe.getShort:(Ljava/lang/Object;J)S
+   #77 = NameAndType        #78:#79       // getShort:(Ljava/lang/Object;J)S
+   #78 = Utf8               getShort
+   #79 = Utf8               (Ljava/lang/Object;J)S
+   #80 = Methodref          #1.#81        // jdk/internal/misc/Unsafe.putShort:(Ljava/lang/Object;JS)V
+   #81 = NameAndType        #82:#83       // putShort:(Ljava/lang/Object;JS)V
+   #82 = Utf8               putShort
+   #83 = Utf8               (Ljava/lang/Object;JS)V
+   #84 = Methodref          #1.#85        // jdk/internal/misc/Unsafe.getChar:(Ljava/lang/Object;J)C
+   #85 = NameAndType        #86:#87       // getChar:(Ljava/lang/Object;J)C
+   #86 = Utf8               getChar
+   #87 = Utf8               (Ljava/lang/Object;J)C
+   #88 = Methodref          #1.#89        // jdk/internal/misc/Unsafe.putChar:(Ljava/lang/Object;JC)V
+   #89 = NameAndType        #90:#91       // putChar:(Ljava/lang/Object;JC)V
+   #90 = Utf8               putChar
+   #91 = Utf8               (Ljava/lang/Object;JC)V
+   #92 = Methodref          #1.#93        // jdk/internal/misc/Unsafe.getLong:(Ljava/lang/Object;J)J
+   #93 = NameAndType        #94:#95       // getLong:(Ljava/lang/Object;J)J
+   #94 = Utf8               getLong
+   #95 = Utf8               (Ljava/lang/Object;J)J
+   #96 = Methodref          #1.#97        // jdk/internal/misc/Unsafe.putLong:(Ljava/lang/Object;JJ)V
+   #97 = NameAndType        #98:#99       // putLong:(Ljava/lang/Object;JJ)V
+   #98 = Utf8               putLong
+   #99 = Utf8               (Ljava/lang/Object;JJ)V
+  #100 = Methodref          #1.#101       // jdk/internal/misc/Unsafe.getFloat:(Ljava/lang/Object;J)F
+  #101 = NameAndType        #102:#103     // getFloat:(Ljava/lang/Object;J)F
+  #102 = Utf8               getFloat
+  #103 = Utf8               (Ljava/lang/Object;J)F
+  #104 = Methodref          #1.#105       // jdk/internal/misc/Unsafe.putFloat:(Ljava/lang/Object;JF)V
+  #105 = NameAndType        #106:#107     // putFloat:(Ljava/lang/Object;JF)V
+  #106 = Utf8               putFloat
+  #107 = Utf8               (Ljava/lang/Object;JF)V
+  #108 = Methodref          #1.#109       // jdk/internal/misc/Unsafe.getDouble:(Ljava/lang/Object;J)D
+  #109 = NameAndType        #110:#111     // getDouble:(Ljava/lang/Object;J)D
+  #110 = Utf8               getDouble
+  #111 = Utf8               (Ljava/lang/Object;J)D
+  #112 = Methodref          #1.#113       // jdk/internal/misc/Unsafe.putDouble:(Ljava/lang/Object;JD)V
+  #113 = NameAndType        #114:#115     // putDouble:(Ljava/lang/Object;JD)V
+  #114 = Utf8               putDouble
+  #115 = Utf8               (Ljava/lang/Object;JD)V
+  #116 = Methodref          #1.#117       // jdk/internal/misc/Unsafe.getByte:(J)B
+  #117 = NameAndType        #70:#118      // getByte:(J)B
+  #118 = Utf8               (J)B
+  #119 = Methodref          #1.#120       // jdk/internal/misc/Unsafe.putByte:(JB)V
+  #120 = NameAndType        #74:#121      // putByte:(JB)V
+  #121 = Utf8               (JB)V
+  #122 = Methodref          #1.#123       // jdk/internal/misc/Unsafe.getShort:(J)S
+  #123 = NameAndType        #78:#124      // getShort:(J)S
+  #124 = Utf8               (J)S
+  #125 = Methodref          #1.#126       // jdk/internal/misc/Unsafe.putShort:(JS)V
+  #126 = NameAndType        #82:#127      // putShort:(JS)V
+  #127 = Utf8               (JS)V
+  #128 = Methodref          #1.#129       // jdk/internal/misc/Unsafe.getChar:(J)C
+  #129 = NameAndType        #86:#130      // getChar:(J)C
+  #130 = Utf8               (J)C
+  #131 = Methodref          #1.#132       // jdk/internal/misc/Unsafe.putChar:(JC)V
+  #132 = NameAndType        #90:#133      // putChar:(JC)V
+  #133 = Utf8               (JC)V
+  #134 = Methodref          #1.#135       // jdk/internal/misc/Unsafe.getInt:(J)I
+  #135 = NameAndType        #46:#136      // getInt:(J)I
+  #136 = Utf8               (J)I
+  #137 = Methodref          #1.#138       // jdk/internal/misc/Unsafe.putInt:(JI)V
+  #138 = NameAndType        #50:#139      // putInt:(JI)V
+  #139 = Utf8               (JI)V
+  #140 = Methodref          #1.#141       // jdk/internal/misc/Unsafe.getLong:(J)J
+  #141 = NameAndType        #94:#142      // getLong:(J)J
+  #142 = Utf8               (J)J
+  #143 = Methodref          #1.#144       // jdk/internal/misc/Unsafe.putLong:(JJ)V
+  #144 = NameAndType        #98:#145      // putLong:(JJ)V
+  #145 = Utf8               (JJ)V
+  #146 = Methodref          #1.#147       // jdk/internal/misc/Unsafe.getFloat:(J)F
+  #147 = NameAndType        #102:#148     // getFloat:(J)F
+  #148 = Utf8               (J)F
+  #149 = Methodref          #1.#150       // jdk/internal/misc/Unsafe.putFloat:(JF)V
+  #150 = NameAndType        #106:#151     // putFloat:(JF)V
+  #151 = Utf8               (JF)V
+  #152 = Methodref          #1.#153       // jdk/internal/misc/Unsafe.getDouble:(J)D
+  #153 = NameAndType        #110:#154     // getDouble:(J)D
+  #154 = Utf8               (J)D
+  #155 = Methodref          #1.#156       // jdk/internal/misc/Unsafe.putDouble:(JD)V
+  #156 = NameAndType        #114:#157     // putDouble:(JD)V
+  #157 = Utf8               (JD)V
+  #158 = Methodref          #1.#159       // jdk/internal/misc/Unsafe.getAddress:(J)J
+  #159 = NameAndType        #160:#142     // getAddress:(J)J
+  #160 = Utf8               getAddress
+  #161 = Methodref          #1.#162       // jdk/internal/misc/Unsafe.putAddress:(JJ)V
+  #162 = NameAndType        #163:#145     // putAddress:(JJ)V
+  #163 = Utf8               putAddress
+  #164 = Methodref          #1.#165       // jdk/internal/misc/Unsafe.allocateMemory:(J)J
+  #165 = NameAndType        #166:#142     // allocateMemory:(J)J
+  #166 = Utf8               allocateMemory
+  #167 = Methodref          #1.#168       // jdk/internal/misc/Unsafe.reallocateMemory:(JJ)J
+  #168 = NameAndType        #169:#170     // reallocateMemory:(JJ)J
+  #169 = Utf8               reallocateMemory
+  #170 = Utf8               (JJ)J
+  #171 = Methodref          #1.#172       // jdk/internal/misc/Unsafe.setMemory:(Ljava/lang/Object;JJB)V
+  #172 = NameAndType        #173:#174     // setMemory:(Ljava/lang/Object;JJB)V
+  #173 = Utf8               setMemory
+  #174 = Utf8               (Ljava/lang/Object;JJB)V
+  #175 = Methodref          #1.#176       // jdk/internal/misc/Unsafe.setMemory:(JJB)V
+  #176 = NameAndType        #173:#177     // setMemory:(JJB)V
+  #177 = Utf8               (JJB)V
+  #178 = Methodref          #1.#179       // jdk/internal/misc/Unsafe.copyMemory:(Ljava/lang/Object;JLjava/lang/Object;JJ)V
+  #179 = NameAndType        #180:#181     // copyMemory:(Ljava/lang/Object;JLjava/lang/Object;JJ)V
+  #180 = Utf8               copyMemory
+  #181 = Utf8               (Ljava/lang/Object;JLjava/lang/Object;JJ)V
+  #182 = Methodref          #1.#183       // jdk/internal/misc/Unsafe.copyMemory:(JJJ)V
+  #183 = NameAndType        #180:#184     // copyMemory:(JJJ)V
+  #184 = Utf8               (JJJ)V
+  #185 = Methodref          #1.#186       // jdk/internal/misc/Unsafe.freeMemory:(J)V
+  #186 = NameAndType        #187:#188     // freeMemory:(J)V
+  #187 = Utf8               freeMemory
+  #188 = Utf8               (J)V
+  #189 = Class              #190          // java/lang/NullPointerException
+  #190 = Utf8               java/lang/NullPointerException
+  #191 = Methodref          #189.#5       // java/lang/NullPointerException."<init>":()V
+  #192 = Methodref          #193.#194     // java/lang/reflect/Field.getDeclaringClass:()Ljava/lang/Class;
+  #193 = Class              #195          // java/lang/reflect/Field
+  #194 = NameAndType        #196:#14      // getDeclaringClass:()Ljava/lang/Class;
+  #195 = Utf8               java/lang/reflect/Field
+  #196 = Utf8               getDeclaringClass
+  #197 = Methodref          #16.#198      // java/lang/Class.isHidden:()Z
+  #198 = NameAndType        #199:#200     // isHidden:()Z
+  #199 = Utf8               isHidden
+  #200 = Utf8               ()Z
+  #201 = Class              #202          // java/lang/UnsupportedOperationException
+  #202 = Utf8               java/lang/UnsupportedOperationException
+  #203 = InvokeDynamic      #0:#204       // #0:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+  #204 = NameAndType        #205:#206     // makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+  #205 = Utf8               makeConcatWithConstants
+  #206 = Utf8               (Ljava/lang/reflect/Field;)Ljava/lang/String;
+  #207 = Methodref          #201.#32      // java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+  #208 = Methodref          #16.#209      // java/lang/Class.isRecord:()Z
+  #209 = NameAndType        #210:#200     // isRecord:()Z
+  #210 = Utf8               isRecord
+  #211 = InvokeDynamic      #1:#204       // #1:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+  #212 = Methodref          #1.#213       // jdk/internal/misc/Unsafe.objectFieldOffset:(Ljava/lang/reflect/Field;)J
+  #213 = NameAndType        #214:#215     // objectFieldOffset:(Ljava/lang/reflect/Field;)J
+  #214 = Utf8               objectFieldOffset
+  #215 = Utf8               (Ljava/lang/reflect/Field;)J
+  #216 = Methodref          #1.#217       // jdk/internal/misc/Unsafe.staticFieldOffset:(Ljava/lang/reflect/Field;)J
+  #217 = NameAndType        #218:#215     // staticFieldOffset:(Ljava/lang/reflect/Field;)J
+  #218 = Utf8               staticFieldOffset
+  #219 = InvokeDynamic      #2:#204       // #2:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+  #220 = InvokeDynamic      #3:#204       // #3:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+  #221 = Methodref          #1.#222       // jdk/internal/misc/Unsafe.staticFieldBase:(Ljava/lang/reflect/Field;)Ljava/lang/Object;
+  #222 = NameAndType        #223:#224     // staticFieldBase:(Ljava/lang/reflect/Field;)Ljava/lang/Object;
+  #223 = Utf8               staticFieldBase
+  #224 = Utf8               (Ljava/lang/reflect/Field;)Ljava/lang/Object;
+  #225 = Methodref          #1.#226       // jdk/internal/misc/Unsafe.shouldBeInitialized:(Ljava/lang/Class;)Z
+  #226 = NameAndType        #227:#228     // shouldBeInitialized:(Ljava/lang/Class;)Z
+  #227 = Utf8               shouldBeInitialized
+  #228 = Utf8               (Ljava/lang/Class;)Z
+  #229 = Methodref          #1.#230       // jdk/internal/misc/Unsafe.ensureClassInitialized:(Ljava/lang/Class;)V
+  #230 = NameAndType        #231:#232     // ensureClassInitialized:(Ljava/lang/Class;)V
+  #231 = Utf8               ensureClassInitialized
+  #232 = Utf8               (Ljava/lang/Class;)V
+  #233 = Methodref          #1.#234       // jdk/internal/misc/Unsafe.arrayBaseOffset:(Ljava/lang/Class;)I
+  #234 = NameAndType        #235:#236     // arrayBaseOffset:(Ljava/lang/Class;)I
+  #235 = Utf8               arrayBaseOffset
+  #236 = Utf8               (Ljava/lang/Class;)I
+  #237 = Methodref          #1.#238       // jdk/internal/misc/Unsafe.arrayIndexScale:(Ljava/lang/Class;)I
+  #238 = NameAndType        #239:#236     // arrayIndexScale:(Ljava/lang/Class;)I
+  #239 = Utf8               arrayIndexScale
+  #240 = Methodref          #1.#241       // jdk/internal/misc/Unsafe.addressSize:()I
+  #241 = NameAndType        #242:#243     // addressSize:()I
+  #242 = Utf8               addressSize
+  #243 = Utf8               ()I
+  #244 = Methodref          #1.#245       // jdk/internal/misc/Unsafe.pageSize:()I
+  #245 = NameAndType        #246:#243     // pageSize:()I
+  #246 = Utf8               pageSize
+  #247 = Methodref          #1.#248       // jdk/internal/misc/Unsafe.allocateInstance:(Ljava/lang/Class;)Ljava/lang/Object;
+  #248 = NameAndType        #249:#250     // allocateInstance:(Ljava/lang/Class;)Ljava/lang/Object;
+  #249 = Utf8               allocateInstance
+  #250 = Utf8               (Ljava/lang/Class;)Ljava/lang/Object;
+  #251 = Methodref          #1.#252       // jdk/internal/misc/Unsafe.throwException:(Ljava/lang/Throwable;)V
+  #252 = NameAndType        #253:#254     // throwException:(Ljava/lang/Throwable;)V
+  #253 = Utf8               throwException
+  #254 = Utf8               (Ljava/lang/Throwable;)V
+  #255 = Methodref          #1.#256       // jdk/internal/misc/Unsafe.compareAndSetReference:(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+  #256 = NameAndType        #257:#258     // compareAndSetReference:(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+  #257 = Utf8               compareAndSetReference
+  #258 = Utf8               (Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+  #259 = Methodref          #1.#260       // jdk/internal/misc/Unsafe.compareAndSetInt:(Ljava/lang/Object;JII)Z
+  #260 = NameAndType        #261:#262     // compareAndSetInt:(Ljava/lang/Object;JII)Z
+  #261 = Utf8               compareAndSetInt
+  #262 = Utf8               (Ljava/lang/Object;JII)Z
+  #263 = Methodref          #1.#264       // jdk/internal/misc/Unsafe.compareAndSetLong:(Ljava/lang/Object;JJJ)Z
+  #264 = NameAndType        #265:#266     // compareAndSetLong:(Ljava/lang/Object;JJJ)Z
+  #265 = Utf8               compareAndSetLong
+  #266 = Utf8               (Ljava/lang/Object;JJJ)Z
+  #267 = Methodref          #1.#268       // jdk/internal/misc/Unsafe.getReferenceVolatile:(Ljava/lang/Object;J)Ljava/lang/Object;
+  #268 = NameAndType        #269:#55      // getReferenceVolatile:(Ljava/lang/Object;J)Ljava/lang/Object;
+  #269 = Utf8               getReferenceVolatile
+  #270 = Methodref          #1.#271       // jdk/internal/misc/Unsafe.putReferenceVolatile:(Ljava/lang/Object;JLjava/lang/Object;)V
+  #271 = NameAndType        #272:#59      // putReferenceVolatile:(Ljava/lang/Object;JLjava/lang/Object;)V
+  #272 = Utf8               putReferenceVolatile
+  #273 = Methodref          #1.#274       // jdk/internal/misc/Unsafe.getIntVolatile:(Ljava/lang/Object;J)I
+  #274 = NameAndType        #275:#47      // getIntVolatile:(Ljava/lang/Object;J)I
+  #275 = Utf8               getIntVolatile
+  #276 = Methodref          #1.#277       // jdk/internal/misc/Unsafe.putIntVolatile:(Ljava/lang/Object;JI)V
+  #277 = NameAndType        #278:#51      // putIntVolatile:(Ljava/lang/Object;JI)V
+  #278 = Utf8               putIntVolatile
+  #279 = Methodref          #1.#280       // jdk/internal/misc/Unsafe.getBooleanVolatile:(Ljava/lang/Object;J)Z
+  #280 = NameAndType        #281:#63      // getBooleanVolatile:(Ljava/lang/Object;J)Z
+  #281 = Utf8               getBooleanVolatile
+  #282 = Methodref          #1.#283       // jdk/internal/misc/Unsafe.putBooleanVolatile:(Ljava/lang/Object;JZ)V
+  #283 = NameAndType        #284:#67      // putBooleanVolatile:(Ljava/lang/Object;JZ)V
+  #284 = Utf8               putBooleanVolatile
+  #285 = Methodref          #1.#286       // jdk/internal/misc/Unsafe.getByteVolatile:(Ljava/lang/Object;J)B
+  #286 = NameAndType        #287:#71      // getByteVolatile:(Ljava/lang/Object;J)B
+  #287 = Utf8               getByteVolatile
+  #288 = Methodref          #1.#289       // jdk/internal/misc/Unsafe.putByteVolatile:(Ljava/lang/Object;JB)V
+  #289 = NameAndType        #290:#75      // putByteVolatile:(Ljava/lang/Object;JB)V
+  #290 = Utf8               putByteVolatile
+  #291 = Methodref          #1.#292       // jdk/internal/misc/Unsafe.getShortVolatile:(Ljava/lang/Object;J)S
+  #292 = NameAndType        #293:#79      // getShortVolatile:(Ljava/lang/Object;J)S
+  #293 = Utf8               getShortVolatile
+  #294 = Methodref          #1.#295       // jdk/internal/misc/Unsafe.putShortVolatile:(Ljava/lang/Object;JS)V
+  #295 = NameAndType        #296:#83      // putShortVolatile:(Ljava/lang/Object;JS)V
+  #296 = Utf8               putShortVolatile
+  #297 = Methodref          #1.#298       // jdk/internal/misc/Unsafe.getCharVolatile:(Ljava/lang/Object;J)C
+  #298 = NameAndType        #299:#87      // getCharVolatile:(Ljava/lang/Object;J)C
+  #299 = Utf8               getCharVolatile
+  #300 = Methodref          #1.#301       // jdk/internal/misc/Unsafe.putCharVolatile:(Ljava/lang/Object;JC)V
+  #301 = NameAndType        #302:#91      // putCharVolatile:(Ljava/lang/Object;JC)V
+  #302 = Utf8               putCharVolatile
+  #303 = Methodref          #1.#304       // jdk/internal/misc/Unsafe.getLongVolatile:(Ljava/lang/Object;J)J
+  #304 = NameAndType        #305:#95      // getLongVolatile:(Ljava/lang/Object;J)J
+  #305 = Utf8               getLongVolatile
+  #306 = Methodref          #1.#307       // jdk/internal/misc/Unsafe.putLongVolatile:(Ljava/lang/Object;JJ)V
+  #307 = NameAndType        #308:#99      // putLongVolatile:(Ljava/lang/Object;JJ)V
+  #308 = Utf8               putLongVolatile
+  #309 = Methodref          #1.#310       // jdk/internal/misc/Unsafe.getFloatVolatile:(Ljava/lang/Object;J)F
+  #310 = NameAndType        #311:#103     // getFloatVolatile:(Ljava/lang/Object;J)F
+  #311 = Utf8               getFloatVolatile
+  #312 = Methodref          #1.#313       // jdk/internal/misc/Unsafe.putFloatVolatile:(Ljava/lang/Object;JF)V
+  #313 = NameAndType        #314:#107     // putFloatVolatile:(Ljava/lang/Object;JF)V
+  #314 = Utf8               putFloatVolatile
+  #315 = Methodref          #1.#316       // jdk/internal/misc/Unsafe.getDoubleVolatile:(Ljava/lang/Object;J)D
+  #316 = NameAndType        #317:#111     // getDoubleVolatile:(Ljava/lang/Object;J)D
+  #317 = Utf8               getDoubleVolatile
+  #318 = Methodref          #1.#319       // jdk/internal/misc/Unsafe.putDoubleVolatile:(Ljava/lang/Object;JD)V
+  #319 = NameAndType        #320:#115     // putDoubleVolatile:(Ljava/lang/Object;JD)V
+  #320 = Utf8               putDoubleVolatile
+  #321 = Methodref          #1.#322       // jdk/internal/misc/Unsafe.putReferenceRelease:(Ljava/lang/Object;JLjava/lang/Object;)V
+  #322 = NameAndType        #323:#59      // putReferenceRelease:(Ljava/lang/Object;JLjava/lang/Object;)V
+  #323 = Utf8               putReferenceRelease
+  #324 = Methodref          #1.#325       // jdk/internal/misc/Unsafe.putIntRelease:(Ljava/lang/Object;JI)V
+  #325 = NameAndType        #326:#51      // putIntRelease:(Ljava/lang/Object;JI)V
+  #326 = Utf8               putIntRelease
+  #327 = Methodref          #1.#328       // jdk/internal/misc/Unsafe.putLongRelease:(Ljava/lang/Object;JJ)V
+  #328 = NameAndType        #329:#99      // putLongRelease:(Ljava/lang/Object;JJ)V
+  #329 = Utf8               putLongRelease
+  #330 = Methodref          #1.#331       // jdk/internal/misc/Unsafe.unpark:(Ljava/lang/Object;)V
+  #331 = NameAndType        #332:#333     // unpark:(Ljava/lang/Object;)V
+  #332 = Utf8               unpark
+  #333 = Utf8               (Ljava/lang/Object;)V
+  #334 = Methodref          #1.#335       // jdk/internal/misc/Unsafe.park:(ZJ)V
+  #335 = NameAndType        #336:#337     // park:(ZJ)V
+  #336 = Utf8               park
+  #337 = Utf8               (ZJ)V
+  #338 = Methodref          #1.#339       // jdk/internal/misc/Unsafe.getLoadAverage:([DI)I
+  #339 = NameAndType        #340:#341     // getLoadAverage:([DI)I
+  #340 = Utf8               getLoadAverage
+  #341 = Utf8               ([DI)I
+  #342 = Methodref          #1.#343       // jdk/internal/misc/Unsafe.getAndAddInt:(Ljava/lang/Object;JI)I
+  #343 = NameAndType        #344:#345     // getAndAddInt:(Ljava/lang/Object;JI)I
+  #344 = Utf8               getAndAddInt
+  #345 = Utf8               (Ljava/lang/Object;JI)I
+  #346 = Methodref          #1.#347       // jdk/internal/misc/Unsafe.getAndAddLong:(Ljava/lang/Object;JJ)J
+  #347 = NameAndType        #348:#349     // getAndAddLong:(Ljava/lang/Object;JJ)J
+  #348 = Utf8               getAndAddLong
+  #349 = Utf8               (Ljava/lang/Object;JJ)J
+  #350 = Methodref          #1.#351       // jdk/internal/misc/Unsafe.getAndSetInt:(Ljava/lang/Object;JI)I
+  #351 = NameAndType        #352:#345     // getAndSetInt:(Ljava/lang/Object;JI)I
+  #352 = Utf8               getAndSetInt
+  #353 = Methodref          #1.#354       // jdk/internal/misc/Unsafe.getAndSetLong:(Ljava/lang/Object;JJ)J
+  #354 = NameAndType        #355:#349     // getAndSetLong:(Ljava/lang/Object;JJ)J
+  #355 = Utf8               getAndSetLong
+  #356 = Methodref          #1.#357       // jdk/internal/misc/Unsafe.getAndSetReference:(Ljava/lang/Object;JLjava/lang/Object;)Ljava/lang/Object;
+  #357 = NameAndType        #358:#359     // getAndSetReference:(Ljava/lang/Object;JLjava/lang/Object;)Ljava/lang/Object;
+  #358 = Utf8               getAndSetReference
+  #359 = Utf8               (Ljava/lang/Object;JLjava/lang/Object;)Ljava/lang/Object;
+  #360 = Methodref          #1.#361       // jdk/internal/misc/Unsafe.loadFence:()V
+  #361 = NameAndType        #362:#8       // loadFence:()V
+  #362 = Utf8               loadFence
+  #363 = Methodref          #1.#364       // jdk/internal/misc/Unsafe.storeFence:()V
+  #364 = NameAndType        #365:#8       // storeFence:()V
+  #365 = Utf8               storeFence
+  #366 = Methodref          #1.#367       // jdk/internal/misc/Unsafe.fullFence:()V
+  #367 = NameAndType        #368:#8       // fullFence:()V
+  #368 = Utf8               fullFence
+  #369 = Methodref          #370.#371     // java/nio/ByteBuffer.isDirect:()Z
+  #370 = Class              #372          // java/nio/ByteBuffer
+  #371 = NameAndType        #373:#200     // isDirect:()Z
+  #372 = Utf8               java/nio/ByteBuffer
+  #373 = Utf8               isDirect
+  #374 = Class              #375          // java/lang/IllegalArgumentException
+  #375 = Utf8               java/lang/IllegalArgumentException
+  #376 = String             #377          // buffer is non-direct
+  #377 = Utf8               buffer is non-direct
+  #378 = Methodref          #374.#32      // java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+  #379 = Methodref          #1.#380       // jdk/internal/misc/Unsafe.invokeCleaner:(Ljava/nio/ByteBuffer;)V
+  #380 = NameAndType        #381:#382     // invokeCleaner:(Ljava/nio/ByteBuffer;)V
+  #381 = Utf8               invokeCleaner
+  #382 = Utf8               (Ljava/nio/ByteBuffer;)V
+  #383 = String             #384          // getUnsafe
+  #384 = Utf8               getUnsafe
+  #385 = InterfaceMethodref #386.#387     // java/util/Set.of:(Ljava/lang/Object;)Ljava/util/Set;
+  #386 = Class              #388          // java/util/Set
+  #387 = NameAndType        #389:#390     // of:(Ljava/lang/Object;)Ljava/util/Set;
+  #388 = Utf8               java/util/Set
+  #389 = Utf8               of
+  #390 = Utf8               (Ljava/lang/Object;)Ljava/util/Set;
+  #391 = Methodref          #10.#392      // jdk/internal/reflect/Reflection.registerMethodsToFilter:(Ljava/lang/Class;Ljava/util/Set;)V
+  #392 = NameAndType        #393:#394     // registerMethodsToFilter:(Ljava/lang/Class;Ljava/util/Set;)V
+  #393 = Utf8               registerMethodsToFilter
+  #394 = Utf8               (Ljava/lang/Class;Ljava/util/Set;)V
+  #395 = Methodref          #35.#5        // sun/misc/Unsafe."<init>":()V
+  #396 = Methodref          #1.#397       // jdk/internal/misc/Unsafe.getUnsafe:()Ljdk/internal/misc/Unsafe;
+  #397 = NameAndType        #384:#398     // getUnsafe:()Ljdk/internal/misc/Unsafe;
+  #398 = Utf8               ()Ljdk/internal/misc/Unsafe;
+  #399 = Fieldref           #1.#400       // jdk/internal/misc/Unsafe.ARRAY_BOOLEAN_BASE_OFFSET:I
+  #400 = NameAndType        #401:#402     // ARRAY_BOOLEAN_BASE_OFFSET:I
+  #401 = Utf8               ARRAY_BOOLEAN_BASE_OFFSET
+  #402 = Utf8               I
+  #403 = Fieldref           #35.#400      // sun/misc/Unsafe.ARRAY_BOOLEAN_BASE_OFFSET:I
+  #404 = Fieldref           #1.#405       // jdk/internal/misc/Unsafe.ARRAY_BYTE_BASE_OFFSET:I
+  #405 = NameAndType        #406:#402     // ARRAY_BYTE_BASE_OFFSET:I
+  #406 = Utf8               ARRAY_BYTE_BASE_OFFSET
+  #407 = Fieldref           #35.#405      // sun/misc/Unsafe.ARRAY_BYTE_BASE_OFFSET:I
+  #408 = Fieldref           #1.#409       // jdk/internal/misc/Unsafe.ARRAY_SHORT_BASE_OFFSET:I
+  #409 = NameAndType        #410:#402     // ARRAY_SHORT_BASE_OFFSET:I
+  #410 = Utf8               ARRAY_SHORT_BASE_OFFSET
+  #411 = Fieldref           #35.#409      // sun/misc/Unsafe.ARRAY_SHORT_BASE_OFFSET:I
+  #412 = Fieldref           #1.#413       // jdk/internal/misc/Unsafe.ARRAY_CHAR_BASE_OFFSET:I
+  #413 = NameAndType        #414:#402     // ARRAY_CHAR_BASE_OFFSET:I
+  #414 = Utf8               ARRAY_CHAR_BASE_OFFSET
+  #415 = Fieldref           #35.#413      // sun/misc/Unsafe.ARRAY_CHAR_BASE_OFFSET:I
+  #416 = Fieldref           #1.#417       // jdk/internal/misc/Unsafe.ARRAY_INT_BASE_OFFSET:I
+  #417 = NameAndType        #418:#402     // ARRAY_INT_BASE_OFFSET:I
+  #418 = Utf8               ARRAY_INT_BASE_OFFSET
+  #419 = Fieldref           #35.#417      // sun/misc/Unsafe.ARRAY_INT_BASE_OFFSET:I
+  #420 = Fieldref           #1.#421       // jdk/internal/misc/Unsafe.ARRAY_LONG_BASE_OFFSET:I
+  #421 = NameAndType        #422:#402     // ARRAY_LONG_BASE_OFFSET:I
+  #422 = Utf8               ARRAY_LONG_BASE_OFFSET
+  #423 = Fieldref           #35.#421      // sun/misc/Unsafe.ARRAY_LONG_BASE_OFFSET:I
+  #424 = Fieldref           #1.#425       // jdk/internal/misc/Unsafe.ARRAY_FLOAT_BASE_OFFSET:I
+  #425 = NameAndType        #426:#402     // ARRAY_FLOAT_BASE_OFFSET:I
+  #426 = Utf8               ARRAY_FLOAT_BASE_OFFSET
+  #427 = Fieldref           #35.#425      // sun/misc/Unsafe.ARRAY_FLOAT_BASE_OFFSET:I
+  #428 = Fieldref           #1.#429       // jdk/internal/misc/Unsafe.ARRAY_DOUBLE_BASE_OFFSET:I
+  #429 = NameAndType        #430:#402     // ARRAY_DOUBLE_BASE_OFFSET:I
+  #430 = Utf8               ARRAY_DOUBLE_BASE_OFFSET
+  #431 = Fieldref           #35.#429      // sun/misc/Unsafe.ARRAY_DOUBLE_BASE_OFFSET:I
+  #432 = Fieldref           #1.#433       // jdk/internal/misc/Unsafe.ARRAY_OBJECT_BASE_OFFSET:I
+  #433 = NameAndType        #434:#402     // ARRAY_OBJECT_BASE_OFFSET:I
+  #434 = Utf8               ARRAY_OBJECT_BASE_OFFSET
+  #435 = Fieldref           #35.#433      // sun/misc/Unsafe.ARRAY_OBJECT_BASE_OFFSET:I
+  #436 = Fieldref           #1.#437       // jdk/internal/misc/Unsafe.ARRAY_BOOLEAN_INDEX_SCALE:I
+  #437 = NameAndType        #438:#402     // ARRAY_BOOLEAN_INDEX_SCALE:I
+  #438 = Utf8               ARRAY_BOOLEAN_INDEX_SCALE
+  #439 = Fieldref           #35.#437      // sun/misc/Unsafe.ARRAY_BOOLEAN_INDEX_SCALE:I
+  #440 = Fieldref           #1.#441       // jdk/internal/misc/Unsafe.ARRAY_BYTE_INDEX_SCALE:I
+  #441 = NameAndType        #442:#402     // ARRAY_BYTE_INDEX_SCALE:I
+  #442 = Utf8               ARRAY_BYTE_INDEX_SCALE
+  #443 = Fieldref           #35.#441      // sun/misc/Unsafe.ARRAY_BYTE_INDEX_SCALE:I
+  #444 = Fieldref           #1.#445       // jdk/internal/misc/Unsafe.ARRAY_SHORT_INDEX_SCALE:I
+  #445 = NameAndType        #446:#402     // ARRAY_SHORT_INDEX_SCALE:I
+  #446 = Utf8               ARRAY_SHORT_INDEX_SCALE
+  #447 = Fieldref           #35.#445      // sun/misc/Unsafe.ARRAY_SHORT_INDEX_SCALE:I
+  #448 = Fieldref           #1.#449       // jdk/internal/misc/Unsafe.ARRAY_CHAR_INDEX_SCALE:I
+  #449 = NameAndType        #450:#402     // ARRAY_CHAR_INDEX_SCALE:I
+  #450 = Utf8               ARRAY_CHAR_INDEX_SCALE
+  #451 = Fieldref           #35.#449      // sun/misc/Unsafe.ARRAY_CHAR_INDEX_SCALE:I
+  #452 = Fieldref           #1.#453       // jdk/internal/misc/Unsafe.ARRAY_INT_INDEX_SCALE:I
+  #453 = NameAndType        #454:#402     // ARRAY_INT_INDEX_SCALE:I
+  #454 = Utf8               ARRAY_INT_INDEX_SCALE
+  #455 = Fieldref           #35.#453      // sun/misc/Unsafe.ARRAY_INT_INDEX_SCALE:I
+  #456 = Fieldref           #1.#457       // jdk/internal/misc/Unsafe.ARRAY_LONG_INDEX_SCALE:I
+  #457 = NameAndType        #458:#402     // ARRAY_LONG_INDEX_SCALE:I
+  #458 = Utf8               ARRAY_LONG_INDEX_SCALE
+  #459 = Fieldref           #35.#457      // sun/misc/Unsafe.ARRAY_LONG_INDEX_SCALE:I
+  #460 = Fieldref           #1.#461       // jdk/internal/misc/Unsafe.ARRAY_FLOAT_INDEX_SCALE:I
+  #461 = NameAndType        #462:#402     // ARRAY_FLOAT_INDEX_SCALE:I
+  #462 = Utf8               ARRAY_FLOAT_INDEX_SCALE
+  #463 = Fieldref           #35.#461      // sun/misc/Unsafe.ARRAY_FLOAT_INDEX_SCALE:I
+  #464 = Fieldref           #1.#465       // jdk/internal/misc/Unsafe.ARRAY_DOUBLE_INDEX_SCALE:I
+  #465 = NameAndType        #466:#402     // ARRAY_DOUBLE_INDEX_SCALE:I
+  #466 = Utf8               ARRAY_DOUBLE_INDEX_SCALE
+  #467 = Fieldref           #35.#465      // sun/misc/Unsafe.ARRAY_DOUBLE_INDEX_SCALE:I
+  #468 = Fieldref           #1.#469       // jdk/internal/misc/Unsafe.ARRAY_OBJECT_INDEX_SCALE:I
+  #469 = NameAndType        #470:#402     // ARRAY_OBJECT_INDEX_SCALE:I
+  #470 = Utf8               ARRAY_OBJECT_INDEX_SCALE
+  #471 = Fieldref           #35.#469      // sun/misc/Unsafe.ARRAY_OBJECT_INDEX_SCALE:I
+  #472 = Fieldref           #35.#473      // sun/misc/Unsafe.ADDRESS_SIZE:I
+  #473 = NameAndType        #474:#402     // ADDRESS_SIZE:I
+  #474 = Utf8               ADDRESS_SIZE
+  #475 = Utf8               INVALID_FIELD_OFFSET
+  #476 = Utf8               ConstantValue
+  #477 = Integer            -1
+  #478 = Utf8               Code
+  #479 = Utf8               LineNumberTable
+  #480 = Utf8               LocalVariableTable
+  #481 = Utf8               this
+  #482 = Utf8               ()Lsun/misc/Unsafe;
+  #483 = Utf8               caller
+  #484 = Utf8               Ljava/lang/Class;
+  #485 = Utf8               LocalVariableTypeTable
+  #486 = Utf8               Ljava/lang/Class<*>;
+  #487 = Utf8               StackMapTable
+  #488 = Utf8               RuntimeVisibleAnnotations
+  #489 = Utf8               Ljdk/internal/reflect/CallerSensitive;
+  #490 = Utf8               o
+  #491 = Utf8               Ljava/lang/Object;
+  #492 = Utf8               offset
+  #493 = Utf8               J
+  #494 = Utf8               Ljdk/internal/vm/annotation/ForceInline;
+  #495 = Utf8               x
+  #496 = Utf8               getObject
+  #497 = Utf8               putObject
+  #498 = Utf8               Z
+  #499 = Utf8               B
+  #500 = Utf8               S
+  #501 = Utf8               C
+  #502 = Utf8               F
+  #503 = Utf8               D
+  #504 = Utf8               address
+  #505 = Utf8               bytes
+  #506 = Utf8               value
+  #507 = Utf8               srcBase
+  #508 = Utf8               srcOffset
+  #509 = Utf8               destBase
+  #510 = Utf8               destOffset
+  #511 = Utf8               srcAddress
+  #512 = Utf8               destAddress
+  #513 = Utf8               f
+  #514 = Utf8               Ljava/lang/reflect/Field;
+  #515 = Utf8               declaringClass
+  #516 = Utf8               c
+  #517 = Utf8               Deprecated
+  #518 = Utf8               Signature
+  #519 = Utf8               (Ljava/lang/Class<*>;)Z
+  #520 = Utf8               Ljava/lang/Deprecated;
+  #521 = Utf8               since
+  #522 = Utf8               15
+  #523 = Utf8               forRemoval
+  #524 = Integer            1
+  #525 = Utf8               (Ljava/lang/Class<*>;)V
+  #526 = Utf8               arrayClass
+  #527 = Utf8               (Ljava/lang/Class<*>;)I
+  #528 = Utf8               cls
+  #529 = Utf8               Exceptions
+  #530 = Class              #531          // java/lang/InstantiationException
+  #531 = Utf8               java/lang/InstantiationException
+  #532 = Utf8               (Ljava/lang/Class<*>;)Ljava/lang/Object;
+  #533 = Utf8               ee
+  #534 = Utf8               Ljava/lang/Throwable;
+  #535 = Utf8               compareAndSwapObject
+  #536 = Utf8               expected
+  #537 = Utf8               compareAndSwapInt
+  #538 = Utf8               compareAndSwapLong
+  #539 = Utf8               getObjectVolatile
+  #540 = Utf8               putObjectVolatile
+  #541 = Utf8               putOrderedObject
+  #542 = Utf8               putOrderedInt
+  #543 = Utf8               putOrderedLong
+  #544 = Utf8               thread
+  #545 = Utf8               isAbsolute
+  #546 = Utf8               time
+  #547 = Utf8               loadavg
+  #548 = Utf8               [D
+  #549 = Utf8               nelems
+  #550 = Utf8               delta
+  #551 = Utf8               newValue
+  #552 = Utf8               getAndSetObject
+  #553 = Utf8               directBuffer
+  #554 = Utf8               Ljava/nio/ByteBuffer;
+  #555 = Utf8               <clinit>
+  #556 = Utf8               SourceFile
+  #557 = Utf8               Unsafe.java
+  #558 = Utf8               BootstrapMethods
+  #559 = MethodHandle       6:#560        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #560 = Methodref          #561.#562     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #561 = Class              #563          // java/lang/invoke/StringConcatFactory
+  #562 = NameAndType        #205:#564     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #563 = Utf8               java/lang/invoke/StringConcatFactory
+  #564 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #565 = String             #566          // can\'t get field offset on a hidden class: \u0001
+  #566 = Utf8               can\'t get field offset on a hidden class: \u0001
+  #567 = String             #568          // can\'t get field offset on a record class: \u0001
+  #568 = Utf8               can\'t get field offset on a record class: \u0001
+  #569 = String             #570          // can\'t get base address on a hidden class: \u0001
+  #570 = Utf8               can\'t get base address on a hidden class: \u0001
+  #571 = String             #572          // can\'t get base address on a record class: \u0001
+  #572 = Utf8               can\'t get base address on a record class: \u0001
+  #573 = Utf8               InnerClasses
+  #574 = Class              #575          // java/lang/invoke/MethodHandles$Lookup
+  #575 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #576 = Class              #577          // java/lang/invoke/MethodHandles
+  #577 = Utf8               java/lang/invoke/MethodHandles
+  #578 = Utf8               Lookup
+{
+  private static final sun.misc.Unsafe theUnsafe;
+    descriptor: Lsun/misc/Unsafe;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  private static final jdk.internal.misc.Unsafe theInternalUnsafe;
+    descriptor: Ljdk/internal/misc/Unsafe;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+
+  public static final int INVALID_FIELD_OFFSET = -1;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: int -1
+
+  public static final int ARRAY_BOOLEAN_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_BYTE_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_SHORT_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_CHAR_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_INT_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_LONG_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_FLOAT_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_DOUBLE_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_OBJECT_BASE_OFFSET;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_BOOLEAN_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_BYTE_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_SHORT_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_CHAR_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_INT_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_LONG_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_FLOAT_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_DOUBLE_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ARRAY_OBJECT_INDEX_SCALE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public static final int ADDRESS_SIZE;
+    descriptor: I
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  private sun.misc.Unsafe();
+    descriptor: ()V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #3                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 62: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lsun/misc/Unsafe;
+
+  public static sun.misc.Unsafe getUnsafe();
+    descriptor: ()Lsun/misc/Unsafe;
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=3, locals=1, args_size=0
+         0: invokestatic  #9                  // Method jdk/internal/reflect/Reflection.getCallerClass:()Ljava/lang/Class;
+         3: astore_0
+         4: aload_0
+         5: invokevirtual #15                 // Method java/lang/Class.getClassLoader:()Ljava/lang/ClassLoader;
+         8: invokestatic  #21                 // Method jdk/internal/misc/VM.isSystemDomainLoader:(Ljava/lang/ClassLoader;)Z
+        11: ifne          24
+        14: new           #27                 // class java/lang/SecurityException
+        17: dup
+        18: ldc           #29                 // String Unsafe
+        20: invokespecial #31                 // Method java/lang/SecurityException."<init>":(Ljava/lang/String;)V
+        23: athrow
+        24: getstatic     #34                 // Field theUnsafe:Lsun/misc/Unsafe;
+        27: areturn
+      LineNumberTable:
+        line 97: 0
+        line 98: 4
+        line 99: 14
+        line 100: 24
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            4      24     0 caller   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            4      24     0 caller   Ljava/lang/Class<*>;
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 24
+          locals = [ class java/lang/Class ]
+    RuntimeVisibleAnnotations:
+      0: #489()
+        jdk.internal.reflect.CallerSensitive
+
+  public int getInt(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #44                 // Method jdk/internal/misc/Unsafe.getInt:(Ljava/lang/Object;J)I
+         8: ireturn
+      LineNumberTable:
+        line 164: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putInt(java.lang.Object, long, int);
+    descriptor: (Ljava/lang/Object;JI)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #48                 // Method jdk/internal/misc/Unsafe.putInt:(Ljava/lang/Object;JI)V
+        10: return
+      LineNumberTable:
+        line 189: 0
+        line 190: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public java.lang.Object getObject(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #52                 // Method jdk/internal/misc/Unsafe.getReference:(Ljava/lang/Object;J)Ljava/lang/Object;
+         8: areturn
+      LineNumberTable:
+        line 198: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putObject(java.lang.Object, long, java.lang.Object);
+    descriptor: (Ljava/lang/Object;JLjava/lang/Object;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: aload         4
+         7: invokevirtual #56                 // Method jdk/internal/misc/Unsafe.putReference:(Ljava/lang/Object;JLjava/lang/Object;)V
+        10: return
+      LineNumberTable:
+        line 213: 0
+        line 214: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public boolean getBoolean(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #60                 // Method jdk/internal/misc/Unsafe.getBoolean:(Ljava/lang/Object;J)Z
+         8: ireturn
+      LineNumberTable:
+        line 219: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putBoolean(java.lang.Object, long, boolean);
+    descriptor: (Ljava/lang/Object;JZ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #64                 // Method jdk/internal/misc/Unsafe.putBoolean:(Ljava/lang/Object;JZ)V
+        10: return
+      LineNumberTable:
+        line 225: 0
+        line 226: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   Z
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public byte getByte(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)B
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #68                 // Method jdk/internal/misc/Unsafe.getByte:(Ljava/lang/Object;J)B
+         8: ireturn
+      LineNumberTable:
+        line 231: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putByte(java.lang.Object, long, byte);
+    descriptor: (Ljava/lang/Object;JB)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #72                 // Method jdk/internal/misc/Unsafe.putByte:(Ljava/lang/Object;JB)V
+        10: return
+      LineNumberTable:
+        line 237: 0
+        line 238: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   B
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public short getShort(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)S
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #76                 // Method jdk/internal/misc/Unsafe.getShort:(Ljava/lang/Object;J)S
+         8: ireturn
+      LineNumberTable:
+        line 243: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putShort(java.lang.Object, long, short);
+    descriptor: (Ljava/lang/Object;JS)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #80                 // Method jdk/internal/misc/Unsafe.putShort:(Ljava/lang/Object;JS)V
+        10: return
+      LineNumberTable:
+        line 249: 0
+        line 250: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   S
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public char getChar(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)C
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #84                 // Method jdk/internal/misc/Unsafe.getChar:(Ljava/lang/Object;J)C
+         8: ireturn
+      LineNumberTable:
+        line 255: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putChar(java.lang.Object, long, char);
+    descriptor: (Ljava/lang/Object;JC)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #88                 // Method jdk/internal/misc/Unsafe.putChar:(Ljava/lang/Object;JC)V
+        10: return
+      LineNumberTable:
+        line 261: 0
+        line 262: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   C
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long getLong(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #92                 // Method jdk/internal/misc/Unsafe.getLong:(Ljava/lang/Object;J)J
+         8: lreturn
+      LineNumberTable:
+        line 267: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putLong(java.lang.Object, long, long);
+    descriptor: (Ljava/lang/Object;JJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: invokevirtual #96                 // Method jdk/internal/misc/Unsafe.putLong:(Ljava/lang/Object;JJ)V
+        10: return
+      LineNumberTable:
+        line 273: 0
+        line 274: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public float getFloat(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)F
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #100                // Method jdk/internal/misc/Unsafe.getFloat:(Ljava/lang/Object;J)F
+         8: freturn
+      LineNumberTable:
+        line 279: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putFloat(java.lang.Object, long, float);
+    descriptor: (Ljava/lang/Object;JF)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: fload         4
+         7: invokevirtual #104                // Method jdk/internal/misc/Unsafe.putFloat:(Ljava/lang/Object;JF)V
+        10: return
+      LineNumberTable:
+        line 285: 0
+        line 286: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   F
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public double getDouble(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)D
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #108                // Method jdk/internal/misc/Unsafe.getDouble:(Ljava/lang/Object;J)D
+         8: dreturn
+      LineNumberTable:
+        line 291: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putDouble(java.lang.Object, long, double);
+    descriptor: (Ljava/lang/Object;JD)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: dload         4
+         7: invokevirtual #112                // Method jdk/internal/misc/Unsafe.putDouble:(Ljava/lang/Object;JD)V
+        10: return
+      LineNumberTable:
+        line 297: 0
+        line 298: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   D
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public byte getByte(long);
+    descriptor: (J)B
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #116                // Method jdk/internal/misc/Unsafe.getByte:(J)B
+         7: ireturn
+      LineNumberTable:
+        line 311: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putByte(long, byte);
+    descriptor: (JB)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: iload_3
+         5: invokevirtual #119                // Method jdk/internal/misc/Unsafe.putByte:(JB)V
+         8: return
+      LineNumberTable:
+        line 323: 0
+        line 324: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   B
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public short getShort(long);
+    descriptor: (J)S
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #122                // Method jdk/internal/misc/Unsafe.getShort:(J)S
+         7: ireturn
+      LineNumberTable:
+        line 329: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putShort(long, short);
+    descriptor: (JS)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: iload_3
+         5: invokevirtual #125                // Method jdk/internal/misc/Unsafe.putShort:(JS)V
+         8: return
+      LineNumberTable:
+        line 335: 0
+        line 336: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   S
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public char getChar(long);
+    descriptor: (J)C
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #128                // Method jdk/internal/misc/Unsafe.getChar:(J)C
+         7: ireturn
+      LineNumberTable:
+        line 341: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putChar(long, char);
+    descriptor: (JC)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: iload_3
+         5: invokevirtual #131                // Method jdk/internal/misc/Unsafe.putChar:(JC)V
+         8: return
+      LineNumberTable:
+        line 347: 0
+        line 348: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   C
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int getInt(long);
+    descriptor: (J)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #134                // Method jdk/internal/misc/Unsafe.getInt:(J)I
+         7: ireturn
+      LineNumberTable:
+        line 353: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putInt(long, int);
+    descriptor: (JI)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: iload_3
+         5: invokevirtual #137                // Method jdk/internal/misc/Unsafe.putInt:(JI)V
+         8: return
+      LineNumberTable:
+        line 359: 0
+        line 360: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long getLong(long);
+    descriptor: (J)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #140                // Method jdk/internal/misc/Unsafe.getLong:(J)J
+         7: lreturn
+      LineNumberTable:
+        line 365: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putLong(long, long);
+    descriptor: (JJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: lload_3
+         5: invokevirtual #143                // Method jdk/internal/misc/Unsafe.putLong:(JJ)V
+         8: return
+      LineNumberTable:
+        line 371: 0
+        line 372: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public float getFloat(long);
+    descriptor: (J)F
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #146                // Method jdk/internal/misc/Unsafe.getFloat:(J)F
+         7: freturn
+      LineNumberTable:
+        line 377: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putFloat(long, float);
+    descriptor: (JF)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: fload_3
+         5: invokevirtual #149                // Method jdk/internal/misc/Unsafe.putFloat:(JF)V
+         8: return
+      LineNumberTable:
+        line 383: 0
+        line 384: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   F
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public double getDouble(long);
+    descriptor: (J)D
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #152                // Method jdk/internal/misc/Unsafe.getDouble:(J)D
+         7: dreturn
+      LineNumberTable:
+        line 389: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putDouble(long, double);
+    descriptor: (JD)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: dload_3
+         5: invokevirtual #155                // Method jdk/internal/misc/Unsafe.putDouble:(JD)V
+         8: return
+      LineNumberTable:
+        line 395: 0
+        line 396: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   D
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long getAddress(long);
+    descriptor: (J)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #158                // Method jdk/internal/misc/Unsafe.getAddress:(J)J
+         7: lreturn
+      LineNumberTable:
+        line 415: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putAddress(long, long);
+    descriptor: (JJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: lload_3
+         5: invokevirtual #161                // Method jdk/internal/misc/Unsafe.putAddress:(JJ)V
+         8: return
+      LineNumberTable:
+        line 430: 0
+        line 431: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3     x   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long allocateMemory(long);
+    descriptor: (J)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #164                // Method jdk/internal/misc/Unsafe.allocateMemory:(J)J
+         7: lreturn
+      LineNumberTable:
+        line 462: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 bytes   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long reallocateMemory(long, long);
+    descriptor: (JJ)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: lload_3
+         5: invokevirtual #167                // Method jdk/internal/misc/Unsafe.reallocateMemory:(JJ)J
+         8: lreturn
+      LineNumberTable:
+        line 493: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 address   J
+            0       9     3 bytes   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void setMemory(java.lang.Object, long, long, byte);
+    descriptor: (Ljava/lang/Object;JJB)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=7, locals=7, args_size=5
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: iload         6
+         9: invokevirtual #171                // Method jdk/internal/misc/Unsafe.setMemory:(Ljava/lang/Object;JJB)V
+        12: return
+      LineNumberTable:
+        line 526: 0
+        line 527: 12
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lsun/misc/Unsafe;
+            0      13     1     o   Ljava/lang/Object;
+            0      13     2 offset   J
+            0      13     4 bytes   J
+            0      13     6 value   B
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void setMemory(long, long, byte);
+    descriptor: (JJB)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: lload_3
+         5: iload         5
+         7: invokevirtual #175                // Method jdk/internal/misc/Unsafe.setMemory:(JJB)V
+        10: return
+      LineNumberTable:
+        line 538: 0
+        line 539: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1 address   J
+            0      11     3 bytes   J
+            0      11     5 value   B
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void copyMemory(java.lang.Object, long, java.lang.Object, long, long);
+    descriptor: (Ljava/lang/Object;JLjava/lang/Object;JJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=9, locals=9, args_size=6
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: aload         4
+         7: lload         5
+         9: lload         7
+        11: invokevirtual #178                // Method jdk/internal/misc/Unsafe.copyMemory:(Ljava/lang/Object;JLjava/lang/Object;JJ)V
+        14: return
+      LineNumberTable:
+        line 573: 0
+        line 574: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lsun/misc/Unsafe;
+            0      15     1 srcBase   Ljava/lang/Object;
+            0      15     2 srcOffset   J
+            0      15     4 destBase   Ljava/lang/Object;
+            0      15     5 destOffset   J
+            0      15     7 bytes   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void copyMemory(long, long, long);
+    descriptor: (JJJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=7, locals=7, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: lload_3
+         5: lload         5
+         7: invokevirtual #182                // Method jdk/internal/misc/Unsafe.copyMemory:(JJJ)V
+        10: return
+      LineNumberTable:
+        line 585: 0
+        line 586: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1 srcAddress   J
+            0      11     3 destAddress   J
+            0      11     5 bytes   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void freeMemory(long);
+    descriptor: (J)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: lload_1
+         4: invokevirtual #185                // Method jdk/internal/misc/Unsafe.freeMemory:(J)V
+         7: return
+      LineNumberTable:
+        line 608: 0
+        line 609: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 address   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long objectFieldOffset(java.lang.reflect.Field);
+    descriptor: (Ljava/lang/reflect/Field;)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_1
+         1: ifnonnull     12
+         4: new           #189                // class java/lang/NullPointerException
+         7: dup
+         8: invokespecial #191                // Method java/lang/NullPointerException."<init>":()V
+        11: athrow
+        12: aload_1
+        13: invokevirtual #192                // Method java/lang/reflect/Field.getDeclaringClass:()Ljava/lang/Class;
+        16: astore_2
+        17: aload_2
+        18: invokevirtual #197                // Method java/lang/Class.isHidden:()Z
+        21: ifeq          38
+        24: new           #201                // class java/lang/UnsupportedOperationException
+        27: dup
+        28: aload_1
+        29: invokedynamic #203,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+        34: invokespecial #207                // Method java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+        37: athrow
+        38: aload_2
+        39: invokevirtual #208                // Method java/lang/Class.isRecord:()Z
+        42: ifeq          59
+        45: new           #201                // class java/lang/UnsupportedOperationException
+        48: dup
+        49: aload_1
+        50: invokedynamic #211,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+        55: invokespecial #207                // Method java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+        58: athrow
+        59: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+        62: aload_1
+        63: invokevirtual #212                // Method jdk/internal/misc/Unsafe.objectFieldOffset:(Ljava/lang/reflect/Field;)J
+        66: lreturn
+      LineNumberTable:
+        line 640: 0
+        line 641: 4
+        line 643: 12
+        line 644: 17
+        line 645: 24
+        line 647: 38
+        line 648: 45
+        line 650: 59
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      67     0  this   Lsun/misc/Unsafe;
+            0      67     1     f   Ljava/lang/reflect/Field;
+           17      50     2 declaringClass   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           17      50     2 declaringClass   Ljava/lang/Class<*>;
+      StackMapTable: number_of_entries = 3
+        frame_type = 12 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 25
+          locals = [ class java/lang/Class ]
+        frame_type = 20 /* same */
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long staticFieldOffset(java.lang.reflect.Field);
+    descriptor: (Ljava/lang/reflect/Field;)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_1
+         1: ifnonnull     12
+         4: new           #189                // class java/lang/NullPointerException
+         7: dup
+         8: invokespecial #191                // Method java/lang/NullPointerException."<init>":()V
+        11: athrow
+        12: aload_1
+        13: invokevirtual #192                // Method java/lang/reflect/Field.getDeclaringClass:()Ljava/lang/Class;
+        16: astore_2
+        17: aload_2
+        18: invokevirtual #197                // Method java/lang/Class.isHidden:()Z
+        21: ifeq          38
+        24: new           #201                // class java/lang/UnsupportedOperationException
+        27: dup
+        28: aload_1
+        29: invokedynamic #203,  0            // InvokeDynamic #0:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+        34: invokespecial #207                // Method java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+        37: athrow
+        38: aload_2
+        39: invokevirtual #208                // Method java/lang/Class.isRecord:()Z
+        42: ifeq          59
+        45: new           #201                // class java/lang/UnsupportedOperationException
+        48: dup
+        49: aload_1
+        50: invokedynamic #211,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+        55: invokespecial #207                // Method java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+        58: athrow
+        59: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+        62: aload_1
+        63: invokevirtual #216                // Method jdk/internal/misc/Unsafe.staticFieldOffset:(Ljava/lang/reflect/Field;)J
+        66: lreturn
+      LineNumberTable:
+        line 672: 0
+        line 673: 4
+        line 675: 12
+        line 676: 17
+        line 677: 24
+        line 679: 38
+        line 680: 45
+        line 682: 59
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      67     0  this   Lsun/misc/Unsafe;
+            0      67     1     f   Ljava/lang/reflect/Field;
+           17      50     2 declaringClass   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           17      50     2 declaringClass   Ljava/lang/Class<*>;
+      StackMapTable: number_of_entries = 3
+        frame_type = 12 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 25
+          locals = [ class java/lang/Class ]
+        frame_type = 20 /* same */
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public java.lang.Object staticFieldBase(java.lang.reflect.Field);
+    descriptor: (Ljava/lang/reflect/Field;)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_1
+         1: ifnonnull     12
+         4: new           #189                // class java/lang/NullPointerException
+         7: dup
+         8: invokespecial #191                // Method java/lang/NullPointerException."<init>":()V
+        11: athrow
+        12: aload_1
+        13: invokevirtual #192                // Method java/lang/reflect/Field.getDeclaringClass:()Ljava/lang/Class;
+        16: astore_2
+        17: aload_2
+        18: invokevirtual #197                // Method java/lang/Class.isHidden:()Z
+        21: ifeq          38
+        24: new           #201                // class java/lang/UnsupportedOperationException
+        27: dup
+        28: aload_1
+        29: invokedynamic #219,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+        34: invokespecial #207                // Method java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+        37: athrow
+        38: aload_2
+        39: invokevirtual #208                // Method java/lang/Class.isRecord:()Z
+        42: ifeq          59
+        45: new           #201                // class java/lang/UnsupportedOperationException
+        48: dup
+        49: aload_1
+        50: invokedynamic #220,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/reflect/Field;)Ljava/lang/String;
+        55: invokespecial #207                // Method java/lang/UnsupportedOperationException."<init>":(Ljava/lang/String;)V
+        58: athrow
+        59: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+        62: aload_1
+        63: invokevirtual #221                // Method jdk/internal/misc/Unsafe.staticFieldBase:(Ljava/lang/reflect/Field;)Ljava/lang/Object;
+        66: areturn
+      LineNumberTable:
+        line 697: 0
+        line 698: 4
+        line 700: 12
+        line 701: 17
+        line 702: 24
+        line 704: 38
+        line 705: 45
+        line 707: 59
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      67     0  this   Lsun/misc/Unsafe;
+            0      67     1     f   Ljava/lang/reflect/Field;
+           17      50     2 declaringClass   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           17      50     2 declaringClass   Ljava/lang/Class<*>;
+      StackMapTable: number_of_entries = 3
+        frame_type = 12 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 25
+          locals = [ class java/lang/Class ]
+        frame_type = 20 /* same */
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public boolean shouldBeInitialized(java.lang.Class<?>);
+    descriptor: (Ljava/lang/Class;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #225                // Method jdk/internal/misc/Unsafe.shouldBeInitialized:(Ljava/lang/Class;)Z
+         7: ireturn
+      LineNumberTable:
+        line 729: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1     c   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       8     1     c   Ljava/lang/Class<*>;
+    Deprecated: true
+    Signature: #519                         // (Ljava/lang/Class<*>;)Z
+    RuntimeVisibleAnnotations:
+      0: #520(#521=s#522,#523=Z#524)
+        java.lang.Deprecated(
+          since="15"
+          forRemoval=true
+        )
+      1: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void ensureClassInitialized(java.lang.Class<?>);
+    descriptor: (Ljava/lang/Class;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #229                // Method jdk/internal/misc/Unsafe.ensureClassInitialized:(Ljava/lang/Class;)V
+         7: return
+      LineNumberTable:
+        line 743: 0
+        line 744: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1     c   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       8     1     c   Ljava/lang/Class<*>;
+    Deprecated: true
+    Signature: #525                         // (Ljava/lang/Class<*>;)V
+    RuntimeVisibleAnnotations:
+      0: #520(#521=s#522,#523=Z#524)
+        java.lang.Deprecated(
+          since="15"
+          forRemoval=true
+        )
+      1: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int arrayBaseOffset(java.lang.Class<?>);
+    descriptor: (Ljava/lang/Class;)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #233                // Method jdk/internal/misc/Unsafe.arrayBaseOffset:(Ljava/lang/Class;)I
+         7: ireturn
+      LineNumberTable:
+        line 758: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 arrayClass   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       8     1 arrayClass   Ljava/lang/Class<*>;
+    Signature: #527                         // (Ljava/lang/Class<*>;)I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int arrayIndexScale(java.lang.Class<?>);
+    descriptor: (Ljava/lang/Class;)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #237                // Method jdk/internal/misc/Unsafe.arrayIndexScale:(Ljava/lang/Class;)I
+         7: ireturn
+      LineNumberTable:
+        line 801: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 arrayClass   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       8     1 arrayClass   Ljava/lang/Class<*>;
+    Signature: #527                         // (Ljava/lang/Class<*>;)I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int addressSize();
+    descriptor: ()I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: invokevirtual #240                // Method jdk/internal/misc/Unsafe.addressSize:()I
+         6: ireturn
+      LineNumberTable:
+        line 839: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lsun/misc/Unsafe;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int pageSize();
+    descriptor: ()I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: invokevirtual #244                // Method jdk/internal/misc/Unsafe.pageSize:()I
+         6: ireturn
+      LineNumberTable:
+        line 851: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lsun/misc/Unsafe;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public java.lang.Object allocateInstance(java.lang.Class<?>) throws java.lang.InstantiationException;
+    descriptor: (Ljava/lang/Class;)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #247                // Method jdk/internal/misc/Unsafe.allocateInstance:(Ljava/lang/Class;)Ljava/lang/Object;
+         7: areturn
+      LineNumberTable:
+        line 864: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1   cls   Ljava/lang/Class;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       8     1   cls   Ljava/lang/Class<*>;
+    Exceptions:
+      throws java.lang.InstantiationException
+    Signature: #532                         // (Ljava/lang/Class<*>;)Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void throwException(java.lang.Throwable);
+    descriptor: (Ljava/lang/Throwable;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #251                // Method jdk/internal/misc/Unsafe.throwException:(Ljava/lang/Throwable;)V
+         7: return
+      LineNumberTable:
+        line 870: 0
+        line 871: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1    ee   Ljava/lang/Throwable;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final boolean compareAndSwapObject(java.lang.Object, long, java.lang.Object, java.lang.Object);
+    descriptor: (Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=6, locals=6, args_size=5
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: aload         4
+         7: aload         5
+         9: invokevirtual #255                // Method jdk/internal/misc/Unsafe.compareAndSetReference:(Ljava/lang/Object;JLjava/lang/Object;Ljava/lang/Object;)Z
+        12: ireturn
+      LineNumberTable:
+        line 886: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lsun/misc/Unsafe;
+            0      13     1     o   Ljava/lang/Object;
+            0      13     2 offset   J
+            0      13     4 expected   Ljava/lang/Object;
+            0      13     5     x   Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final boolean compareAndSwapInt(java.lang.Object, long, int, int);
+    descriptor: (Ljava/lang/Object;JII)Z
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=6, locals=6, args_size=5
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: iload         5
+         9: invokevirtual #259                // Method jdk/internal/misc/Unsafe.compareAndSetInt:(Ljava/lang/Object;JII)Z
+        12: ireturn
+      LineNumberTable:
+        line 902: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lsun/misc/Unsafe;
+            0      13     1     o   Ljava/lang/Object;
+            0      13     2 offset   J
+            0      13     4 expected   I
+            0      13     5     x   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final boolean compareAndSwapLong(java.lang.Object, long, long, long);
+    descriptor: (Ljava/lang/Object;JJJ)Z
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=8, locals=8, args_size=5
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: lload         6
+         9: invokevirtual #263                // Method jdk/internal/misc/Unsafe.compareAndSetLong:(Ljava/lang/Object;JJJ)Z
+        12: ireturn
+      LineNumberTable:
+        line 918: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lsun/misc/Unsafe;
+            0      13     1     o   Ljava/lang/Object;
+            0      13     2 offset   J
+            0      13     4 expected   J
+            0      13     6     x   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public java.lang.Object getObjectVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #267                // Method jdk/internal/misc/Unsafe.getReferenceVolatile:(Ljava/lang/Object;J)Ljava/lang/Object;
+         8: areturn
+      LineNumberTable:
+        line 927: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putObjectVolatile(java.lang.Object, long, java.lang.Object);
+    descriptor: (Ljava/lang/Object;JLjava/lang/Object;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: aload         4
+         7: invokevirtual #270                // Method jdk/internal/misc/Unsafe.putReferenceVolatile:(Ljava/lang/Object;JLjava/lang/Object;)V
+        10: return
+      LineNumberTable:
+        line 936: 0
+        line 937: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int getIntVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #273                // Method jdk/internal/misc/Unsafe.getIntVolatile:(Ljava/lang/Object;J)I
+         8: ireturn
+      LineNumberTable:
+        line 942: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putIntVolatile(java.lang.Object, long, int);
+    descriptor: (Ljava/lang/Object;JI)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #276                // Method jdk/internal/misc/Unsafe.putIntVolatile:(Ljava/lang/Object;JI)V
+        10: return
+      LineNumberTable:
+        line 948: 0
+        line 949: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public boolean getBooleanVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #279                // Method jdk/internal/misc/Unsafe.getBooleanVolatile:(Ljava/lang/Object;J)Z
+         8: ireturn
+      LineNumberTable:
+        line 954: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putBooleanVolatile(java.lang.Object, long, boolean);
+    descriptor: (Ljava/lang/Object;JZ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #282                // Method jdk/internal/misc/Unsafe.putBooleanVolatile:(Ljava/lang/Object;JZ)V
+        10: return
+      LineNumberTable:
+        line 960: 0
+        line 961: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   Z
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public byte getByteVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)B
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #285                // Method jdk/internal/misc/Unsafe.getByteVolatile:(Ljava/lang/Object;J)B
+         8: ireturn
+      LineNumberTable:
+        line 966: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putByteVolatile(java.lang.Object, long, byte);
+    descriptor: (Ljava/lang/Object;JB)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #288                // Method jdk/internal/misc/Unsafe.putByteVolatile:(Ljava/lang/Object;JB)V
+        10: return
+      LineNumberTable:
+        line 972: 0
+        line 973: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   B
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public short getShortVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)S
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #291                // Method jdk/internal/misc/Unsafe.getShortVolatile:(Ljava/lang/Object;J)S
+         8: ireturn
+      LineNumberTable:
+        line 978: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putShortVolatile(java.lang.Object, long, short);
+    descriptor: (Ljava/lang/Object;JS)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #294                // Method jdk/internal/misc/Unsafe.putShortVolatile:(Ljava/lang/Object;JS)V
+        10: return
+      LineNumberTable:
+        line 984: 0
+        line 985: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   S
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public char getCharVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)C
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #297                // Method jdk/internal/misc/Unsafe.getCharVolatile:(Ljava/lang/Object;J)C
+         8: ireturn
+      LineNumberTable:
+        line 990: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putCharVolatile(java.lang.Object, long, char);
+    descriptor: (Ljava/lang/Object;JC)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #300                // Method jdk/internal/misc/Unsafe.putCharVolatile:(Ljava/lang/Object;JC)V
+        10: return
+      LineNumberTable:
+        line 996: 0
+        line 997: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   C
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public long getLongVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #303                // Method jdk/internal/misc/Unsafe.getLongVolatile:(Ljava/lang/Object;J)J
+         8: lreturn
+      LineNumberTable:
+        line 1002: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putLongVolatile(java.lang.Object, long, long);
+    descriptor: (Ljava/lang/Object;JJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: invokevirtual #306                // Method jdk/internal/misc/Unsafe.putLongVolatile:(Ljava/lang/Object;JJ)V
+        10: return
+      LineNumberTable:
+        line 1008: 0
+        line 1009: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public float getFloatVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)F
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #309                // Method jdk/internal/misc/Unsafe.getFloatVolatile:(Ljava/lang/Object;J)F
+         8: freturn
+      LineNumberTable:
+        line 1014: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putFloatVolatile(java.lang.Object, long, float);
+    descriptor: (Ljava/lang/Object;JF)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: fload         4
+         7: invokevirtual #312                // Method jdk/internal/misc/Unsafe.putFloatVolatile:(Ljava/lang/Object;JF)V
+        10: return
+      LineNumberTable:
+        line 1020: 0
+        line 1021: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   F
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public double getDoubleVolatile(java.lang.Object, long);
+    descriptor: (Ljava/lang/Object;J)D
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: invokevirtual #315                // Method jdk/internal/misc/Unsafe.getDoubleVolatile:(Ljava/lang/Object;J)D
+         8: dreturn
+      LineNumberTable:
+        line 1026: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1     o   Ljava/lang/Object;
+            0       9     2 offset   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putDoubleVolatile(java.lang.Object, long, double);
+    descriptor: (Ljava/lang/Object;JD)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: dload         4
+         7: invokevirtual #318                // Method jdk/internal/misc/Unsafe.putDoubleVolatile:(Ljava/lang/Object;JD)V
+        10: return
+      LineNumberTable:
+        line 1032: 0
+        line 1033: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   D
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putOrderedObject(java.lang.Object, long, java.lang.Object);
+    descriptor: (Ljava/lang/Object;JLjava/lang/Object;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: aload         4
+         7: invokevirtual #321                // Method jdk/internal/misc/Unsafe.putReferenceRelease:(Ljava/lang/Object;JLjava/lang/Object;)V
+        10: return
+      LineNumberTable:
+        line 1046: 0
+        line 1047: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putOrderedInt(java.lang.Object, long, int);
+    descriptor: (Ljava/lang/Object;JI)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #324                // Method jdk/internal/misc/Unsafe.putIntRelease:(Ljava/lang/Object;JI)V
+        10: return
+      LineNumberTable:
+        line 1052: 0
+        line 1053: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void putOrderedLong(java.lang.Object, long, long);
+    descriptor: (Ljava/lang/Object;JJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: invokevirtual #327                // Method jdk/internal/misc/Unsafe.putLongRelease:(Ljava/lang/Object;JJ)V
+        10: return
+      LineNumberTable:
+        line 1058: 0
+        line 1059: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4     x   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void unpark(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: invokevirtual #330                // Method jdk/internal/misc/Unsafe.unpark:(Ljava/lang/Object;)V
+         7: return
+      LineNumberTable:
+        line 1075: 0
+        line 1076: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lsun/misc/Unsafe;
+            0       8     1 thread   Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void park(boolean, long);
+    descriptor: (ZJ)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: iload_1
+         4: lload_2
+         5: invokevirtual #334                // Method jdk/internal/misc/Unsafe.park:(ZJ)V
+         8: return
+      LineNumberTable:
+        line 1091: 0
+        line 1092: 8
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 isAbsolute   Z
+            0       9     2  time   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public int getLoadAverage(double[], int);
+    descriptor: ([DI)I
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=3
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: iload_2
+         5: invokevirtual #338                // Method jdk/internal/misc/Unsafe.getLoadAverage:([DI)I
+         8: ireturn
+      LineNumberTable:
+        line 1111: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lsun/misc/Unsafe;
+            0       9     1 loadavg   [D
+            0       9     2 nelems   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final int getAndAddInt(java.lang.Object, long, int);
+    descriptor: (Ljava/lang/Object;JI)I
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #342                // Method jdk/internal/misc/Unsafe.getAndAddInt:(Ljava/lang/Object;JI)I
+        10: ireturn
+      LineNumberTable:
+        line 1130: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4 delta   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final long getAndAddLong(java.lang.Object, long, long);
+    descriptor: (Ljava/lang/Object;JJ)J
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: invokevirtual #346                // Method jdk/internal/misc/Unsafe.getAndAddLong:(Ljava/lang/Object;JJ)J
+        10: lreturn
+      LineNumberTable:
+        line 1146: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4 delta   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final int getAndSetInt(java.lang.Object, long, int);
+    descriptor: (Ljava/lang/Object;JI)I
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: iload         4
+         7: invokevirtual #350                // Method jdk/internal/misc/Unsafe.getAndSetInt:(Ljava/lang/Object;JI)I
+        10: ireturn
+      LineNumberTable:
+        line 1162: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4 newValue   I
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final long getAndSetLong(java.lang.Object, long, long);
+    descriptor: (Ljava/lang/Object;JJ)J
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=6, locals=6, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: lload         4
+         7: invokevirtual #353                // Method jdk/internal/misc/Unsafe.getAndSetLong:(Ljava/lang/Object;JJ)J
+        10: lreturn
+      LineNumberTable:
+        line 1178: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4 newValue   J
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public final java.lang.Object getAndSetObject(java.lang.Object, long, java.lang.Object);
+    descriptor: (Ljava/lang/Object;JLjava/lang/Object;)Ljava/lang/Object;
+    flags: (0x0011) ACC_PUBLIC, ACC_FINAL
+    Code:
+      stack=5, locals=5, args_size=4
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: aload_1
+         4: lload_2
+         5: aload         4
+         7: invokevirtual #356                // Method jdk/internal/misc/Unsafe.getAndSetReference:(Ljava/lang/Object;JLjava/lang/Object;)Ljava/lang/Object;
+        10: areturn
+      LineNumberTable:
+        line 1194: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lsun/misc/Unsafe;
+            0      11     1     o   Ljava/lang/Object;
+            0      11     2 offset   J
+            0      11     4 newValue   Ljava/lang/Object;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void loadFence();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: invokevirtual #360                // Method jdk/internal/misc/Unsafe.loadFence:()V
+         6: return
+      LineNumberTable:
+        line 1212: 0
+        line 1213: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lsun/misc/Unsafe;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void storeFence();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: invokevirtual #363                // Method jdk/internal/misc/Unsafe.storeFence:()V
+         6: return
+      LineNumberTable:
+        line 1229: 0
+        line 1230: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lsun/misc/Unsafe;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void fullFence();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+         3: invokevirtual #366                // Method jdk/internal/misc/Unsafe.fullFence:()V
+         6: return
+      LineNumberTable:
+        line 1243: 0
+        line 1244: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0  this   Lsun/misc/Unsafe;
+    RuntimeVisibleAnnotations:
+      0: #494()
+        jdk.internal.vm.annotation.ForceInline
+
+  public void invokeCleaner(java.nio.ByteBuffer);
+    descriptor: (Ljava/nio/ByteBuffer;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=2
+         0: aload_1
+         1: invokevirtual #369                // Method java/nio/ByteBuffer.isDirect:()Z
+         4: ifne          18
+         7: new           #374                // class java/lang/IllegalArgumentException
+        10: dup
+        11: ldc_w         #376                // String buffer is non-direct
+        14: invokespecial #378                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        17: athrow
+        18: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+        21: aload_1
+        22: invokevirtual #379                // Method jdk/internal/misc/Unsafe.invokeCleaner:(Ljava/nio/ByteBuffer;)V
+        25: return
+      LineNumberTable:
+        line 1257: 0
+        line 1258: 7
+        line 1260: 18
+        line 1261: 25
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0  this   Lsun/misc/Unsafe;
+            0      26     1 directBuffer   Ljava/nio/ByteBuffer;
+      StackMapTable: number_of_entries = 1
+        frame_type = 18 /* same */
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: ldc           #35                 // class sun/misc/Unsafe
+         2: ldc_w         #383                // String getUnsafe
+         5: invokestatic  #385                // InterfaceMethod java/util/Set.of:(Ljava/lang/Object;)Ljava/util/Set;
+         8: invokestatic  #391                // Method jdk/internal/reflect/Reflection.registerMethodsToFilter:(Ljava/lang/Class;Ljava/util/Set;)V
+        11: new           #35                 // class sun/misc/Unsafe
+        14: dup
+        15: invokespecial #395                // Method "<init>":()V
+        18: putstatic     #34                 // Field theUnsafe:Lsun/misc/Unsafe;
+        21: invokestatic  #396                // Method jdk/internal/misc/Unsafe.getUnsafe:()Ljdk/internal/misc/Unsafe;
+        24: putstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+        27: getstatic     #399                // Field jdk/internal/misc/Unsafe.ARRAY_BOOLEAN_BASE_OFFSET:I
+        30: putstatic     #403                // Field ARRAY_BOOLEAN_BASE_OFFSET:I
+        33: getstatic     #404                // Field jdk/internal/misc/Unsafe.ARRAY_BYTE_BASE_OFFSET:I
+        36: putstatic     #407                // Field ARRAY_BYTE_BASE_OFFSET:I
+        39: getstatic     #408                // Field jdk/internal/misc/Unsafe.ARRAY_SHORT_BASE_OFFSET:I
+        42: putstatic     #411                // Field ARRAY_SHORT_BASE_OFFSET:I
+        45: getstatic     #412                // Field jdk/internal/misc/Unsafe.ARRAY_CHAR_BASE_OFFSET:I
+        48: putstatic     #415                // Field ARRAY_CHAR_BASE_OFFSET:I
+        51: getstatic     #416                // Field jdk/internal/misc/Unsafe.ARRAY_INT_BASE_OFFSET:I
+        54: putstatic     #419                // Field ARRAY_INT_BASE_OFFSET:I
+        57: getstatic     #420                // Field jdk/internal/misc/Unsafe.ARRAY_LONG_BASE_OFFSET:I
+        60: putstatic     #423                // Field ARRAY_LONG_BASE_OFFSET:I
+        63: getstatic     #424                // Field jdk/internal/misc/Unsafe.ARRAY_FLOAT_BASE_OFFSET:I
+        66: putstatic     #427                // Field ARRAY_FLOAT_BASE_OFFSET:I
+        69: getstatic     #428                // Field jdk/internal/misc/Unsafe.ARRAY_DOUBLE_BASE_OFFSET:I
+        72: putstatic     #431                // Field ARRAY_DOUBLE_BASE_OFFSET:I
+        75: getstatic     #432                // Field jdk/internal/misc/Unsafe.ARRAY_OBJECT_BASE_OFFSET:I
+        78: putstatic     #435                // Field ARRAY_OBJECT_BASE_OFFSET:I
+        81: getstatic     #436                // Field jdk/internal/misc/Unsafe.ARRAY_BOOLEAN_INDEX_SCALE:I
+        84: putstatic     #439                // Field ARRAY_BOOLEAN_INDEX_SCALE:I
+        87: getstatic     #440                // Field jdk/internal/misc/Unsafe.ARRAY_BYTE_INDEX_SCALE:I
+        90: putstatic     #443                // Field ARRAY_BYTE_INDEX_SCALE:I
+        93: getstatic     #444                // Field jdk/internal/misc/Unsafe.ARRAY_SHORT_INDEX_SCALE:I
+        96: putstatic     #447                // Field ARRAY_SHORT_INDEX_SCALE:I
+        99: getstatic     #448                // Field jdk/internal/misc/Unsafe.ARRAY_CHAR_INDEX_SCALE:I
+       102: putstatic     #451                // Field ARRAY_CHAR_INDEX_SCALE:I
+       105: getstatic     #452                // Field jdk/internal/misc/Unsafe.ARRAY_INT_INDEX_SCALE:I
+       108: putstatic     #455                // Field ARRAY_INT_INDEX_SCALE:I
+       111: getstatic     #456                // Field jdk/internal/misc/Unsafe.ARRAY_LONG_INDEX_SCALE:I
+       114: putstatic     #459                // Field ARRAY_LONG_INDEX_SCALE:I
+       117: getstatic     #460                // Field jdk/internal/misc/Unsafe.ARRAY_FLOAT_INDEX_SCALE:I
+       120: putstatic     #463                // Field ARRAY_FLOAT_INDEX_SCALE:I
+       123: getstatic     #464                // Field jdk/internal/misc/Unsafe.ARRAY_DOUBLE_INDEX_SCALE:I
+       126: putstatic     #467                // Field ARRAY_DOUBLE_INDEX_SCALE:I
+       129: getstatic     #468                // Field jdk/internal/misc/Unsafe.ARRAY_OBJECT_INDEX_SCALE:I
+       132: putstatic     #471                // Field ARRAY_OBJECT_INDEX_SCALE:I
+       135: getstatic     #40                 // Field theInternalUnsafe:Ljdk/internal/misc/Unsafe;
+       138: invokevirtual #240                // Method jdk/internal/misc/Unsafe.addressSize:()I
+       141: putstatic     #472                // Field ADDRESS_SIZE:I
+       144: return
+      LineNumberTable:
+        line 59: 0
+        line 64: 11
+        line 65: 21
+        line 762: 27
+        line 765: 33
+        line 768: 39
+        line 771: 45
+        line 774: 51
+        line 777: 57
+        line 780: 63
+        line 783: 69
+        line 786: 75
+        line 805: 81
+        line 808: 87
+        line 811: 93
+        line 814: 99
+        line 817: 105
+        line 820: 111
+        line 823: 117
+        line 826: 123
+        line 829: 129
+        line 843: 135
+}
+SourceFile: "Unsafe.java"
+BootstrapMethods:
+  0: #559 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #565 can\'t get field offset on a hidden class: \u0001
+  1: #559 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #567 can\'t get field offset on a record class: \u0001
+  2: #559 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #569 can\'t get base address on a hidden class: \u0001
+  3: #559 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #571 can\'t get base address on a record class: \u0001
+InnerClasses:
+  public static final #578= #574 of #576; // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

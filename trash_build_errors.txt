@@ -1,0 +1,14 @@
+The directory is not empty.
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7.32)
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
+Note: Loading searge mappings from F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\createMcpToSrg\output.tsrg
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-mappings.tsrg
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-mappings.tsrg
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\src\main\java\yeet\block\SparseIntegerProperty.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.

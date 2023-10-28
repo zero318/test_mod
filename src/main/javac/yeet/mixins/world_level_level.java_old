@@ -1,0 +1,30 @@
+package yeet.mixins;
+
+import yeet.block_registration;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+
+import org.spongepowered.asm.mixin.Debug;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+@Mixin(Level.class)
+@Debug(export = true)
+public class world_level_level {
+	
+	@Redirect(
+		method = "updateNeighbourForOutputSignal(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V",
+		at = @At(
+			value = "INVOKE",
+			target = "Lnet/minecraft/world/level/block/state/BlockState;is(Lnet/minecraft/world/level/block/Block;)Z"
+		)
+	)
+	@Debug(print = true)
+	public boolean comparator_block_to_tag(BlockState block_state, Block idgaf) {
+		return block_state.is(block_registration.COMPARATORS);
+	}
+}

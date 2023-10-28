@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:repeater",
+		"test_mod:soul_repeater"
+	]
+}

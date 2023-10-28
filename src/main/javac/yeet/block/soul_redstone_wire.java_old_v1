@@ -1,0 +1,704 @@
+package yeet.block;
+
+#include "..\util.h"
+
+import yeet.YeetUtil;
+import yeet.block.CustomStates;
+import yeet.BlockRegistration;
+import net.minecraft.world.level.block.RedStoneWireBlock;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
+import com.mojang.math.Vector3f;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Random;
+import javax.annotation.Nullable;
+import net.minecraft.Util;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
+import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.util.Mth;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Abilities;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.ObserverBlock;
+import net.minecraft.world.level.block.RepeaterBlock;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.RedstoneSide;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
+
+#define BASE_MASK		(0x03)
+
+#define NORTH_MASK		(0x03)
+#define SOUTH_MASK		(0x0C)
+#define WEST_MASK		(0x30)
+#define EAST_MASK		(0xC0)
+
+#define BITS_PER_DIR	(2)
+
+#define DOWN_ORDINAL	(0)
+#define UP_ORDINAL		(1)
+#define NORTH_ORDINAL	(2)
+#define SOUTH_ORDINAL	(3)
+#define WEST_ORDINAL	(4)
+#define EAST_ORDINAL	(5)
+
+// I doubt Java is smart enough to optimize this to a LEA,
+// but you never know. Keep as A * B - C instead of (A - C) * B
+#define ordinal_to_shift(ordinal) ((ordinal) * 2 - 4)
+
+#define ordinal_to_mask(ordinal) (BASE_MASK << ordinal_to_shift(ordinal))
+
+#define NONE_BITS		(0)
+#define SIDE_BITS		(1)
+#define UP_BITS			(2)
+
+#define NORTH_SHIFT		(0)
+#define SOUTH_SHIFT		(2)
+#define WEST_SHIFT		(4)
+#define EAST_SHIFT		(6)
+
+#define NO_CONNECTIONS	(0x00)
+#define NORTH_SIDE		(0x01)
+#define NORTH_UP		(0x02)
+#define SOUTH_SIDE		(0x04)
+#define SOUTH_UP		(0x08)
+#define WEST_SIDE		(0x10)
+#define WEST_UP			(0x20)
+#define EAST_SIDE		(0x40)
+#define EAST_UP			(0x80)
+
+#define CROSS_SHAPE		(NORTH_SIDE | SOUTH_SIDE | WEST_SIDE | EAST_SIDE)
+
+#define connection_type_is_not_none(type) ((type) != 0)
+
+#define has_connection_by_ordinal(connections, ordinal) (((connections) & ordinal_to_mask(ordinal)) != 0)
+
+#define has_north_connection(connections) (((connections) & (byte)NORTH_MASK) != 0)
+#define has_any_swe_connection(connections) ((connections) > 0x03)
+#define has_south_connection(connections) (((connections) & (byte)SOUTH_MASK) != 0)
+#define has_any_nwe_connection(connections) (((connections) & (byte)~SOUTH_MASK) != 0)
+#define has_west_connection(connections) (((connections) & (byte)WEST_MASK) != 0)
+#define has_any_nse_connection(connections) (((connections) & (byte)~WEST_MASK) != 0)
+#define has_east_connection(connections) ((connections) > 0x3F)
+#define has_any_nsw_connection(connections) (((connections) & (byte)~EAST_MASK) != 0)
+
+#define has_no_connections(connections) ((connections) == NO_CONNECTIONS)
+
+#define ExtendsVanillaWire 0
+
+#if ExtendsVanillaWire
+#define SoulWireBase RedStoneWireBlock
+#define StateIsWire(blockstate) ((blockstate).getBlock() instanceof RedStoneWireBlock)
+#define ShouldConnect(...) RedStoneWireBlock.shouldConnectTo(__VA_ARGS__)
+#else
+//import java.lang.reflect.Method;
+#define SoulWireBase Block
+#define StateIsWire(blockstate) ((blockstate).is(BlockRegistration.REDSTONE_WIRES_TAG))
+#define ShouldConnect(...) SoulRedstoneWire.shouldConnectTo(__VA_ARGS__)
+#endif
+
+//========================================
+//
+//
+//
+//
+//
+//========================================
+
+public class SoulRedstoneWire extends SoulWireBase {
+	
+	private static final VoxelShape[] SHAPES_LUT = new VoxelShape[171];
+	
+	static {
+		VoxelShape shape_dot = SHAPES_LUT[0] = Block.box(3.0, 0.0, 3.0, 13.0, 1.0, 13.0);
+		for (int i = 1; i < 171; ++i) {
+			int side_count = popcount(i);
+			if (side_count != 1 && side_count <= 4) {
+				VoxelShape shape = shape_dot;
+				if (has_north_connection(i)) {
+					shape = Shapes.or(shape, Block.box(3.0, 0.0, 0.0, 13.0, 1.0, 13.0));
+					if ((i & NORTH_UP) != 0) {
+						shape = Shapes.or(shape, Block.box(3.0, 0.0, 0.0, 13.0, 16.0, 1.0));
+					}
+				}
+				if (has_south_connection(i)) {
+					shape = Shapes.or(shape, Block.box(3.0, 0.0, 3.0, 13.0, 1.0, 16.0));
+					if ((i & SOUTH_UP) != 0) {
+						shape = Shapes.or(shape, Block.box(3.0, 0.0, 15.0, 13.0, 16.0, 16.0));
+					}
+				}
+				if (has_west_connection(i)) {
+					shape = Shapes.or(shape, Block.box(0.0, 0.0, 3.0, 13.0, 1.0, 13.0));
+					if ((i & WEST_UP) != 0) {
+						shape = Shapes.or(shape, Block.box(0.0, 0.0, 3.0, 1.0, 16.0, 13.0));
+					}
+				}
+				if (has_east_connection(i)) {
+					shape = Shapes.or(shape, Block.box(3.0, 0.0, 3.0, 16.0, 1.0, 13.0));
+					if ((i & EAST_UP) != 0) {
+						shape = Shapes.or(shape, Block.box(15.0, 0.0, 3.0, 16.0, 16.0, 13.0));
+					}
+				}
+				SHAPES_LUT[i] = shape;
+			}
+		}
+/*
+#if !ExtendsVanillaWire
+		try {
+			Method should_connect_to1 = RedStoneWireBlock.class.getDeclaredMethod("shouldConnectTo", BlockState.class);
+            should_connect_to1.setAccessible(true);
+			Method should_connect_to2 = RedStoneWireBlock.class.getDeclaredMethod("shouldConnectTo", BlockState.class, Direction.class);
+            should_connect_to2.setAccessible(true);
+		} catch (IllegalAccessException | NoSuchMethodException e) {
+            throw new RuntimeException("", e);
+        }
+#endif
+*/
+	}
+	
+	public static final SparseIntegerProperty CONNECTIONS = CustomStates.CONNECTIONS;
+	private boolean shouldSignal = true;
+#if !ExtendsVanillaWire
+	public static final IntegerProperty POWER = BlockStateProperties.POWER;
+	//private final BlockState crossState;
+#endif
+	
+	public SoulRedstoneWire(BlockBehaviour.Properties properties) {
+        super(properties);
+		this.registerDefaultState(
+			this.stateDefinition.any()
+				.setValue(POWER, 0)
+				.setValue(CONNECTIONS, NO_CONNECTIONS)
+		);
+#if !ExtendsVanillaWire
+		//this.crossState = this.defaultBlockState().setValue(CONNECTIONS, CROSS_SHAPE);
+#endif
+	}
+	
+	@Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(POWER, CONNECTIONS);
+    }
+	
+	private boolean canSurviveOn(BlockGetter blockGetter, BlockPos blockPos, BlockState blockState) {
+        return blockState.isFaceSturdy(blockGetter, blockPos, Direction.UP) || blockState.is(Blocks.HOPPER);
+    }
+	
+#if !ExtendsVanillaWire
+	@Override
+    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+        BlockPos blockPos2 = blockPos.below();
+        BlockState blockState2 = levelReader.getBlockState(blockPos2);
+        return this.canSurviveOn(levelReader, blockPos2, blockState2);
+    }
+
+	@Override
+    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
+        return this.defaultBlockState().setValue(CONNECTIONS, this.getConnectionState(blockPlaceContext.getLevel(), CROSS_SHAPE, blockPlaceContext.getClickedPos()));
+    }
+	
+	@Override
+    public void onPlace(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
+        if (!blockState2.is(blockState.getBlock()) && !level.isClientSide) {
+            this.updatePowerStrength(level, blockPos, blockState, UPDATE_CLIENTS | UPDATE_SUPPRESS_LIGHT);
+			for (Direction direction : Direction.Plane.VERTICAL) {
+				level.updateNeighborsAt(blockPos.relative(direction), this);
+			}
+			this.updateNeighborsOfNeighboringWires(level, blockPos);
+        }
+    }
+
+    @Override
+    public void onRemove(BlockState blockState, Level level, BlockPos blockPos, BlockState blockState2, boolean bl) {
+        if (!bl && !blockState.is(blockState2.getBlock())) {
+            super.onRemove(blockState, level, blockPos, blockState2, bl);
+			if (!level.isClientSide) {
+				for (Direction direction : Direction.values()) {
+					level.updateNeighborsAt(blockPos.relative(direction), this);
+				}
+				this.updatePowerStrength(level, blockPos, blockState, UPDATE_CLIENTS | UPDATE_SUPPRESS_LIGHT);
+				this.updateNeighborsOfNeighboringWires(level, blockPos);
+			}
+        }
+    }
+	
+	@Override
+    public void neighborChanged(BlockState blockState, Level level, BlockPos blockPos, Block block, BlockPos blockPos2, boolean bl) {
+        if (!level.isClientSide) {
+            if (blockState.canSurvive(level, blockPos)) {
+				this.updatePowerStrength(level, blockPos, blockState, UPDATE_NEIGHBORS | UPDATE_CLIENTS | UPDATE_KNOWN_SHAPE | UPDATE_SUPPRESS_LIGHT);
+			} else {
+				RedStoneWireBlock.dropResources(blockState, level, blockPos);
+				level.removeBlock(blockPos, false);
+			}
+        }
+    }
+	
+	@Override
+    public int getDirectSignal(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Direction direction) {
+        return this.shouldSignal ? blockState.getSignal(blockGetter, blockPos, direction) : 0;
+    }
+	
+	@Override
+    public boolean isSignalSource(BlockState blockState) {
+        return this.shouldSignal;
+    }
+	
+	// FIXME: This is where the duplicate updates are! Do something about it!
+	private void updateNeighborsOfNeighboringWires(Level level, BlockPos blockPos) {
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            this.checkCornerChangeAt(level, blockPos.relative(direction));
+        }
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            BlockPos blockPos2 = blockPos.relative(direction);
+			
+			this.checkCornerChangeAt(level,
+				level.getBlockState(blockPos2).isRedstoneConductor(level, blockPos2)
+					? blockPos2.above() : blockPos2.below());
+        }
+    }
+	
+	private void checkCornerChangeAt(Level level, BlockPos blockPos) {
+        if (level.getBlockState(blockPos).is(BlockRegistration.WIRE_CONNECTIONS_TAG)) {
+            level.updateNeighborsAt(blockPos, this);
+			level.updateNeighborsAt(blockPos.relative(Direction.DOWN), this);
+			level.updateNeighborsAt(blockPos.relative(Direction.UP), this);
+			level.updateNeighborsAt(blockPos.relative(Direction.NORTH), this);
+			level.updateNeighborsAt(blockPos.relative(Direction.SOUTH), this);
+			level.updateNeighborsAt(blockPos.relative(Direction.WEST), this);
+			level.updateNeighborsAt(blockPos.relative(Direction.EAST), this);
+        }
+    }
+	
+	protected static boolean shouldConnectTo(BlockState blockState) {
+        return ShouldConnect(blockState, null);
+    }
+
+    protected static boolean shouldConnectTo(BlockState blockState, @Nullable Direction direction) {
+        if (blockState.is(BlockRegistration.WIRE_CONNECTIONS_TAG)) {
+            return true;
+        }
+        if (blockState.is(BlockRegistration.REPEATER_CONNECTIONS_TAG)) {
+            Direction direction2 = blockState.getValue(RepeaterBlock.FACING);
+            return direction2 == direction || direction2.getOpposite() == direction;
+        }
+        if (blockState.is(BlockRegistration.OBSERVER_CONNECTIONS_TAG)) {
+            return direction == blockState.getValue(ObserverBlock.FACING);
+        }
+        return blockState.isSignalSource() && direction != null;
+    }
+#endif
+	
+	private static final int[] COLORS = {
+		0x0F4547,
+		0x166669,
+		0x186F72,
+		0x1A787B,
+		0x1C8185,
+		0x1E8A8E,
+		0x209397,
+		0x229CA1,
+		0x24A6AA,
+		0x26AFB3,
+		0x28BABE,
+		0x2AC3C8,
+		0x2CCCD1,
+		0x2ED5DA,
+		0x30DEE4,
+		0x32E7ED
+	};
+	
+	// isSignalSource not overwritten
+	
+	public static int getColorForPower(int n) {
+        return COLORS[n];
+    }
+	
+	// spawnParticlesAlongLine (omitted because animateTick is removed)
+	@Override
+    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, Random random) {
+	}
+	
+	// rotation of NONE will end up falling through the switch in RedstoneWireBlock
+	@Override
+    public BlockState rotate(BlockState blockState, Rotation rotation) {
+        int connections = blockState.getValue(CONNECTIONS);
+		int temp;
+		switch (rotation) {
+			default:
+				return blockState;
+			case CLOCKWISE_90: {
+				temp = connections >>> 4;
+				temp += connections << 6 & 0xC0;
+				connections &= 0x30;
+				//temp += connections << 2 & 0x30;
+				return blockState.setValue(CONNECTIONS, connections * 4 + temp);
+            }
+            case CLOCKWISE_180: {
+				temp = connections >>> 2 & 0x33;
+				connections &= 0xCC;
+				//temp += connections << 2 & 0xCC;
+				return blockState.setValue(CONNECTIONS, connections * 4 + temp);
+            }
+            case COUNTERCLOCKWISE_90: {
+				temp = connections >>> 6;
+				temp += connections >> 2 & 0x0C;
+				temp += connections << 4 & 0xF0;
+                return blockState.setValue(CONNECTIONS, temp);
+            }
+        }
+    }
+	
+	// mirror of NONE will end up falling through the switch in RedstoneWireBlock
+	@Override
+    public BlockState mirror(BlockState blockState, Mirror mirror) {
+		int connections = blockState.getValue(CONNECTIONS);
+		int temp;
+		switch (mirror) {
+            case LEFT_RIGHT: {
+				temp = connections >>> 2 & 0x03;
+				temp += connections & 0xF0;
+				connections &= 0x03;
+				return blockState.setValue(CONNECTIONS, connections * 4 + temp);
+            }
+            case FRONT_BACK: {
+				temp = connections >>> 2 & 0x30;
+				temp += connections & 0x0F;
+				connections &= 0x30;
+				return blockState.setValue(CONNECTIONS, connections * 4 + temp);
+            }
+        }
+        return super.mirror(blockState, mirror);
+    }
+	
+	@Override
+    public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+        if (player.getAbilities().mayBuild) {
+            int connections = blockState.getValue(CONNECTIONS);
+			int number_of_connections = popcount(connections);
+			if (number_of_connections == 0 || number_of_connections == 4) {
+				int new_connections = this.getConnectionState(level, connections, blockPos);
+				connections ^= new_connections;
+				if (connections != 0) {
+					blockState = blockState.setValue(CONNECTIONS, new_connections);
+					level.setBlock(blockPos, blockState, UPDATE_ALL);
+					BlockPos.MutableBlockPos mutable_pos = new BlockPos.MutableBlockPos();
+					mutable_pos.setWithOffset(blockPos, NORTH_OFFSETS);
+					if (popcount(connections & NORTH_MASK) == 1 || level.getBlockState(mutable_pos).isRedstoneConductor(level, mutable_pos)) {
+						level.updateNeighborsAtExceptFromFacing(mutable_pos, blockState.getBlock(), Direction.SOUTH);
+					}
+					mutable_pos.setWithOffset(blockPos, EAST_OFFSETS);
+					if (popcount(connections & EAST_MASK) == 1 || level.getBlockState(mutable_pos).isRedstoneConductor(level, mutable_pos)) {
+						level.updateNeighborsAtExceptFromFacing(mutable_pos, blockState.getBlock(), Direction.WEST);
+					}
+					mutable_pos.setWithOffset(blockPos, SOUTH_OFFSETS);
+					if (popcount(connections & SOUTH_MASK) == 1 || level.getBlockState(mutable_pos).isRedstoneConductor(level, mutable_pos)) {
+						level.updateNeighborsAtExceptFromFacing(mutable_pos, blockState.getBlock(), Direction.NORTH);
+					}
+					mutable_pos.setWithOffset(blockPos, WEST_OFFSETS);
+					if (popcount(connections & WEST_MASK) == 1 || level.getBlockState(mutable_pos).isRedstoneConductor(level, mutable_pos)) {
+						level.updateNeighborsAtExceptFromFacing(mutable_pos, blockState.getBlock(), Direction.EAST);
+					}
+					return InteractionResult.SUCCESS;
+				}
+			}
+        }
+        return InteractionResult.PASS;
+    }
+	
+	
+	@Override
+    public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
+        return SHAPES_LUT[blockState.getValue(CONNECTIONS)];
+    }
+	
+	/*
+	private int getConnectingSide(BlockGetter blockGetter, BlockPos blockPos, Direction direction, boolean above_is_solid) {
+        blockPos = blockPos.relative(direction);
+		BlockState neighbor_state = blockGetter.getBlockState(blockPos);
+		if (!above_is_solid && this.canSurviveOn(blockGetter, blockPos, neighbor_state) && RedStoneWireBlock.shouldConnectTo(blockGetter.getBlockState(blockPos.above()))) {
+			return neighbor_state.isFaceSturdy(blockGetter, blockPos, direction.getOpposite()) ? UP_BITS : SIDE_BITS;
+		}
+		return RedStoneWireBlock.shouldConnectTo(neighbor_state, direction) || !blockState.isRedstoneConductor(blockGetter, blockPos) && RedStoneWireBlock.shouldConnectTo(blockGetter.getBlockState(blockPos.below()))) ? SIDE_BITS : NONE_BITS;
+    }
+	*/
+	
+	public int getConnectingSide(BlockGetter blockGetter, BlockPos blockPos, Direction direction, boolean above_is_solid) {
+        blockPos = blockPos.relative(direction);
+		BlockState neighbor_state = blockGetter.getBlockState(blockPos);
+		int ret = NONE_BITS;
+		do {
+			if (!above_is_solid && this.canSurviveOn(blockGetter, blockPos, neighbor_state) && ShouldConnect(blockGetter.getBlockState(blockPos.above()))) {
+				if (neighbor_state.isFaceSturdy(blockGetter, blockPos, direction.getOpposite())) {
+					ret += UP_BITS;
+					break;
+				}
+			}
+			else if (!(ShouldConnect(neighbor_state, direction) || !neighbor_state.isRedstoneConductor(blockGetter, blockPos) && ShouldConnect(blockGetter.getBlockState(blockPos.below())))) {
+				break;
+			}
+			ret += SIDE_BITS;
+		} while (false);
+		return ret << ordinal_to_shift(direction.ordinal());
+    }
+	
+	public int getMissingConnections(BlockGetter blockGetter, BlockPos blockPos) {
+		boolean above_is_solid = blockGetter.getBlockState(blockPos.above()).isRedstoneConductor(blockGetter, blockPos);
+		int connections = NO_CONNECTIONS;
+		connections |= this.getConnectingSide(blockGetter, blockPos, Direction.NORTH, above_is_solid);
+		connections |= this.getConnectingSide(blockGetter, blockPos, Direction.SOUTH, above_is_solid);
+		connections |= this.getConnectingSide(blockGetter, blockPos, Direction.WEST, above_is_solid);
+		connections |= this.getConnectingSide(blockGetter, blockPos, Direction.EAST, above_is_solid);
+        return connections;
+    }
+	
+	/*
+	@Override
+	private static boolean isDot(BlockState blockState) {
+		return has_no_connections(blockState.getValue(CONNECTIONS));
+    }
+	@Override
+	private static boolean isCross(BlockState blockState) {
+		return popcount(blockState.getValue(CONNECTIONS)) == 4;
+	}
+	*/
+	
+	//private int getConnectionState(BlockGetter blockGetter, BlockState self_state, BlockPos self_pos) {
+	public int getConnectionState(BlockGetter blockGetter, int connections, BlockPos self_pos) {
+		//int connections = self_state.getValue(CONNECTIONS);
+        boolean started_as_dot = has_no_connections(connections);
+        connections = this.getMissingConnections(blockGetter, self_pos);
+        if (started_as_dot && has_no_connections(connections)) {
+			return NO_CONNECTIONS; // self_state.setValue(CONNECTIONS, NO_CONNECTIONS);
+        }
+		int new_connections = connections;
+		if (!has_any_nwe_connection(connections)) new_connections += NORTH_SIDE;
+		if (!has_any_swe_connection(connections)) new_connections += SOUTH_SIDE;
+		if (!has_any_nsw_connection(connections)) new_connections += WEST_SIDE;
+		if (!has_any_nse_connection(connections)) new_connections += EAST_SIDE;
+		return new_connections;
+    }
+	
+	@Override
+    public BlockState updateShape(BlockState blockState, Direction direction, BlockState blockState2, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos2) {
+#define direction_index direction_int
+#define direction_mask direction_int
+		int direction_index = direction.ordinal();
+		if (direction_index != DOWN_ORDINAL) {
+			int redstone_side;
+			int connections = blockState.getValue(CONNECTIONS);
+			if (direction_index == UP_ORDINAL) {
+				redstone_side = this.getConnectionState(levelAccessor, connections, blockPos);
+			}
+			else {
+				redstone_side = this.getConnectingSide(levelAccessor, blockPos, direction, levelAccessor.getBlockState(blockPos.above()).isRedstoneConductor(levelAccessor, blockPos));
+					
+				direction_mask = ordinal_to_mask(direction_index) & connections;
+				if (popcount(connections) != 4 &&
+					//connection_type_is_not_none(redstone_side) == has_connection_by_ordinal(connections, direction_index)
+					popcount(redstone_side ^ direction_mask) != 1
+				) {
+					redstone_side |= connections ^ direction_mask;
+				}
+				else {
+					redstone_side = this.getConnectionState(levelAccessor, CROSS_SHAPE, blockPos);
+				}
+			}
+			if (redstone_side != connections) { // This prevents the stupid "144 is not a valid value" error
+				blockState = blockState.setValue(CONNECTIONS, redstone_side);
+			}
+			/* try {
+				blockState = blockState.setValue(CONNECTIONS, redstone_side);
+			}
+			catch (IllegalArgumentException e) {
+				int length = CustomStates.WIRE_STATES.length;
+				String pingas = "BAD BLOCKSTATES (" + blockPos.getX() + "," + blockPos.getY() + "," + blockPos.getZ() + ")[" + blockState.getValue(CONNECTIONS) + "," + blockState.getValue(POWER) + "]: ";
+				for (int i = 0; i < length; ++i) {
+					int value = CustomStates.WIRE_STATES[i];
+					try {
+						blockState.setValue(CONNECTIONS, value);
+					} catch (IllegalArgumentException e2) {
+						pingas += value + " ";
+					}
+				}
+				System.out.println(pingas);
+				//throw new IllegalArgumentException(pingas);
+			} */
+		}
+		return blockState;
+#undef direction_index
+#undef direction_mask
+    }
+	
+	@Override
+    public void updateIndirectNeighbourShapes(BlockState blockState, LevelAccessor levelAccessor, BlockPos blockPos, int n, int n2) {
+        int connections = blockState.getValue(CONNECTIONS);
+		if (!has_no_connections(connections)) {
+			BlockPos.MutableBlockPos mutable_pos = new BlockPos.MutableBlockPos();
+			BlockPos below_pos = blockPos.below();
+			BlockState below_state = levelAccessor.getBlockState(below_pos);
+			BlockPos above_pos = blockPos.above();
+			BlockState above_state = levelAccessor.getBlockState(above_pos);
+			BlockState neighbor_state;
+			if (has_north_connection(connections)) {
+				mutable_pos.setWithOffset(blockPos, 0, 0, -1);
+				if (!StateIsWire(levelAccessor.getBlockState(mutable_pos))) {
+					mutable_pos.move(0, -1, 0);
+					neighbor_state = levelAccessor.getBlockState(mutable_pos);
+					if (!neighbor_state.is(Blocks.OBSERVER)) {
+						RedStoneWireBlock.updateOrDestroy(neighbor_state,
+							neighbor_state.updateShape(Direction.SOUTH, below_state, levelAccessor, mutable_pos, below_pos)
+						, levelAccessor, mutable_pos, n, n2);
+					}
+				}
+				mutable_pos.setWithOffset(blockPos, 0, 1, -1);
+				neighbor_state = levelAccessor.getBlockState(mutable_pos);
+				if (!neighbor_state.is(Blocks.OBSERVER)) {
+					RedStoneWireBlock.updateOrDestroy(neighbor_state,
+						neighbor_state.updateShape(Direction.SOUTH, above_state, levelAccessor, mutable_pos, above_pos)
+					, levelAccessor, mutable_pos, n, n2);
+				}
+			}
+			if (has_east_connection(connections)) {
+				mutable_pos.setWithOffset(blockPos, 1, 0, 0);
+				if (!StateIsWire(levelAccessor.getBlockState(mutable_pos))) {
+					mutable_pos.move(0, -1, 0);
+					neighbor_state = levelAccessor.getBlockState(mutable_pos);
+					if (!neighbor_state.is(Blocks.OBSERVER)) {
+						RedStoneWireBlock.updateOrDestroy(neighbor_state,
+							neighbor_state.updateShape(Direction.WEST, below_state, levelAccessor, mutable_pos, below_pos)
+						, levelAccessor, mutable_pos, n, n2);
+					}
+				}
+				mutable_pos.setWithOffset(blockPos, 1, 1, 0);
+				neighbor_state = levelAccessor.getBlockState(mutable_pos);
+				if (!neighbor_state.is(Blocks.OBSERVER)) {
+					RedStoneWireBlock.updateOrDestroy(neighbor_state,
+						neighbor_state.updateShape(Direction.WEST, above_state, levelAccessor, mutable_pos, above_pos)
+					, levelAccessor, mutable_pos, n, n2);
+				}
+			}
+			if (has_south_connection(connections)) {
+				mutable_pos.setWithOffset(blockPos, 0, 0, 1);
+				if (!StateIsWire(levelAccessor.getBlockState(mutable_pos))) {
+					mutable_pos.move(0, -1, 0);
+					neighbor_state = levelAccessor.getBlockState(mutable_pos);
+					if (!neighbor_state.is(Blocks.OBSERVER)) {
+						RedStoneWireBlock.updateOrDestroy(neighbor_state,
+							neighbor_state.updateShape(Direction.NORTH, below_state, levelAccessor, mutable_pos, below_pos)
+						, levelAccessor, mutable_pos, n, n2);
+					}
+				}
+				mutable_pos.setWithOffset(blockPos, 0, 1, 1);
+				neighbor_state = levelAccessor.getBlockState(mutable_pos);
+				if (!neighbor_state.is(Blocks.OBSERVER)) {
+					RedStoneWireBlock.updateOrDestroy(neighbor_state,
+						neighbor_state.updateShape(Direction.NORTH, above_state, levelAccessor, mutable_pos, above_pos)
+					, levelAccessor, mutable_pos, n, n2);
+				}
+			}
+			if (has_west_connection(connections)) {
+				mutable_pos.setWithOffset(blockPos, 1, 0, 0);
+				if (!StateIsWire(levelAccessor.getBlockState(mutable_pos))) {
+					mutable_pos.move(0, -1, 0);
+					neighbor_state = levelAccessor.getBlockState(mutable_pos);
+					if (!neighbor_state.is(Blocks.OBSERVER)) {
+						RedStoneWireBlock.updateOrDestroy(neighbor_state,
+							neighbor_state.updateShape(Direction.EAST, below_state, levelAccessor, mutable_pos, below_pos)
+						, levelAccessor, mutable_pos, n, n2);
+					}
+				}
+				mutable_pos.setWithOffset(blockPos, 1, 1, 0);
+				neighbor_state = levelAccessor.getBlockState(mutable_pos);
+				if (!neighbor_state.is(Blocks.OBSERVER)) {
+					RedStoneWireBlock.updateOrDestroy(neighbor_state,
+						neighbor_state.updateShape(Direction.EAST, above_state, levelAccessor, mutable_pos, above_pos)
+					, levelAccessor, mutable_pos, n, n2);
+				}
+			}
+		}
+    }
+	
+	// getDirectSignal not overwritten
+	
+	@Override
+    public int getSignal(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, Direction direction) {
+		int direction_index = direction.ordinal();
+		if (this.shouldSignal && direction_index != DOWN_ORDINAL) {
+			int power = blockState.getValue(POWER);
+			if (power != 0 && (direction_index == UP_ORDINAL || has_connection_by_ordinal(this.getConnectionState(blockGetter, blockState.getValue(CONNECTIONS), blockPos), direction_index ^ 1))) {
+				return power;
+			}
+		}
+		return 0;
+    }
+	
+	//@Override
+	public void updatePowerStrength(Level level, BlockPos blockPos, BlockState blockState, int flags) {
+        this.shouldSignal = false;
+        int highest_power = level.getBestNeighborSignal(blockPos);
+        this.shouldSignal = true;
+		BlockPos.MutableBlockPos mutable_pos = new BlockPos.MutableBlockPos();
+        if (highest_power < 14) {
+			BlockState neighbor_state;
+			mutable_pos.setWithOffset(blockPos, UP_OFFSETS);
+			boolean above_is_solid = level.getBlockState(mutable_pos).isRedstoneConductor(level, mutable_pos);
+			
+			for (int i = 0; i < 4; ++i) {
+				mutable_pos.setWithOffset(blockPos, YeetUtil.horizontal_direction_offsets[i]);
+				neighbor_state = level.getBlockState(mutable_pos);
+				if (StateIsWire(neighbor_state)) {
+					highest_power = Math.max(highest_power, neighbor_state.getValue(POWER) - 1);
+				}
+				
+				if (neighbor_state.isRedstoneConductor(level, mutable_pos)) {
+					if (!above_is_solid && StateIsWire(neighbor_state = level.getBlockState(mutable_pos.move(0, 1, 0)))) {
+						highest_power = Math.max(highest_power, neighbor_state.getValue(POWER) - 1);
+					}
+				}
+				else if (StateIsWire(neighbor_state = level.getBlockState(mutable_pos.move(0, -1, 0)))) {
+					highest_power = Math.max(highest_power, neighbor_state.getValue(POWER) - 1);
+				}
+				//if (highest_power == 15) break;
+			}
+        }
+        if (blockState.getValue(POWER) != highest_power) {
+            //if (level.getBlockState(blockPos) == blockState) { // Why is this here?
+                level.setBlock(blockPos, blockState.setValue(POWER, highest_power), flags);
+            //}
+			level.updateNeighborsAt(mutable_pos.setWithOffset(blockPos, DOWN_OFFSETS), this);
+			level.updateNeighborsAt(mutable_pos.move(0, 2, 0), this);
+			level.updateNeighborsAt(mutable_pos.move(0, -1, -1), this);
+			level.updateNeighborsAt(mutable_pos.move(0, 0, 2), this);
+			level.updateNeighborsAt(mutable_pos.move(-1, 0, 1), this);
+			level.updateNeighborsAt(mutable_pos.move(2, 0, 0), this);
+        }
+    }
+}

@@ -1,0 +1,167 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/cov.class
+  Last modified Feb 28, 2022; size 1861 bytes
+  SHA-256 checksum 0ae7d8d1dfa67279e288f6b741fe23d7c4013ccebee45da9d3cb8f52bbf6b39b
+  Compiled from "SourceFile"
+public class cov extends cou$a
+  minor version: 0
+  major version: 61
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #2                          // cov
+  super_class: #4                         // cou$a
+  interfaces: 0, fields: 1, methods: 3, attributes: 3
+Constant pool:
+   #1 = Utf8               cov
+   #2 = Class              #1             // cov
+   #3 = Utf8               cou$a
+   #4 = Class              #3             // cou$a
+   #5 = Utf8               SourceFile
+   #6 = Utf8               cou
+   #7 = Class              #6             // cou
+   #8 = Utf8               a
+   #9 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #10 = Class              #9             // java/lang/invoke/MethodHandles$Lookup
+  #11 = Utf8               java/lang/invoke/MethodHandles
+  #12 = Class              #11            // java/lang/invoke/MethodHandles
+  #13 = Utf8               Lookup
+  #14 = Utf8               b
+  #15 = Utf8               Lcom/mojang/serialization/Codec;
+  #16 = Utf8               Lcom/mojang/serialization/Codec<Lcov;>;
+  #17 = Utf8               <init>
+  #18 = Utf8               (Lcdq;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+  #19 = Utf8               (Lcdq;Lcom/google/common/collect/ImmutableMap<Lcpy<*>;Ljava/lang/Comparable<*>;>;Lcom/mojang/serialization/MapCodec<Lcov;>;)V
+  #20 = NameAndType        #17:#18        // "<init>":(Lcdq;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+  #21 = Methodref          #4.#20         // cou$a."<init>":(Lcdq;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+  #22 = Utf8               this
+  #23 = Utf8               Lcov;
+  #24 = Utf8               $$0
+  #25 = Utf8               Lcdq;
+  #26 = Utf8               $$1
+  #27 = Utf8               Lcom/google/common/collect/ImmutableMap<Lcpy<*>;Ljava/lang/Comparable<*>;>;
+  #28 = Utf8               Lcom/google/common/collect/ImmutableMap;
+  #29 = Utf8               $$2
+  #30 = Utf8               Lcom/mojang/serialization/MapCodec<Lcov;>;
+  #31 = Utf8               Lcom/mojang/serialization/MapCodec;
+  #32 = Utf8               r
+  #33 = Utf8               ()Lcov;
+  #34 = Utf8               <clinit>
+  #35 = Utf8               ()V
+  #36 = Utf8               hb
+  #37 = Class              #36            // hb
+  #38 = Utf8               U
+  #39 = Utf8               Lgn;
+  #40 = NameAndType        #38:#39        // U:Lgn;
+  #41 = Fieldref           #37.#40        // hb.U:Lgn;
+  #42 = Utf8               gn
+  #43 = Class              #42            // gn
+  #44 = Utf8               o
+  #45 = Utf8               ()Lcom/mojang/serialization/Codec;
+  #46 = NameAndType        #44:#45        // o:()Lcom/mojang/serialization/Codec;
+  #47 = Methodref          #43.#46        // gn.o:()Lcom/mojang/serialization/Codec;
+  #48 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #49 = MethodType         #48            //  (Ljava/lang/Object;)Ljava/lang/Object;
+  #50 = Utf8               cdq
+  #51 = Class              #50            // cdq
+  #52 = Utf8               n
+  #53 = NameAndType        #52:#33        // n:()Lcov;
+  #54 = Methodref          #51.#53        // cdq.n:()Lcov;
+  #55 = MethodHandle       5:#54          // REF_invokeVirtual cdq.n:()Lcov;
+  #56 = Utf8               (Lcdq;)Lcov;
+  #57 = MethodType         #56            //  (Lcdq;)Lcov;
+  #58 = Utf8               java/lang/invoke/LambdaMetafactory
+  #59 = Class              #58            // java/lang/invoke/LambdaMetafactory
+  #60 = Utf8               metafactory
+  #61 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #62 = NameAndType        #60:#61        // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #63 = Methodref          #59.#62        // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #64 = MethodHandle       6:#63          // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #65 = Utf8               apply
+  #66 = Utf8               ()Ljava/util/function/Function;
+  #67 = NameAndType        #65:#66        // apply:()Ljava/util/function/Function;
+  #68 = InvokeDynamic      #0:#67         // #0:apply:()Ljava/util/function/Function;
+  #69 = Utf8               (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #70 = NameAndType        #8:#69         // a:(Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #71 = Methodref          #2.#70         // cov.a:(Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #72 = Utf8               com/mojang/serialization/Codec
+  #73 = Class              #72            // com/mojang/serialization/Codec
+  #74 = Utf8               stable
+  #75 = NameAndType        #74:#45        // stable:()Lcom/mojang/serialization/Codec;
+  #76 = InterfaceMethodref #73.#75        // com/mojang/serialization/Codec.stable:()Lcom/mojang/serialization/Codec;
+  #77 = NameAndType        #14:#15        // b:Lcom/mojang/serialization/Codec;
+  #78 = Fieldref           #2.#77         // cov.b:Lcom/mojang/serialization/Codec;
+  #79 = Utf8               Signature
+  #80 = Utf8               Code
+  #81 = Utf8               LineNumberTable
+  #82 = Utf8               LocalVariableTable
+  #83 = Utf8               LocalVariableTypeTable
+  #84 = Utf8               InnerClasses
+  #85 = Utf8               BootstrapMethods
+{
+  public static final com.mojang.serialization.Codec<cov> b;
+    descriptor: Lcom/mojang/serialization/Codec;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Signature: #16                          // Lcom/mojang/serialization/Codec<Lcov;>;
+
+  public cov(cdq, com.google.common.collect.ImmutableMap<cpy<?>, java.lang.Comparable<?>>, com.mojang.serialization.MapCodec<cov>);
+    descriptor: (Lcdq;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=4, args_size=4
+         0: aload_0
+         1: aload_1
+         2: aload_2
+         3: aload_3
+         4: invokespecial #21                 // Method cou$a."<init>":(Lcdq;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+         7: return
+      LineNumberTable:
+        line 17: 0
+        line 18: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lcov;
+            0       8     1   $$0   Lcdq;
+            0       8     2   $$1   Lcom/google/common/collect/ImmutableMap;
+            0       8     3   $$2   Lcom/mojang/serialization/MapCodec;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       8     2   $$1   Lcom/google/common/collect/ImmutableMap<Lcpy<*>;Ljava/lang/Comparable<*>;>;
+            0       8     3   $$2   Lcom/mojang/serialization/MapCodec<Lcov;>;
+    Signature: #19                          // (Lcdq;Lcom/google/common/collect/ImmutableMap<Lcpy<*>;Ljava/lang/Comparable<*>;>;Lcom/mojang/serialization/MapCodec<Lcov;>;)V
+
+  protected cov r();
+    descriptor: ()Lcov;
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: areturn
+      LineNumberTable:
+        line 22: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     0  this   Lcov;
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: getstatic     #41                 // Field hb.U:Lgn;
+         3: invokevirtual #47                 // Method gn.o:()Lcom/mojang/serialization/Codec;
+         6: invokedynamic #68,  0             // InvokeDynamic #0:apply:()Ljava/util/function/Function;
+        11: invokestatic  #71                 // Method a:(Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+        14: invokeinterface #76,  1           // InterfaceMethod com/mojang/serialization/Codec.stable:()Lcom/mojang/serialization/Codec;
+        19: putstatic     #78                 // Field b:Lcom/mojang/serialization/Codec;
+        22: return
+      LineNumberTable:
+        line 14: 0
+}
+InnerClasses:
+  public static abstract #8= #4 of #7;    // a=class cou$a of class cou
+  public static final #13= #10 of #12;    // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles
+SourceFile: "SourceFile"
+BootstrapMethods:
+  0: #64 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #49 (Ljava/lang/Object;)Ljava/lang/Object;
+      #55 REF_invokeVirtual cdq.n:()Lcov;
+      #57 (Lcdq;)Lcov;

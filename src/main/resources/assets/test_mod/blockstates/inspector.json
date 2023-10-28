@@ -1,0 +1,105 @@
+{
+	"variants": {
+		"facing=down,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital",
+			"x": 90
+		},
+		"facing=down,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital",
+			"x": 90
+		},
+		"facing=east,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital",
+			"y": 90
+		},
+		"facing=east,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital",
+			"y": 90
+		},
+		"facing=north,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital"
+		},
+		"facing=north,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital"
+		},
+		"facing=south,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital",
+			"y": 180
+		},
+		"facing=south,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital",
+			"y": 180
+		},
+		"facing=up,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital",
+			"x": 270
+		},
+		"facing=up,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital",
+			"x": 270
+		},
+		"facing=west,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital",
+			"y": 270
+		},
+		"facing=west,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital",
+			"y": 270
+		},
+		"facing=down,powered=false,mode=digital": {
+			"model": "test_mod:block/inspector_digital",
+			"x": 90
+		},
+		"facing=down,powered=true,mode=digital": {
+			"model": "test_mod:block/inspector_on_digital",
+			"x": 90
+		},
+		
+		"facing=east,powered=false,mode=analog": {
+			"model": "test_mod:block/inspector_analog",
+			"y": 90
+		},
+		"facing=east,powered=true,mode=analog": {
+			"model": "test_mod:block/inspector_on_analog",
+			"y": 90
+		},
+		"facing=north,powered=false,mode=analog": {
+			"model": "test_mod:block/inspector_analog"
+		},
+		"facing=north,powered=true,mode=analog": {
+			"model": "test_mod:block/inspector_on_analog"
+		},
+		"facing=south,powered=false,mode=analog": {
+			"model": "test_mod:block/inspector_analog",
+			"y": 180
+		},
+		"facing=south,powered=true,mode=analog": {
+			"model": "test_mod:block/inspector_on_analog",
+			"y": 180
+		},
+		"facing=up,powered=false,mode=analog": {
+			"model": "test_mod:block/inspector_analog",
+			"x": 270
+		},
+		"facing=up,powered=true,mode=analog": {
+			"model": "test_mod:block/inspector_on_analog",
+			"x": 270
+		},
+		"facing=west,powered=false,mode=analog": {
+			"model": "test_mod:block/inspector_analog",
+			"y": 270
+		},
+		"facing=west,powered=true,mode=analog": {
+			"model": "test_mod:block/inspector_on_analog",
+			"y": 270
+		},
+		"facing=down,powered=false,mode=analog": {
+			"model": "test_mod:block/inspector_analog",
+			"x": 90
+		},
+		"facing=down,powered=true,mode=analog": {
+			"model": "test_mod:block/inspector_on_analog",
+			"x": 90
+		}
+	}
+}

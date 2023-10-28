@@ -1,0 +1,43 @@
+	Redstone Resistor
+=Crafting: 2x Coal/Charcoal, 1x Redstone, 3x Stone
+=Description:
+
+
+	Soul Redstone Torch
+=Crafting: 1x Redstone, 1x Stick, 1x Soul Sand/Soil
+=Description:
+Almost identical to a redstone torch, except:
+-Does not emit light
+-Does not produce particles
+-Does not burn out when toggles rapidly
+
+	Soul Redstone Repeater
+=Crafting: 2x Soul Redstone Torch, 1x Redstone, 3x Polished Blackstone
+=Description:
+Almost identical to a redstone repeaters, except:
+-Does not produce particles
+-Does not suffer from https://bugs.mojang.com/browse/MC-54711
+
+	Soul Redstone Comparator
+=Crafting: 3x Soul Redstone Torch, 1x Nether Quartz, 3x Polished Blackstone
+=Description:
+Almost identical to a redstone comparator, except:
+-Does not produce particles
+-Does not suffer from https://bugs.mojang.com/browse/MC-54711
+-Signal strength is capped at 15, removing the need for a block entity
+
+	END Redstone Torch
+=Crafting: 1x Redstone, 1x Stick, 1x END_THING_A
+=Description:
+Almost identical to a soul redstone torch, except:
+-Does respond to 1 tick fluxuations
+
+	END Redstone Repeater
+=Crafting: 2x END Redstone Torch, 1x Redstone, 3x END_THING_B
+
+	Copper Hopper
+=Crafting: 5x Copper Ingot, 1x Chest
+=Description:
+Almost identical to an iron hopper, except:
+-Does not interact with item entities
+-Does not interact with storage entities

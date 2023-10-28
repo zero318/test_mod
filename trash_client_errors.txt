@@ -1,0 +1,101 @@
+Note: SpongePowered MIXIN Annotation Processor Version=0.8.5 (MixinGradle Version=0.7.32)
+Note: Supported obfuscation types: ObfuscationServiceMCP supports [notch] ObfuscationServiceFG3 supports [searge]
+Note: Loading searge mappings from F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\createMcpToSrg\output.tsrg
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-mappings.tsrg
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing refmap to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-refmap.json
+Note: Writing searge composite mappings to F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\tmp\compileJava\compileJava-mappings.tsrg
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\src\main\java\yeet\block\SparseIntegerProperty.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+/******************************************************************************************************************************************************************************************************************/
+/*                                                                                              SpongePowered MIXIN                                                                                               */
+/******************************************************************************************************************************************************************************************************************/
+/*                                         Code source : union:/C:/Users/zero318/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2323!/ */
+/*                                    Internal Version : 0.8.5                                                                                                                                                    */
+/*                                        Java Version : 17.0 (supports compatibility 6-17)                                                                                                                       */
+/*                         Default Compatibility Level : JAVA_16                                                                                                                                                  */
+/*                                Detected ASM Version : ASM 9.2 (ASM10_EXPERIMENTAL)                                                                                                                             */
+/*                          Detected ASM Supports Java : Up to Java 18 (class file version 62.0)                                                                                                                  */
+/******************************************************************************************************************************************************************************************************************/
+/*                                        Service Name : ModLauncher                                                                                                                                              */
+/*                                 Mixin Service Class : org.spongepowered.asm.service.modlauncher.MixinServiceModLauncher                                                                                        */
+/*                       Global Property Service Class : org.spongepowered.asm.service.modlauncher.Blackboard                                                                                                     */
+/*                                 Logger Adapter Type : Log4j2 (via ModLauncher)                                                                                                                                 */
+/******************************************************************************************************************************************************************************************************************/
+/*                                         mixin.debug : <false>                                                                                                                                                  */
+/*                                  mixin.debug.export : - <true>                                                                                                                                                 */
+/*                           mixin.debug.export.filter : - - <null>                                                                                                                                               */
+/*                        mixin.debug.export.decompile : - - <true>                                                                                                                                               */
+/*                  mixin.debug.export.decompile.async : - - - <true>                                                                                                                                             */
+/* mixin.debug.export.decompile.mergeGenericSignatures : - - - <true>                                                                                                                                             */
+/*                                  mixin.debug.verify : - <false>                                                                                                                                                */
+/*                                 mixin.debug.verbose : - <false>                                                                                                                                                */
+/*                         mixin.debug.countInjections : - <false>                                                                                                                                                */
+/*                                  mixin.debug.strict : - <false>                                                                                                                                                */
+/*                           mixin.debug.strict.unique : - - <false>                                                                                                                                              */
+/*                          mixin.debug.strict.targets : - - <false>                                                                                                                                              */
+/*                                mixin.debug.profiler : - <false>                                                                                                                                                */
+/*                           mixin.dumpTargetOnFailure : <true>                                                                                                                                                   */
+/*                                        mixin.checks : <false>                                                                                                                                                  */
+/*                             mixin.checks.interfaces : - <false>                                                                                                                                                */
+/*                      mixin.checks.interfaces.strict : - - <false>                                                                                                                                              */
+/*                             mixin.ignoreConstraints : <false>                                                                                                                                                  */
+/*                                       mixin.hotSwap : <false>                                                                                                                                                  */
+/*                                           mixin.env : <false>                                                                                                                                                  */
+/*                                       mixin.env.obf : - <false>                                                                                                                                                */
+/*                             mixin.env.disableRefMap : - <false>                                                                                                                                                */
+/*                               mixin.env.remapRefMap : - <true>                                                                                                                                                 */
+/*                       mixin.env.refMapRemappingFile : - <F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\createSrgToMcp\output.srg>                                                                  */
+/*                        mixin.env.refMapRemappingEnv : - <searge>                                                                                                                                               */
+/*                      mixin.env.allowPermissiveMatch : - <false>                                                                                                                                                */
+/*                            mixin.env.ignoreRequired : - <false>                                                                                                                                                */
+/*                               mixin.env.compatLevel : - <false>                                                                                                                                                */
+/*                          mixin.env.shiftByViolation : - <warn>                                                                                                                                                 */
+/*                      mixin.initialiserInjectionMode : <default>                                                                                                                                                */
+/******************************************************************************************************************************************************************************************************************/
+/*                                       Detected Side : CLIENT                                                                                                                                                   */
+/******************************************************************************************************************************************************************************************************************/
+The message received from the daemon indicates that the daemon has disappeared.
+Build request sent: Build{id=8f99a40e-2525-4ae5-adab-124a065b8aa3, currentDir=F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod}
+Attempting to read last messages from the daemon log...
+Daemon pid: 25648
+  log file: C:\Users\zero318\.gradle\daemon\7.4\daemon-25648.out.log
+----- Last  20 lines from daemon log file - daemon-25648.out.log -----
+    "1.19.2-latest": "43.1.58"
+  }
+}
+[18:36:01] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 40.1.31 Target: 40.1.85
+[18:36:07] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 5602
+[18:36:08] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on CABLE Input (VB-Audio Virtual Cable)
+[18:36:08] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18:36:11] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[18:36:11] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18:36:11] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18:36:11] [Realms Notification Availability checker #1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[18:36:14] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+----- End of the daemon log -----
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not dispatch a message to the daemon.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org

@@ -1,0 +1,75 @@
+public boolean setBlock(BlockPos blockPos, BlockState blockState, int flags, int count = 512);
+
+Ind	Dec	Hex		Name					Meaning
+0	1	0x01	UPDATE_NEIGHBORS		Update Neighbors
+1	2	0x02	UPDATE_CLIENTS			Update Collision and Pathing?
+2	4	0x04	UPDATE_INVISIBLE		Disable Client Update
+3	8	0x08	UPDATE_IMMEDIATE		Client Renderer Related
+4	16	0x10	UPDATE_KNOWN_SHAPE		Disable Neighbor Shape Updates
+5	32	0x20	UPDATE_SUPPRESS_DROPS	block entity destroyBlock boolean (Not sent to neighbor shape updates)
+6	64	0x40	UPDATE_MOVE_BY_PISTON	setBlockState/onPlace/onRemove boolean (See below)
+7	128	0x80	UPDATE_SUPPRESS_LIGHT	Disable Light Updates
+
+	3	0x03	UPDATE_ALL				(UPDATE_NEIGHBORS | UPDATE_CLIENTS)
+	4	0x04	UPDATE_NONE				(UPDATE_INVISIBLE)
+	11	0x0B	UPDATE_ALL_IMMEDIATE	(UPDATE_NEIGHBORS | UPDATE_CLIENTS | UPDATE_IMMEDIATE)
+	35	0x23	UPDATE_ALL_KNOWN_SHAPE	(UPDATE_NEIGHBORS | UPDATE_CLIENTS | UPDATE_KNOWN_SHAPE)
+
+
+Flag 6 Boolean Uses:
+	AbstractFurnaceBlock	onRemove -> ignore
+	BarrelBlock				onRemove -> ignore
+	BaseFireBlock			onPlace  -> ignore
+	BasePressurePlateBlock	onRemove -> Early Return
+	BaseRailBlock			onPlace  -> updateShape -> neighborChanged -> ignore
+							onRemove -> Early Return
+	BrewingStandBlock		onRemove -> ignore
+	ButtonBlock				onRemove -> Early Return
+	CampfireBlock			onRemove -> ignore
+	CarvedPumpkinBlock		onPlace  -> ignore
+	ChestBlock				onPlace  -> ignore
+	ComposterBlock			onPlace  -> ignore
+	CoralFanBlock			onPlace  -> ignore
+	CoralPlantBlock			onPlace  -> ignore
+	CoralWallFanBlock		onPlace  -> ignore
+	DetectorRailBlock		onPlace  -> updateShape -> neighborChanged -> ignore
+	DiodeBlock				onPlace  -> ignore
+							onRemove -> Early Return
+	DispenserBlock			onRemove -> ignore
+	FallingBlock			onPlace  -> ignore
+	FireBlock				onPlace  -> ignore
+	HopperBlock				onPlace  -> ignore
+							onRemove -> ignore
+	JukeboxBlock			onRemove -> ignore
+	LecternBlock			onRemove -> ignore
+	LeverBlock				onRemove -> Early Return
+	LightningRodBlock		onPlace  -> ignore
+							onRemove -> ignore
+	LiquidBlock				onPlace  -> ignore
+	MagmaBlock				onPlace  -> ignore
+	MovingPistonBlock		onRemove -> ignore
+	ObserverBlock			onPlace  -> ignore
+							onRemove -> ignore
+	PistonBaseBlock			onPlace  -> ignore
+	PistonHeadBlock			onRemove -> ignore
+	RedstoneTorchBlock		onPlace  -> ignore
+							onRemove -> Early Return
+	RedstoneWireBlock		onPlace  -> ignore
+							onRemove -> Early Return
+	ScaffoldingBlock		onPlace  -> ignore
+	SculkSensorBlock		onPlace  -> ignore
+							onRemove -> ignore
+	SoulSandBlock			onPlace  -> ignore
+	SpongeBlock				onPlace  -> ignore
+	StairBlock				onPlace  -> ignore
+							onRemove -> ignore
+	TargetBlock				onPlace  -> ignore
+	TntBlock				onPlace  -> ignore
+	TripWireBlock			onPlace  -> ignore
+							onRemove -> Early Return
+	TripWireHookBlock		onRemove -> Early Return
+	TurtleEggBlock			onPlace  -> ignore
+	WetSpongeBlock			onPlace  -> ignore
+	
+Java condensing regex:
+^ +\/(?:\*\*.+?\*\/|\/.+?\n$)\r?\n|@(?!Override).+?(?:\r?\n| ) *|(?:(?<=@Override)|(?<=>))\r?\n *(?= )|(?<=;)\r?\n(?! )|(?<=[(<,])\r?\n +|(?<=[{}])\r?\n(?=\r?\n)|\s+(?:(?= &&)|(?= \|\|))

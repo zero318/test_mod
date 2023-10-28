@@ -1,0 +1,10 @@
+{
+	"replace": false,
+	"values": [
+		"test_mod:soul_redstone_wire",
+		"test_mod:soul_redstone_torch",
+		"test_mod:soul_redstone_wall_torch",
+		"test_mod:soul_repeater",
+		"test_mod:soul_comparator"
+	]
+}

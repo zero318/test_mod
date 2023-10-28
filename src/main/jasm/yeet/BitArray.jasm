@@ -1,0 +1,125 @@
+/*
+ * Disassembled from BitArray.class (originally BitArray.java) by JASM
+ *
+ * Original class version: 61
+ * Signature: <no signature>
+ */
+public class yeet/BitArray {
+    // <no signature>
+    private values [J
+
+    // <no signature>
+    // <no exceptions>
+    public <init>(I)V {
+        aload 0
+        invokespecial java/lang/Object.<init>()V
+        aload 0
+        iload 1
+        bipush 63
+        iadd
+        bipush 6
+        iushr
+        newarray J
+        putfield yeet/BitArray.values [J
+        return
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public final read_bit_raw(I)I {
+        aload 0
+        getfield yeet/BitArray.values [J
+        iload 1
+        bipush 6
+        iushr
+        laload
+        iload 1
+        lushr
+        l2i
+        iconst 1
+        iand
+        ireturn
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public final read_bit(I)Z {
+        aload 0
+        iload 1
+        invokevirtual yeet/BitArray.read_bit_raw(I)I
+        ireturn
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public final write_bit_raw(I, I)V {
+		aload 0
+        getfield yeet/BitArray.values [J
+		iload 1
+		bipush 6
+		iushr
+		dup2
+		laload
+		lconst 1
+		iload 1
+		lshl
+		ldc -1L
+		lxor
+		land
+		iload 2
+		i2l
+		iload 1
+		lshl
+		lor
+		lastore
+		return
+    }
+
+
+    // <no signature>
+    // <no exceptions>
+    public final write_bit(I, Z)V {
+        aload 0
+        iload 1
+        iload 2
+        invokevirtual yeet/BitArray.write_bit_raw(I, I)V
+        return
+    }
+
+	public final clear_bit(I)V {
+		aload 0
+		getfield yeet/BitArray.values [J
+		iload 1
+		bipush 6
+		iushr
+		dup2
+		laload
+		lconst 1
+		iload 1
+		lshl
+		ldc -1L
+		lxor
+		land
+		lastore
+		return
+	}
+	
+	public final set_bit(I)V {
+		aload 0
+		getfield yeet/BitArray.values [J
+		iload 1
+		bipush 6
+		iushr
+		dup2
+		laload
+		lconst 1
+		iload 1
+		lshl
+		lor
+		lastore
+		return
+	}
+}

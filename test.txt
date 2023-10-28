@@ -1,0 +1,27 @@
+package yeet;
+public class util {
+    public static final byte bool_to_byte(boolean value) {
+        return value ? (byte)1 : 0;
+    }
+    public static final boolean byte_to_bool(byte value) {
+        return value != 0;
+    }
+    public static final short bool_to_short(boolean value) {
+        return value ? (short)1 : 0;
+    }
+    public static final boolean short_to_bool(short value) {
+        return value != 0;
+    }
+    public static final int bool_to_int(boolean value) {
+        return value ? 1 : 0;
+    }
+    public static final boolean int_to_bool(int value) {
+        return value != 0;
+    }
+    public static final long bool_to_long(boolean value) {
+        return value ? 1 : 0;
+    }
+    public static final boolean long_to_bool(long value) {
+        return value != 0;
+    }
+}

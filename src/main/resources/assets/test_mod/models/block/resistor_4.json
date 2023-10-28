@@ -1,0 +1,7 @@
+{
+	"parent": "test_mod:block/template_resistor",
+	"textures": {
+		"slab": "block/smooth_stone",
+		"top": "test_mod:block/resistor_4"
+	}
+}

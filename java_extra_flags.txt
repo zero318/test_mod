@@ -1,0 +1,72 @@
+
+    -Xbatch           disable background compilation
+    -Xbootclasspath/a:<directories and zip/jar files separated by ;>
+                      append to end of bootstrap class path
+    -Xcheck:jni       perform additional checks for JNI functions
+    -Xcomp            forces compilation of methods on first invocation
+    -Xdebug           does nothing. Provided for backward compatibility.
+    -Xdiag            show additional diagnostic messages
+    -Xfuture          enable strictest checks, anticipating future default.
+                      This option is deprecated and may be removed in a
+                      future release.
+    -Xint             interpreted mode execution only
+    -Xinternalversion
+                      displays more detailed JVM version information than the
+                      -version option
+    -Xlog:<opts>      Configure or enable logging with the Java Virtual
+                      Machine (JVM) unified logging framework. Use -Xlog:help
+                      for details.
+    -Xloggc:<file>    log GC status to a file with time stamps.
+                      This option is deprecated and may be removed in a
+                      future release. It is replaced by -Xlog:gc:<file>.
+    -Xmixed           mixed mode execution (default)
+    -Xmn<size>        sets the initial and maximum size (in bytes) of the heap
+                      for the young generation (nursery)
+    -Xms<size>        set initial Java heap size
+    -Xmx<size>        set maximum Java heap size
+    -Xnoclassgc       disable class garbage collection
+    -Xrs              reduce use of OS signals by Java/VM (see documentation)
+    -Xshare:auto      use shared class data if possible (default)
+    -Xshare:off       do not attempt to use shared class data
+    -Xshare:on        require using shared class data, otherwise fail.
+                      This is a testing option and may lead to intermittent
+                      failures. It should not be used in production environments.
+    -XshowSettings    show all settings and continue
+    -XshowSettings:all
+                      show all settings and continue
+    -XshowSettings:locale
+                      show all locale related settings and continue
+    -XshowSettings:properties
+                      show all property settings and continue
+    -XshowSettings:vm
+                      show all vm related settings and continue
+    -XshowSettings:system
+                      (Linux Only) show host system or container
+                      configuration and continue
+    -Xss<size>        set java thread stack size
+    -Xverify          sets the mode of the bytecode verifier
+                      Note that option -Xverify:none is deprecated and
+                      may be removed in a future release.
+    --add-reads <module>=<target-module>(,<target-module>)*
+                      updates <module> to read <target-module>, regardless
+                      of module declaration. 
+                      <target-module> can be ALL-UNNAMED to read all unnamed
+                      modules.
+    --add-exports <module>/<package>=<target-module>(,<target-module>)*
+                      updates <module> to export <package> to <target-module>,
+                      regardless of module declaration.
+                      <target-module> can be ALL-UNNAMED to export to all
+                      unnamed modules.
+    --add-opens <module>/<package>=<target-module>(,<target-module>)*
+                      updates <module> to open <package> to
+                      <target-module>, regardless of module declaration.
+    --limit-modules <module name>[,<module name>...]
+                      limit the universe of observable modules
+    --patch-module <module>=<file>(;<file>)*
+                      override or augment a module with classes and resources
+                      in JAR files or directories.
+    --source <version>
+                      set the version of the source in source-file mode.
+
+These extra options are subject to change without notice.
+

@@ -1,0 +1,22 @@
+{
+	"block.test_mod.resistor": "Redstone Resistor",
+	"block.test_mod.inspector": "Inspector",
+
+	"block.test_mod.soul_redstone_wire": "Soul Redstone Wire",
+	"block.test_mod.soul_redstone_torch": "Soul Redstone Torch",
+	"block.test_mod.soul_redstone_wall_torch": "Soul Redstone Wall Torch",
+	"block.test_mod.soul_repeater": "Soul Redstone Repeater",
+	"block.test_mod.soul_comparator": "Soul Redstone Comparator",
+	"block.test_mod.soul_resistor": "Soul Redstone Resistor",
+	"item.test_mod.soul_redstone": "Soul Redstone Dust",
+
+	"block.test_mod.end_redstone_wire": "END Redstone Wire",
+	"block.test_mod.end_redstone_torch": "END Redstone Torch",
+	"block.test_mod.end_redstone_wall_torch": "END Redstone Wall Torch",
+	"block.test_mod.end_repeater": "END Redstone Repeater",
+	"block.test_mod.end_comparator": "END Redstone Comparator",
+	"block.test_mod.end_resistor": "END Redstone Resistor",
+	"item.test_mod.end_redstone": "END Redstone Dust",
+	
+	"subtitles.block.inspector.click": "Inspector Clicks"
+}

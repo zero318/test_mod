@@ -1,0 +1,120 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/cav$1.class
+  Last modified Feb 28, 2022; size 638 bytes
+  SHA-256 checksum f5240342c9c83379bcdcebcbdb74d09debabbb013bc37f5491eddf8d3428f214
+  Compiled from "SourceFile"
+class cav$1 extends cql
+  minor version: 0
+  major version: 61
+  flags: (0x0020) ACC_SUPER
+  this_class: #2                          // cav$1
+  super_class: #4                         // cql
+  interfaces: 0, fields: 1, methods: 3, attributes: 4
+Constant pool:
+   #1 = Utf8               cav$1
+   #2 = Class              #1             // cav$1
+   #3 = Utf8               cql
+   #4 = Class              #3             // cql
+   #5 = Utf8               SourceFile
+   #6 = Utf8               cav
+   #7 = Class              #6             // cav
+   #8 = Utf8               <init>
+   #9 = Utf8               (Ldkw;Lys;Lgs;Ljava/util/function/Supplier;ZZJ)V
+  #10 = NameAndType        #8:#9          // "<init>":(Ldkw;Lys;Lgs;Ljava/util/function/Supplier;ZZJ)V
+  #11 = Utf8               a
+  #12 = Utf8               Lcav;
+  #13 = Utf8               (Lcav;)V
+  #14 = NameAndType        #11:#12        // a:Lcav;
+  #15 = Fieldref           #2.#14         // cav$1.a:Lcav;
+  #16 = Utf8               ()V
+  #17 = NameAndType        #8:#16         // "<init>":()V
+  #18 = Methodref          #4.#17         // cql."<init>":()V
+  #19 = Utf8               this
+  #20 = Utf8               Lcav$1;
+  #21 = Utf8               $$0
+  #22 = Utf8               ()D
+  #23 = NameAndType        #11:#22        // a:()D
+  #24 = Methodref          #4.#23         // cql.a:()D
+  #25 = Utf8               B
+  #26 = Utf8               Lcry;
+  #27 = NameAndType        #25:#26        // B:Lcry;
+  #28 = Fieldref           #7.#27         // cav.B:Lcry;
+  #29 = Utf8               cry
+  #30 = Class              #29            // cry
+  #31 = Utf8               e
+  #32 = NameAndType        #31:#22        // e:()D
+  #33 = Methodref          #30.#32        // cry.e:()D
+  #34 = Utf8               b
+  #35 = NameAndType        #34:#22        // b:()D
+  #36 = Methodref          #4.#35         // cql.b:()D
+  #37 = Utf8               Code
+  #38 = Utf8               LineNumberTable
+  #39 = Utf8               LocalVariableTable
+  #40 = Utf8               InnerClasses
+  #41 = Utf8               EnclosingMethod
+  #42 = Utf8               NestHost
+{
+  final cav a;
+    descriptor: Lcav;
+    flags: (0x1010) ACC_FINAL, ACC_SYNTHETIC
+
+  cav$1(cav);
+    descriptor: (Lcav;)V
+    flags: (0x0000)
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: putfield      #15                 // Field a:Lcav;
+         5: aload_0
+         6: invokespecial #18                 // Method cql."<init>":()V
+         9: return
+      LineNumberTable:
+        line 129: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lcav$1;
+            0      10     1   $$0   Lcav;
+
+  public double a();
+    descriptor: ()D
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #24                 // Method cql.a:()D
+         4: aload_0
+         5: getfield      #15                 // Field a:Lcav;
+         8: getfield      #28                 // Field cav.B:Lcry;
+        11: invokevirtual #33                 // Method cry.e:()D
+        14: ddiv
+        15: dreturn
+      LineNumberTable:
+        line 132: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lcav$1;
+
+  public double b();
+    descriptor: ()D
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #36                 // Method cql.b:()D
+         4: aload_0
+         5: getfield      #15                 // Field a:Lcav;
+         8: getfield      #28                 // Field cav.B:Lcry;
+        11: invokevirtual #33                 // Method cry.e:()D
+        14: ddiv
+        15: dreturn
+      LineNumberTable:
+        line 137: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lcav$1;
+}
+InnerClasses:
+  #2;                                     // class cav$1
+EnclosingMethod: #7.#10                 // cav.<init>
+SourceFile: "SourceFile"
+NestHost: class cav

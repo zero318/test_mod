@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:redstone_wire",
+		"test_mod:soul_redstone_wire"
+	]
+}

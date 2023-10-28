@@ -1,0 +1,29 @@
+public class yeet/JasmUtil {
+	public <init>()V {
+        aload 0
+        invokespecial java/lang/Object.<init>()V
+        return
+    }
+	
+	public static final bool_to_byte(Z)B {
+		iload 0
+		ireturn
+	}
+	public static final byte_to_bool(B)Z {
+		iload 0
+		ireturn
+	}
+	public static final bool_to_short(Z)S {
+		iload 0
+		ireturn
+	}
+	public static final bool_to_int(Z)I {
+		iload 0
+		ireturn
+	}
+	public static final bool_to_long(Z)J {
+		iload 0
+		i2l
+		lreturn
+	}
+}

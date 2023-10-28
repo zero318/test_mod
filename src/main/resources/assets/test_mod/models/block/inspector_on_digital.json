@@ -1,0 +1,6 @@
+{
+    "parent": "test_mod:block/inspector_digital",
+    "textures": {
+        "bottom": "block/observer_back_on"
+    }
+}

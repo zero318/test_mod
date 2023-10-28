@@ -1,0 +1,1301 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/soul_comparator.class
+  Last modified Jun 5, 2022; size 12949 bytes
+  SHA-256 checksum 6c13a5690a100ccaefc0c0f25cffbdde1f4849c1069ef0f2f57816bbcf80b9bb
+  Compiled from "soul_comparator.java"
+public class yeet.block.soul_comparator extends net.minecraft.world.level.block.DiodeBlock
+  minor version: 0
+  major version: 61
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #8                          // yeet/block/soul_comparator
+  super_class: #2                         // net/minecraft/world/level/block/DiodeBlock
+  interfaces: 0, fields: 2, methods: 17, attributes: 3
+Constant pool:
+    #1 = Methodref          #2.#3         // net/minecraft/world/level/block/DiodeBlock."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+    #2 = Class              #4            // net/minecraft/world/level/block/DiodeBlock
+    #3 = NameAndType        #5:#6         // "<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+    #4 = Utf8               net/minecraft/world/level/block/DiodeBlock
+    #5 = Utf8               <init>
+    #6 = Utf8               (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+    #7 = Fieldref           #8.#9         // yeet/block/soul_comparator.stateDefinition:Lnet/minecraft/world/level/block/state/StateDefinition;
+    #8 = Class              #10           // yeet/block/soul_comparator
+    #9 = NameAndType        #11:#12       // stateDefinition:Lnet/minecraft/world/level/block/state/StateDefinition;
+   #10 = Utf8               yeet/block/soul_comparator
+   #11 = Utf8               stateDefinition
+   #12 = Utf8               Lnet/minecraft/world/level/block/state/StateDefinition;
+   #13 = Methodref          #14.#15       // net/minecraft/world/level/block/state/StateDefinition.any:()Lnet/minecraft/world/level/block/state/StateHolder;
+   #14 = Class              #16           // net/minecraft/world/level/block/state/StateDefinition
+   #15 = NameAndType        #17:#18       // any:()Lnet/minecraft/world/level/block/state/StateHolder;
+   #16 = Utf8               net/minecraft/world/level/block/state/StateDefinition
+   #17 = Utf8               any
+   #18 = Utf8               ()Lnet/minecraft/world/level/block/state/StateHolder;
+   #19 = Class              #20           // net/minecraft/world/level/block/state/BlockState
+   #20 = Utf8               net/minecraft/world/level/block/state/BlockState
+   #21 = Fieldref           #8.#22        // yeet/block/soul_comparator.FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+   #22 = NameAndType        #23:#24       // FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+   #23 = Utf8               FACING
+   #24 = Utf8               Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+   #25 = Fieldref           #26.#27       // net/minecraft/core/Direction.NORTH:Lnet/minecraft/core/Direction;
+   #26 = Class              #28           // net/minecraft/core/Direction
+   #27 = NameAndType        #29:#30       // NORTH:Lnet/minecraft/core/Direction;
+   #28 = Utf8               net/minecraft/core/Direction
+   #29 = Utf8               NORTH
+   #30 = Utf8               Lnet/minecraft/core/Direction;
+   #31 = Methodref          #19.#32       // net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+   #32 = NameAndType        #33:#34       // setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+   #33 = Utf8               setValue
+   #34 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+   #35 = Fieldref           #8.#36        // yeet/block/soul_comparator.POWERED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+   #36 = NameAndType        #37:#38       // POWERED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+   #37 = Utf8               POWERED
+   #38 = Utf8               Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+   #39 = Methodref          #40.#41       // java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+   #40 = Class              #42           // java/lang/Boolean
+   #41 = NameAndType        #43:#44       // valueOf:(Z)Ljava/lang/Boolean;
+   #42 = Utf8               java/lang/Boolean
+   #43 = Utf8               valueOf
+   #44 = Utf8               (Z)Ljava/lang/Boolean;
+   #45 = Fieldref           #8.#46        // yeet/block/soul_comparator.MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+   #46 = NameAndType        #47:#48       // MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+   #47 = Utf8               MODE
+   #48 = Utf8               Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+   #49 = Fieldref           #50.#51       // net/minecraft/world/level/block/state/properties/ComparatorMode.COMPARE:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+   #50 = Class              #52           // net/minecraft/world/level/block/state/properties/ComparatorMode
+   #51 = NameAndType        #53:#54       // COMPARE:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+   #52 = Utf8               net/minecraft/world/level/block/state/properties/ComparatorMode
+   #53 = Utf8               COMPARE
+   #54 = Utf8               Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+   #55 = Fieldref           #8.#56        // yeet/block/soul_comparator.POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+   #56 = NameAndType        #57:#58       // POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+   #57 = Utf8               POWER
+   #58 = Utf8               Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+   #59 = Methodref          #60.#61       // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #60 = Class              #62           // java/lang/Integer
+   #61 = NameAndType        #43:#63       // valueOf:(I)Ljava/lang/Integer;
+   #62 = Utf8               java/lang/Integer
+   #63 = Utf8               (I)Ljava/lang/Integer;
+   #64 = Methodref          #8.#65        // yeet/block/soul_comparator.registerDefaultState:(Lnet/minecraft/world/level/block/state/BlockState;)V
+   #65 = NameAndType        #66:#67       // registerDefaultState:(Lnet/minecraft/world/level/block/state/BlockState;)V
+   #66 = Utf8               registerDefaultState
+   #67 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;)V
+   #68 = Methodref          #19.#69       // net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+   #69 = NameAndType        #70:#71       // getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+   #70 = Utf8               getValue
+   #71 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+   #72 = Methodref          #60.#73       // java/lang/Integer.intValue:()I
+   #73 = NameAndType        #74:#75       // intValue:()I
+   #74 = Utf8               intValue
+   #75 = Utf8               ()I
+   #76 = Methodref          #8.#77        // yeet/block/soul_comparator.getInputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+   #77 = NameAndType        #78:#79       // getInputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+   #78 = Utf8               getInputSignal
+   #79 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+   #80 = Methodref          #8.#81        // yeet/block/soul_comparator.getAlternateSignal:(Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+   #81 = NameAndType        #82:#83       // getAlternateSignal:(Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+   #82 = Utf8               getAlternateSignal
+   #83 = Utf8               (Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+   #84 = Methodref          #85.#86       // net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+   #85 = Class              #87           // net/minecraft/core/BlockPos
+   #86 = NameAndType        #88:#89       // relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+   #87 = Utf8               net/minecraft/core/BlockPos
+   #88 = Utf8               relative
+   #89 = Utf8               (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+   #90 = Methodref          #91.#92       // net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+   #91 = Class              #93           // net/minecraft/world/level/Level
+   #92 = NameAndType        #94:#95       // getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+   #93 = Utf8               net/minecraft/world/level/Level
+   #94 = Utf8               getBlockState
+   #95 = Utf8               (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+   #96 = Methodref          #19.#97       // net/minecraft/world/level/block/state/BlockState.hasAnalogOutputSignal:()Z
+   #97 = NameAndType        #98:#99       // hasAnalogOutputSignal:()Z
+   #98 = Utf8               hasAnalogOutputSignal
+   #99 = Utf8               ()Z
+  #100 = Methodref          #19.#101      // net/minecraft/world/level/block/state/BlockState.getAnalogOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
+  #101 = NameAndType        #102:#103     // getAnalogOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
+  #102 = Utf8               getAnalogOutputSignal
+  #103 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
+  #104 = Methodref          #2.#77        // net/minecraft/world/level/block/DiodeBlock.getInputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+  #105 = Methodref          #19.#106      // net/minecraft/world/level/block/state/BlockState.isRedstoneConductor:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+  #106 = NameAndType        #107:#108     // isRedstoneConductor:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+  #107 = Utf8               isRedstoneConductor
+  #108 = Utf8               (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+  #109 = Class              #110          // net/minecraft/world/entity/decoration/ItemFrame
+  #110 = Utf8               net/minecraft/world/entity/decoration/ItemFrame
+  #111 = Methodref          #8.#112       // yeet/block/soul_comparator.getItemFrame:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/decoration/ItemFrame;
+  #112 = NameAndType        #113:#114     // getItemFrame:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/decoration/ItemFrame;
+  #113 = Utf8               getItemFrame
+  #114 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/decoration/ItemFrame;
+  #115 = Methodref          #109.#116     // net/minecraft/world/entity/decoration/ItemFrame.getAnalogOutput:()I
+  #116 = NameAndType        #117:#75      // getAnalogOutput:()I
+  #117 = Utf8               getAnalogOutput
+  #118 = Methodref          #85.#119      // net/minecraft/core/BlockPos.getX:()I
+  #119 = NameAndType        #120:#75      // getX:()I
+  #120 = Utf8               getX
+  #121 = Methodref          #85.#122      // net/minecraft/core/BlockPos.getY:()I
+  #122 = NameAndType        #123:#75      // getY:()I
+  #123 = Utf8               getY
+  #124 = Methodref          #85.#125      // net/minecraft/core/BlockPos.getZ:()I
+  #125 = NameAndType        #126:#75      // getZ:()I
+  #126 = Utf8               getZ
+  #127 = Class              #128          // net/minecraft/world/phys/AABB
+  #128 = Utf8               net/minecraft/world/phys/AABB
+  #129 = Methodref          #127.#130     // net/minecraft/world/phys/AABB."<init>":(DDDDDD)V
+  #130 = NameAndType        #5:#131       // "<init>":(DDDDDD)V
+  #131 = Utf8               (DDDDDD)V
+  #132 = InvokeDynamic      #0:#133       // #0:test:(Lnet/minecraft/core/Direction;)Ljava/util/function/Predicate;
+  #133 = NameAndType        #134:#135     // test:(Lnet/minecraft/core/Direction;)Ljava/util/function/Predicate;
+  #134 = Utf8               test
+  #135 = Utf8               (Lnet/minecraft/core/Direction;)Ljava/util/function/Predicate;
+  #136 = Methodref          #91.#137      // net/minecraft/world/level/Level.getEntitiesOfClass:(Ljava/lang/Class;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;
+  #137 = NameAndType        #138:#139     // getEntitiesOfClass:(Ljava/lang/Class;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;
+  #138 = Utf8               getEntitiesOfClass
+  #139 = Utf8               (Ljava/lang/Class;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;
+  #140 = InterfaceMethodref #141.#142     // java/util/List.size:()I
+  #141 = Class              #143          // java/util/List
+  #142 = NameAndType        #144:#75      // size:()I
+  #143 = Utf8               java/util/List
+  #144 = Utf8               size
+  #145 = InterfaceMethodref #141.#146     // java/util/List.get:(I)Ljava/lang/Object;
+  #146 = NameAndType        #147:#148     // get:(I)Ljava/lang/Object;
+  #147 = Utf8               get
+  #148 = Utf8               (I)Ljava/lang/Object;
+  #149 = Methodref          #150.#151     // net/minecraft/world/entity/player/Player.getAbilities:()Lnet/minecraft/world/entity/player/Abilities;
+  #150 = Class              #152          // net/minecraft/world/entity/player/Player
+  #151 = NameAndType        #153:#154     // getAbilities:()Lnet/minecraft/world/entity/player/Abilities;
+  #152 = Utf8               net/minecraft/world/entity/player/Player
+  #153 = Utf8               getAbilities
+  #154 = Utf8               ()Lnet/minecraft/world/entity/player/Abilities;
+  #155 = Fieldref           #156.#157     // net/minecraft/world/entity/player/Abilities.mayBuild:Z
+  #156 = Class              #158          // net/minecraft/world/entity/player/Abilities
+  #157 = NameAndType        #159:#160     // mayBuild:Z
+  #158 = Utf8               net/minecraft/world/entity/player/Abilities
+  #159 = Utf8               mayBuild
+  #160 = Utf8               Z
+  #161 = Methodref          #19.#162      // net/minecraft/world/level/block/state/BlockState.cycle:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+  #162 = NameAndType        #163:#164     // cycle:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+  #163 = Utf8               cycle
+  #164 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+  #165 = Fieldref           #50.#166      // net/minecraft/world/level/block/state/properties/ComparatorMode.SUBTRACT:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+  #166 = NameAndType        #167:#54      // SUBTRACT:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+  #167 = Utf8               SUBTRACT
+  #168 = Float              0.55f
+  #169 = Float              0.5f
+  #170 = Fieldref           #171.#172     // net/minecraft/sounds/SoundEvents.COMPARATOR_CLICK:Lnet/minecraft/sounds/SoundEvent;
+  #171 = Class              #173          // net/minecraft/sounds/SoundEvents
+  #172 = NameAndType        #174:#175     // COMPARATOR_CLICK:Lnet/minecraft/sounds/SoundEvent;
+  #173 = Utf8               net/minecraft/sounds/SoundEvents
+  #174 = Utf8               COMPARATOR_CLICK
+  #175 = Utf8               Lnet/minecraft/sounds/SoundEvent;
+  #176 = Fieldref           #177.#178     // net/minecraft/sounds/SoundSource.BLOCKS:Lnet/minecraft/sounds/SoundSource;
+  #177 = Class              #179          // net/minecraft/sounds/SoundSource
+  #178 = NameAndType        #180:#181     // BLOCKS:Lnet/minecraft/sounds/SoundSource;
+  #179 = Utf8               net/minecraft/sounds/SoundSource
+  #180 = Utf8               BLOCKS
+  #181 = Utf8               Lnet/minecraft/sounds/SoundSource;
+  #182 = Float              0.3f
+  #183 = Methodref          #91.#184      // net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+  #184 = NameAndType        #185:#186     // playSound:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+  #185 = Utf8               playSound
+  #186 = Utf8               (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+  #187 = Methodref          #91.#188      // net/minecraft/world/level/Level.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+  #188 = NameAndType        #189:#190     // setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+  #189 = Utf8               setBlock
+  #190 = Utf8               (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+  #191 = Fieldref           #91.#192      // net/minecraft/world/level/Level.isClientSide:Z
+  #192 = NameAndType        #193:#160     // isClientSide:Z
+  #193 = Utf8               isClientSide
+  #194 = Methodref          #195.#196     // net/minecraft/world/InteractionResult.sidedSuccess:(Z)Lnet/minecraft/world/InteractionResult;
+  #195 = Class              #197          // net/minecraft/world/InteractionResult
+  #196 = NameAndType        #198:#199     // sidedSuccess:(Z)Lnet/minecraft/world/InteractionResult;
+  #197 = Utf8               net/minecraft/world/InteractionResult
+  #198 = Utf8               sidedSuccess
+  #199 = Utf8               (Z)Lnet/minecraft/world/InteractionResult;
+  #200 = Fieldref           #195.#201     // net/minecraft/world/InteractionResult.PASS:Lnet/minecraft/world/InteractionResult;
+  #201 = NameAndType        #202:#203     // PASS:Lnet/minecraft/world/InteractionResult;
+  #202 = Utf8               PASS
+  #203 = Utf8               Lnet/minecraft/world/InteractionResult;
+  #204 = Methodref          #91.#205      // net/minecraft/world/level/Level.getBlockTicks:()Lnet/minecraft/world/ticks/LevelTickAccess;
+  #205 = NameAndType        #206:#207     // getBlockTicks:()Lnet/minecraft/world/ticks/LevelTickAccess;
+  #206 = Utf8               getBlockTicks
+  #207 = Utf8               ()Lnet/minecraft/world/ticks/LevelTickAccess;
+  #208 = InterfaceMethodref #209.#210     // net/minecraft/world/ticks/LevelTickAccess.hasScheduledTick:(Lnet/minecraft/core/BlockPos;Ljava/lang/Object;)Z
+  #209 = Class              #211          // net/minecraft/world/ticks/LevelTickAccess
+  #210 = NameAndType        #212:#213     // hasScheduledTick:(Lnet/minecraft/core/BlockPos;Ljava/lang/Object;)Z
+  #211 = Utf8               net/minecraft/world/ticks/LevelTickAccess
+  #212 = Utf8               hasScheduledTick
+  #213 = Utf8               (Lnet/minecraft/core/BlockPos;Ljava/lang/Object;)Z
+  #214 = Methodref          #8.#215       // yeet/block/soul_comparator.calculateOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+  #215 = NameAndType        #216:#79      // calculateOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+  #216 = Utf8               calculateOutputSignal
+  #217 = Methodref          #60.#218      // java/lang/Integer.compareTo:(Ljava/lang/Integer;)I
+  #218 = NameAndType        #219:#220     // compareTo:(Ljava/lang/Integer;)I
+  #219 = Utf8               compareTo
+  #220 = Utf8               (Ljava/lang/Integer;)I
+  #221 = Methodref          #40.#222      // java/lang/Boolean.booleanValue:()Z
+  #222 = NameAndType        #223:#99      // booleanValue:()Z
+  #223 = Utf8               booleanValue
+  #224 = Methodref          #8.#225       // yeet/block/soul_comparator.shouldPrioritize:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #225 = NameAndType        #226:#227     // shouldPrioritize:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #226 = Utf8               shouldPrioritize
+  #227 = Utf8               (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #228 = Fieldref           #229.#230     // net/minecraft/world/ticks/TickPriority.HIGH:Lnet/minecraft/world/ticks/TickPriority;
+  #229 = Class              #231          // net/minecraft/world/ticks/TickPriority
+  #230 = NameAndType        #232:#233     // HIGH:Lnet/minecraft/world/ticks/TickPriority;
+  #231 = Utf8               net/minecraft/world/ticks/TickPriority
+  #232 = Utf8               HIGH
+  #233 = Utf8               Lnet/minecraft/world/ticks/TickPriority;
+  #234 = Fieldref           #229.#235     // net/minecraft/world/ticks/TickPriority.NORMAL:Lnet/minecraft/world/ticks/TickPriority;
+  #235 = NameAndType        #236:#233     // NORMAL:Lnet/minecraft/world/ticks/TickPriority;
+  #236 = Utf8               NORMAL
+  #237 = Methodref          #91.#238      // net/minecraft/world/level/Level.scheduleTick:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;ILnet/minecraft/world/ticks/TickPriority;)V
+  #238 = NameAndType        #239:#240     // scheduleTick:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;ILnet/minecraft/world/ticks/TickPriority;)V
+  #239 = Utf8               scheduleTick
+  #240 = Utf8               (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;ILnet/minecraft/world/ticks/TickPriority;)V
+  #241 = Methodref          #8.#242       // yeet/block/soul_comparator.updateNeighborsInFront:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+  #242 = NameAndType        #243:#244     // updateNeighborsInFront:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+  #243 = Utf8               updateNeighborsInFront
+  #244 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+  #245 = Methodref          #8.#246       // yeet/block/soul_comparator.refreshOutputState:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+  #246 = NameAndType        #247:#244     // refreshOutputState:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+  #247 = Utf8               refreshOutputState
+  #248 = Methodref          #26.#249      // net/minecraft/core/Direction.getOpposite:()Lnet/minecraft/core/Direction;
+  #249 = NameAndType        #250:#251     // getOpposite:()Lnet/minecraft/core/Direction;
+  #250 = Utf8               getOpposite
+  #251 = Utf8               ()Lnet/minecraft/core/Direction;
+  #252 = InterfaceMethodref #253.#92      // net/minecraft/world/level/BlockGetter.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+  #253 = Class              #254          // net/minecraft/world/level/BlockGetter
+  #254 = Utf8               net/minecraft/world/level/BlockGetter
+  #255 = Methodref          #2.#256       // net/minecraft/world/level/block/DiodeBlock.isDiode:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #256 = NameAndType        #257:#258     // isDiode:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #257 = Utf8               isDiode
+  #258 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #259 = Class              #260          // net/minecraft/world/level/block/state/properties/Property
+  #260 = Utf8               net/minecraft/world/level/block/state/properties/Property
+  #261 = Methodref          #262.#263     // net/minecraft/world/level/block/state/StateDefinition$Builder.add:([Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+  #262 = Class              #264          // net/minecraft/world/level/block/state/StateDefinition$Builder
+  #263 = NameAndType        #265:#266     // add:([Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+  #264 = Utf8               net/minecraft/world/level/block/state/StateDefinition$Builder
+  #265 = Utf8               add
+  #266 = Utf8               ([Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+  #267 = Fieldref           #268.#269     // yeet/block_registration.COMPARATORS:Lnet/minecraft/tags/TagKey;
+  #268 = Class              #270          // yeet/block_registration
+  #269 = NameAndType        #271:#272     // COMPARATORS:Lnet/minecraft/tags/TagKey;
+  #270 = Utf8               yeet/block_registration
+  #271 = Utf8               COMPARATORS
+  #272 = Utf8               Lnet/minecraft/tags/TagKey;
+  #273 = Methodref          #19.#274      // net/minecraft/world/level/block/state/BlockState.is:(Lnet/minecraft/tags/TagKey;)Z
+  #274 = NameAndType        #275:#276     // is:(Lnet/minecraft/tags/TagKey;)Z
+  #275 = Utf8               is
+  #276 = Utf8               (Lnet/minecraft/tags/TagKey;)Z
+  #277 = Methodref          #91.#278      // net/minecraft/world/level/Level.isClientSide:()Z
+  #278 = NameAndType        #193:#99      // isClientSide:()Z
+  #279 = InterfaceMethodref #280.#92      // net/minecraft/world/level/LevelReader.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+  #280 = Class              #281          // net/minecraft/world/level/LevelReader
+  #281 = Utf8               net/minecraft/world/level/LevelReader
+  #282 = Methodref          #19.#283      // net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+  #283 = NameAndType        #284:#285     // getBlock:()Lnet/minecraft/world/level/block/Block;
+  #284 = Utf8               getBlock
+  #285 = Utf8               ()Lnet/minecraft/world/level/block/Block;
+  #286 = Methodref          #19.#287      // net/minecraft/world/level/block/state/BlockState.neighborChanged:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
+  #287 = NameAndType        #288:#289     // neighborChanged:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
+  #288 = Utf8               neighborChanged
+  #289 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
+  #290 = Methodref          #109.#291     // net/minecraft/world/entity/decoration/ItemFrame.getDirection:()Lnet/minecraft/core/Direction;
+  #291 = NameAndType        #292:#251     // getDirection:()Lnet/minecraft/core/Direction;
+  #292 = Utf8               getDirection
+  #293 = Fieldref           #294.#295     // net/minecraft/world/level/block/state/properties/BlockStateProperties.MODE_COMPARATOR:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+  #294 = Class              #296          // net/minecraft/world/level/block/state/properties/BlockStateProperties
+  #295 = NameAndType        #297:#48      // MODE_COMPARATOR:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+  #296 = Utf8               net/minecraft/world/level/block/state/properties/BlockStateProperties
+  #297 = Utf8               MODE_COMPARATOR
+  #298 = Fieldref           #294.#56      // net/minecraft/world/level/block/state/properties/BlockStateProperties.POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+  #299 = Utf8               Signature
+  #300 = Utf8               Lnet/minecraft/world/level/block/state/properties/EnumProperty<Lnet/minecraft/world/level/block/state/properties/ComparatorMode;>;
+  #301 = Utf8               Code
+  #302 = Utf8               LineNumberTable
+  #303 = Utf8               LocalVariableTable
+  #304 = Utf8               this
+  #305 = Utf8               Lyeet/block/soul_comparator;
+  #306 = Utf8               properties
+  #307 = Utf8               Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+  #308 = Utf8               getDelay
+  #309 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;)I
+  #310 = Utf8               blockState
+  #311 = Utf8               Lnet/minecraft/world/level/block/state/BlockState;
+  #312 = Utf8               getOutputSignal
+  #313 = Utf8               (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+  #314 = Utf8               blockGetter
+  #315 = Utf8               Lnet/minecraft/world/level/BlockGetter;
+  #316 = Utf8               blockPos
+  #317 = Utf8               Lnet/minecraft/core/BlockPos;
+  #318 = Utf8               signal_sub
+  #319 = Utf8               I
+  #320 = Utf8               level
+  #321 = Utf8               Lnet/minecraft/world/level/Level;
+  #322 = Utf8               signal
+  #323 = Utf8               StackMapTable
+  #324 = Utf8               shouldTurnOn
+  #325 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #326 = Utf8               item_frame
+  #327 = Utf8               Lnet/minecraft/world/entity/decoration/ItemFrame;
+  #328 = Utf8               block_pos_3
+  #329 = Utf8               block_state_3
+  #330 = Utf8               signal_2
+  #331 = Utf8               direction
+  #332 = Utf8               block_pos_2
+  #333 = Utf8               block_state_2
+  #334 = Utf8               X
+  #335 = Utf8               D
+  #336 = Utf8               Y
+  #337 = Utf8               list
+  #338 = Utf8               Ljava/util/List;
+  #339 = Utf8               LocalVariableTypeTable
+  #340 = Utf8               Ljava/util/List<Lnet/minecraft/world/entity/decoration/ItemFrame;>;
+  #341 = Utf8               RuntimeVisibleAnnotations
+  #342 = Utf8               Ljavax/annotation/Nullable;
+  #343 = Utf8               use
+  #344 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;
+  #345 = Utf8               f
+  #346 = Utf8               F
+  #347 = Utf8               player
+  #348 = Utf8               Lnet/minecraft/world/entity/player/Player;
+  #349 = Utf8               interactionHand
+  #350 = Utf8               Lnet/minecraft/world/InteractionHand;
+  #351 = Utf8               blockHitResult
+  #352 = Utf8               Lnet/minecraft/world/phys/BlockHitResult;
+  #353 = Utf8               checkTickOnNeighbor
+  #354 = Utf8               output
+  #355 = Utf8               output_state
+  #356 = Class              #357          // net/minecraft/world/level/block/state/properties/BooleanProperty
+  #357 = Utf8               net/minecraft/world/level/block/state/properties/BooleanProperty
+  #358 = Utf8               tick
+  #359 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+  #360 = Utf8               serverLevel
+  #361 = Utf8               Lnet/minecraft/server/level/ServerLevel;
+  #362 = Utf8               random
+  #363 = Utf8               Ljava/util/Random;
+  #364 = Utf8               createBlockStateDefinition
+  #365 = Utf8               (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+  #366 = Utf8               builder
+  #367 = Utf8               Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+  #368 = Utf8               Lnet/minecraft/world/level/block/state/StateDefinition$Builder<Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/state/BlockState;>;
+  #369 = Utf8               (Lnet/minecraft/world/level/block/state/StateDefinition$Builder<Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/state/BlockState;>;)V
+  #370 = Utf8               getWeakChanges
+  #371 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
+  #372 = Utf8               state
+  #373 = Utf8               world
+  #374 = Utf8               Lnet/minecraft/world/level/LevelReader;
+  #375 = Utf8               pos
+  #376 = Utf8               onNeighborChange
+  #377 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)V
+  #378 = Utf8               neighbor
+  #379 = Utf8               lambda$getItemFrame$0
+  #380 = Utf8               (Lnet/minecraft/core/Direction;Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+  #381 = Utf8               <clinit>
+  #382 = Utf8               ()V
+  #383 = Utf8               SourceFile
+  #384 = Utf8               soul_comparator.java
+  #385 = Utf8               BootstrapMethods
+  #386 = MethodHandle       6:#387        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #387 = Methodref          #388.#389     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #388 = Class              #390          // java/lang/invoke/LambdaMetafactory
+  #389 = NameAndType        #391:#392     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #390 = Utf8               java/lang/invoke/LambdaMetafactory
+  #391 = Utf8               metafactory
+  #392 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #393 = MethodType         #394          //  (Ljava/lang/Object;)Z
+  #394 = Utf8               (Ljava/lang/Object;)Z
+  #395 = MethodHandle       6:#396        // REF_invokeStatic yeet/block/soul_comparator.lambda$getItemFrame$0:(Lnet/minecraft/core/Direction;Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+  #396 = Methodref          #8.#397       // yeet/block/soul_comparator.lambda$getItemFrame$0:(Lnet/minecraft/core/Direction;Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+  #397 = NameAndType        #379:#380     // lambda$getItemFrame$0:(Lnet/minecraft/core/Direction;Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+  #398 = MethodType         #399          //  (Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+  #399 = Utf8               (Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+  #400 = Utf8               InnerClasses
+  #401 = Class              #402          // net/minecraft/world/level/block/state/BlockBehaviour$Properties
+  #402 = Utf8               net/minecraft/world/level/block/state/BlockBehaviour$Properties
+  #403 = Class              #404          // net/minecraft/world/level/block/state/BlockBehaviour
+  #404 = Utf8               net/minecraft/world/level/block/state/BlockBehaviour
+  #405 = Utf8               Properties
+  #406 = Utf8               Builder
+  #407 = Class              #408          // java/lang/invoke/MethodHandles$Lookup
+  #408 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #409 = Class              #410          // java/lang/invoke/MethodHandles
+  #410 = Utf8               java/lang/invoke/MethodHandles
+  #411 = Utf8               Lookup
+{
+  public static final net.minecraft.world.level.block.state.properties.EnumProperty<net.minecraft.world.level.block.state.properties.ComparatorMode> MODE;
+    descriptor: Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Signature: #300                         // Lnet/minecraft/world/level/block/state/properties/EnumProperty<Lnet/minecraft/world/level/block/state/properties/ComparatorMode;>;
+
+  public static final net.minecraft.world.level.block.state.properties.IntegerProperty POWER;
+    descriptor: Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+
+  public yeet.block.soul_comparator(net.minecraft.world.level.block.state.BlockBehaviour$Properties);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokespecial #1                  // Method net/minecraft/world/level/block/DiodeBlock."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+         5: aload_0
+         6: aload_0
+         7: getfield      #7                  // Field stateDefinition:Lnet/minecraft/world/level/block/state/StateDefinition;
+        10: invokevirtual #13                 // Method net/minecraft/world/level/block/state/StateDefinition.any:()Lnet/minecraft/world/level/block/state/StateHolder;
+        13: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        16: getstatic     #21                 // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+        19: getstatic     #25                 // Field net/minecraft/core/Direction.NORTH:Lnet/minecraft/core/Direction;
+        22: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        25: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        28: getstatic     #35                 // Field POWERED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+        31: iconst_0
+        32: invokestatic  #39                 // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        35: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        38: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        41: getstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+        44: getstatic     #49                 // Field net/minecraft/world/level/block/state/properties/ComparatorMode.COMPARE:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+        47: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        50: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        53: getstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+        56: iconst_0
+        57: invokestatic  #59                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        60: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        63: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        66: invokevirtual #64                 // Method registerDefaultState:(Lnet/minecraft/world/level/block/state/BlockState;)V
+        69: return
+      LineNumberTable:
+        line 42: 0
+        line 43: 5
+        line 48: 10
+        line 49: 22
+        line 50: 32
+        line 51: 47
+        line 52: 57
+        line 43: 66
+        line 54: 69
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      70     0  this   Lyeet/block/soul_comparator;
+            0      70     1 properties   Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+
+  protected int getDelay(net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;)I
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=1, locals=2, args_size=2
+         0: iconst_2
+         1: ireturn
+      LineNumberTable:
+        line 58: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       2     0  this   Lyeet/block/soul_comparator;
+            0       2     1 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+
+  protected int getOutputSignal(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=2, locals=4, args_size=4
+         0: aload_3
+         1: getstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+         4: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+         7: checkcast     #60                 // class java/lang/Integer
+        10: invokevirtual #72                 // Method java/lang/Integer.intValue:()I
+        13: ireturn
+      LineNumberTable:
+        line 63: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      14     0  this   Lyeet/block/soul_comparator;
+            0      14     1 blockGetter   Lnet/minecraft/world/level/BlockGetter;
+            0      14     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0      14     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+
+  private int calculateOutputSignal(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=5, locals=6, args_size=4
+         0: aload_0
+         1: aload_1
+         2: aload_2
+         3: aload_3
+         4: invokevirtual #76                 // Method getInputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+         7: istore        4
+         9: iload         4
+        11: ifeq          52
+        14: iload         4
+        16: aload_0
+        17: aload_1
+        18: aload_2
+        19: aload_3
+        20: invokevirtual #80                 // Method getAlternateSignal:(Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+        23: isub
+        24: istore        5
+        26: iload         5
+        28: iflt          52
+        31: aload_3
+        32: getstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+        35: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        38: getstatic     #49                 // Field net/minecraft/world/level/block/state/properties/ComparatorMode.COMPARE:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+        41: if_acmpne     49
+        44: iload         4
+        46: goto          51
+        49: iload         5
+        51: ireturn
+        52: iconst_0
+        53: ireturn
+      LineNumberTable:
+        line 67: 0
+        line 68: 9
+        line 69: 14
+        line 70: 26
+        line 71: 31
+        line 74: 52
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           26      26     5 signal_sub   I
+            0      54     0  this   Lyeet/block/soul_comparator;
+            0      54     1 level   Lnet/minecraft/world/level/Level;
+            0      54     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0      54     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            9      45     4 signal   I
+      StackMapTable: number_of_entries = 3
+        frame_type = 253 /* append */
+          offset_delta = 49
+          locals = [ int, int ]
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 0
+
+  protected boolean shouldTurnOn(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=5, locals=6, args_size=4
+         0: aload_0
+         1: aload_1
+         2: aload_2
+         3: aload_3
+         4: invokevirtual #76                 // Method getInputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+         7: istore        4
+         9: iload         4
+        11: ifeq          55
+        14: iload         4
+        16: aload_0
+        17: aload_1
+        18: aload_2
+        19: aload_3
+        20: invokevirtual #80                 // Method getAlternateSignal:(Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+        23: isub
+        24: istore        5
+        26: iload         5
+        28: iflt          55
+        31: iload         5
+        33: ifne          49
+        36: aload_3
+        37: getstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+        40: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        43: getstatic     #49                 // Field net/minecraft/world/level/block/state/properties/ComparatorMode.COMPARE:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+        46: if_acmpne     53
+        49: iconst_1
+        50: goto          54
+        53: iconst_0
+        54: ireturn
+        55: iconst_0
+        56: ireturn
+      LineNumberTable:
+        line 88: 0
+        line 89: 9
+        line 90: 14
+        line 91: 26
+        line 92: 31
+        line 95: 55
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           26      29     5 signal_sub   I
+            0      57     0  this   Lyeet/block/soul_comparator;
+            0      57     1 level   Lnet/minecraft/world/level/Level;
+            0      57     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0      57     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            9      48     4 signal   I
+      StackMapTable: number_of_entries = 4
+        frame_type = 253 /* append */
+          offset_delta = 49
+          locals = [ int, int ]
+        frame_type = 3 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+        frame_type = 250 /* chop */
+          offset_delta = 0
+
+  protected int getInputSignal(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=4, locals=12, args_size=4
+         0: aload_3
+         1: getstatic     #21                 // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+         4: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+         7: checkcast     #26                 // class net/minecraft/core/Direction
+        10: astore        4
+        12: aload_2
+        13: aload         4
+        15: invokevirtual #84                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+        18: astore        5
+        20: aload_1
+        21: aload         5
+        23: invokevirtual #90                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+        26: astore        6
+        28: aload         6
+        30: invokevirtual #96                 // Method net/minecraft/world/level/block/state/BlockState.hasAnalogOutputSignal:()Z
+        33: ifeq          45
+        36: aload         6
+        38: aload_1
+        39: aload         5
+        41: invokevirtual #100                // Method net/minecraft/world/level/block/state/BlockState.getAnalogOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
+        44: ireturn
+        45: aload_0
+        46: aload_1
+        47: aload_2
+        48: aload_3
+        49: invokespecial #104                // Method net/minecraft/world/level/block/DiodeBlock.getInputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+        52: istore        7
+        54: iload         7
+        56: bipush        15
+        58: if_icmpge     157
+        61: aload         6
+        63: aload_1
+        64: aload         5
+        66: invokevirtual #105                // Method net/minecraft/world/level/block/state/BlockState.isRedstoneConductor:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Z
+        69: ifeq          157
+        72: aload         5
+        74: aload         4
+        76: invokevirtual #84                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+        79: astore        8
+        81: aload_1
+        82: aload         8
+        84: invokevirtual #90                 // Method net/minecraft/world/level/Level.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+        87: astore        9
+        89: iconst_0
+        90: istore        10
+        92: aload         9
+        94: invokevirtual #96                 // Method net/minecraft/world/level/block/state/BlockState.hasAnalogOutputSignal:()Z
+        97: ifeq          124
+       100: aload         9
+       102: aload_1
+       103: aload         8
+       105: invokevirtual #100                // Method net/minecraft/world/level/block/state/BlockState.getAnalogOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;)I
+       108: istore        7
+       110: iload         7
+       112: bipush        8
+       114: if_icmplt     120
+       117: goto          157
+       120: iload         7
+       122: istore        10
+       124: aload_0
+       125: aload_1
+       126: aload         4
+       128: aload         8
+       130: invokevirtual #111                // Method getItemFrame:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/decoration/ItemFrame;
+       133: astore        11
+       135: aload         11
+       137: ifnull        157
+       140: aload         11
+       142: invokevirtual #115                // Method net/minecraft/world/entity/decoration/ItemFrame.getAnalogOutput:()I
+       145: istore        7
+       147: iload         10
+       149: iload         7
+       151: if_icmple     157
+       154: iload         10
+       156: ireturn
+       157: iload         7
+       159: ireturn
+      LineNumberTable:
+        line 110: 0
+        line 111: 12
+        line 112: 20
+        line 113: 28
+        line 114: 36
+        line 116: 45
+        line 117: 54
+        line 118: 72
+        line 119: 81
+        line 120: 89
+        line 122: 92
+        line 123: 100
+        line 124: 110
+        line 125: 120
+        line 127: 124
+        line 128: 135
+        line 129: 140
+        line 130: 147
+        line 134: 157
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+          135      22    11 item_frame   Lnet/minecraft/world/entity/decoration/ItemFrame;
+           81      76     8 block_pos_3   Lnet/minecraft/core/BlockPos;
+           89      68     9 block_state_3   Lnet/minecraft/world/level/block/state/BlockState;
+           92      65    10 signal_2   I
+            0     160     0  this   Lyeet/block/soul_comparator;
+            0     160     1 level   Lnet/minecraft/world/level/Level;
+            0     160     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0     160     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+           12     148     4 direction   Lnet/minecraft/core/Direction;
+           20     140     5 block_pos_2   Lnet/minecraft/core/BlockPos;
+           28     132     6 block_state_2   Lnet/minecraft/world/level/block/state/BlockState;
+           54     106     7 signal   I
+      StackMapTable: number_of_entries = 5
+        frame_type = 254 /* append */
+          offset_delta = 45
+          locals = [ class net/minecraft/core/Direction, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 46
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/core/Direction, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int ]
+          stack = []
+        frame_type = 27 /* same */
+        frame_type = 3 /* same */
+        frame_type = 248 /* chop */
+          offset_delta = 32
+
+  private net.minecraft.world.entity.decoration.ItemFrame getItemFrame(net.minecraft.world.level.Level, net.minecraft.core.Direction, net.minecraft.core.BlockPos);
+    descriptor: (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/Direction;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/entity/decoration/ItemFrame;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=18, locals=11, args_size=4
+         0: aload_3
+         1: invokevirtual #118                // Method net/minecraft/core/BlockPos.getX:()I
+         4: i2d
+         5: dstore        4
+         7: aload_3
+         8: invokevirtual #121                // Method net/minecraft/core/BlockPos.getY:()I
+        11: i2d
+        12: dstore        6
+        14: aload_3
+        15: invokevirtual #124                // Method net/minecraft/core/BlockPos.getZ:()I
+        18: i2d
+        19: dstore        8
+        21: aload_1
+        22: ldc           #109                // class net/minecraft/world/entity/decoration/ItemFrame
+        24: new           #127                // class net/minecraft/world/phys/AABB
+        27: dup
+        28: dload         4
+        30: dload         6
+        32: dload         8
+        34: dload         4
+        36: dconst_1
+        37: dadd
+        38: dload         6
+        40: dconst_1
+        41: dadd
+        42: dload         8
+        44: dconst_1
+        45: dadd
+        46: invokespecial #129                // Method net/minecraft/world/phys/AABB."<init>":(DDDDDD)V
+        49: aload_2
+        50: invokedynamic #132,  0            // InvokeDynamic #0:test:(Lnet/minecraft/core/Direction;)Ljava/util/function/Predicate;
+        55: invokevirtual #136                // Method net/minecraft/world/level/Level.getEntitiesOfClass:(Ljava/lang/Class;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;
+        58: astore        10
+        60: aload         10
+        62: invokeinterface #140,  1          // InterfaceMethod java/util/List.size:()I
+        67: iconst_1
+        68: if_icmpeq     75
+        71: aconst_null
+        72: goto          86
+        75: aload         10
+        77: iconst_0
+        78: invokeinterface #145,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+        83: checkcast     #109                // class net/minecraft/world/entity/decoration/ItemFrame
+        86: areturn
+      LineNumberTable:
+        line 139: 0
+        line 140: 7
+        line 141: 14
+        line 142: 21
+        line 143: 60
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      87     0  this   Lyeet/block/soul_comparator;
+            0      87     1 level   Lnet/minecraft/world/level/Level;
+            0      87     2 direction   Lnet/minecraft/core/Direction;
+            0      87     3 blockPos   Lnet/minecraft/core/BlockPos;
+            7      80     4     X   D
+           14      73     6     Y   D
+           21      66     8     Z   D
+           60      27    10  list   Ljava/util/List;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           60      27    10  list   Ljava/util/List<Lnet/minecraft/world/entity/decoration/ItemFrame;>;
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 75
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/Direction, class net/minecraft/core/BlockPos, double, double, double, class java/util/List ]
+          stack = []
+        frame_type = 74 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/world/entity/decoration/ItemFrame ]
+    RuntimeVisibleAnnotations:
+      0: #342()
+        javax.annotation.Nullable
+
+  public net.minecraft.world.InteractionResult use(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand, net.minecraft.world.phys.BlockHitResult);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=7, locals=8, args_size=7
+         0: aload         4
+         2: invokevirtual #149                // Method net/minecraft/world/entity/player/Player.getAbilities:()Lnet/minecraft/world/entity/player/Abilities;
+         5: getfield      #155                // Field net/minecraft/world/entity/player/Abilities.mayBuild:Z
+         8: ifeq          77
+        11: aload_1
+        12: getstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+        15: invokevirtual #161                // Method net/minecraft/world/level/block/state/BlockState.cycle:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+        18: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        21: dup
+        22: astore_1
+        23: getstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+        26: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        29: getstatic     #165                // Field net/minecraft/world/level/block/state/properties/ComparatorMode.SUBTRACT:Lnet/minecraft/world/level/block/state/properties/ComparatorMode;
+        32: if_acmpne     40
+        35: ldc           #168                // float 0.55f
+        37: goto          42
+        40: ldc           #169                // float 0.5f
+        42: fstore        7
+        44: aload_2
+        45: aload         4
+        47: aload_3
+        48: getstatic     #170                // Field net/minecraft/sounds/SoundEvents.COMPARATOR_CLICK:Lnet/minecraft/sounds/SoundEvent;
+        51: getstatic     #176                // Field net/minecraft/sounds/SoundSource.BLOCKS:Lnet/minecraft/sounds/SoundSource;
+        54: ldc           #182                // float 0.3f
+        56: fload         7
+        58: invokevirtual #183                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+        61: aload_2
+        62: aload_3
+        63: aload_1
+        64: iconst_2
+        65: invokevirtual #187                // Method net/minecraft/world/level/Level.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+        68: pop
+        69: aload_2
+        70: getfield      #191                // Field net/minecraft/world/level/Level.isClientSide:Z
+        73: invokestatic  #194                // Method net/minecraft/world/InteractionResult.sidedSuccess:(Z)Lnet/minecraft/world/InteractionResult;
+        76: areturn
+        77: getstatic     #200                // Field net/minecraft/world/InteractionResult.PASS:Lnet/minecraft/world/InteractionResult;
+        80: areturn
+      LineNumberTable:
+        line 148: 0
+        line 149: 11
+        line 150: 44
+        line 151: 61
+        line 155: 69
+        line 157: 77
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           44      33     7     f   F
+            0      81     0  this   Lyeet/block/soul_comparator;
+            0      81     1 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            0      81     2 level   Lnet/minecraft/world/level/Level;
+            0      81     3 blockPos   Lnet/minecraft/core/BlockPos;
+            0      81     4 player   Lnet/minecraft/world/entity/player/Player;
+            0      81     5 interactionHand   Lnet/minecraft/world/InteractionHand;
+            0      81     6 blockHitResult   Lnet/minecraft/world/phys/BlockHitResult;
+      StackMapTable: number_of_entries = 3
+        frame_type = 40 /* same */
+        frame_type = 65 /* same_locals_1_stack_item */
+          stack = [ float ]
+        frame_type = 34 /* same */
+
+  protected void checkTickOnNeighbor(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=8, locals=5, args_size=4
+         0: aload_1
+         1: invokevirtual #204                // Method net/minecraft/world/level/Level.getBlockTicks:()Lnet/minecraft/world/ticks/LevelTickAccess;
+         4: aload_2
+         5: aload_0
+         6: invokeinterface #208,  3          // InterfaceMethod net/minecraft/world/ticks/LevelTickAccess.hasScheduledTick:(Lnet/minecraft/core/BlockPos;Ljava/lang/Object;)Z
+        11: ifne          96
+        14: aload_0
+        15: aload_1
+        16: aload_2
+        17: aload_3
+        18: invokevirtual #214                // Method calculateOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+        21: istore        4
+        23: aload_3
+        24: getstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+        27: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        30: checkcast     #60                 // class java/lang/Integer
+        33: iload         4
+        35: invokestatic  #59                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        38: invokevirtual #217                // Method java/lang/Integer.compareTo:(Ljava/lang/Integer;)I
+        41: ifne          70
+        44: aload_3
+        45: getstatic     #35                 // Field POWERED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+        48: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        51: checkcast     #40                 // class java/lang/Boolean
+        54: invokevirtual #221                // Method java/lang/Boolean.booleanValue:()Z
+        57: iload         4
+        59: ifeq          66
+        62: iconst_1
+        63: goto          67
+        66: iconst_0
+        67: if_icmpeq     96
+        70: aload_1
+        71: aload_2
+        72: aload_0
+        73: iconst_2
+        74: aload_0
+        75: aload_1
+        76: aload_2
+        77: aload_3
+        78: invokevirtual #224                // Method shouldPrioritize:(Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+        81: ifeq          90
+        84: getstatic     #228                // Field net/minecraft/world/ticks/TickPriority.HIGH:Lnet/minecraft/world/ticks/TickPriority;
+        87: goto          93
+        90: getstatic     #234                // Field net/minecraft/world/ticks/TickPriority.NORMAL:Lnet/minecraft/world/ticks/TickPriority;
+        93: invokevirtual #237                // Method net/minecraft/world/level/Level.scheduleTick:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;ILnet/minecraft/world/ticks/TickPriority;)V
+        96: return
+      LineNumberTable:
+        line 162: 0
+        line 163: 14
+        line 165: 23
+        line 166: 70
+        line 169: 96
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           23      73     4 output   I
+            0      97     0  this   Lyeet/block/soul_comparator;
+            0      97     1 level   Lnet/minecraft/world/level/Level;
+            0      97     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0      97     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+      StackMapTable: number_of_entries = 6
+        frame_type = 255 /* full_frame */
+          offset_delta = 66
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int ]
+          stack = [ int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int ]
+          stack = [ int, int ]
+        frame_type = 2 /* same */
+        frame_type = 255 /* full_frame */
+          offset_delta = 19
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int ]
+          stack = [ class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class yeet/block/soul_comparator, int ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int ]
+          stack = [ class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class yeet/block/soul_comparator, int, class net/minecraft/world/ticks/TickPriority ]
+        frame_type = 250 /* chop */
+          offset_delta = 2
+
+  private void refreshOutputState(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=5, locals=6, args_size=4
+         0: aload_0
+         1: aload_1
+         2: aload_2
+         3: aload_3
+         4: invokevirtual #214                // Method calculateOutputSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)I
+         7: bipush        15
+         9: iand
+        10: istore        4
+        12: aload_3
+        13: getstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+        16: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        19: checkcast     #60                 // class java/lang/Integer
+        22: invokevirtual #72                 // Method java/lang/Integer.intValue:()I
+        25: istore        5
+        27: iload         4
+        29: iload         5
+        31: if_icmpeq     101
+        34: iload         4
+        36: iload         5
+        38: imul
+        39: ifne          72
+        42: aload_1
+        43: aload_2
+        44: aload_3
+        45: getstatic     #35                 // Field POWERED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+        48: iload         4
+        50: ifeq          57
+        53: iconst_1
+        54: goto          58
+        57: iconst_0
+        58: invokestatic  #39                 // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        61: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        64: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        67: iconst_2
+        68: invokevirtual #187                // Method net/minecraft/world/level/Level.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+        71: pop
+        72: aload_1
+        73: aload_2
+        74: aload_3
+        75: getstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+        78: iload         4
+        80: invokestatic  #59                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        83: invokevirtual #31                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        86: checkcast     #19                 // class net/minecraft/world/level/block/state/BlockState
+        89: iconst_4
+        90: invokevirtual #187                // Method net/minecraft/world/level/Level.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+        93: pop
+        94: aload_0
+        95: aload_1
+        96: aload_2
+        97: aload_3
+        98: invokevirtual #241                // Method updateNeighborsInFront:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+       101: return
+      LineNumberTable:
+        line 172: 0
+        line 173: 12
+        line 174: 27
+        line 175: 34
+        line 176: 42
+        line 178: 72
+        line 179: 94
+        line 181: 101
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0     102     0  this   Lyeet/block/soul_comparator;
+            0     102     1 level   Lnet/minecraft/world/level/Level;
+            0     102     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0     102     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+           12      90     4 output   I
+           27      75     5 output_state   I
+      StackMapTable: number_of_entries = 4
+        frame_type = 255 /* full_frame */
+          offset_delta = 57
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int, int ]
+          stack = [ class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/world/level/block/state/properties/BooleanProperty ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class yeet/block/soul_comparator, class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, int, int ]
+          stack = [ class net/minecraft/world/level/Level, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/world/level/block/state/properties/BooleanProperty, int ]
+        frame_type = 13 /* same */
+        frame_type = 28 /* same */
+
+  public void tick(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, java.util.Random);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=5, args_size=5
+         0: aload_0
+         1: aload_2
+         2: aload_3
+         3: aload_1
+         4: invokevirtual #245                // Method refreshOutputState:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+         7: return
+      LineNumberTable:
+        line 185: 0
+        line 186: 7
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lyeet/block/soul_comparator;
+            0       8     1 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            0       8     2 serverLevel   Lnet/minecraft/server/level/ServerLevel;
+            0       8     3 blockPos   Lnet/minecraft/core/BlockPos;
+            0       8     4 random   Ljava/util/Random;
+
+  public boolean shouldPrioritize(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=6, args_size=4
+         0: aload_3
+         1: getstatic     #21                 // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+         4: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+         7: checkcast     #26                 // class net/minecraft/core/Direction
+        10: astore        4
+        12: aload_1
+        13: aload_2
+        14: aload         4
+        16: invokevirtual #248                // Method net/minecraft/core/Direction.getOpposite:()Lnet/minecraft/core/Direction;
+        19: invokevirtual #84                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+        22: invokeinterface #252,  2          // InterfaceMethod net/minecraft/world/level/BlockGetter.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+        27: astore        5
+        29: aload         5
+        31: invokestatic  #255                // Method net/minecraft/world/level/block/DiodeBlock.isDiode:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+        34: ifeq          54
+        37: aload         5
+        39: getstatic     #21                 // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+        42: invokevirtual #68                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        45: aload         4
+        47: if_acmpeq     54
+        50: iconst_1
+        51: goto          55
+        54: iconst_0
+        55: ireturn
+      LineNumberTable:
+        line 190: 0
+        line 191: 12
+        line 192: 29
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      56     0  this   Lyeet/block/soul_comparator;
+            0      56     1 blockGetter   Lnet/minecraft/world/level/BlockGetter;
+            0      56     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0      56     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+           12      44     4 direction   Lnet/minecraft/core/Direction;
+           29      27     5 block_state_2   Lnet/minecraft/world/level/block/state/BlockState;
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 54
+          locals = [ class net/minecraft/core/Direction, class net/minecraft/world/level/block/state/BlockState ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+
+  protected void createBlockStateDefinition(net.minecraft.world.level.block.state.StateDefinition$Builder<net.minecraft.world.level.block.Block, net.minecraft.world.level.block.state.BlockState>);
+    descriptor: (Lnet/minecraft/world/level/block/state/StateDefinition$Builder;)V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=5, locals=2, args_size=2
+         0: aload_1
+         1: iconst_4
+         2: anewarray     #259                // class net/minecraft/world/level/block/state/properties/Property
+         5: dup
+         6: iconst_0
+         7: getstatic     #21                 // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+        10: aastore
+        11: dup
+        12: iconst_1
+        13: getstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+        16: aastore
+        17: dup
+        18: iconst_2
+        19: getstatic     #35                 // Field POWERED:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+        22: aastore
+        23: dup
+        24: iconst_3
+        25: getstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+        28: aastore
+        29: invokevirtual #261                // Method net/minecraft/world/level/block/state/StateDefinition$Builder.add:([Lnet/minecraft/world/level/block/state/properties/Property;)Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+        32: pop
+        33: return
+      LineNumberTable:
+        line 197: 0
+        line 198: 33
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      34     0  this   Lyeet/block/soul_comparator;
+            0      34     1 builder   Lnet/minecraft/world/level/block/state/StateDefinition$Builder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      34     1 builder   Lnet/minecraft/world/level/block/state/StateDefinition$Builder<Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/state/BlockState;>;
+    Signature: #369                         // (Lnet/minecraft/world/level/block/state/StateDefinition$Builder<Lnet/minecraft/world/level/block/Block;Lnet/minecraft/world/level/block/state/BlockState;>;)V
+
+  public boolean getWeakChanges(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=4, args_size=4
+         0: aload_1
+         1: getstatic     #267                // Field yeet/block_registration.COMPARATORS:Lnet/minecraft/tags/TagKey;
+         4: invokevirtual #273                // Method net/minecraft/world/level/block/state/BlockState.is:(Lnet/minecraft/tags/TagKey;)Z
+         7: ireturn
+      LineNumberTable:
+        line 202: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       8     0  this   Lyeet/block/soul_comparator;
+            0       8     1 state   Lnet/minecraft/world/level/block/state/BlockState;
+            0       8     2 world   Lnet/minecraft/world/level/LevelReader;
+            0       8     3   pos   Lnet/minecraft/core/BlockPos;
+
+  public void onNeighborChange(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=6, locals=5, args_size=5
+         0: aload_3
+         1: invokevirtual #121                // Method net/minecraft/core/BlockPos.getY:()I
+         4: aload         4
+         6: invokevirtual #121                // Method net/minecraft/core/BlockPos.getY:()I
+         9: if_icmpne     52
+        12: aload_2
+        13: instanceof    #91                 // class net/minecraft/world/level/Level
+        16: ifeq          52
+        19: aload_2
+        20: checkcast     #91                 // class net/minecraft/world/level/Level
+        23: invokevirtual #277                // Method net/minecraft/world/level/Level.isClientSide:()Z
+        26: ifne          52
+        29: aload_1
+        30: aload_2
+        31: checkcast     #91                 // class net/minecraft/world/level/Level
+        34: aload_3
+        35: aload_2
+        36: aload         4
+        38: invokeinterface #279,  2          // InterfaceMethod net/minecraft/world/level/LevelReader.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+        43: invokevirtual #282                // Method net/minecraft/world/level/block/state/BlockState.getBlock:()Lnet/minecraft/world/level/block/Block;
+        46: aload         4
+        48: iconst_0
+        49: invokevirtual #286                // Method net/minecraft/world/level/block/state/BlockState.neighborChanged:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;Lnet/minecraft/core/BlockPos;Z)V
+        52: return
+      LineNumberTable:
+        line 207: 0
+        line 208: 29
+        line 210: 52
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      53     0  this   Lyeet/block/soul_comparator;
+            0      53     1 state   Lnet/minecraft/world/level/block/state/BlockState;
+            0      53     2 world   Lnet/minecraft/world/level/LevelReader;
+            0      53     3   pos   Lnet/minecraft/core/BlockPos;
+            0      53     4 neighbor   Lnet/minecraft/core/BlockPos;
+      StackMapTable: number_of_entries = 1
+        frame_type = 52 /* same */
+
+  private static boolean lambda$getItemFrame$0(net.minecraft.core.Direction, net.minecraft.world.entity.decoration.ItemFrame);
+    descriptor: (Lnet/minecraft/core/Direction;Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_1
+         1: ifnull        16
+         4: aload_1
+         5: invokevirtual #290                // Method net/minecraft/world/entity/decoration/ItemFrame.getDirection:()Lnet/minecraft/core/Direction;
+         8: aload_0
+         9: if_acmpne     16
+        12: iconst_1
+        13: goto          17
+        16: iconst_0
+        17: ireturn
+      LineNumberTable:
+        line 142: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      18     0 direction   Lnet/minecraft/core/Direction;
+            0      18     1 item_frame   Lnet/minecraft/world/entity/decoration/ItemFrame;
+      StackMapTable: number_of_entries = 2
+        frame_type = 16 /* same */
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=1, locals=0, args_size=0
+         0: getstatic     #293                // Field net/minecraft/world/level/block/state/properties/BlockStateProperties.MODE_COMPARATOR:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+         3: putstatic     #45                 // Field MODE:Lnet/minecraft/world/level/block/state/properties/EnumProperty;
+         6: getstatic     #298                // Field net/minecraft/world/level/block/state/properties/BlockStateProperties.POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+         9: putstatic     #55                 // Field POWER:Lnet/minecraft/world/level/block/state/properties/IntegerProperty;
+        12: return
+      LineNumberTable:
+        line 38: 0
+        line 39: 6
+}
+SourceFile: "soul_comparator.java"
+BootstrapMethods:
+  0: #386 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #393 (Ljava/lang/Object;)Z
+      #395 REF_invokeStatic yeet/block/soul_comparator.lambda$getItemFrame$0:(Lnet/minecraft/core/Direction;Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+      #398 (Lnet/minecraft/world/entity/decoration/ItemFrame;)Z
+InnerClasses:
+  public static #405= #401 of #403;       // Properties=class net/minecraft/world/level/block/state/BlockBehaviour$Properties of class net/minecraft/world/level/block/state/BlockBehaviour
+  public static #406= #262 of #14;        // Builder=class net/minecraft/world/level/block/state/StateDefinition$Builder of class net/minecraft/world/level/block/state/StateDefinition
+  public static final #411= #407 of #409; // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

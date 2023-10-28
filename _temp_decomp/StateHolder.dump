@@ -1,0 +1,1181 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/StateHolder.class
+  Last modified Jun 2, 2022; size 13027 bytes
+  SHA-256 checksum b01021ab8cde943d5b621e132314c9a1fb178c965160235dffee4e583afdd482
+  Compiled from "StateHolder.java"
+public abstract class net.minecraft.world.level.block.state.StateHolder<O extends java.lang.Object, S extends java.lang.Object> extends java.lang.Object
+  minor version: 0
+  major version: 61
+  flags: (0x0421) ACC_PUBLIC, ACC_SUPER, ACC_ABSTRACT
+  this_class: #8                          // net/minecraft/world/level/block/state/StateHolder
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 7, methods: 17, attributes: 5
+Constant pool:
+    #1 = Methodref          #2.#3         // java/lang/Object."<init>":()V
+    #2 = Class              #4            // java/lang/Object
+    #3 = NameAndType        #5:#6         // "<init>":()V
+    #4 = Utf8               java/lang/Object
+    #5 = Utf8               <init>
+    #6 = Utf8               ()V
+    #7 = Fieldref           #8.#9         // net/minecraft/world/level/block/state/StateHolder.owner:Ljava/lang/Object;
+    #8 = Class              #10           // net/minecraft/world/level/block/state/StateHolder
+    #9 = NameAndType        #11:#12       // owner:Ljava/lang/Object;
+   #10 = Utf8               net/minecraft/world/level/block/state/StateHolder
+   #11 = Utf8               owner
+   #12 = Utf8               Ljava/lang/Object;
+   #13 = Fieldref           #8.#14        // net/minecraft/world/level/block/state/StateHolder.values:Lcom/google/common/collect/ImmutableMap;
+   #14 = NameAndType        #15:#16       // values:Lcom/google/common/collect/ImmutableMap;
+   #15 = Utf8               values
+   #16 = Utf8               Lcom/google/common/collect/ImmutableMap;
+   #17 = Fieldref           #8.#18        // net/minecraft/world/level/block/state/StateHolder.propertiesCodec:Lcom/mojang/serialization/MapCodec;
+   #18 = NameAndType        #19:#20       // propertiesCodec:Lcom/mojang/serialization/MapCodec;
+   #19 = Utf8               propertiesCodec
+   #20 = Utf8               Lcom/mojang/serialization/MapCodec;
+   #21 = Methodref          #22.#23       // net/minecraft/world/level/block/state/properties/Property.getPossibleValues:()Ljava/util/Collection;
+   #22 = Class              #24           // net/minecraft/world/level/block/state/properties/Property
+   #23 = NameAndType        #25:#26       // getPossibleValues:()Ljava/util/Collection;
+   #24 = Utf8               net/minecraft/world/level/block/state/properties/Property
+   #25 = Utf8               getPossibleValues
+   #26 = Utf8               ()Ljava/util/Collection;
+   #27 = Methodref          #8.#28        // net/minecraft/world/level/block/state/StateHolder.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+   #28 = NameAndType        #29:#30       // getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+   #29 = Utf8               getValue
+   #30 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+   #31 = Methodref          #8.#32        // net/minecraft/world/level/block/state/StateHolder.findNextInCollection:(Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
+   #32 = NameAndType        #33:#34       // findNextInCollection:(Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
+   #33 = Utf8               findNextInCollection
+   #34 = Utf8               (Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
+   #35 = Class              #36           // java/lang/Comparable
+   #36 = Utf8               java/lang/Comparable
+   #37 = Methodref          #8.#38        // net/minecraft/world/level/block/state/StateHolder.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+   #38 = NameAndType        #39:#40       // setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+   #39 = Utf8               setValue
+   #40 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+   #41 = InterfaceMethodref #42.#43       // java/util/Collection.iterator:()Ljava/util/Iterator;
+   #42 = Class              #44           // java/util/Collection
+   #43 = NameAndType        #45:#46       // iterator:()Ljava/util/Iterator;
+   #44 = Utf8               java/util/Collection
+   #45 = Utf8               iterator
+   #46 = Utf8               ()Ljava/util/Iterator;
+   #47 = InterfaceMethodref #48.#49       // java/util/Iterator.hasNext:()Z
+   #48 = Class              #50           // java/util/Iterator
+   #49 = NameAndType        #51:#52       // hasNext:()Z
+   #50 = Utf8               java/util/Iterator
+   #51 = Utf8               hasNext
+   #52 = Utf8               ()Z
+   #53 = InterfaceMethodref #48.#54       // java/util/Iterator.next:()Ljava/lang/Object;
+   #54 = NameAndType        #55:#56       // next:()Ljava/lang/Object;
+   #55 = Utf8               next
+   #56 = Utf8               ()Ljava/lang/Object;
+   #57 = Methodref          #2.#58        // java/lang/Object.equals:(Ljava/lang/Object;)Z
+   #58 = NameAndType        #59:#60       // equals:(Ljava/lang/Object;)Z
+   #59 = Utf8               equals
+   #60 = Utf8               (Ljava/lang/Object;)Z
+   #61 = Class              #62           // java/lang/StringBuilder
+   #62 = Utf8               java/lang/StringBuilder
+   #63 = Methodref          #61.#3        // java/lang/StringBuilder."<init>":()V
+   #64 = Methodref          #61.#65       // java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   #65 = NameAndType        #66:#67       // append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   #66 = Utf8               append
+   #67 = Utf8               (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   #68 = Methodref          #8.#69        // net/minecraft/world/level/block/state/StateHolder.getValues:()Lcom/google/common/collect/ImmutableMap;
+   #69 = NameAndType        #70:#71       // getValues:()Lcom/google/common/collect/ImmutableMap;
+   #70 = Utf8               getValues
+   #71 = Utf8               ()Lcom/google/common/collect/ImmutableMap;
+   #72 = Methodref          #73.#74       // com/google/common/collect/ImmutableMap.isEmpty:()Z
+   #73 = Class              #75           // com/google/common/collect/ImmutableMap
+   #74 = NameAndType        #76:#52       // isEmpty:()Z
+   #75 = Utf8               com/google/common/collect/ImmutableMap
+   #76 = Utf8               isEmpty
+   #77 = Methodref          #61.#78       // java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+   #78 = NameAndType        #66:#79       // append:(C)Ljava/lang/StringBuilder;
+   #79 = Utf8               (C)Ljava/lang/StringBuilder;
+   #80 = Methodref          #73.#81       // com/google/common/collect/ImmutableMap.entrySet:()Lcom/google/common/collect/ImmutableSet;
+   #81 = NameAndType        #82:#83       // entrySet:()Lcom/google/common/collect/ImmutableSet;
+   #82 = Utf8               entrySet
+   #83 = Utf8               ()Lcom/google/common/collect/ImmutableSet;
+   #84 = Methodref          #85.#86       // com/google/common/collect/ImmutableSet.stream:()Ljava/util/stream/Stream;
+   #85 = Class              #87           // com/google/common/collect/ImmutableSet
+   #86 = NameAndType        #88:#89       // stream:()Ljava/util/stream/Stream;
+   #87 = Utf8               com/google/common/collect/ImmutableSet
+   #88 = Utf8               stream
+   #89 = Utf8               ()Ljava/util/stream/Stream;
+   #90 = Fieldref           #8.#91        // net/minecraft/world/level/block/state/StateHolder.PROPERTY_ENTRY_TO_STRING_FUNCTION:Ljava/util/function/Function;
+   #91 = NameAndType        #92:#93       // PROPERTY_ENTRY_TO_STRING_FUNCTION:Ljava/util/function/Function;
+   #92 = Utf8               PROPERTY_ENTRY_TO_STRING_FUNCTION
+   #93 = Utf8               Ljava/util/function/Function;
+   #94 = InterfaceMethodref #95.#96       // java/util/stream/Stream.map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+   #95 = Class              #97           // java/util/stream/Stream
+   #96 = NameAndType        #98:#99       // map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+   #97 = Utf8               java/util/stream/Stream
+   #98 = Utf8               map
+   #99 = Utf8               (Ljava/util/function/Function;)Ljava/util/stream/Stream;
+  #100 = String             #101          // ,
+  #101 = Utf8               ,
+  #102 = Methodref          #103.#104     // java/util/stream/Collectors.joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+  #103 = Class              #105          // java/util/stream/Collectors
+  #104 = NameAndType        #106:#107     // joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+  #105 = Utf8               java/util/stream/Collectors
+  #106 = Utf8               joining
+  #107 = Utf8               (Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+  #108 = InterfaceMethodref #95.#109      // java/util/stream/Stream.collect:(Ljava/util/stream/Collector;)Ljava/lang/Object;
+  #109 = NameAndType        #110:#111     // collect:(Ljava/util/stream/Collector;)Ljava/lang/Object;
+  #110 = Utf8               collect
+  #111 = Utf8               (Ljava/util/stream/Collector;)Ljava/lang/Object;
+  #112 = Class              #113          // java/lang/String
+  #113 = Utf8               java/lang/String
+  #114 = Methodref          #61.#115      // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #115 = NameAndType        #66:#116      // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #116 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #117 = Methodref          #61.#118      // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #118 = NameAndType        #119:#120     // toString:()Ljava/lang/String;
+  #119 = Utf8               toString
+  #120 = Utf8               ()Ljava/lang/String;
+  #121 = Methodref          #73.#122      // com/google/common/collect/ImmutableMap.keySet:()Lcom/google/common/collect/ImmutableSet;
+  #122 = NameAndType        #123:#83      // keySet:()Lcom/google/common/collect/ImmutableSet;
+  #123 = Utf8               keySet
+  #124 = Methodref          #125.#126     // java/util/Collections.unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;
+  #125 = Class              #127          // java/util/Collections
+  #126 = NameAndType        #128:#129     // unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;
+  #127 = Utf8               java/util/Collections
+  #128 = Utf8               unmodifiableCollection
+  #129 = Utf8               (Ljava/util/Collection;)Ljava/util/Collection;
+  #130 = Methodref          #73.#131      // com/google/common/collect/ImmutableMap.containsKey:(Ljava/lang/Object;)Z
+  #131 = NameAndType        #132:#60      // containsKey:(Ljava/lang/Object;)Z
+  #132 = Utf8               containsKey
+  #133 = Methodref          #73.#134      // com/google/common/collect/ImmutableMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #134 = NameAndType        #135:#136     // get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #135 = Utf8               get
+  #136 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #137 = Class              #138          // java/lang/IllegalArgumentException
+  #138 = Utf8               java/lang/IllegalArgumentException
+  #139 = InvokeDynamic      #0:#140       // #0:makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
+  #140 = NameAndType        #141:#142     // makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
+  #141 = Utf8               makeConcatWithConstants
+  #142 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
+  #143 = Methodref          #137.#144     // java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+  #144 = NameAndType        #5:#145       // "<init>":(Ljava/lang/String;)V
+  #145 = Utf8               (Ljava/lang/String;)V
+  #146 = Methodref          #22.#147      // net/minecraft/world/level/block/state/properties/Property.getValueClass:()Ljava/lang/Class;
+  #147 = NameAndType        #148:#149     // getValueClass:()Ljava/lang/Class;
+  #148 = Utf8               getValueClass
+  #149 = Utf8               ()Ljava/lang/Class;
+  #150 = Methodref          #151.#152     // java/lang/Class.cast:(Ljava/lang/Object;)Ljava/lang/Object;
+  #151 = Class              #153          // java/lang/Class
+  #152 = NameAndType        #154:#136     // cast:(Ljava/lang/Object;)Ljava/lang/Object;
+  #153 = Utf8               java/lang/Class
+  #154 = Utf8               cast
+  #155 = Methodref          #156.#157     // java/util/Optional.empty:()Ljava/util/Optional;
+  #156 = Class              #158          // java/util/Optional
+  #157 = NameAndType        #159:#160     // empty:()Ljava/util/Optional;
+  #158 = Utf8               java/util/Optional
+  #159 = Utf8               empty
+  #160 = Utf8               ()Ljava/util/Optional;
+  #161 = Methodref          #156.#162     // java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+  #162 = NameAndType        #163:#164     // of:(Ljava/lang/Object;)Ljava/util/Optional;
+  #163 = Utf8               of
+  #164 = Utf8               (Ljava/lang/Object;)Ljava/util/Optional;
+  #165 = InvokeDynamic      #1:#140       // #1:makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
+  #166 = Fieldref           #8.#167       // net/minecraft/world/level/block/state/StateHolder.neighbours:Lcom/google/common/collect/Table;
+  #167 = NameAndType        #168:#169     // neighbours:Lcom/google/common/collect/Table;
+  #168 = Utf8               neighbours
+  #169 = Utf8               Lcom/google/common/collect/Table;
+  #170 = InterfaceMethodref #171.#172     // com/google/common/collect/Table.get:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #171 = Class              #173          // com/google/common/collect/Table
+  #172 = NameAndType        #135:#174     // get:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #173 = Utf8               com/google/common/collect/Table
+  #174 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #175 = InvokeDynamic      #2:#176       // #2:makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/String;
+  #176 = NameAndType        #141:#177     // makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/String;
+  #177 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/String;
+  #178 = Class              #179          // java/lang/IllegalStateException
+  #179 = Utf8               java/lang/IllegalStateException
+  #180 = Methodref          #178.#3       // java/lang/IllegalStateException."<init>":()V
+  #181 = Methodref          #182.#183     // com/google/common/collect/HashBasedTable.create:()Lcom/google/common/collect/HashBasedTable;
+  #182 = Class              #184          // com/google/common/collect/HashBasedTable
+  #183 = NameAndType        #185:#186     // create:()Lcom/google/common/collect/HashBasedTable;
+  #184 = Utf8               com/google/common/collect/HashBasedTable
+  #185 = Utf8               create
+  #186 = Utf8               ()Lcom/google/common/collect/HashBasedTable;
+  #187 = Methodref          #85.#188      // com/google/common/collect/ImmutableSet.iterator:()Lcom/google/common/collect/UnmodifiableIterator;
+  #188 = NameAndType        #45:#189      // iterator:()Lcom/google/common/collect/UnmodifiableIterator;
+  #189 = Utf8               ()Lcom/google/common/collect/UnmodifiableIterator;
+  #190 = Class              #191          // java/util/Map$Entry
+  #191 = Utf8               java/util/Map$Entry
+  #192 = InterfaceMethodref #190.#193     // java/util/Map$Entry.getKey:()Ljava/lang/Object;
+  #193 = NameAndType        #194:#56      // getKey:()Ljava/lang/Object;
+  #194 = Utf8               getKey
+  #195 = InterfaceMethodref #190.#196     // java/util/Map$Entry.getValue:()Ljava/lang/Object;
+  #196 = NameAndType        #29:#56       // getValue:()Ljava/lang/Object;
+  #197 = Methodref          #8.#198       // net/minecraft/world/level/block/state/StateHolder.makeNeighbourValues:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
+  #198 = NameAndType        #199:#200     // makeNeighbourValues:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
+  #199 = Utf8               makeNeighbourValues
+  #200 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
+  #201 = InterfaceMethodref #202.#134     // java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #202 = Class              #203          // java/util/Map
+  #203 = Utf8               java/util/Map
+  #204 = InterfaceMethodref #171.#205     // com/google/common/collect/Table.put:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #205 = NameAndType        #206:#207     // put:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #206 = Utf8               put
+  #207 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #208 = InterfaceMethodref #171.#74      // com/google/common/collect/Table.isEmpty:()Z
+  #209 = Methodref          #210.#211     // com/google/common/collect/ArrayTable.create:(Lcom/google/common/collect/Table;)Lcom/google/common/collect/ArrayTable;
+  #210 = Class              #212          // com/google/common/collect/ArrayTable
+  #211 = NameAndType        #185:#213     // create:(Lcom/google/common/collect/Table;)Lcom/google/common/collect/ArrayTable;
+  #212 = Utf8               com/google/common/collect/ArrayTable
+  #213 = Utf8               (Lcom/google/common/collect/Table;)Lcom/google/common/collect/ArrayTable;
+  #214 = Methodref          #215.#216     // com/google/common/collect/Maps.newHashMap:(Ljava/util/Map;)Ljava/util/HashMap;
+  #215 = Class              #217          // com/google/common/collect/Maps
+  #216 = NameAndType        #218:#219     // newHashMap:(Ljava/util/Map;)Ljava/util/HashMap;
+  #217 = Utf8               com/google/common/collect/Maps
+  #218 = Utf8               newHashMap
+  #219 = Utf8               (Ljava/util/Map;)Ljava/util/HashMap;
+  #220 = InterfaceMethodref #202.#221     // java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #221 = NameAndType        #206:#174     // put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #222 = String             #223          // Name
+  #223 = Utf8               Name
+  #224 = InvokeDynamic      #3:#225       // #3:apply:()Ljava/util/function/Function;
+  #225 = NameAndType        #226:#227     // apply:()Ljava/util/function/Function;
+  #226 = Utf8               apply
+  #227 = Utf8               ()Ljava/util/function/Function;
+  #228 = InvokeDynamic      #4:#229       // #4:apply:(Ljava/util/function/Function;)Ljava/util/function/Function;
+  #229 = NameAndType        #226:#230     // apply:(Ljava/util/function/Function;)Ljava/util/function/Function;
+  #230 = Utf8               (Ljava/util/function/Function;)Ljava/util/function/Function;
+  #231 = InterfaceMethodref #232.#233     // com/mojang/serialization/Codec.dispatch:(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #232 = Class              #234          // com/mojang/serialization/Codec
+  #233 = NameAndType        #235:#236     // dispatch:(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #234 = Utf8               com/mojang/serialization/Codec
+  #235 = Utf8               dispatch
+  #236 = Utf8               (Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #237 = InterfaceMethodref #238.#239     // java/util/function/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+  #238 = Class              #240          // java/util/function/Function
+  #239 = NameAndType        #226:#136     // apply:(Ljava/lang/Object;)Ljava/lang/Object;
+  #240 = Utf8               java/util/function/Function
+  #241 = InterfaceMethodref #232.#242     // com/mojang/serialization/Codec.unit:(Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #242 = NameAndType        #243:#244     // unit:(Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #243 = Utf8               unit
+  #244 = Utf8               (Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #245 = Methodref          #246.#247     // com/mojang/serialization/MapCodec.codec:()Lcom/mojang/serialization/Codec;
+  #246 = Class              #248          // com/mojang/serialization/MapCodec
+  #247 = NameAndType        #249:#250     // codec:()Lcom/mojang/serialization/Codec;
+  #248 = Utf8               com/mojang/serialization/MapCodec
+  #249 = Utf8               codec
+  #250 = Utf8               ()Lcom/mojang/serialization/Codec;
+  #251 = String             #252          // Properties
+  #252 = Utf8               Properties
+  #253 = InterfaceMethodref #232.#254     // com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+  #254 = NameAndType        #255:#256     // optionalFieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+  #255 = Utf8               optionalFieldOf
+  #256 = Utf8               (Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+  #257 = InvokeDynamic      #5:#258       // #5:apply:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/function/Function;
+  #258 = NameAndType        #226:#259     // apply:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/function/Function;
+  #259 = Utf8               (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/function/Function;
+  #260 = InvokeDynamic      #6:#225       // #6:apply:()Ljava/util/function/Function;
+  #261 = Methodref          #246.#262     // com/mojang/serialization/MapCodec.xmap:(Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+  #262 = NameAndType        #263:#264     // xmap:(Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+  #263 = Utf8               xmap
+  #264 = Utf8               (Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+  #265 = Methodref          #156.#266     // java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+  #266 = NameAndType        #267:#136     // orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+  #267 = Utf8               orElse
+  #268 = Class              #269          // net/minecraft/world/level/block/state/StateHolder$1
+  #269 = Utf8               net/minecraft/world/level/block/state/StateHolder$1
+  #270 = Methodref          #268.#3       // net/minecraft/world/level/block/state/StateHolder$1."<init>":()V
+  #271 = Utf8               NAME_TAG
+  #272 = Utf8               Ljava/lang/String;
+  #273 = Utf8               ConstantValue
+  #274 = Utf8               PROPERTIES_TAG
+  #275 = Utf8               Signature
+  #276 = Utf8               Ljava/util/function/Function<Ljava/util/Map$Entry<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;Ljava/lang/String;>;
+  #277 = Utf8               TO;
+  #278 = Utf8               Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+  #279 = Utf8               Lcom/google/common/collect/Table<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;TS;>;
+  #280 = Utf8               Lcom/mojang/serialization/MapCodec<TS;>;
+  #281 = Utf8               (Ljava/lang/Object;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+  #282 = Utf8               Code
+  #283 = Utf8               LineNumberTable
+  #284 = Utf8               LocalVariableTable
+  #285 = Utf8               this
+  #286 = Utf8               Lnet/minecraft/world/level/block/state/StateHolder;
+  #287 = Utf8               p_61117_
+  #288 = Utf8               p_61118_
+  #289 = Utf8               p_61119_
+  #290 = Utf8               LocalVariableTypeTable
+  #291 = Utf8               Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+  #292 = Utf8               (TO;Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;Lcom/mojang/serialization/MapCodec<TS;>;)V
+  #293 = Utf8               cycle
+  #294 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+  #295 = Utf8               p_61123_
+  #296 = Utf8               Lnet/minecraft/world/level/block/state/properties/Property;
+  #297 = Utf8               Lnet/minecraft/world/level/block/state/properties/Property<TT;>;
+  #298 = Utf8               <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)TS;
+  #299 = Utf8               p_61131_
+  #300 = Utf8               Ljava/util/Collection;
+  #301 = Utf8               p_61132_
+  #302 = Utf8               Ljava/util/Iterator;
+  #303 = Utf8               Ljava/util/Collection<TT;>;
+  #304 = Utf8               TT;
+  #305 = Utf8               Ljava/util/Iterator<TT;>;
+  #306 = Utf8               StackMapTable
+  #307 = Utf8               <T:Ljava/lang/Object;>(Ljava/util/Collection<TT;>;TT;)TT;
+  #308 = Utf8               stringbuilder
+  #309 = Utf8               Ljava/lang/StringBuilder;
+  #310 = Utf8               getProperties
+  #311 = Utf8               ()Ljava/util/Collection<Lnet/minecraft/world/level/block/state/properties/Property<*>;>;
+  #312 = Utf8               hasProperty
+  #313 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Z
+  #314 = Utf8               p_61139_
+  #315 = Utf8               <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)Z
+  #316 = Utf8               p_61144_
+  #317 = Utf8               comparable
+  #318 = Utf8               Ljava/lang/Comparable;
+  #319 = Utf8               Ljava/lang/Comparable<*>;
+  #320 = Utf8               <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)TT;
+  #321 = Utf8               getOptionalValue
+  #322 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/util/Optional;
+  #323 = Utf8               p_61146_
+  #324 = Utf8               <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)Ljava/util/Optional<TT;>;
+  #325 = Utf8               s
+  #326 = Utf8               p_61125_
+  #327 = Utf8               p_61126_
+  #328 = Utf8               TS;
+  #329 = Utf8               TV;
+  #330 = Utf8               <T::Ljava/lang/Comparable<TT;>;V:TT;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;TV;)TS;
+  #331 = Utf8               populateNeighbours
+  #332 = Utf8               (Ljava/util/Map;)V
+  #333 = Utf8               property
+  #334 = Utf8               entry
+  #335 = Utf8               Ljava/util/Map$Entry;
+  #336 = Utf8               table
+  #337 = Utf8               p_61134_
+  #338 = Utf8               Ljava/util/Map;
+  #339 = Utf8               Lnet/minecraft/world/level/block/state/properties/Property<*>;
+  #340 = Utf8               Ljava/util/Map$Entry<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+  #341 = Utf8               Ljava/util/Map<Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;TS;>;
+  #342 = Utf8               (Ljava/util/Map<Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;TS;>;)V
+  #343 = Utf8               p_61141_
+  #344 = Utf8               p_61142_
+  #345 = Utf8               Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+  #346 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;)Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+  #347 = Utf8               ()Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+  #348 = Utf8               (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+  #349 = Utf8               p_61128_
+  #350 = Utf8               Lcom/mojang/serialization/Codec;
+  #351 = Utf8               p_61129_
+  #352 = Utf8               Lcom/mojang/serialization/Codec<TO;>;
+  #353 = Utf8               Ljava/util/function/Function<TO;TS;>;
+  #354 = Utf8               <O:Ljava/lang/Object;S:Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;>(Lcom/mojang/serialization/Codec<TO;>;Ljava/util/function/Function<TO;TS;>;)Lcom/mojang/serialization/Codec<TS;>;
+  #355 = Utf8               lambda$codec$2
+  #356 = Utf8               (Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #357 = Utf8               p_187547_
+  #358 = Utf8               lambda$codec$1
+  #359 = Utf8               (Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  #360 = Utf8               p_187544_
+  #361 = Utf8               Ljava/util/Optional;
+  #362 = Utf8               lambda$codec$0
+  #363 = Utf8               (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+  #364 = Utf8               p_61121_
+  #365 = Utf8               <clinit>
+  #366 = Utf8               <O:Ljava/lang/Object;S:Ljava/lang/Object;>Ljava/lang/Object;
+  #367 = Utf8               SourceFile
+  #368 = Utf8               StateHolder.java
+  #369 = Utf8               NestMembers
+  #370 = Utf8               BootstrapMethods
+  #371 = MethodHandle       6:#372        // REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #372 = Methodref          #373.#374     // java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #373 = Class              #375          // java/lang/invoke/StringConcatFactory
+  #374 = NameAndType        #141:#376     // makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #375 = Utf8               java/lang/invoke/StringConcatFactory
+  #376 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+  #377 = String             #378          // Cannot get property \u0001 as it does not exist in \u0001
+  #378 = Utf8               Cannot get property \u0001 as it does not exist in \u0001
+  #379 = String             #380          // Cannot set property \u0001 as it does not exist in \u0001
+  #380 = Utf8               Cannot set property \u0001 as it does not exist in \u0001
+  #381 = String             #382          // Cannot set property \u0001 to \u0001 on \u0001, it is not an allowed value
+  #382 = Utf8               Cannot set property \u0001 to \u0001 on \u0001, it is not an allowed value
+  #383 = MethodHandle       6:#384        // REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #384 = Methodref          #385.#386     // java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #385 = Class              #387          // java/lang/invoke/LambdaMetafactory
+  #386 = NameAndType        #388:#389     // metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #387 = Utf8               java/lang/invoke/LambdaMetafactory
+  #388 = Utf8               metafactory
+  #389 = Utf8               (Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+  #390 = MethodType         #136          //  (Ljava/lang/Object;)Ljava/lang/Object;
+  #391 = MethodHandle       6:#392        // REF_invokeStatic net/minecraft/world/level/block/state/StateHolder.lambda$codec$0:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+  #392 = Methodref          #8.#393       // net/minecraft/world/level/block/state/StateHolder.lambda$codec$0:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+  #393 = NameAndType        #362:#363     // lambda$codec$0:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+  #394 = MethodType         #363          //  (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+  #395 = MethodHandle       6:#396        // REF_invokeStatic net/minecraft/world/level/block/state/StateHolder.lambda$codec$2:(Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #396 = Methodref          #8.#397       // net/minecraft/world/level/block/state/StateHolder.lambda$codec$2:(Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #397 = NameAndType        #355:#356     // lambda$codec$2:(Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #398 = MethodType         #244          //  (Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  #399 = MethodHandle       6:#400        // REF_invokeStatic net/minecraft/world/level/block/state/StateHolder.lambda$codec$1:(Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  #400 = Methodref          #8.#401       // net/minecraft/world/level/block/state/StateHolder.lambda$codec$1:(Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  #401 = NameAndType        #358:#359     // lambda$codec$1:(Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  #402 = MethodType         #403          //  (Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  #403 = Utf8               (Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  #404 = MethodHandle       6:#161        // REF_invokeStatic java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+  #405 = MethodType         #406          //  (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/Optional;
+  #406 = Utf8               (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/Optional;
+  #407 = Utf8               InnerClasses
+  #408 = Utf8               Entry
+  #409 = Class              #410          // java/lang/invoke/MethodHandles$Lookup
+  #410 = Utf8               java/lang/invoke/MethodHandles$Lookup
+  #411 = Class              #412          // java/lang/invoke/MethodHandles
+  #412 = Utf8               java/lang/invoke/MethodHandles
+  #413 = Utf8               Lookup
+{
+  public static final java.lang.String NAME_TAG = "Name";
+    descriptor: Ljava/lang/String;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Name
+
+  public static final java.lang.String PROPERTIES_TAG = "Properties";
+    descriptor: Ljava/lang/String;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    ConstantValue: String Properties
+
+  private static final java.util.function.Function<java.util.Map$Entry<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>>, java.lang.String> PROPERTY_ENTRY_TO_STRING_FUNCTION;
+    descriptor: Ljava/util/function/Function;
+    flags: (0x001a) ACC_PRIVATE, ACC_STATIC, ACC_FINAL
+    Signature: #276                         // Ljava/util/function/Function<Ljava/util/Map$Entry<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;Ljava/lang/String;>;
+
+  protected final O owner;
+    descriptor: Ljava/lang/Object;
+    flags: (0x0014) ACC_PROTECTED, ACC_FINAL
+    Signature: #277                         // TO;
+
+  private final com.google.common.collect.ImmutableMap<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>> values;
+    descriptor: Lcom/google/common/collect/ImmutableMap;
+    flags: (0x0012) ACC_PRIVATE, ACC_FINAL
+    Signature: #278                         // Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+
+  private com.google.common.collect.Table<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>, S> neighbours;
+    descriptor: Lcom/google/common/collect/Table;
+    flags: (0x0002) ACC_PRIVATE
+    Signature: #279                         // Lcom/google/common/collect/Table<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;TS;>;
+
+  protected final com.mojang.serialization.MapCodec<S> propertiesCodec;
+    descriptor: Lcom/mojang/serialization/MapCodec;
+    flags: (0x0014) ACC_PROTECTED, ACC_FINAL
+    Signature: #280                         // Lcom/mojang/serialization/MapCodec<TS;>;
+
+  protected net.minecraft.world.level.block.state.StateHolder(O, com.google.common.collect.ImmutableMap<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>>, com.mojang.serialization.MapCodec<S>);
+    descriptor: (Ljava/lang/Object;Lcom/google/common/collect/ImmutableMap;Lcom/mojang/serialization/MapCodec;)V
+    flags: (0x0004) ACC_PROTECTED
+    Code:
+      stack=2, locals=4, args_size=4
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #7                  // Field owner:Ljava/lang/Object;
+         9: aload_0
+        10: aload_2
+        11: putfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+        14: aload_0
+        15: aload_3
+        16: putfield      #17                 // Field propertiesCodec:Lcom/mojang/serialization/MapCodec;
+        19: return
+      LineNumberTable:
+        line 43: 0
+        line 44: 4
+        line 45: 9
+        line 46: 14
+        line 47: 19
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0      20     1 p_61117_   Ljava/lang/Object;
+            0      20     2 p_61118_   Lcom/google/common/collect/ImmutableMap;
+            0      20     3 p_61119_   Lcom/mojang/serialization/MapCodec;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0      20     1 p_61117_   TO;
+            0      20     2 p_61118_   Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+            0      20     3 p_61119_   Lcom/mojang/serialization/MapCodec<TS;>;
+    Signature: #292                         // (TO;Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;Lcom/mojang/serialization/MapCodec<TS;>;)V
+
+  public <T extends java.lang.Comparable<T>> S cycle(net.minecraft.world.level.block.state.properties.Property<T>);
+    descriptor: (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: aload_1
+         3: invokevirtual #21                 // Method net/minecraft/world/level/block/state/properties/Property.getPossibleValues:()Ljava/util/Collection;
+         6: aload_0
+         7: aload_1
+         8: invokevirtual #27                 // Method getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        11: invokestatic  #31                 // Method findNextInCollection:(Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
+        14: checkcast     #35                 // class java/lang/Comparable
+        17: invokevirtual #37                 // Method setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        20: areturn
+      LineNumberTable:
+        line 50: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      21     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0      21     1 p_61123_   Lnet/minecraft/world/level/block/state/properties/Property;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      21     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0      21     1 p_61123_   Lnet/minecraft/world/level/block/state/properties/Property<TT;>;
+    Signature: #298                         // <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)TS;
+
+  protected static <T extends java.lang.Object> T findNextInCollection(java.util.Collection<T>, T);
+    descriptor: (Ljava/util/Collection;Ljava/lang/Object;)Ljava/lang/Object;
+    flags: (0x000c) ACC_PROTECTED, ACC_STATIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: invokeinterface #41,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+         6: astore_2
+         7: aload_2
+         8: invokeinterface #47,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        13: ifeq          57
+        16: aload_2
+        17: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        22: aload_1
+        23: invokevirtual #57                 // Method java/lang/Object.equals:(Ljava/lang/Object;)Z
+        26: ifeq          7
+        29: aload_2
+        30: invokeinterface #47,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        35: ifeq          45
+        38: aload_2
+        39: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        44: areturn
+        45: aload_0
+        46: invokeinterface #41,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+        51: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        56: areturn
+        57: aload_2
+        58: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        63: areturn
+      LineNumberTable:
+        line 54: 0
+        line 56: 7
+        line 57: 16
+        line 58: 29
+        line 59: 38
+        line 62: 45
+        line 66: 57
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      64     0 p_61131_   Ljava/util/Collection;
+            0      64     1 p_61132_   Ljava/lang/Object;
+            7      57     2 iterator   Ljava/util/Iterator;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      64     0 p_61131_   Ljava/util/Collection<TT;>;
+            0      64     1 p_61132_   TT;
+            7      57     2 iterator   Ljava/util/Iterator<TT;>;
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 7
+          locals = [ class java/util/Iterator ]
+        frame_type = 37 /* same */
+        frame_type = 11 /* same */
+    Signature: #307                         // <T:Ljava/lang/Object;>(Ljava/util/Collection<TT;>;TT;)TT;
+
+  public java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=2, args_size=1
+         0: new           #61                 // class java/lang/StringBuilder
+         3: dup
+         4: invokespecial #63                 // Method java/lang/StringBuilder."<init>":()V
+         7: astore_1
+         8: aload_1
+         9: aload_0
+        10: getfield      #7                  // Field owner:Ljava/lang/Object;
+        13: invokevirtual #64                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+        16: pop
+        17: aload_0
+        18: invokevirtual #68                 // Method getValues:()Lcom/google/common/collect/ImmutableMap;
+        21: invokevirtual #72                 // Method com/google/common/collect/ImmutableMap.isEmpty:()Z
+        24: ifne          77
+        27: aload_1
+        28: bipush        91
+        30: invokevirtual #77                 // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+        33: pop
+        34: aload_1
+        35: aload_0
+        36: invokevirtual #68                 // Method getValues:()Lcom/google/common/collect/ImmutableMap;
+        39: invokevirtual #80                 // Method com/google/common/collect/ImmutableMap.entrySet:()Lcom/google/common/collect/ImmutableSet;
+        42: invokevirtual #84                 // Method com/google/common/collect/ImmutableSet.stream:()Ljava/util/stream/Stream;
+        45: getstatic     #90                 // Field PROPERTY_ENTRY_TO_STRING_FUNCTION:Ljava/util/function/Function;
+        48: invokeinterface #94,  2           // InterfaceMethod java/util/stream/Stream.map:(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+        53: ldc           #100                // String ,
+        55: invokestatic  #102                // Method java/util/stream/Collectors.joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;
+        58: invokeinterface #108,  2          // InterfaceMethod java/util/stream/Stream.collect:(Ljava/util/stream/Collector;)Ljava/lang/Object;
+        63: checkcast     #112                // class java/lang/String
+        66: invokevirtual #114                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        69: pop
+        70: aload_1
+        71: bipush        93
+        73: invokevirtual #77                 // Method java/lang/StringBuilder.append:(C)Ljava/lang/StringBuilder;
+        76: pop
+        77: aload_1
+        78: invokevirtual #117                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        81: areturn
+      LineNumberTable:
+        line 70: 0
+        line 71: 8
+        line 72: 17
+        line 73: 27
+        line 74: 34
+        line 75: 70
+        line 78: 77
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      82     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            8      74     1 stringbuilder   Ljava/lang/StringBuilder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      82     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 77
+          locals = [ class java/lang/StringBuilder ]
+
+  public java.util.Collection<net.minecraft.world.level.block.state.properties.Property<?>> getProperties();
+    descriptor: ()Ljava/util/Collection;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: invokevirtual #121                // Method com/google/common/collect/ImmutableMap.keySet:()Lcom/google/common/collect/ImmutableSet;
+         7: invokestatic  #124                // Method java/util/Collections.unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;
+        10: areturn
+      LineNumberTable:
+        line 82: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+    Signature: #311                         // ()Ljava/util/Collection<Lnet/minecraft/world/level/block/state/properties/Property<*>;>;
+
+  public <T extends java.lang.Comparable<T>> boolean hasProperty(net.minecraft.world.level.block.state.properties.Property<T>);
+    descriptor: (Lnet/minecraft/world/level/block/state/properties/Property;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: aload_1
+         5: invokevirtual #130                // Method com/google/common/collect/ImmutableMap.containsKey:(Ljava/lang/Object;)Z
+         8: ireturn
+      LineNumberTable:
+        line 86: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0       9     1 p_61139_   Lnet/minecraft/world/level/block/state/properties/Property;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0       9     1 p_61139_   Lnet/minecraft/world/level/block/state/properties/Property<TT;>;
+    Signature: #315                         // <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)Z
+
+  public <T extends java.lang.Comparable<T>> T getValue(net.minecraft.world.level.block.state.properties.Property<T>);
+    descriptor: (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=4, locals=3, args_size=2
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: aload_1
+         5: invokevirtual #133                // Method com/google/common/collect/ImmutableMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+         8: checkcast     #35                 // class java/lang/Comparable
+        11: astore_2
+        12: aload_2
+        13: ifnonnull     34
+        16: new           #137                // class java/lang/IllegalArgumentException
+        19: dup
+        20: aload_1
+        21: aload_0
+        22: getfield      #7                  // Field owner:Ljava/lang/Object;
+        25: invokedynamic #139,  0            // InvokeDynamic #0:makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
+        30: invokespecial #143                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        33: athrow
+        34: aload_1
+        35: invokevirtual #146                // Method net/minecraft/world/level/block/state/properties/Property.getValueClass:()Ljava/lang/Class;
+        38: aload_2
+        39: invokevirtual #150                // Method java/lang/Class.cast:(Ljava/lang/Object;)Ljava/lang/Object;
+        42: checkcast     #35                 // class java/lang/Comparable
+        45: areturn
+      LineNumberTable:
+        line 90: 0
+        line 91: 12
+        line 92: 16
+        line 94: 34
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      46     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0      46     1 p_61144_   Lnet/minecraft/world/level/block/state/properties/Property;
+           12      34     2 comparable   Ljava/lang/Comparable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      46     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0      46     1 p_61144_   Lnet/minecraft/world/level/block/state/properties/Property<TT;>;
+           12      34     2 comparable   Ljava/lang/Comparable<*>;
+      StackMapTable: number_of_entries = 1
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class java/lang/Comparable ]
+    Signature: #320                         // <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)TT;
+
+  public <T extends java.lang.Comparable<T>> java.util.Optional<T> getOptionalValue(net.minecraft.world.level.block.state.properties.Property<T>);
+    descriptor: (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/util/Optional;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: aload_1
+         5: invokevirtual #133                // Method com/google/common/collect/ImmutableMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+         8: checkcast     #35                 // class java/lang/Comparable
+        11: astore_2
+        12: aload_2
+        13: ifnonnull     22
+        16: invokestatic  #155                // Method java/util/Optional.empty:()Ljava/util/Optional;
+        19: goto          36
+        22: aload_1
+        23: invokevirtual #146                // Method net/minecraft/world/level/block/state/properties/Property.getValueClass:()Ljava/lang/Class;
+        26: aload_2
+        27: invokevirtual #150                // Method java/lang/Class.cast:(Ljava/lang/Object;)Ljava/lang/Object;
+        30: checkcast     #35                 // class java/lang/Comparable
+        33: invokestatic  #161                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+        36: areturn
+      LineNumberTable:
+        line 99: 0
+        line 100: 12
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      37     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0      37     1 p_61146_   Lnet/minecraft/world/level/block/state/properties/Property;
+           12      25     2 comparable   Ljava/lang/Comparable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      37     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0      37     1 p_61146_   Lnet/minecraft/world/level/block/state/properties/Property<TT;>;
+           12      25     2 comparable   Ljava/lang/Comparable<*>;
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 22
+          locals = [ class java/lang/Comparable ]
+        frame_type = 77 /* same_locals_1_stack_item */
+          stack = [ class java/util/Optional ]
+    Signature: #324                         // <T::Ljava/lang/Comparable<TT;>;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;)Ljava/util/Optional<TT;>;
+
+  public <T extends java.lang.Comparable<T>, V extends T> S setValue(net.minecraft.world.level.block.state.properties.Property<T>, V);
+    descriptor: (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=3
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: aload_1
+         5: invokevirtual #133                // Method com/google/common/collect/ImmutableMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+         8: checkcast     #35                 // class java/lang/Comparable
+        11: astore_3
+        12: aload_3
+        13: ifnonnull     34
+        16: new           #137                // class java/lang/IllegalArgumentException
+        19: dup
+        20: aload_1
+        21: aload_0
+        22: getfield      #7                  // Field owner:Ljava/lang/Object;
+        25: invokedynamic #165,  0            // InvokeDynamic #1:makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Object;)Ljava/lang/String;
+        30: invokespecial #143                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        33: athrow
+        34: aload_3
+        35: aload_2
+        36: if_acmpne     41
+        39: aload_0
+        40: areturn
+        41: aload_0
+        42: getfield      #166                // Field neighbours:Lcom/google/common/collect/Table;
+        45: aload_1
+        46: aload_2
+        47: invokeinterface #170,  3          // InterfaceMethod com/google/common/collect/Table.get:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        52: astore        4
+        54: aload         4
+        56: ifnonnull     78
+        59: new           #137                // class java/lang/IllegalArgumentException
+        62: dup
+        63: aload_1
+        64: aload_2
+        65: aload_0
+        66: getfield      #7                  // Field owner:Ljava/lang/Object;
+        69: invokedynamic #175,  0            // InvokeDynamic #2:makeConcatWithConstants:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/String;
+        74: invokespecial #143                // Method java/lang/IllegalArgumentException."<init>":(Ljava/lang/String;)V
+        77: athrow
+        78: aload         4
+        80: areturn
+      LineNumberTable:
+        line 104: 0
+        line 105: 12
+        line 106: 16
+        line 107: 34
+        line 108: 39
+        line 110: 41
+        line 111: 54
+        line 112: 59
+        line 114: 78
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           54      27     4     s   Ljava/lang/Object;
+            0      81     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0      81     1 p_61125_   Lnet/minecraft/world/level/block/state/properties/Property;
+            0      81     2 p_61126_   Ljava/lang/Comparable;
+           12      69     3 comparable   Ljava/lang/Comparable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           54      27     4     s   TS;
+            0      81     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0      81     1 p_61125_   Lnet/minecraft/world/level/block/state/properties/Property<TT;>;
+            0      81     2 p_61126_   TV;
+           12      69     3 comparable   Ljava/lang/Comparable<*>;
+      StackMapTable: number_of_entries = 3
+        frame_type = 252 /* append */
+          offset_delta = 34
+          locals = [ class java/lang/Comparable ]
+        frame_type = 6 /* same */
+        frame_type = 252 /* append */
+          offset_delta = 36
+          locals = [ class java/lang/Object ]
+    Signature: #330                         // <T::Ljava/lang/Comparable<TT;>;V:TT;>(Lnet/minecraft/world/level/block/state/properties/Property<TT;>;TV;)TS;
+
+  public void populateNeighbours(java.util.Map<java.util.Map<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>>, S>);
+    descriptor: (Ljava/util/Map;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=7, locals=8, args_size=2
+         0: aload_0
+         1: getfield      #166                // Field neighbours:Lcom/google/common/collect/Table;
+         4: ifnull        15
+         7: new           #178                // class java/lang/IllegalStateException
+        10: dup
+        11: invokespecial #180                // Method java/lang/IllegalStateException."<init>":()V
+        14: athrow
+        15: invokestatic  #181                // Method com/google/common/collect/HashBasedTable.create:()Lcom/google/common/collect/HashBasedTable;
+        18: astore_2
+        19: aload_0
+        20: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+        23: invokevirtual #80                 // Method com/google/common/collect/ImmutableMap.entrySet:()Lcom/google/common/collect/ImmutableSet;
+        26: invokevirtual #187                // Method com/google/common/collect/ImmutableSet.iterator:()Lcom/google/common/collect/UnmodifiableIterator;
+        29: astore_3
+        30: aload_3
+        31: invokeinterface #47,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        36: ifeq          139
+        39: aload_3
+        40: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        45: checkcast     #190                // class java/util/Map$Entry
+        48: astore        4
+        50: aload         4
+        52: invokeinterface #192,  1          // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+        57: checkcast     #22                 // class net/minecraft/world/level/block/state/properties/Property
+        60: astore        5
+        62: aload         5
+        64: invokevirtual #21                 // Method net/minecraft/world/level/block/state/properties/Property.getPossibleValues:()Ljava/util/Collection;
+        67: invokeinterface #41,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+        72: astore        6
+        74: aload         6
+        76: invokeinterface #47,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        81: ifeq          136
+        84: aload         6
+        86: invokeinterface #53,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        91: checkcast     #35                 // class java/lang/Comparable
+        94: astore        7
+        96: aload         7
+        98: aload         4
+       100: invokeinterface #195,  1          // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+       105: if_acmpeq     133
+       108: aload_2
+       109: aload         5
+       111: aload         7
+       113: aload_1
+       114: aload_0
+       115: aload         5
+       117: aload         7
+       119: invokevirtual #197                // Method makeNeighbourValues:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
+       122: invokeinterface #201,  2          // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       127: invokeinterface #204,  4          // InterfaceMethod com/google/common/collect/Table.put:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       132: pop
+       133: goto          74
+       136: goto          30
+       139: aload_0
+       140: aload_2
+       141: invokeinterface #208,  1          // InterfaceMethod com/google/common/collect/Table.isEmpty:()Z
+       146: ifeq          153
+       149: aload_2
+       150: goto          157
+       153: aload_2
+       154: invokestatic  #209                // Method com/google/common/collect/ArrayTable.create:(Lcom/google/common/collect/Table;)Lcom/google/common/collect/ArrayTable;
+       157: putfield      #166                // Field neighbours:Lcom/google/common/collect/Table;
+       160: return
+      LineNumberTable:
+        line 120: 0
+        line 121: 7
+        line 123: 15
+        line 125: 19
+        line 126: 50
+        line 128: 62
+        line 129: 96
+        line 130: 108
+        line 132: 133
+        line 133: 136
+        line 135: 139
+        line 137: 160
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           96      37     7 comparable   Ljava/lang/Comparable;
+           62      74     5 property   Lnet/minecraft/world/level/block/state/properties/Property;
+           50      86     4 entry   Ljava/util/Map$Entry;
+           19     141     2 table   Lcom/google/common/collect/Table;
+            0     161     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0     161     1 p_61134_   Ljava/util/Map;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           96      37     7 comparable   Ljava/lang/Comparable<*>;
+           62      74     5 property   Lnet/minecraft/world/level/block/state/properties/Property<*>;
+           50      86     4 entry   Ljava/util/Map$Entry<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+           19     141     2 table   Lcom/google/common/collect/Table<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;TS;>;
+            0     161     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0     161     1 p_61134_   Ljava/util/Map<Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;TS;>;
+      StackMapTable: number_of_entries = 8
+        frame_type = 15 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 14
+          locals = [ class com/google/common/collect/Table, class java/util/Iterator ]
+        frame_type = 254 /* append */
+          offset_delta = 43
+          locals = [ class java/util/Map$Entry, class net/minecraft/world/level/block/state/properties/Property, class java/util/Iterator ]
+        frame_type = 58 /* same */
+        frame_type = 248 /* chop */
+          offset_delta = 2
+        frame_type = 250 /* chop */
+          offset_delta = 2
+        frame_type = 77 /* same_locals_1_stack_item */
+          stack = [ class net/minecraft/world/level/block/state/StateHolder ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 3
+          locals = [ class net/minecraft/world/level/block/state/StateHolder, class java/util/Map, class com/google/common/collect/Table ]
+          stack = [ class net/minecraft/world/level/block/state/StateHolder, class com/google/common/collect/Table ]
+    Signature: #342                         // (Ljava/util/Map<Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;TS;>;)V
+
+  private java.util.Map<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>> makeNeighbourValues(net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>);
+    descriptor: (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/util/Map;
+    flags: (0x0002) ACC_PRIVATE
+    Code:
+      stack=3, locals=4, args_size=3
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: invokestatic  #214                // Method com/google/common/collect/Maps.newHashMap:(Ljava/util/Map;)Ljava/util/HashMap;
+         7: astore_3
+         8: aload_3
+         9: aload_1
+        10: aload_2
+        11: invokeinterface #220,  3          // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        16: pop
+        17: aload_3
+        18: areturn
+      LineNumberTable:
+        line 140: 0
+        line 141: 8
+        line 142: 17
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+            0      19     1 p_61141_   Lnet/minecraft/world/level/block/state/properties/Property;
+            0      19     2 p_61142_   Ljava/lang/Comparable;
+            8      11     3   map   Ljava/util/Map;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      19     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+            0      19     1 p_61141_   Lnet/minecraft/world/level/block/state/properties/Property<*>;
+            0      19     2 p_61142_   Ljava/lang/Comparable<*>;
+            8      11     3   map   Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+    Signature: #346                         // (Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;)Ljava/util/Map<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+
+  public com.google.common.collect.ImmutableMap<net.minecraft.world.level.block.state.properties.Property<?>, java.lang.Comparable<?>> getValues();
+    descriptor: ()Lcom/google/common/collect/ImmutableMap;
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #13                 // Field values:Lcom/google/common/collect/ImmutableMap;
+         4: areturn
+      LineNumberTable:
+        line 146: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/minecraft/world/level/block/state/StateHolder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;
+    Signature: #347                         // ()Lcom/google/common/collect/ImmutableMap<Lnet/minecraft/world/level/block/state/properties/Property<*>;Ljava/lang/Comparable<*>;>;
+
+  protected static <O extends java.lang.Object, S extends net.minecraft.world.level.block.state.StateHolder<O, S>> com.mojang.serialization.Codec<S> codec(com.mojang.serialization.Codec<O>, java.util.function.Function<O, S>);
+    descriptor: (Lcom/mojang/serialization/Codec;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+    flags: (0x000c) ACC_PROTECTED, ACC_STATIC
+    Code:
+      stack=4, locals=2, args_size=2
+         0: aload_0
+         1: ldc           #222                // String Name
+         3: invokedynamic #224,  0            // InvokeDynamic #3:apply:()Ljava/util/function/Function;
+         8: aload_1
+         9: invokedynamic #228,  0            // InvokeDynamic #4:apply:(Ljava/util/function/Function;)Ljava/util/function/Function;
+        14: invokeinterface #231,  4          // InterfaceMethod com/mojang/serialization/Codec.dispatch:(Ljava/lang/String;Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+        19: areturn
+      LineNumberTable:
+        line 150: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0 p_61128_   Lcom/mojang/serialization/Codec;
+            0      20     1 p_61129_   Ljava/util/function/Function;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      20     0 p_61128_   Lcom/mojang/serialization/Codec<TO;>;
+            0      20     1 p_61129_   Ljava/util/function/Function<TO;TS;>;
+    Signature: #354                         // <O:Ljava/lang/Object;S:Lnet/minecraft/world/level/block/state/StateHolder<TO;TS;>;>(Lcom/mojang/serialization/Codec<TO;>;Ljava/util/function/Function<TO;TS;>;)Lcom/mojang/serialization/Codec<TS;>;
+
+  private static com.mojang.serialization.Codec lambda$codec$2(java.util.function.Function, java.lang.Object);
+    descriptor: (Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokeinterface #237,  2          // InterfaceMethod java/util/function/Function.apply:(Ljava/lang/Object;)Ljava/lang/Object;
+         7: checkcast     #8                  // class net/minecraft/world/level/block/state/StateHolder
+        10: astore_2
+        11: aload_2
+        12: invokevirtual #68                 // Method getValues:()Lcom/google/common/collect/ImmutableMap;
+        15: invokevirtual #72                 // Method com/google/common/collect/ImmutableMap.isEmpty:()Z
+        18: ifeq          28
+        21: aload_2
+        22: invokestatic  #241                // InterfaceMethod com/mojang/serialization/Codec.unit:(Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+        25: goto          59
+        28: aload_2
+        29: getfield      #17                 // Field propertiesCodec:Lcom/mojang/serialization/MapCodec;
+        32: invokevirtual #245                // Method com/mojang/serialization/MapCodec.codec:()Lcom/mojang/serialization/Codec;
+        35: ldc           #251                // String Properties
+        37: invokeinterface #253,  2          // InterfaceMethod com/mojang/serialization/Codec.optionalFieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+        42: aload_2
+        43: invokedynamic #257,  0            // InvokeDynamic #5:apply:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/function/Function;
+        48: invokedynamic #260,  0            // InvokeDynamic #6:apply:()Ljava/util/function/Function;
+        53: invokevirtual #261                // Method com/mojang/serialization/MapCodec.xmap:(Ljava/util/function/Function;Ljava/util/function/Function;)Lcom/mojang/serialization/MapCodec;
+        56: invokevirtual #245                // Method com/mojang/serialization/MapCodec.codec:()Lcom/mojang/serialization/Codec;
+        59: areturn
+      LineNumberTable:
+        line 153: 0
+        line 154: 11
+        line 156: 28
+        line 154: 32
+        line 156: 56
+        line 154: 59
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      60     0 p_61129_   Ljava/util/function/Function;
+            0      60     1 p_187547_   Ljava/lang/Object;
+           11      49     2     s   Lnet/minecraft/world/level/block/state/StateHolder;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           11      49     2     s   TS;
+      StackMapTable: number_of_entries = 2
+        frame_type = 252 /* append */
+          offset_delta = 28
+          locals = [ class net/minecraft/world/level/block/state/StateHolder ]
+        frame_type = 94 /* same_locals_1_stack_item */
+          stack = [ class com/mojang/serialization/Codec ]
+
+  private static net.minecraft.world.level.block.state.StateHolder lambda$codec$1(net.minecraft.world.level.block.state.StateHolder, java.util.Optional);
+    descriptor: (Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_1
+         1: aload_0
+         2: invokevirtual #265                // Method java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+         5: checkcast     #8                  // class net/minecraft/world/level/block/state/StateHolder
+         8: areturn
+      LineNumberTable:
+        line 155: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       9     0     s   Lnet/minecraft/world/level/block/state/StateHolder;
+            0       9     1 p_187544_   Ljava/util/Optional;
+
+  private static java.lang.Object lambda$codec$0(net.minecraft.world.level.block.state.StateHolder);
+    descriptor: (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+    flags: (0x100a) ACC_PRIVATE, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #7                  // Field owner:Ljava/lang/Object;
+         4: areturn
+      LineNumberTable:
+        line 151: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0 p_61121_   Lnet/minecraft/world/level/block/state/StateHolder;
+
+  static {};
+    descriptor: ()V
+    flags: (0x0008) ACC_STATIC
+    Code:
+      stack=2, locals=0, args_size=0
+         0: new           #268                // class net/minecraft/world/level/block/state/StateHolder$1
+         3: dup
+         4: invokespecial #270                // Method net/minecraft/world/level/block/state/StateHolder$1."<init>":()V
+         7: putstatic     #90                 // Field PROPERTY_ENTRY_TO_STRING_FUNCTION:Ljava/util/function/Function;
+        10: return
+      LineNumberTable:
+        line 24: 0
+}
+Signature: #366                         // <O:Ljava/lang/Object;S:Ljava/lang/Object;>Ljava/lang/Object;
+SourceFile: "StateHolder.java"
+NestMembers:
+  net/minecraft/world/level/block/state/StateHolder$1
+BootstrapMethods:
+  0: #371 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #377 Cannot get property \u0001 as it does not exist in \u0001
+  1: #371 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #379 Cannot set property \u0001 as it does not exist in \u0001
+  2: #371 REF_invokeStatic java/lang/invoke/StringConcatFactory.makeConcatWithConstants:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #381 Cannot set property \u0001 to \u0001 on \u0001, it is not an allowed value
+  3: #383 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #390 (Ljava/lang/Object;)Ljava/lang/Object;
+      #391 REF_invokeStatic net/minecraft/world/level/block/state/StateHolder.lambda$codec$0:(Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+      #394 (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/lang/Object;
+  4: #383 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #390 (Ljava/lang/Object;)Ljava/lang/Object;
+      #395 REF_invokeStatic net/minecraft/world/level/block/state/StateHolder.lambda$codec$2:(Ljava/util/function/Function;Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+      #398 (Ljava/lang/Object;)Lcom/mojang/serialization/Codec;
+  5: #383 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #390 (Ljava/lang/Object;)Ljava/lang/Object;
+      #399 REF_invokeStatic net/minecraft/world/level/block/state/StateHolder.lambda$codec$1:(Lnet/minecraft/world/level/block/state/StateHolder;Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+      #402 (Ljava/util/Optional;)Lnet/minecraft/world/level/block/state/StateHolder;
+  6: #383 REF_invokeStatic java/lang/invoke/LambdaMetafactory.metafactory:(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;
+    Method arguments:
+      #390 (Ljava/lang/Object;)Ljava/lang/Object;
+      #404 REF_invokeStatic java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      #405 (Lnet/minecraft/world/level/block/state/StateHolder;)Ljava/util/Optional;
+InnerClasses:
+  public static #408= #190 of #202;       // Entry=class java/util/Map$Entry of class java/util/Map
+  #268;                                   // class net/minecraft/world/level/block/state/StateHolder$1
+  public static final #413= #409 of #411; // Lookup=class java/lang/invoke/MethodHandles$Lookup of class java/lang/invoke/MethodHandles

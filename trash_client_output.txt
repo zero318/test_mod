@@ -1,0 +1,897 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.4/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Java: 17.0.3, JVM: 17.0.3+7 (Eclipse Adoptium), Arch: amd64
+CLASSPATH_START
+F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\libs\nalim.jar
+CLASSPATH_END
+CLASSPATH_START
+F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\libs\nalim.jar
+CLASSPATH_END
+CLASSPATH_START
+F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\libs\nalim.jar
+CLASSPATH_END
+CLASSPATH_START
+F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\libs\nalim.jar
+CLASSPATH_END
+
+> Task :assembleJasm UP-TO-DATE
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+
+> Task :compileJava
+
+> Task :processResources
+> Task :classes
+> Task :createSrgToMcp UP-TO-DATE
+> Task :downloadMCMeta UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :extractNatives UP-TO-DATE
+> Task :makeSrcDirs
+> Task :prepareRuns
+> Task :prepareRunClient
+
+> Task :runClient
+2022-11-29 18:35:21,255 main WARN Advanced terminal features are not available in this environment
+[18:35:21] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.18, --assetsDir, C:\Users\zero318\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.1.31, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mixin.config, test_mod_mixins.json]
+[18:35:21] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.3 by Eclipse Adoptium
+[18:35:21] [main/DEBUG] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
+[18:35:21] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[18:35:21] [main/DEBUG] [cp.mo.mo.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@2e61d218
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.LauncherVersion/CORE]: Found FMLLauncher version 1.0
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML 1.0 loading
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.15-4.x+4.0.15-4.x+4.x.038e91c0
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ForgeSPI package specification 4
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[18:35:21] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@1da51a35
+[18:35:21] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/zero318/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2323!/ Service=ModLauncher Env=CLIENT
+[18:35:21] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[18:35:21] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[18:35:21] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[18:35:21] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[18:35:21] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[18:35:21] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[18:35:21] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[18:35:21] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FileUtils/CORE]: Found existing GAMEDIR directory : F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FileUtils/CORE]: Found existing MODSDIR directory : F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\mods
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\mods
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FileUtils/CORE]: Found existing CONFIGDIR directory : F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\fml.toml
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading configuration
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FileUtils/CORE]: Found existing default config directory directory : F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\defaultconfigs
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing ModFile
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing launch handler
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Using forgeclientuserdev as launch service
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.1.31, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
+[18:35:22] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[18:35:22] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[18:35:22] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
+[18:35:22] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[18:35:22] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[18:35:22] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[18:35:22] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Initiating mod scan
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModListHandler/CORE]: Found mod coordinates from lists: []
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ta.CommonLaunchHandler/CORE]: Got mod coordinates test_mod%%F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\resources\main;test_mod%%F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\classes\java\main from env
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ta.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{test_mod=[F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\resources\main, F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\classes\java\main]}]
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.1.31_mapped_official_1.18.2.jar with {minecraft} mods - versions {1.18.2}
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\fg_cache\net\minecraftforge\forge\1.18.2-40.1.31_mapped_official_1.18.2\forge-1.18.2-40.1.31_mapped_official_1.18.2.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\resources\main
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {test_mod} mods - versions {0.0NONE}
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.1.31}
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod coremods/field_to_method.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
+[18:35:22] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found 2 language providers
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Configured system mods: [minecraft, forge]
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Found system mod: minecraft
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Found system mod: forge
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ModSorter/LOADING]: Found 2 mod requirements (2 mandatory, 0 optional)
+[18:35:22] [main/DEBUG] [ne.mi.fm.lo.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[18:35:23] [main/DEBUG] [ne.mi.fm.lo.MCPNamingService/CORE]: Loaded 28190 method mappings from methods.csv
+[18:35:23] [main/DEBUG] [ne.mi.fm.lo.MCPNamingService/CORE]: Loaded 27073 field mappings from fields.csv
+[18:35:23] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[18:35:23] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[18:35:23] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[18:35:23] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[18:35:23] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading coremod transformers
+[18:35:23] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
+[18:35:24] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@1f0b3cfe to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@4068102e to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@44bd4b0a to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@6c008c24 to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@216e0771 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@21079a12 to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@fcc6023 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@67c5ac52 to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
+[18:35:24] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[18:35:25] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[18:35:25] [main/DEBUG] [mixin/]: Registering mixin config: test_mod_mixins.json
+[18:35:25] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by test_mod_mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[18:35:25] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[18:35:25] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[18:35:25] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[18:35:25] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[18:35:25] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[18:35:25] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[18:35:25] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[18:35:25] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[18:35:25] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(test_mod)
+[18:35:25] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(test_mod)
+[18:35:25] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(test_mod)
+[18:35:25] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(test_mod)
+[18:35:25] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(test_mod)
+[18:35:25] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(test_mod)]
+[18:35:25] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
+[18:35:25] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
+[18:35:25] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
+[18:35:25] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
+[18:35:25] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
+[18:35:25] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[18:35:25] [main/DEBUG] [mixin/]: inject() running with 4 agents
+[18:35:25] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[18:35:25] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[18:35:25] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(test_mod)]
+[18:35:25] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[18:35:25] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\zero318\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18]
+[18:35:25] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[18:35:25] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[18:35:25] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[18:35:25] [main/DEBUG] [mixin/]: Selecting config test_mod_mixins.json
+[18:35:25] [main/WARN] [mixin/]: Reference map 'test_mod_mixins.refmap.json' for test_mod_mixins.json could not be read. If this is a development environment you can ignore this message
+[18:35:25] [main/DEBUG] [mixin/]: Preparing test_mod_mixins.json (1)
+[18:35:25] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[18:35:25] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[18:35:25] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[18:35:25] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[18:35:25] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[18:35:25] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[18:35:25] [main/DEBUG] [io.ne.ut.in.lo.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[18:35:25] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[18:35:25] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[18:35:26] [main/DEBUG] [os.ut.FileUtil/]: No oshi.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@1aabf50d
+[18:35:26] [main/DEBUG] [os.ut.FileUtil/]: No oshi.architecture.properties file found from ClassLoader cpw.mods.modlauncher.TransformingClassLoader@1aabf50d
+[18:35:27] [pool-3-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[18:35:27] [pool-3-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
+[18:35:27] [pool-3-thread-1/DEBUG] [mixin/]: Mixing world_level_block_redstonewireblock from test_mod_mixins.json into net.minecraft.world.level.block.RedStoneWireBlock
+[18:35:28] [pool-3-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[18:35:29] [pool-3-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
+[18:35:35] [pool-3-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[18:35:35] [pool-3-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[18:35:37] [Render thread/WARN] [minecraft/VanillaPackResources]: Assets URL 'union:/F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/build/fg_cache/net/minecraftforge/forge/1.18.2-40.1.31_mapped_official_1.18.2/forge-1.18.2-40.1.31_mapped_official_1.18.2.jar%2377!/assets/.mcassetsroot' uses unexpected schema
+[18:35:37] [Render thread/WARN] [minecraft/VanillaPackResources]: Assets URL 'union:/F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/build/fg_cache/net/minecraftforge/forge/1.18.2-40.1.31_mapped_official_1.18.2/forge-1.18.2-40.1.31_mapped_official_1.18.2.jar%2377!/data/.mcassetsroot' uses unexpected schema
+[18:35:37] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[18:35:37] [Render thread/INFO] [minecraft/Minecraft]: Setting user: Dev
+[18:35:38] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.2.2 SNAPSHOT
+[18:35:44] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 5352
+[18:35:44] [Render thread/DEBUG] [ne.mi.fm.ModWorkManager/LOADING]: Using 4 threads for parallel mod-loading
+[18:35:44] [Render thread/DEBUG] [ne.mi.fm.ja.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1aabf50d - got cpw.mods.cl.ModuleClassLoader@25243bc1
+[18:35:44] [Render thread/DEBUG] [ne.mi.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[18:35:44] [Render thread/DEBUG] [ne.mi.fm.ja.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@1aabf50d - got cpw.mods.cl.ModuleClassLoader@25243bc1
+[18:35:44] [Render thread/DEBUG] [ne.mi.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for yeet.test_mod
+[18:35:44] [modloading-worker-0/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
+SUN Unsafe Methods:
+public final boolean sun.misc.Unsafe.compareAndSwapObject(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean sun.misc.Unsafe.compareAndSwapInt(java.lang.Object,long,int,int)
+public final boolean sun.misc.Unsafe.compareAndSwapLong(java.lang.Object,long,long,long)
+public void sun.misc.Unsafe.putOrderedObject(java.lang.Object,long,java.lang.Object)
+public void sun.misc.Unsafe.putOrderedInt(java.lang.Object,long,int)
+public void sun.misc.Unsafe.putOrderedLong(java.lang.Object,long,long)
+public java.lang.Object sun.misc.Unsafe.allocateInstance(java.lang.Class<?>) throws java.lang.InstantiationException
+public void sun.misc.Unsafe.loadFence()
+public void sun.misc.Unsafe.storeFence()
+public void sun.misc.Unsafe.fullFence()
+public boolean sun.misc.Unsafe.getBoolean(java.lang.Object,long)
+public void sun.misc.Unsafe.putBoolean(java.lang.Object,long,boolean)
+public byte sun.misc.Unsafe.getByte(long)
+public byte sun.misc.Unsafe.getByte(java.lang.Object,long)
+public void sun.misc.Unsafe.putByte(long,byte)
+public void sun.misc.Unsafe.putByte(java.lang.Object,long,byte)
+public short sun.misc.Unsafe.getShort(java.lang.Object,long)
+public short sun.misc.Unsafe.getShort(long)
+public void sun.misc.Unsafe.putShort(long,short)
+public void sun.misc.Unsafe.putShort(java.lang.Object,long,short)
+public char sun.misc.Unsafe.getChar(long)
+public char sun.misc.Unsafe.getChar(java.lang.Object,long)
+public void sun.misc.Unsafe.putChar(long,char)
+public void sun.misc.Unsafe.putChar(java.lang.Object,long,char)
+public int sun.misc.Unsafe.getInt(long)
+public int sun.misc.Unsafe.getInt(java.lang.Object,long)
+public void sun.misc.Unsafe.putInt(java.lang.Object,long,int)
+public void sun.misc.Unsafe.putInt(long,int)
+public long sun.misc.Unsafe.getLong(long)
+public long sun.misc.Unsafe.getLong(java.lang.Object,long)
+public void sun.misc.Unsafe.putLong(long,long)
+public void sun.misc.Unsafe.putLong(java.lang.Object,long,long)
+public float sun.misc.Unsafe.getFloat(long)
+public float sun.misc.Unsafe.getFloat(java.lang.Object,long)
+public void sun.misc.Unsafe.putFloat(long,float)
+public void sun.misc.Unsafe.putFloat(java.lang.Object,long,float)
+public double sun.misc.Unsafe.getDouble(java.lang.Object,long)
+public double sun.misc.Unsafe.getDouble(long)
+public void sun.misc.Unsafe.putDouble(long,double)
+public void sun.misc.Unsafe.putDouble(java.lang.Object,long,double)
+public boolean sun.misc.Unsafe.getBooleanVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putBooleanVolatile(java.lang.Object,long,boolean)
+public byte sun.misc.Unsafe.getByteVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putByteVolatile(java.lang.Object,long,byte)
+public short sun.misc.Unsafe.getShortVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putShortVolatile(java.lang.Object,long,short)
+public char sun.misc.Unsafe.getCharVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putCharVolatile(java.lang.Object,long,char)
+public int sun.misc.Unsafe.getIntVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putIntVolatile(java.lang.Object,long,int)
+public long sun.misc.Unsafe.getLongVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putLongVolatile(java.lang.Object,long,long)
+public float sun.misc.Unsafe.getFloatVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putFloatVolatile(java.lang.Object,long,float)
+public double sun.misc.Unsafe.getDoubleVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putDoubleVolatile(java.lang.Object,long,double)
+public final int sun.misc.Unsafe.getAndAddInt(java.lang.Object,long,int)
+public final long sun.misc.Unsafe.getAndAddLong(java.lang.Object,long,long)
+public final int sun.misc.Unsafe.getAndSetInt(java.lang.Object,long,int)
+public final long sun.misc.Unsafe.getAndSetLong(java.lang.Object,long,long)
+public void sun.misc.Unsafe.park(boolean,long)
+public void sun.misc.Unsafe.unpark(java.lang.Object)
+public void sun.misc.Unsafe.throwException(java.lang.Throwable)
+public long sun.misc.Unsafe.objectFieldOffset(java.lang.reflect.Field)
+public void sun.misc.Unsafe.ensureClassInitialized(java.lang.Class<?>)
+public java.lang.Object sun.misc.Unsafe.staticFieldBase(java.lang.reflect.Field)
+public long sun.misc.Unsafe.staticFieldOffset(java.lang.reflect.Field)
+public boolean sun.misc.Unsafe.shouldBeInitialized(java.lang.Class<?>)
+public long sun.misc.Unsafe.getAddress(long)
+public void sun.misc.Unsafe.putAddress(long,long)
+public void sun.misc.Unsafe.freeMemory(long)
+public void sun.misc.Unsafe.setMemory(long,long,byte)
+public void sun.misc.Unsafe.setMemory(java.lang.Object,long,long,byte)
+public void sun.misc.Unsafe.copyMemory(java.lang.Object,long,java.lang.Object,long,long)
+public void sun.misc.Unsafe.copyMemory(long,long,long)
+public int sun.misc.Unsafe.arrayBaseOffset(java.lang.Class<?>)
+public int sun.misc.Unsafe.arrayIndexScale(java.lang.Class<?>)
+public long sun.misc.Unsafe.allocateMemory(long)
+public long sun.misc.Unsafe.reallocateMemory(long,long)
+public int sun.misc.Unsafe.addressSize()
+public int sun.misc.Unsafe.pageSize()
+public int sun.misc.Unsafe.getLoadAverage(double[],int)
+public void sun.misc.Unsafe.invokeCleaner(java.nio.ByteBuffer)
+public java.lang.Object sun.misc.Unsafe.getObject(java.lang.Object,long)
+public java.lang.Object sun.misc.Unsafe.getObjectVolatile(java.lang.Object,long)
+public void sun.misc.Unsafe.putObject(java.lang.Object,long,java.lang.Object)
+public void sun.misc.Unsafe.putObjectVolatile(java.lang.Object,long,java.lang.Object)
+public final java.lang.Object sun.misc.Unsafe.getAndSetObject(java.lang.Object,long,java.lang.Object)
+JDK Unsafe Methods:
+private native void jdk.internal.misc.Unsafe.writeback0(long)
+private native void jdk.internal.misc.Unsafe.writebackPreSync0()
+private native void jdk.internal.misc.Unsafe.writebackPostSync0()
+public native java.lang.Object jdk.internal.misc.Unsafe.allocateInstance(java.lang.Class<?>) throws java.lang.InstantiationException
+private java.lang.Object jdk.internal.misc.Unsafe.allocateUninitializedArray0(java.lang.Class<?>,int)
+private native void jdk.internal.misc.Unsafe.copyMemory0(java.lang.Object,long,java.lang.Object,long,long)
+public native void jdk.internal.misc.Unsafe.loadFence()
+public native void jdk.internal.misc.Unsafe.storeFence()
+public native void jdk.internal.misc.Unsafe.fullFence()
+public native java.lang.Object jdk.internal.misc.Unsafe.getReference(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putReference(java.lang.Object,long,java.lang.Object)
+public native boolean jdk.internal.misc.Unsafe.getBoolean(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putBoolean(java.lang.Object,long,boolean)
+public byte jdk.internal.misc.Unsafe.getByte(long)
+public native byte jdk.internal.misc.Unsafe.getByte(java.lang.Object,long)
+public void jdk.internal.misc.Unsafe.putByte(long,byte)
+public native void jdk.internal.misc.Unsafe.putByte(java.lang.Object,long,byte)
+public native short jdk.internal.misc.Unsafe.getShort(java.lang.Object,long)
+public short jdk.internal.misc.Unsafe.getShort(long)
+public void jdk.internal.misc.Unsafe.putShort(long,short)
+public native void jdk.internal.misc.Unsafe.putShort(java.lang.Object,long,short)
+public native char jdk.internal.misc.Unsafe.getChar(java.lang.Object,long)
+public char jdk.internal.misc.Unsafe.getChar(long)
+public native void jdk.internal.misc.Unsafe.putChar(java.lang.Object,long,char)
+public void jdk.internal.misc.Unsafe.putChar(long,char)
+public int jdk.internal.misc.Unsafe.getInt(long)
+public native int jdk.internal.misc.Unsafe.getInt(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putInt(java.lang.Object,long,int)
+public void jdk.internal.misc.Unsafe.putInt(long,int)
+public long jdk.internal.misc.Unsafe.getLong(long)
+public native long jdk.internal.misc.Unsafe.getLong(java.lang.Object,long)
+public void jdk.internal.misc.Unsafe.putLong(long,long)
+public native void jdk.internal.misc.Unsafe.putLong(java.lang.Object,long,long)
+public float jdk.internal.misc.Unsafe.getFloat(long)
+public native float jdk.internal.misc.Unsafe.getFloat(java.lang.Object,long)
+public void jdk.internal.misc.Unsafe.putFloat(long,float)
+public native void jdk.internal.misc.Unsafe.putFloat(java.lang.Object,long,float)
+public native double jdk.internal.misc.Unsafe.getDouble(java.lang.Object,long)
+public double jdk.internal.misc.Unsafe.getDouble(long)
+public void jdk.internal.misc.Unsafe.putDouble(long,double)
+public native void jdk.internal.misc.Unsafe.putDouble(java.lang.Object,long,double)
+public native java.lang.Object jdk.internal.misc.Unsafe.getReferenceVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putReferenceVolatile(java.lang.Object,long,java.lang.Object)
+public native boolean jdk.internal.misc.Unsafe.getBooleanVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putBooleanVolatile(java.lang.Object,long,boolean)
+public native byte jdk.internal.misc.Unsafe.getByteVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putByteVolatile(java.lang.Object,long,byte)
+public native short jdk.internal.misc.Unsafe.getShortVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putShortVolatile(java.lang.Object,long,short)
+public native char jdk.internal.misc.Unsafe.getCharVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putCharVolatile(java.lang.Object,long,char)
+public native int jdk.internal.misc.Unsafe.getIntVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putIntVolatile(java.lang.Object,long,int)
+public native long jdk.internal.misc.Unsafe.getLongVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putLongVolatile(java.lang.Object,long,long)
+public native float jdk.internal.misc.Unsafe.getFloatVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putFloatVolatile(java.lang.Object,long,float)
+public native double jdk.internal.misc.Unsafe.getDoubleVolatile(java.lang.Object,long)
+public native void jdk.internal.misc.Unsafe.putDoubleVolatile(java.lang.Object,long,double)
+public final java.lang.Object jdk.internal.misc.Unsafe.getReferenceOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putReferenceOpaque(java.lang.Object,long,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.getBooleanOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putBooleanOpaque(java.lang.Object,long,boolean)
+public final byte jdk.internal.misc.Unsafe.getByteOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putByteOpaque(java.lang.Object,long,byte)
+public final short jdk.internal.misc.Unsafe.getShortOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putShortOpaque(java.lang.Object,long,short)
+public final char jdk.internal.misc.Unsafe.getCharOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putCharOpaque(java.lang.Object,long,char)
+public final int jdk.internal.misc.Unsafe.getIntOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putIntOpaque(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getLongOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putLongOpaque(java.lang.Object,long,long)
+public final float jdk.internal.misc.Unsafe.getFloatOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putFloatOpaque(java.lang.Object,long,float)
+public final double jdk.internal.misc.Unsafe.getDoubleOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putDoubleOpaque(java.lang.Object,long,double)
+public final java.lang.Object jdk.internal.misc.Unsafe.getReferenceAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putReferenceRelease(java.lang.Object,long,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.getBooleanAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putBooleanRelease(java.lang.Object,long,boolean)
+public final byte jdk.internal.misc.Unsafe.getByteAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putByteRelease(java.lang.Object,long,byte)
+public final short jdk.internal.misc.Unsafe.getShortAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putShortRelease(java.lang.Object,long,short)
+public final char jdk.internal.misc.Unsafe.getCharAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putCharRelease(java.lang.Object,long,char)
+public final int jdk.internal.misc.Unsafe.getIntAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putIntRelease(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getLongAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putLongRelease(java.lang.Object,long,long)
+public final float jdk.internal.misc.Unsafe.getFloatAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putFloatRelease(java.lang.Object,long,float)
+public final double jdk.internal.misc.Unsafe.getDoubleAcquire(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putDoubleRelease(java.lang.Object,long,double)
+public final short jdk.internal.misc.Unsafe.getShortUnaligned(java.lang.Object,long,boolean)
+public final short jdk.internal.misc.Unsafe.getShortUnaligned(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putShortUnaligned(java.lang.Object,long,short,boolean)
+public final void jdk.internal.misc.Unsafe.putShortUnaligned(java.lang.Object,long,short)
+public final char jdk.internal.misc.Unsafe.getCharUnaligned(java.lang.Object,long,boolean)
+public final char jdk.internal.misc.Unsafe.getCharUnaligned(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putCharUnaligned(java.lang.Object,long,char)
+public final void jdk.internal.misc.Unsafe.putCharUnaligned(java.lang.Object,long,char,boolean)
+public final int jdk.internal.misc.Unsafe.getIntUnaligned(java.lang.Object,long)
+public final int jdk.internal.misc.Unsafe.getIntUnaligned(java.lang.Object,long,boolean)
+public final void jdk.internal.misc.Unsafe.putIntUnaligned(java.lang.Object,long,int,boolean)
+public final void jdk.internal.misc.Unsafe.putIntUnaligned(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getLongUnaligned(java.lang.Object,long)
+public final long jdk.internal.misc.Unsafe.getLongUnaligned(java.lang.Object,long,boolean)
+public final void jdk.internal.misc.Unsafe.putLongUnaligned(java.lang.Object,long,long,boolean)
+public final void jdk.internal.misc.Unsafe.putLongUnaligned(java.lang.Object,long,long)
+public final native boolean jdk.internal.misc.Unsafe.compareAndSetReference(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final native java.lang.Object jdk.internal.misc.Unsafe.compareAndExchangeReference(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.compareAndExchangeReferenceAcquire(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.compareAndExchangeReferenceRelease(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final native boolean jdk.internal.misc.Unsafe.compareAndSetLong(java.lang.Object,long,long,long)
+public final native long jdk.internal.misc.Unsafe.compareAndExchangeLong(java.lang.Object,long,long,long)
+public final long jdk.internal.misc.Unsafe.compareAndExchangeLongAcquire(java.lang.Object,long,long,long)
+public final long jdk.internal.misc.Unsafe.compareAndExchangeLongRelease(java.lang.Object,long,long,long)
+public final native boolean jdk.internal.misc.Unsafe.compareAndSetInt(java.lang.Object,long,int,int)
+public final native int jdk.internal.misc.Unsafe.compareAndExchangeInt(java.lang.Object,long,int,int)
+public final int jdk.internal.misc.Unsafe.compareAndExchangeIntAcquire(java.lang.Object,long,int,int)
+public final int jdk.internal.misc.Unsafe.compareAndExchangeIntRelease(java.lang.Object,long,int,int)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetByte(java.lang.Object,long,byte,byte)
+public final byte jdk.internal.misc.Unsafe.compareAndExchangeByte(java.lang.Object,long,byte,byte)
+public final byte jdk.internal.misc.Unsafe.compareAndExchangeByteAcquire(java.lang.Object,long,byte,byte)
+public final byte jdk.internal.misc.Unsafe.compareAndExchangeByteRelease(java.lang.Object,long,byte,byte)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetShort(java.lang.Object,long,short,short)
+public final short jdk.internal.misc.Unsafe.compareAndExchangeShort(java.lang.Object,long,short,short)
+public final short jdk.internal.misc.Unsafe.compareAndExchangeShortAcquire(java.lang.Object,long,short,short)
+public final short jdk.internal.misc.Unsafe.compareAndExchangeShortRelease(java.lang.Object,long,short,short)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetReferencePlain(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetReferenceAcquire(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetReferenceRelease(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetReference(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetLongPlain(java.lang.Object,long,long,long)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetLongAcquire(java.lang.Object,long,long,long)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetLongRelease(java.lang.Object,long,long,long)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetLong(java.lang.Object,long,long,long)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetIntPlain(java.lang.Object,long,int,int)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetIntAcquire(java.lang.Object,long,int,int)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetIntRelease(java.lang.Object,long,int,int)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetInt(java.lang.Object,long,int,int)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetBytePlain(java.lang.Object,long,byte,byte)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetByteAcquire(java.lang.Object,long,byte,byte)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetByteRelease(java.lang.Object,long,byte,byte)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetByte(java.lang.Object,long,byte,byte)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetShortPlain(java.lang.Object,long,short,short)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetShortAcquire(java.lang.Object,long,short,short)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetShortRelease(java.lang.Object,long,short,short)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetShort(java.lang.Object,long,short,short)
+public final int jdk.internal.misc.Unsafe.getAndAddInt(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getAndAddLong(java.lang.Object,long,long)
+public final byte jdk.internal.misc.Unsafe.getAndAddByte(java.lang.Object,long,byte)
+public final short jdk.internal.misc.Unsafe.getAndAddShort(java.lang.Object,long,short)
+public final int jdk.internal.misc.Unsafe.getAndSetInt(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getAndSetLong(java.lang.Object,long,long)
+public final byte jdk.internal.misc.Unsafe.getAndSetByte(java.lang.Object,long,byte)
+public final short jdk.internal.misc.Unsafe.getAndSetShort(java.lang.Object,long,short)
+public final java.lang.Object jdk.internal.misc.Unsafe.getAndSetReference(java.lang.Object,long,java.lang.Object)
+public native void jdk.internal.misc.Unsafe.park(boolean,long)
+public native void jdk.internal.misc.Unsafe.unpark(java.lang.Object)
+public native void jdk.internal.misc.Unsafe.throwException(java.lang.Throwable)
+private void jdk.internal.misc.Unsafe.checkOffset(java.lang.Object,long)
+public static jdk.internal.misc.Unsafe jdk.internal.misc.Unsafe.getUnsafe()
+private static native void jdk.internal.misc.Unsafe.registerNatives()
+public java.lang.Class<?> jdk.internal.misc.Unsafe.defineClass(java.lang.String,byte[],int,int,java.lang.ClassLoader,java.security.ProtectionDomain)
+public long jdk.internal.misc.Unsafe.objectFieldOffset(java.lang.reflect.Field)
+public long jdk.internal.misc.Unsafe.objectFieldOffset(java.lang.Class<?>,java.lang.String)
+public native java.lang.Class<?> jdk.internal.misc.Unsafe.defineClass0(java.lang.String,byte[],int,int,java.lang.ClassLoader,java.security.ProtectionDomain)
+public void jdk.internal.misc.Unsafe.ensureClassInitialized(java.lang.Class<?>)
+public java.lang.Object jdk.internal.misc.Unsafe.staticFieldBase(java.lang.reflect.Field)
+public long jdk.internal.misc.Unsafe.staticFieldOffset(java.lang.reflect.Field)
+public boolean jdk.internal.misc.Unsafe.shouldBeInitialized(java.lang.Class<?>)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetBoolean(java.lang.Object,long,boolean,boolean)
+public final void jdk.internal.misc.Unsafe.loadLoadFence()
+public final void jdk.internal.misc.Unsafe.storeStoreFence()
+private static long jdk.internal.misc.Unsafe.toUnsignedLong(short)
+private static long jdk.internal.misc.Unsafe.toUnsignedLong(byte)
+private static long jdk.internal.misc.Unsafe.toUnsignedLong(int)
+public long jdk.internal.misc.Unsafe.getAddress(long)
+public long jdk.internal.misc.Unsafe.getAddress(java.lang.Object,long)
+public void jdk.internal.misc.Unsafe.putAddress(java.lang.Object,long,long)
+public void jdk.internal.misc.Unsafe.putAddress(long,long)
+private boolean jdk.internal.misc.Unsafe.is32BitClean(long)
+private java.lang.RuntimeException jdk.internal.misc.Unsafe.invalidInput()
+private void jdk.internal.misc.Unsafe.checkNativeAddress(long)
+private void jdk.internal.misc.Unsafe.checkPointer(java.lang.Object,long)
+private void jdk.internal.misc.Unsafe.checkPrimitiveArray(java.lang.Class<?>)
+private long jdk.internal.misc.Unsafe.alignToHeapWordSize(long)
+private void jdk.internal.misc.Unsafe.allocateMemoryChecks(long)
+private native long jdk.internal.misc.Unsafe.allocateMemory0(long)
+private void jdk.internal.misc.Unsafe.checkSize(long)
+private void jdk.internal.misc.Unsafe.reallocateMemoryChecks(long,long)
+public void jdk.internal.misc.Unsafe.freeMemory(long)
+private native long jdk.internal.misc.Unsafe.reallocateMemory0(long,long)
+private void jdk.internal.misc.Unsafe.setMemoryChecks(java.lang.Object,long,long,byte)
+private native void jdk.internal.misc.Unsafe.setMemory0(java.lang.Object,long,long,byte)
+public void jdk.internal.misc.Unsafe.setMemory(java.lang.Object,long,long,byte)
+public void jdk.internal.misc.Unsafe.setMemory(long,long,byte)
+private void jdk.internal.misc.Unsafe.checkPrimitivePointer(java.lang.Object,long)
+private void jdk.internal.misc.Unsafe.copyMemoryChecks(java.lang.Object,long,java.lang.Object,long,long)
+public void jdk.internal.misc.Unsafe.copyMemory(java.lang.Object,long,java.lang.Object,long,long)
+public void jdk.internal.misc.Unsafe.copyMemory(long,long,long)
+private void jdk.internal.misc.Unsafe.copySwapMemoryChecks(java.lang.Object,long,java.lang.Object,long,long,long)
+private native void jdk.internal.misc.Unsafe.copySwapMemory0(java.lang.Object,long,java.lang.Object,long,long,long)
+public void jdk.internal.misc.Unsafe.copySwapMemory(java.lang.Object,long,java.lang.Object,long,long,long)
+public void jdk.internal.misc.Unsafe.copySwapMemory(long,long,long,long)
+private void jdk.internal.misc.Unsafe.freeMemoryChecks(long)
+private native void jdk.internal.misc.Unsafe.freeMemory0(long)
+private void jdk.internal.misc.Unsafe.checkWritebackEnabled()
+private void jdk.internal.misc.Unsafe.checkWritebackMemory(long,long)
+public long jdk.internal.misc.Unsafe.dataCacheLineAlignDown(long)
+public int jdk.internal.misc.Unsafe.dataCacheLineFlushSize()
+public static boolean jdk.internal.misc.Unsafe.isWritebackEnabled()
+private native long jdk.internal.misc.Unsafe.objectFieldOffset0(java.lang.reflect.Field)
+private native long jdk.internal.misc.Unsafe.objectFieldOffset1(java.lang.Class<?>,java.lang.String)
+private native long jdk.internal.misc.Unsafe.staticFieldOffset0(java.lang.reflect.Field)
+private native java.lang.Object jdk.internal.misc.Unsafe.staticFieldBase0(java.lang.reflect.Field)
+private native boolean jdk.internal.misc.Unsafe.shouldBeInitialized0(java.lang.Class<?>)
+private native void jdk.internal.misc.Unsafe.ensureClassInitialized0(java.lang.Class<?>)
+private native int jdk.internal.misc.Unsafe.arrayBaseOffset0(java.lang.Class<?>)
+private native int jdk.internal.misc.Unsafe.arrayIndexScale0(java.lang.Class<?>)
+private short jdk.internal.misc.Unsafe.c2s(char)
+private char jdk.internal.misc.Unsafe.s2c(short)
+private byte jdk.internal.misc.Unsafe.bool2byte(boolean)
+private boolean jdk.internal.misc.Unsafe.byte2bool(byte)
+private native int jdk.internal.misc.Unsafe.getLoadAverage0(double[],int)
+public final short jdk.internal.misc.Unsafe.getAndAddShortRelease(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndAddShortAcquire(java.lang.Object,long,short)
+public final byte jdk.internal.misc.Unsafe.getAndSetByteRelease(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndSetByteAcquire(java.lang.Object,long,byte)
+public final short jdk.internal.misc.Unsafe.getAndSetShortRelease(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndSetShortAcquire(java.lang.Object,long,short)
+public final int jdk.internal.misc.Unsafe.getAndSetIntRelease(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndSetIntAcquire(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getAndSetLongRelease(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndSetLongAcquire(java.lang.Object,long,long)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseOrByte(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseOrByteRelease(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseOrByteAcquire(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseAndByte(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseAndByteRelease(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseAndByteAcquire(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseXorByte(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseXorByteRelease(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndBitwiseXorByteAcquire(java.lang.Object,long,byte)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseOrShort(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseOrShortRelease(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseOrShortAcquire(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseAndShort(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseAndShortRelease(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseAndShortAcquire(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseXorShort(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseXorShortRelease(java.lang.Object,long,short)
+public final short jdk.internal.misc.Unsafe.getAndBitwiseXorShortAcquire(java.lang.Object,long,short)
+private static long jdk.internal.misc.Unsafe.makeLong(byte,byte,byte,byte,byte,byte,byte,byte)
+private static long jdk.internal.misc.Unsafe.makeLong(short,short,short,short)
+private static long jdk.internal.misc.Unsafe.makeLong(int,int)
+private static long jdk.internal.misc.Unsafe.convEndian(boolean,long)
+private static short jdk.internal.misc.Unsafe.convEndian(boolean,short)
+private static int jdk.internal.misc.Unsafe.convEndian(boolean,int)
+private static char jdk.internal.misc.Unsafe.convEndian(boolean,char)
+private static int jdk.internal.misc.Unsafe.makeInt(byte,byte,byte,byte)
+private static int jdk.internal.misc.Unsafe.makeInt(short,short)
+private static short jdk.internal.misc.Unsafe.makeShort(byte,byte)
+private void jdk.internal.misc.Unsafe.putLongParts(java.lang.Object,long,int,int)
+private void jdk.internal.misc.Unsafe.putLongParts(java.lang.Object,long,byte,byte,byte,byte,byte,byte,byte,byte)
+private void jdk.internal.misc.Unsafe.putLongParts(java.lang.Object,long,short,short,short,short)
+private void jdk.internal.misc.Unsafe.putIntParts(java.lang.Object,long,byte,byte,byte,byte)
+private void jdk.internal.misc.Unsafe.putIntParts(java.lang.Object,long,short,short)
+private void jdk.internal.misc.Unsafe.putShortParts(java.lang.Object,long,byte,byte)
+private static int jdk.internal.misc.Unsafe.pickPos(int,int)
+private static int jdk.internal.misc.Unsafe.toUnsignedInt(short)
+private static int jdk.internal.misc.Unsafe.toUnsignedInt(byte)
+private static short jdk.internal.misc.Unsafe.pick(short,short)
+private static int jdk.internal.misc.Unsafe.pick(int,int)
+private static byte jdk.internal.misc.Unsafe.pick(byte,byte)
+public final java.lang.Object jdk.internal.misc.Unsafe.getAndSetReferenceAcquire(java.lang.Object,long,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.getAndSetReferenceRelease(java.lang.Object,long,java.lang.Object)
+public int jdk.internal.misc.Unsafe.arrayBaseOffset(java.lang.Class<?>)
+public int jdk.internal.misc.Unsafe.arrayIndexScale(java.lang.Class<?>)
+public native java.lang.Object jdk.internal.misc.Unsafe.getUncompressedObject(long)
+public long jdk.internal.misc.Unsafe.allocateMemory(long)
+public long jdk.internal.misc.Unsafe.reallocateMemory(long,long)
+public void jdk.internal.misc.Unsafe.writebackMemory(long,long)
+public int jdk.internal.misc.Unsafe.addressSize()
+public int jdk.internal.misc.Unsafe.pageSize()
+public java.lang.Object jdk.internal.misc.Unsafe.allocateUninitializedArray(java.lang.Class<?>,int)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetChar(java.lang.Object,long,char,char)
+public final char jdk.internal.misc.Unsafe.compareAndExchangeChar(java.lang.Object,long,char,char)
+public final char jdk.internal.misc.Unsafe.compareAndExchangeCharAcquire(java.lang.Object,long,char,char)
+public final char jdk.internal.misc.Unsafe.compareAndExchangeCharRelease(java.lang.Object,long,char,char)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetChar(java.lang.Object,long,char,char)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetCharAcquire(java.lang.Object,long,char,char)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetCharRelease(java.lang.Object,long,char,char)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetCharPlain(java.lang.Object,long,char,char)
+public final boolean jdk.internal.misc.Unsafe.compareAndExchangeBoolean(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.compareAndExchangeBooleanAcquire(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.compareAndExchangeBooleanRelease(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetBoolean(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetBooleanAcquire(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetBooleanRelease(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetBooleanPlain(java.lang.Object,long,boolean,boolean)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetFloat(java.lang.Object,long,float,float)
+public final float jdk.internal.misc.Unsafe.compareAndExchangeFloat(java.lang.Object,long,float,float)
+public final float jdk.internal.misc.Unsafe.compareAndExchangeFloatAcquire(java.lang.Object,long,float,float)
+public final float jdk.internal.misc.Unsafe.compareAndExchangeFloatRelease(java.lang.Object,long,float,float)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetFloatPlain(java.lang.Object,long,float,float)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetFloatAcquire(java.lang.Object,long,float,float)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetFloatRelease(java.lang.Object,long,float,float)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetFloat(java.lang.Object,long,float,float)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetDouble(java.lang.Object,long,double,double)
+public final double jdk.internal.misc.Unsafe.compareAndExchangeDouble(java.lang.Object,long,double,double)
+public final double jdk.internal.misc.Unsafe.compareAndExchangeDoubleAcquire(java.lang.Object,long,double,double)
+public final double jdk.internal.misc.Unsafe.compareAndExchangeDoubleRelease(java.lang.Object,long,double,double)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetDoublePlain(java.lang.Object,long,double,double)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetDoubleAcquire(java.lang.Object,long,double,double)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetDoubleRelease(java.lang.Object,long,double,double)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetDouble(java.lang.Object,long,double,double)
+public int jdk.internal.misc.Unsafe.getLoadAverage(double[],int)
+public final int jdk.internal.misc.Unsafe.getAndAddIntRelease(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndAddIntAcquire(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getAndAddLongRelease(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndAddLongAcquire(java.lang.Object,long,long)
+public final byte jdk.internal.misc.Unsafe.getAndAddByteRelease(java.lang.Object,long,byte)
+public final byte jdk.internal.misc.Unsafe.getAndAddByteAcquire(java.lang.Object,long,byte)
+public final char jdk.internal.misc.Unsafe.getAndAddChar(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndAddCharRelease(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndAddCharAcquire(java.lang.Object,long,char)
+public final float jdk.internal.misc.Unsafe.getAndAddFloat(java.lang.Object,long,float)
+public final float jdk.internal.misc.Unsafe.getAndAddFloatRelease(java.lang.Object,long,float)
+public final float jdk.internal.misc.Unsafe.getAndAddFloatAcquire(java.lang.Object,long,float)
+public final double jdk.internal.misc.Unsafe.getAndAddDouble(java.lang.Object,long,double)
+public final double jdk.internal.misc.Unsafe.getAndAddDoubleRelease(java.lang.Object,long,double)
+public final double jdk.internal.misc.Unsafe.getAndAddDoubleAcquire(java.lang.Object,long,double)
+public final boolean jdk.internal.misc.Unsafe.getAndSetBoolean(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndSetBooleanRelease(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndSetBooleanAcquire(java.lang.Object,long,boolean)
+public final char jdk.internal.misc.Unsafe.getAndSetChar(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndSetCharRelease(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndSetCharAcquire(java.lang.Object,long,char)
+public final float jdk.internal.misc.Unsafe.getAndSetFloat(java.lang.Object,long,float)
+public final float jdk.internal.misc.Unsafe.getAndSetFloatRelease(java.lang.Object,long,float)
+public final float jdk.internal.misc.Unsafe.getAndSetFloatAcquire(java.lang.Object,long,float)
+public final double jdk.internal.misc.Unsafe.getAndSetDouble(java.lang.Object,long,double)
+public final double jdk.internal.misc.Unsafe.getAndSetDoubleRelease(java.lang.Object,long,double)
+public final double jdk.internal.misc.Unsafe.getAndSetDoubleAcquire(java.lang.Object,long,double)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseOrBoolean(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseOrBooleanRelease(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseOrBooleanAcquire(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseAndBoolean(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseAndBooleanRelease(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseAndBooleanAcquire(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseXorBoolean(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseXorBooleanRelease(java.lang.Object,long,boolean)
+public final boolean jdk.internal.misc.Unsafe.getAndBitwiseXorBooleanAcquire(java.lang.Object,long,boolean)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseOrChar(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseOrCharRelease(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseOrCharAcquire(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseAndChar(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseAndCharRelease(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseAndCharAcquire(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseXorChar(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseXorCharRelease(java.lang.Object,long,char)
+public final char jdk.internal.misc.Unsafe.getAndBitwiseXorCharAcquire(java.lang.Object,long,char)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseOrInt(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseOrIntRelease(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseOrIntAcquire(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseAndInt(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseAndIntRelease(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseAndIntAcquire(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseXorInt(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseXorIntRelease(java.lang.Object,long,int)
+public final int jdk.internal.misc.Unsafe.getAndBitwiseXorIntAcquire(java.lang.Object,long,int)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseOrLong(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseOrLongRelease(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseOrLongAcquire(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseAndLong(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseAndLongRelease(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseAndLongAcquire(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseXorLong(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseXorLongRelease(java.lang.Object,long,long)
+public final long jdk.internal.misc.Unsafe.getAndBitwiseXorLongAcquire(java.lang.Object,long,long)
+private static void jdk.internal.misc.Unsafe.throwIllegalAccessError()
+private static void jdk.internal.misc.Unsafe.throwNoSuchMethodError()
+public final boolean jdk.internal.misc.Unsafe.isBigEndian()
+public final boolean jdk.internal.misc.Unsafe.unalignedAccess()
+public void jdk.internal.misc.Unsafe.invokeCleaner(java.nio.ByteBuffer)
+public final java.lang.Object jdk.internal.misc.Unsafe.getObject(java.lang.Object,long)
+public final java.lang.Object jdk.internal.misc.Unsafe.getObjectVolatile(java.lang.Object,long)
+public final java.lang.Object jdk.internal.misc.Unsafe.getObjectAcquire(java.lang.Object,long)
+public final java.lang.Object jdk.internal.misc.Unsafe.getObjectOpaque(java.lang.Object,long)
+public final void jdk.internal.misc.Unsafe.putObject(java.lang.Object,long,java.lang.Object)
+public final void jdk.internal.misc.Unsafe.putObjectVolatile(java.lang.Object,long,java.lang.Object)
+public final void jdk.internal.misc.Unsafe.putObjectOpaque(java.lang.Object,long,java.lang.Object)
+public final void jdk.internal.misc.Unsafe.putObjectRelease(java.lang.Object,long,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.getAndSetObject(java.lang.Object,long,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.getAndSetObjectAcquire(java.lang.Object,long,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.getAndSetObjectRelease(java.lang.Object,long,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.compareAndSetObject(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.compareAndExchangeObject(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.compareAndExchangeObjectAcquire(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final java.lang.Object jdk.internal.misc.Unsafe.compareAndExchangeObjectRelease(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetObject(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetObjectAcquire(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetObjectPlain(java.lang.Object,long,java.lang.Object,java.lang.Object)
+public final boolean jdk.internal.misc.Unsafe.weakCompareAndSetObjectRelease(java.lang.Object,long,java.lang.Object,java.lang.Object)
+TestStruct.field_A Offset: 12
+TestStruct.field_A Value: 42069
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.1 from cpw.mods.modlauncher.TransformingClassLoader@1aabf50d
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Found Forge version 40.1.31
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Found Forge spec 40.1
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Found Forge group net.minecraftforge
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.mc.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@1aabf50d
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.mc.MCPVersion/CORE]: Found MC version information 1.18.2
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.ve.mc.MCPVersion/CORE]: Found MCP version information 20220404.173914
+[18:35:45] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 40.1.31, for MC 1.18.2 with MCP 20220404.173914
+[18:35:45] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v40.1.31 Initialized
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for test_mod
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing yeet.test_mod$init_crap to MOD
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: Java version: 17
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.Buffer.address: available
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?] {}
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:247) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-all-4.1.68.Final.jar%2333!/:4.1.68.Final] {}
+	at net.minecraftforge.network.NetworkConstants.<clinit>(NetworkConstants.java:28) ~[forge-1.18.2-40.1.31_mapped_official_1.18.2.jar%2376%2382!/:?] {re:classloading}
+	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:148) ~[forge-1.18.2-40.1.31_mapped_official_1.18.2.jar%2376%2382!/:?] {re:classloading}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.1.31.jar%2378!/:?] {}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:106) ~[fmlcore-1.18.2-40.1.31.jar%2380!/:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?] {}
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): available
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: sun.misc.Unsafe: available
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: maxDirectMemory: 4280287232 bytes (maybe)
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\zero318\AppData\Local\Temp (java.io.tmpdir)
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: Platform: Windows
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: 1024
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[18:35:45] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeMod/FORGEMOD]: Loading Network data for FML net version: FML2
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[18:35:45] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
+[18:35:46] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[18:35:46] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
+[18:35:46] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
+[18:35:46] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
+[18:35:46] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
+[18:35:47] [Render thread/DEBUG] [ne.mi.cl.lo.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /
+[18:35:47] [Render thread/DEBUG] [ne.mi.cl.lo.ClientModLoader/CORE]: Generating PackInfo named mod:test_mod for mod file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\build\resources\main
+[18:35:49] [Render thread/DEBUG] [io.ne.ut.in.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[18:35:49] [Render thread/DEBUG] [io.ne.ut.in.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[18:35:49] [Render thread/DEBUG] [io.ne.ut.in.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0x08d2fbdefc090a1e
+[18:35:50] [Render thread/INFO] [mojang/NarratorWindows]: Narrator library for x64 successfully loaded
+[18:35:50] [Render thread/INFO] [ne.mi.ga.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [test_mod]
+[18:35:51] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: Default, Mod Resources
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Built TOML config for F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\forge-client.toml
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\forge-client.toml
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Watching TOML config file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\forge-client.toml for changes
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Loading configs type COMMON
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Built TOML config for F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\forge-common.toml
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\forge-common.toml
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Watching TOML config file F:\My_Minecraft_Expansion_3\_forge_mod_dev\test_mod\run\config\forge-common.toml for changes
+[18:35:51] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeConfig/FORGEMOD]: Loaded forge config file forge-common.toml
+[18:36:00] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[18:36:01] [Forge Version Check/DEBUG] [ne.mi.fm.VersionChecker/]: [forge] Received version check data:
+{
+  "homepage": "https://files.minecraftforge.net/net/minecraftforge/forge/",
+  "promos": {
+    "1.1-latest": "1.3.4.29",
+    "1.2.3-latest": "1.4.1.64",
+    "1.2.4-latest": "2.0.0.68",
+    "1.2.5-latest": "3.4.9.171",
+    "1.3.2-latest": "4.3.5.318",
+    "1.4.0-latest": "5.0.0.326",
+    "1.4.1-latest": "6.0.0.329",
+    "1.4.2-latest": "6.0.1.355",
+    "1.4.3-latest": "6.2.1.358",
+    "1.4.4-latest": "6.3.0.378",
+    "1.4.5-latest": "6.4.2.448",
+    "1.4.6-latest": "6.5.0.489",
+    "1.4.7-latest": "6.6.2.534",
+    "1.5-latest": "7.7.0.598",
+    "1.5.1-latest": "7.7.2.682",
+    "1.5.2-latest": "7.8.1.738",
+    "1.5.2-recommended": "7.8.1.738",
+    "1.6.1-latest": "8.9.0.775",
+    "1.6.2-latest": "9.10.1.871",
+    "1.6.2-recommended": "9.10.1.871",
+    "1.6.3-latest": "9.11.0.878",
+    "1.6.4-latest": "9.11.1.1345",
+    "1.6.4-recommended": "9.11.1.1345",
+    "1.7.2-latest": "10.12.2.1161",
+    "1.7.2-recommended": "10.12.2.1161",
+    "1.7.10_pre4-latest": "10.12.2.1149",
+    "1.7.10-latest": "10.13.4.1614",
+    "1.7.10-recommended": "10.13.4.1614",
+    "1.8-latest": "11.14.4.1577",
+    "1.8-recommended": "11.14.4.1563",
+    "1.8.8-latest": "11.15.0.1655",
+    "1.8.9-latest": "11.15.1.2318",
+    "1.8.9-recommended": "11.15.1.2318",
+    "1.9-latest": "12.16.1.1938",
+    "1.9-recommended": "12.16.1.1887",
+    "1.9.4-latest": "12.17.0.2317",
+    "1.9.4-recommended": "12.17.0.2317",
+    "1.10-latest": "12.18.0.2000",
+    "1.10.2-latest": "12.18.3.2511",
+    "1.10.2-recommended": "12.18.3.2511",
+    "1.11-latest": "13.19.1.2199",
+    "1.11-recommended": "13.19.1.2189",
+    "1.11.2-latest": "13.20.1.2588",
+    "1.11.2-recommended": "13.20.1.2588",
+    "1.12-latest": "14.21.1.2443",
+    "1.12-recommended": "14.21.1.2387",
+    "1.12.1-latest": "14.22.1.2485",
+    "1.12.1-recommended": "14.22.1.2478",
+    "1.12.2-latest": "14.23.5.2860",
+    "1.12.2-recommended": "14.23.5.2859",
+    "1.13.2-latest": "25.0.223",
+    "1.14.2-latest": "26.0.63",
+    "1.14.3-latest": "27.0.60",
+    "1.14.4-latest": "28.2.26",
+    "1.14.4-recommended": "28.2.26",
+    "1.15-latest": "29.0.4",
+    "1.15.1-latest": "30.0.51",
+    "1.15.2-latest": "31.2.57",
+    "1.15.2-recommended": "31.2.57",
+    "1.16.1-latest": "32.0.108",
+    "1.16.2-latest": "33.0.61",
+    "1.16.3-latest": "34.1.42",
+    "1.16.3-recommended": "34.1.0",
+    "1.16.4-latest": "35.1.37",
+    "1.16.4-recommended": "35.1.4",
+    "1.16.5-latest": "36.2.39",
+    "1.16.5-recommended": "36.2.34",
+    "1.17.1-latest": "37.1.1",
+    "1.17.1-recommended": "37.1.1",
+    "1.18-latest": "38.0.17",
+    "1.18.1-latest": "39.1.2",
+    "1.18.1-recommended": "39.1.0",
+    "1.18.2-recommended": "40.1.0",
+    "1.18.2-latest": "40.1.85",
+    "1.19-latest": "41.1.0",
+    "1.19-recommended": "41.1.0",
+    "1.19.1-latest": "42.0.9",
+    "1.19.2-recommended": "43.1.7",
+    "1.19.2-latest": "43.1.58"
+  }
+}
+[18:36:01] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 40.1.31 Target: 40.1.85
+[18:36:07] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 5602
+[18:36:08] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on CABLE Input (VB-Audio Virtual Cable)
+[18:36:08] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[18:36:08] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[18:36:11] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[18:36:11] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[18:36:11] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[18:36:11] [Realms Notification Availability checker #1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[18:36:14] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+

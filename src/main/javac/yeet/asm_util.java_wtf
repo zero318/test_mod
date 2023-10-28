@@ -1,0 +1,56 @@
+package yeet;
+
+#include "util.h"
+
+import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.FieldVisitor;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
+import java.util.Set;
+import net.minecraft.launchwrapper.IClassTransformer;
+
+public class AsmUtil extends ClassVisitor implements IClassTransformer {
+	
+	public AsmUtil() {
+		super(0);
+	}
+	
+	private static byte[] publicize_fields(String class_name, String[] field_names) {
+		ClassReader reader = new ClassReader(class_name);
+		reader.accept(new FieldPublicizer(field_names), 0);
+		ClassWriter writer = new ClassWriter(reader);
+		return writer.toByteArray();
+	}
+	
+	public static void run() {
+		publicize_fields("net.minecraft.core.BlockPos", new String[] { "x", "y", "z" })
+		
+	}
+	
+	private class FieldPublicizer extends ClassVisitor {
+		
+		Set<String> field_names;
+		
+		public FieldPublicizer(String[] field_names) {
+			super(0);
+			this.field_names = Set.of(field_names);
+		}
+		public FieldPublicizer(String[] field_names, ClassVisitor visitor) {
+			super(0, visitor);
+			this.field_names = Set.of(field_names);
+		}
+		@Override
+		public FieldVisitor visitField(int access, String name, String desc,
+String signature, Object value) {
+			if (this.field_names.contains(name)) {
+				if ((access & ACC_PUBLIC) == 0) {
+					access |= OpCodes.ACC_PUBLIC;
+				}
+			}
+			return super.visitField(access, name, desc, signature, value);
+		}
+		public void visitEnd() {}
+	}
+}

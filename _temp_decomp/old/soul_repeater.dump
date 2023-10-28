@@ -1,0 +1,172 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/soul_repeater.class
+  Last modified Jun 5, 2022; size 2279 bytes
+  SHA-256 checksum 5f428a2148e28b48841807428ec327a9cb450f5b29a97ad711b92b70d6ca1db8
+  Compiled from "soul_repeater.java"
+public class yeet.block.soul_repeater extends net.minecraft.world.level.block.RepeaterBlock
+  minor version: 0
+  major version: 61
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #8                          // yeet/block/soul_repeater
+  super_class: #2                         // net/minecraft/world/level/block/RepeaterBlock
+  interfaces: 0, fields: 0, methods: 3, attributes: 2
+Constant pool:
+   #1 = Methodref          #2.#3          // net/minecraft/world/level/block/RepeaterBlock."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+   #2 = Class              #4             // net/minecraft/world/level/block/RepeaterBlock
+   #3 = NameAndType        #5:#6          // "<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+   #4 = Utf8               net/minecraft/world/level/block/RepeaterBlock
+   #5 = Utf8               <init>
+   #6 = Utf8               (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+   #7 = Fieldref           #8.#9          // yeet/block/soul_repeater.FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+   #8 = Class              #10            // yeet/block/soul_repeater
+   #9 = NameAndType        #11:#12        // FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+  #10 = Utf8               yeet/block/soul_repeater
+  #11 = Utf8               FACING
+  #12 = Utf8               Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+  #13 = Methodref          #14.#15        // net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+  #14 = Class              #16            // net/minecraft/world/level/block/state/BlockState
+  #15 = NameAndType        #17:#18        // getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+  #16 = Utf8               net/minecraft/world/level/block/state/BlockState
+  #17 = Utf8               getValue
+  #18 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+  #19 = Class              #20            // net/minecraft/core/Direction
+  #20 = Utf8               net/minecraft/core/Direction
+  #21 = Methodref          #19.#22        // net/minecraft/core/Direction.getOpposite:()Lnet/minecraft/core/Direction;
+  #22 = NameAndType        #23:#24        // getOpposite:()Lnet/minecraft/core/Direction;
+  #23 = Utf8               getOpposite
+  #24 = Utf8               ()Lnet/minecraft/core/Direction;
+  #25 = Methodref          #26.#27        // net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+  #26 = Class              #28            // net/minecraft/core/BlockPos
+  #27 = NameAndType        #29:#30        // relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+  #28 = Utf8               net/minecraft/core/BlockPos
+  #29 = Utf8               relative
+  #30 = Utf8               (Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+  #31 = InterfaceMethodref #32.#33        // net/minecraft/world/level/BlockGetter.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+  #32 = Class              #34            // net/minecraft/world/level/BlockGetter
+  #33 = NameAndType        #35:#36        // getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+  #34 = Utf8               net/minecraft/world/level/BlockGetter
+  #35 = Utf8               getBlockState
+  #36 = Utf8               (Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+  #37 = Methodref          #38.#39        // net/minecraft/world/level/block/DiodeBlock.isDiode:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #38 = Class              #40            // net/minecraft/world/level/block/DiodeBlock
+  #39 = NameAndType        #41:#42        // isDiode:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #40 = Utf8               net/minecraft/world/level/block/DiodeBlock
+  #41 = Utf8               isDiode
+  #42 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #43 = Utf8               Code
+  #44 = Utf8               LineNumberTable
+  #45 = Utf8               LocalVariableTable
+  #46 = Utf8               this
+  #47 = Utf8               Lyeet/block/soul_repeater;
+  #48 = Utf8               properties
+  #49 = Utf8               Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+  #50 = Utf8               animateTick
+  #51 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+  #52 = Utf8               blockState
+  #53 = Utf8               Lnet/minecraft/world/level/block/state/BlockState;
+  #54 = Utf8               level
+  #55 = Utf8               Lnet/minecraft/world/level/Level;
+  #56 = Utf8               blockPos
+  #57 = Utf8               Lnet/minecraft/core/BlockPos;
+  #58 = Utf8               random
+  #59 = Utf8               Ljava/util/Random;
+  #60 = Utf8               shouldPrioritize
+  #61 = Utf8               (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #62 = Utf8               blockGetter
+  #63 = Utf8               Lnet/minecraft/world/level/BlockGetter;
+  #64 = Utf8               direction
+  #65 = Utf8               Lnet/minecraft/core/Direction;
+  #66 = Utf8               blockState2
+  #67 = Utf8               StackMapTable
+  #68 = Utf8               SourceFile
+  #69 = Utf8               soul_repeater.java
+  #70 = Utf8               InnerClasses
+  #71 = Class              #72            // net/minecraft/world/level/block/state/BlockBehaviour$Properties
+  #72 = Utf8               net/minecraft/world/level/block/state/BlockBehaviour$Properties
+  #73 = Class              #74            // net/minecraft/world/level/block/state/BlockBehaviour
+  #74 = Utf8               net/minecraft/world/level/block/state/BlockBehaviour
+  #75 = Utf8               Properties
+{
+  public yeet.block.soul_repeater(net.minecraft.world.level.block.state.BlockBehaviour$Properties);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokespecial #1                  // Method net/minecraft/world/level/block/RepeaterBlock."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+         5: return
+      LineNumberTable:
+        line 16: 0
+        line 17: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lyeet/block/soul_repeater;
+            0       6     1 properties   Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+
+  public void animateTick(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.Level, net.minecraft.core.BlockPos, java.util.Random);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=5, args_size=5
+         0: return
+      LineNumberTable:
+        line 21: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lyeet/block/soul_repeater;
+            0       1     1 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            0       1     2 level   Lnet/minecraft/world/level/Level;
+            0       1     3 blockPos   Lnet/minecraft/core/BlockPos;
+            0       1     4 random   Ljava/util/Random;
+
+  public boolean shouldPrioritize(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=6, args_size=4
+         0: aload_3
+         1: getstatic     #7                  // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+         4: invokevirtual #13                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+         7: checkcast     #19                 // class net/minecraft/core/Direction
+        10: astore        4
+        12: aload_1
+        13: aload_2
+        14: aload         4
+        16: invokevirtual #21                 // Method net/minecraft/core/Direction.getOpposite:()Lnet/minecraft/core/Direction;
+        19: invokevirtual #25                 // Method net/minecraft/core/BlockPos.relative:(Lnet/minecraft/core/Direction;)Lnet/minecraft/core/BlockPos;
+        22: invokeinterface #31,  2           // InterfaceMethod net/minecraft/world/level/BlockGetter.getBlockState:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/state/BlockState;
+        27: astore        5
+        29: aload         5
+        31: invokestatic  #37                 // Method net/minecraft/world/level/block/DiodeBlock.isDiode:(Lnet/minecraft/world/level/block/state/BlockState;)Z
+        34: ifeq          54
+        37: aload         5
+        39: getstatic     #7                  // Field FACING:Lnet/minecraft/world/level/block/state/properties/DirectionProperty;
+        42: invokevirtual #13                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+        45: aload         4
+        47: if_acmpeq     54
+        50: iconst_1
+        51: goto          55
+        54: iconst_0
+        55: ireturn
+      LineNumberTable:
+        line 25: 0
+        line 26: 12
+        line 27: 29
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      56     0  this   Lyeet/block/soul_repeater;
+            0      56     1 blockGetter   Lnet/minecraft/world/level/BlockGetter;
+            0      56     2 blockPos   Lnet/minecraft/core/BlockPos;
+            0      56     3 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+           12      44     4 direction   Lnet/minecraft/core/Direction;
+           29      27     5 blockState2   Lnet/minecraft/world/level/block/state/BlockState;
+      StackMapTable: number_of_entries = 2
+        frame_type = 253 /* append */
+          offset_delta = 54
+          locals = [ class net/minecraft/core/Direction, class net/minecraft/world/level/block/state/BlockState ]
+        frame_type = 64 /* same_locals_1_stack_item */
+          stack = [ int ]
+}
+SourceFile: "soul_repeater.java"
+InnerClasses:
+  public static #75= #71 of #73;          // Properties=class net/minecraft/world/level/block/state/BlockBehaviour$Properties of class net/minecraft/world/level/block/state/BlockBehaviour

@@ -1,0 +1,10 @@
+{
+	"minVersion": "0.8",
+	"required": true,
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "test_mod_mixins.refmap.json",
+	"package": "yeet.mixins",
+	"mixins": [
+		"world_level_block_redstonewireblock"
+	]
+}

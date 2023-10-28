@@ -1,0 +1,187 @@
+Classfile /F:/My_Minecraft_Expansion_3/_forge_mod_dev/test_mod/_temp_decomp/soul_redstone_wall_torch.class
+  Last modified Jun 5, 2022; size 2505 bytes
+  SHA-256 checksum 15507fef7b1e848cc784dc90b531279b340e9cbb1a82cdc97ab87e61734c53bc
+  Compiled from "soul_redstone_wall_torch.java"
+public class yeet.block.soul_redstone_wall_torch extends net.minecraft.world.level.block.RedstoneWallTorchBlock
+  minor version: 0
+  major version: 61
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #8                          // yeet/block/soul_redstone_wall_torch
+  super_class: #2                         // net/minecraft/world/level/block/RedstoneWallTorchBlock
+  interfaces: 0, fields: 0, methods: 3, attributes: 2
+Constant pool:
+   #1 = Methodref          #2.#3          // net/minecraft/world/level/block/RedstoneWallTorchBlock."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+   #2 = Class              #4             // net/minecraft/world/level/block/RedstoneWallTorchBlock
+   #3 = NameAndType        #5:#6          // "<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+   #4 = Utf8               net/minecraft/world/level/block/RedstoneWallTorchBlock
+   #5 = Utf8               <init>
+   #6 = Utf8               (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+   #7 = Fieldref           #8.#9          // yeet/block/soul_redstone_wall_torch.LIT:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+   #8 = Class              #10            // yeet/block/soul_redstone_wall_torch
+   #9 = NameAndType        #11:#12        // LIT:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+  #10 = Utf8               yeet/block/soul_redstone_wall_torch
+  #11 = Utf8               LIT
+  #12 = Utf8               Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+  #13 = Methodref          #14.#15        // net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+  #14 = Class              #16            // net/minecraft/world/level/block/state/BlockState
+  #15 = NameAndType        #17:#18        // getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+  #16 = Utf8               net/minecraft/world/level/block/state/BlockState
+  #17 = Utf8               getValue
+  #18 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+  #19 = Class              #20            // java/lang/Boolean
+  #20 = Utf8               java/lang/Boolean
+  #21 = Methodref          #19.#22        // java/lang/Boolean.booleanValue:()Z
+  #22 = NameAndType        #23:#24        // booleanValue:()Z
+  #23 = Utf8               booleanValue
+  #24 = Utf8               ()Z
+  #25 = Methodref          #8.#26         // yeet/block/soul_redstone_wall_torch.hasNeighborSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #26 = NameAndType        #27:#28        // hasNeighborSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #27 = Utf8               hasNeighborSignal
+  #28 = Utf8               (Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+  #29 = Methodref          #19.#30        // java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+  #30 = NameAndType        #31:#32        // valueOf:(Z)Ljava/lang/Boolean;
+  #31 = Utf8               valueOf
+  #32 = Utf8               (Z)Ljava/lang/Boolean;
+  #33 = Methodref          #14.#34        // net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+  #34 = NameAndType        #35:#36        // setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+  #35 = Utf8               setValue
+  #36 = Utf8               (Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+  #37 = Methodref          #38.#39        // net/minecraft/server/level/ServerLevel.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+  #38 = Class              #40            // net/minecraft/server/level/ServerLevel
+  #39 = NameAndType        #41:#42        // setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+  #40 = Utf8               net/minecraft/server/level/ServerLevel
+  #41 = Utf8               setBlock
+  #42 = Utf8               (Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+  #43 = Utf8               Code
+  #44 = Utf8               LineNumberTable
+  #45 = Utf8               LocalVariableTable
+  #46 = Utf8               this
+  #47 = Utf8               Lyeet/block/soul_redstone_wall_torch;
+  #48 = Utf8               properties
+  #49 = Utf8               Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+  #50 = Utf8               animateTick
+  #51 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+  #52 = Utf8               blockState
+  #53 = Utf8               Lnet/minecraft/world/level/block/state/BlockState;
+  #54 = Utf8               level
+  #55 = Utf8               Lnet/minecraft/world/level/Level;
+  #56 = Utf8               blockPos
+  #57 = Utf8               Lnet/minecraft/core/BlockPos;
+  #58 = Utf8               random
+  #59 = Utf8               Ljava/util/Random;
+  #60 = Utf8               tick
+  #61 = Utf8               (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+  #62 = Utf8               serverLevel
+  #63 = Utf8               Lnet/minecraft/server/level/ServerLevel;
+  #64 = Utf8               is_lit
+  #65 = Utf8               Z
+  #66 = Utf8               StackMapTable
+  #67 = Class              #68            // net/minecraft/core/BlockPos
+  #68 = Utf8               net/minecraft/core/BlockPos
+  #69 = Class              #70            // java/util/Random
+  #70 = Utf8               java/util/Random
+  #71 = Class              #72            // net/minecraft/world/level/block/state/properties/BooleanProperty
+  #72 = Utf8               net/minecraft/world/level/block/state/properties/BooleanProperty
+  #73 = Utf8               SourceFile
+  #74 = Utf8               soul_redstone_wall_torch.java
+  #75 = Utf8               InnerClasses
+  #76 = Class              #77            // net/minecraft/world/level/block/state/BlockBehaviour$Properties
+  #77 = Utf8               net/minecraft/world/level/block/state/BlockBehaviour$Properties
+  #78 = Class              #79            // net/minecraft/world/level/block/state/BlockBehaviour
+  #79 = Utf8               net/minecraft/world/level/block/state/BlockBehaviour
+  #80 = Utf8               Properties
+{
+  public yeet.block.soul_redstone_wall_torch(net.minecraft.world.level.block.state.BlockBehaviour$Properties);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0
+         1: aload_1
+         2: invokespecial #1                  // Method net/minecraft/world/level/block/RedstoneWallTorchBlock."<init>":(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+         5: return
+      LineNumberTable:
+        line 16: 0
+        line 17: 5
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lyeet/block/soul_redstone_wall_torch;
+            0       6     1 properties   Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;
+
+  public void animateTick(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.Level, net.minecraft.core.BlockPos, java.util.Random);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=0, locals=5, args_size=5
+         0: return
+      LineNumberTable:
+        line 21: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lyeet/block/soul_redstone_wall_torch;
+            0       1     1 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            0       1     2 level   Lnet/minecraft/world/level/Level;
+            0       1     3 blockPos   Lnet/minecraft/core/BlockPos;
+            0       1     4 random   Ljava/util/Random;
+
+  public void tick(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, java.util.Random);
+    descriptor: (Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;Ljava/util/Random;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=6, args_size=5
+         0: aload_1
+         1: getstatic     #7                  // Field LIT:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+         4: invokevirtual #13                 // Method net/minecraft/world/level/block/state/BlockState.getValue:(Lnet/minecraft/world/level/block/state/properties/Property;)Ljava/lang/Comparable;
+         7: checkcast     #19                 // class java/lang/Boolean
+        10: invokevirtual #21                 // Method java/lang/Boolean.booleanValue:()Z
+        13: istore        5
+        15: iload         5
+        17: aload_0
+        18: aload_2
+        19: aload_3
+        20: aload_1
+        21: invokevirtual #25                 // Method hasNeighborSignal:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+        24: if_icmpne     57
+        27: aload_2
+        28: aload_3
+        29: aload_1
+        30: getstatic     #7                  // Field LIT:Lnet/minecraft/world/level/block/state/properties/BooleanProperty;
+        33: iload         5
+        35: ifne          42
+        38: iconst_1
+        39: goto          43
+        42: iconst_0
+        43: invokestatic  #29                 // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+        46: invokevirtual #33                 // Method net/minecraft/world/level/block/state/BlockState.setValue:(Lnet/minecraft/world/level/block/state/properties/Property;Ljava/lang/Comparable;)Ljava/lang/Object;
+        49: checkcast     #14                 // class net/minecraft/world/level/block/state/BlockState
+        52: iconst_3
+        53: invokevirtual #37                 // Method net/minecraft/server/level/ServerLevel.setBlock:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;I)Z
+        56: pop
+        57: return
+      LineNumberTable:
+        line 25: 0
+        line 26: 15
+        line 27: 27
+        line 29: 57
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      58     0  this   Lyeet/block/soul_redstone_wall_torch;
+            0      58     1 blockState   Lnet/minecraft/world/level/block/state/BlockState;
+            0      58     2 serverLevel   Lnet/minecraft/server/level/ServerLevel;
+            0      58     3 blockPos   Lnet/minecraft/core/BlockPos;
+            0      58     4 random   Ljava/util/Random;
+           15      43     5 is_lit   Z
+      StackMapTable: number_of_entries = 3
+        frame_type = 255 /* full_frame */
+          offset_delta = 42
+          locals = [ class yeet/block/soul_redstone_wall_torch, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/server/level/ServerLevel, class net/minecraft/core/BlockPos, class java/util/Random, int ]
+          stack = [ class net/minecraft/server/level/ServerLevel, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/world/level/block/state/properties/BooleanProperty ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 0
+          locals = [ class yeet/block/soul_redstone_wall_torch, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/server/level/ServerLevel, class net/minecraft/core/BlockPos, class java/util/Random, int ]
+          stack = [ class net/minecraft/server/level/ServerLevel, class net/minecraft/core/BlockPos, class net/minecraft/world/level/block/state/BlockState, class net/minecraft/world/level/block/state/properties/BooleanProperty, int ]
+        frame_type = 13 /* same */
+}
+SourceFile: "soul_redstone_wall_torch.java"
+InnerClasses:
+  public static #80= #76 of #78;          // Properties=class net/minecraft/world/level/block/state/BlockBehaviour$Properties of class net/minecraft/world/level/block/state/BlockBehaviour

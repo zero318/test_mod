@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:observer",
+		"test_mod:inspector"
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"block.inspector.click": {
+		"subtitle": "subtitles.block.inspector.click",
+		"sounds": [
+			{
+				"type": "event",
+				"name": "block.comparator.click"
+			}
+		]
+	}
+}
